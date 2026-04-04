@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Machine Learning for Beginners: The Honest Roadmap (2026)</title>
+<meta name="description" content="Most beginner ML guides skip the parts that actually matter. Here is the honest learning sequence, the math you actually need, the best free resources, and how long it realistically takes.">
+<link rel="canonical" href="https://fissionlab.net/blog/ml-for-beginners.html">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2a; --navy-mid: #1b2d42; --gold: #c9a84c; --gold-light: #e8c97a;
+    --cream: #f5f0e8; --cream-dark: #ede6d6; --text: #1a1a2e; --muted: #5a6475; --white: #ffffff;
+    --border: rgba(201,168,76,0.2);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(13,27,42,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.2rem; color: var(--cream); text-decoration: none; }
+  .nav-logo span { color: var(--gold); }
+  .nav-links { display: flex; gap: 2rem; align-items: center; }
+  .nav-links a { font-size: 0.85rem; font-weight: 500; color: rgba(245,240,232,0.7); text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-cta { background: var(--gold) !important; color: var(--navy) !important; padding: 8px 20px; border-radius: 6px; font-weight: 600 !important; }
+  .article-wrap { max-width: 760px; margin: 0 auto; padding: 100px 2rem 80px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--gold); font-size: 0.85rem; font-weight: 600; text-decoration: none; margin-bottom: 2rem; letter-spacing: 0.03em; }
+  .back-link:hover { color: var(--navy); }
+  .post-tag { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; display: block; }
+  .post-title { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.15; color: var(--text); margin-bottom: 1rem; }
+  .post-meta { font-size: 0.8rem; color: var(--muted); margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--cream-dark); }
+  .post-body h2 { font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: var(--text); margin: 2.5rem 0 1rem; }
+  .post-body h3 { font-family: 'DM Serif Display', serif; font-size: 1.15rem; color: var(--navy-mid); margin: 1.75rem 0 0.75rem; }
+  .post-body p { font-size: 1rem; line-height: 1.8; color: var(--text); margin-bottom: 1.25rem; }
+  .post-body ul, .post-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; }
+  .post-body li { font-size: 0.95rem; line-height: 1.75; color: var(--text); margin-bottom: 0.4rem; }
+  .post-body strong { font-weight: 600; }
+  .post-body a { color: var(--gold); text-decoration: none; font-weight: 500; }
+  .post-body a:hover { text-decoration: underline; }
+  .callout { background: var(--navy); color: var(--cream); border-radius: 12px; padding: 1.5rem 2rem; margin: 2rem 0; }
+  .callout p { color: rgba(245,240,232,0.85); margin: 0; }
+  .callout strong { color: var(--gold); }
+  .author-bio { background: var(--cream-dark); border-radius: 12px; padding: 1.5rem 2rem; margin-top: 3rem; border-left: 4px solid var(--gold); }
+  .author-bio p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; margin: 0; }
+  .author-bio strong { color: var(--text); font-weight: 600; }
+  footer { background: #08111a; padding: 24px 2rem; text-align: center; font-size: 0.8rem; color: rgba(245,240,232,0.3); margin-top: 0; }
+  footer a { color: inherit; }
+  @media (max-width: 600px) { .nav-links { display: none; } }
+</style>
+</head>
+<body>
+<nav>
+  <a href="https://fissionlab.net" class="nav-logo">Fission<span>Lab</span></a>
+  <div class="nav-links">
+    <a href="https://fissionlab.net/#subjects">Subjects</a>
+    <a href="https://fissionlab.net/#products">Products</a>
+    <a href="https://fissionlab.net/#packages">Packages</a>
+    <a href="https://fissionlab.net/blog/">Blog</a>
+    <a href="https://fissionlab.net/#booking" class="nav-cta">Book a Call</a>
+  </div>
+</nav>
+
+<div class="article-wrap">
+  <a href="https://fissionlab.net/blog/" class="back-link">&#8592; Back to Blog</a>
+  <span class="post-tag">Machine Learning</span>
+  <h1 class="post-title">Machine Learning for Beginners: The Honest Roadmap</h1>
+  <div class="post-meta">By Dr. Preston &nbsp;&middot;&nbsp; April 4, 2026 &nbsp;&middot;&nbsp; 9 min read</div>
+
+  <div class="post-body">
+
+    <p>Most beginner machine learning guides will tell you to install Python, open a Jupyter notebook, and start training neural networks within the first hour. That is not a learning path — it is a demo. You will be able to run code you do not understand, produce outputs you cannot interpret, and hit a wall the first time something does not work as expected. I have seen this pattern repeatedly with students who come to me after following popular "learn ML in 30 days" courses. They have run the code. They have not learned machine learning.</p>
+    <p>This is the version I would have wanted when I started — the one that tells you what the prerequisites actually are, what the learning sequence should look like, and what "ready to do real work" actually means.</p>
+
+    <h2>Why Most Beginner ML Guides Mislead You</h2>
+    <p>The problem is incentive misalignment. Online courses are sold on excitement and early results. Showing you a classification model running on MNIST in session one generates enthusiasm and good reviews. But it skips the conceptual scaffolding that makes ML learnable rather than just runnable. You end up with syntax familiarity and no mathematical intuition — which means you cannot debug a model that underperforms, you cannot choose between algorithms meaningfully, and you cannot extend what you have learned to new problem types.</p>
+    <p>The second issue is scope. "Machine learning" covers supervised learning, unsupervised learning, reinforcement learning, probabilistic modeling, deep learning, and more. Most beginner paths drop you into deep learning first because it is the most visible part of the field right now. That is like teaching calculus before algebra because calculus is more impressive. The fundamentals come first — not because they are more exciting, but because everything else depends on them.</p>
+
+    <h2>What You Actually Need to Know First</h2>
+
+    <h3>Mathematics: The Honest Requirements</h3>
+    <p>You do not need a graduate math background to start. You do need to be genuinely comfortable with the following before your ML knowledge will hold together:</p>
+    <ul>
+      <li><strong>Linear algebra:</strong> Vectors, matrices, matrix multiplication, dot products, eigenvalues/eigenvectors. You need to understand what these operations mean geometrically, not just how to compute them.</li>
+      <li><strong>Calculus:</strong> Derivatives, partial derivatives, the chain rule. Gradient descent is the engine of most ML training — if you do not understand what a gradient is, you are running the engine without knowing what it does.</li>
+      <li><strong>Probability and statistics:</strong> Probability distributions, conditional probability, Bayes' theorem, expectation, variance. Classification is fundamentally probabilistic. You need this vocabulary to read papers, interpret results, and understand loss functions.</li>
+    </ul>
+    <p>If any of the above are shaky, fix them first. Khan Academy covers linear algebra and calculus adequately. For probability, <em>Introduction to Probability</em> by Blitzstein and Hwang is free online and excellent.</p>
+
+    <h3>Python: What "Basics" Actually Means</h3>
+    <p>You need to be able to write clean Python without looking things up constantly. Specifically: data types, functions, classes, loops, list comprehensions, file I/O, and the basics of NumPy and Pandas. If you are still Googling how to define a function, you are not ready to learn ML — you are learning Python and ML simultaneously, which makes both harder. Spend 3–4 weeks solidifying Python first if needed.</p>
+
+    <h2>The Recommended Learning Sequence</h2>
+    <ol>
+      <li><strong>Math foundations</strong> — Linear algebra and calculus review (2–4 weeks if rusty). 3Blue1Brown's Essence of Linear Algebra series is the best visual introduction available.</li>
+      <li><strong>Python and NumPy fluency</strong> — Wes McKinney's <em>Python for Data Analysis</em> covers the practical toolkit. Do the exercises; do not just read.</li>
+      <li><strong>Classical ML algorithms</strong> — Start with Andrew Ng's Machine Learning Specialization on Coursera. Linear regression, logistic regression, decision trees, SVMs, k-means. Understand the math of each, not just the sklearn calls.</li>
+      <li><strong>Probability and statistical learning</strong> — Work through the probabilistic foundations. Bishop's <em>Pattern Recognition and Machine Learning</em> is comprehensive but dense; use it as a reference. The fast.ai Statistical Learning course is more accessible.</li>
+      <li><strong>Deep learning fundamentals</strong> — fast.ai's Practical Deep Learning for Coders is the best entry point. Jeremy Howard's top-down approach works well once you have the foundations in place. Follow with Andrej Karpathy's Neural Networks: Zero to Hero series to build everything from scratch.</li>
+      <li><strong>Applied projects</strong> — Build three to five projects on real data (not MNIST). Kaggle competitions in their "Getting Started" track, or personal projects where you care about the outcome. The debugging experience from a real project is worth more than another course.</li>
+    </ol>
+
+    <div class="callout">
+      <p><strong>The milestone test:</strong> Before moving from classical ML to deep learning, you should be able to implement linear regression and logistic regression from scratch using only NumPy — no sklearn. If you cannot, you do not understand the foundations yet. Go back to step 3.</p>
+    </div>
+
+    <h2>Free Resources That Are Actually Good</h2>
+    <ul>
+      <li><strong>fast.ai</strong> — Practical Deep Learning for Coders (free). Best top-down applied course available. Assumes Python competence.</li>
+      <li><strong>Andrew Ng's ML Specialization</strong> — Coursera (auditable free). The gold-standard introduction to classical ML. Thorough, mathematically grounded.</li>
+      <li><strong>3Blue1Brown</strong> — Essence of Linear Algebra and Neural Networks series (YouTube, free). The best visual intuition-building content in existence for these topics.</li>
+      <li><strong>Andrej Karpathy — Neural Networks: Zero to Hero</strong> (YouTube, free). Builds a GPT from scratch. Excellent for understanding what deep learning actually does.</li>
+      <li><strong>Kaggle Learn</strong> — Short, practical micro-courses on ML topics. Good for filling specific gaps.</li>
+    </ul>
+
+    <h2>Common Beginner Mistakes</h2>
+    <ul>
+      <li>Jumping to transformers and LLMs before understanding backpropagation</li>
+      <li>Collecting courses instead of building projects — five certificates and no real work</li>
+      <li>Ignoring the math because the libraries abstract it away</li>
+      <li>Measuring progress by code running rather than by concepts understood</li>
+      <li>Not reading error messages — they contain the answer most of the time</li>
+    </ul>
+
+    <h2>How Long Does It Realistically Take?</h2>
+    <p>With 1–2 hours daily of focused work, most people reach functional ML competence — meaning they can build, train, evaluate, and iterate on supervised learning models — in 6 to 9 months. Reaching the level where you can read current research papers and implement novel architectures takes 18–24 months minimum. Anyone telling you they turned a complete beginner into an ML engineer in 8 weeks is either selling you something or defining "engineer" very loosely.</p>
+    <p>The learning compounds. The first three months are the hardest. If you have the foundations in place and are putting in consistent hours, the rate of progress accelerates significantly in months four through six. Do not quit at month two.</p>
+
+    <p>If you want structured guidance through the learning sequence — whether you are starting from zero or have hit a wall at a specific point — I work with ML learners one-on-one. The details are at <a href="https://fissionlab.net/#packages">fissionlab.net/#packages</a>.</p>
+
+  </div>
+
+  <div class="author-bio">
+    <p><strong>About the Author:</strong> Dr. Preston is an active duty Air Force officer, nuclear physicist, and ML researcher offering expert tutoring at <a href="https://fissionlab.net">fissionlab.net</a>. He tutors AFOQT prep, SAT/ACT, Physics, Mathematics, and Machine Learning.</p>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 &middot; FissionLab &middot; Expert Tutoring &middot; <a href="https://fissionlab.net">fissionlab.net</a></p>
+</footer>
+</body>
+</html>
