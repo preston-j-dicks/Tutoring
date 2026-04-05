@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PhD Expert Tutoring — AFOQT · SAT/ACT · Physics · Math · ML/AI</title>
+<title>PhD Expert Tutoring — AFOQT · SAT/ACT · Physics · Math · ML/AI | FissionLab</title>
+<!-- GSC verification: replace content with your verification code from search.google.com/search-console -->
+<meta name="google-site-verification" content="REPLACE_ME">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -569,7 +571,10 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">Expert<span>Tutor</span></div>
+  <a href="/" class="nav-logo" style="display:flex;align-items:center;gap:10px;text-decoration:none">
+    <img src="assets/logo.png" alt="Fission Lab" style="height:40px;width:auto;object-fit:contain">
+    <span style="font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--cream)">Fission<span style="color:var(--gold)">Lab</span></span>
+  </a>
   <div class="nav-links">
     <a href="#subjects">Subjects</a>
     <a href="#products">Products</a>
@@ -941,12 +946,20 @@ We just had our first session with Preston, and it was a great experience! He is
 
     <div class="products-grid">
 
+      <div class="product-card" style="border:2px solid var(--gold)">
+        <span class="product-emoji">🚀</span>
+        <div class="product-name">AI Workflow OS <span style="background:var(--gold);color:var(--navy);font-size:0.65rem;padding:2px 7px;border-radius:10px;font-weight:700;vertical-align:middle;margin-left:4px">NEW</span></div>
+        <p class="product-desc">The complete Notion productivity system for solopreneurs and creators. AI-powered dashboards, project tracker, income tracker, content calendar, and goal system — all wired together.</p>
+        <div class="product-price">$49 one-time</div>
+        <a href="https://prestonj.gumroad.com/l/aynnhp" target="_blank" class="product-btn">Get on Gumroad →</a>
+      </div>
+
       <div class="product-card">
         <span class="product-emoji">♻️</span>
         <div class="product-name">RepurposeAI</div>
         <p class="product-desc">Turn one piece of content into 6 formats — tweets, LinkedIn posts, newsletters, Instagram captions, video scripts, and threads. Instantly.</p>
         <div class="product-price">Free / $19.99</div>
-        <a href="https://huggingface.co/spaces/Dr-P/RepurposeAI" target="_blank" class="product-btn">Get It</a>
+        <a href="https://huggingface.co/spaces/Dr-P/RepurposeAI" target="_blank" class="product-btn">Try It Free →</a>
       </div>
 
       <div class="product-card">
@@ -954,23 +967,23 @@ We just had our first session with Preston, and it was a great experience! He is
         <div class="product-name">ClearMinutes AI</div>
         <p class="product-desc">Never write meeting notes again. Paste any transcript and get an executive summary, action items, key decisions, follow-up email, and next agenda — in seconds.</p>
         <div class="product-price">Free / $19/mo</div>
-        <a href="https://huggingface.co/spaces/Dr-P/ClearMinutes-AI" target="_blank" class="product-btn">Get It</a>
+        <a href="https://huggingface.co/spaces/Dr-P/ClearMinutes-AI" target="_blank" class="product-btn">Try It Free →</a>
       </div>
 
       <div class="product-card">
         <span class="product-emoji">💼</span>
         <div class="product-name">ChatGPT for Small Business Owners</div>
         <p class="product-desc">200 proven AI prompts to save time, win customers, and scale faster. Marketing, operations, hiring, finance — every prompt is ready to use today.</p>
-        <div class="product-price">$9.99</div>
-        <a href="#amazon-link" class="product-btn" title="Coming soon on Amazon" style="opacity:0.7;cursor:default;">Coming Soon</a>
+        <div class="product-price">$9.99 — Amazon</div>
+        <a href="#amazon-link" class="product-btn" title="Coming soon on Amazon" style="opacity:0.7;cursor:default;" aria-label="Coming soon on Amazon">Coming Soon</a>
       </div>
 
       <div class="product-card">
         <span class="product-emoji">🍎</span>
         <div class="product-name">AI Prompts for Teachers</div>
         <p class="product-desc">150 ready-to-use AI prompts that transform your classroom. Lesson plans, assessments, differentiation, parent communication, and more — grades K-12.</p>
-        <div class="product-price">$9.99</div>
-        <a href="#amazon-link" class="product-btn" title="Coming soon on Amazon" style="opacity:0.7;cursor:default;">Coming Soon</a>
+        <div class="product-price">$9.99 — Amazon</div>
+        <a href="#amazon-link" class="product-btn" title="Coming soon on Amazon" style="opacity:0.7;cursor:default;" aria-label="Coming soon on Amazon">Coming Soon</a>
       </div>
 
     </div>
@@ -1068,6 +1081,14 @@ We just had our first session with Preston, and it was a great experience! He is
     </div>
   </div>
 </section>
+
+<!-- FLOATING GUMROAD BANNER -->
+<div id="gumroad-banner" style="background:var(--navy);border-top:2px solid var(--gold);padding:14px 2rem;display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;position:relative">
+  <span style="color:var(--cream);font-size:0.95rem;font-weight:500">🚀 <strong style="color:var(--gold)">New:</strong> AI Workflow OS for Solopreneurs — The complete Notion system. <strong style="color:var(--gold)">$49 one-time.</strong></span>
+  <a href="https://prestonj.gumroad.com/l/aynnhp" target="_blank" style="background:var(--gold);color:var(--navy);padding:8px 20px;border-radius:6px;font-weight:700;text-decoration:none;font-size:0.9rem;white-space:nowrap">Get It Now →</a>
+  <button onclick="document.getElementById('gumroad-banner').style.display='none';localStorage.setItem('gumroad-banner-dismissed','1')" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--muted);font-size:1.2rem;cursor:pointer;line-height:1" aria-label="Dismiss">✕</button>
+</div>
+<script>if(localStorage.getItem('gumroad-banner-dismissed'))document.getElementById('gumroad-banner').style.display='none';</script>
 
 <!-- FOOTER CTA -->
 <div class="footer-cta">
