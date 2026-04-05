@@ -559,6 +559,10 @@
     .steps { grid-template-columns: repeat(2,1fr); }
     .testi-grid, .products-grid, .blog-grid { grid-template-columns: repeat(2,1fr); }
     .nav-links { display: none; }
+    #about .section-inner > div[style*="grid-template-columns:280px"] {
+      grid-template-columns: 1fr !important;
+    }
+    #about img { max-width: 200px !important; }
   }
   @media (max-width: 600px) {
     .subjects-grid, .packages-grid, .steps, .products-grid, .blog-grid { grid-template-columns: 1fr; }
@@ -577,8 +581,8 @@
   </a>
   <div class="nav-links">
     <a href="#subjects">Subjects</a>
-    <a href="#products">Products</a>
     <a href="#packages">Packages</a>
+    <a href="#about">About</a>
     <a href="#blog">Blog</a>
     <a href="resources.html">Resources</a>
     <a href="#booking" class="nav-cta">Book a Call</a>
@@ -816,6 +820,78 @@
         <h3>Hit Your Goal</h3>
         <p>Track measurable progress every session. Most students hit their goal within the 4 or 8-session pack.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / BIO -->
+<section id="about" style="background:var(--white)">
+  <div class="section-inner" style="max-width:1000px">
+    <span class="section-tag">About Dr. Preston</span>
+    <h2 class="section-title">The tutor behind FissionLab</h2>
+
+    <div style="display:grid;grid-template-columns:280px 1fr;gap:48px;align-items:start;margin-top:3rem">
+
+      <!-- Photo -->
+      <div style="text-align:center">
+        <img src="assets/dr-preston.jpg" alt="Dr. Preston Dicks"
+             style="width:100%;max-width:260px;border-radius:20px;object-fit:cover;aspect-ratio:3/4;
+                    box-shadow:0 20px 60px rgba(13,27,42,0.18);border:3px solid var(--cream-dark)">
+        <div style="margin-top:16px">
+          <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--navy);font-weight:700">Dr. Preston Dicks</div>
+          <div style="font-size:0.82rem;color:var(--muted);margin-top:4px">PhD · Nuclear Engineering · AFIT</div>
+          <div style="display:flex;justify-content:center;gap:8px;margin-top:12px;flex-wrap:wrap">
+            <span style="background:var(--cream);border:1px solid var(--cream-dark);border-radius:20px;padding:4px 10px;font-size:0.72rem;font-weight:600;color:var(--navy)">🎓 UC Berkeley</span>
+            <span style="background:var(--cream);border:1px solid var(--cream-dark);border-radius:20px;padding:4px 10px;font-size:0.72rem;font-weight:600;color:var(--navy)">✈️ USAF Veteran</span>
+            <span style="background:var(--cream);border:1px solid var(--cream-dark);border-radius:20px;padding:4px 10px;font-size:0.72rem;font-weight:600;color:var(--navy)">⚛️ AFIT PhD</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bio Text -->
+      <div>
+        <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1.25rem">
+          I'm Dr. Preston Dicks — a nuclear engineer, military officer, and educator with over a decade of experience helping students achieve goals they didn't think were possible. My path has taken me from the physics labs at <strong>UC Berkeley</strong> (B.S. Physics, 2010) to the <strong>Air Force Institute of Technology</strong>, where I earned both my M.S. and Ph.D. in Nuclear Engineering with a specialization in machine learning applied to reactor systems.
+        </p>
+        <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1.25rem">
+          During my time as a <strong>U.S. Air Force officer</strong>, I navigated the AFOQT myself, earned my commission, and served in technical and leadership roles that demanded mastery under pressure — the same kind of mastery I now help my students develop. I've worked across government, academia, and industry, applying nuclear physics and AI in real-world environments most tutors have never seen.
+        </p>
+        <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1.25rem">
+          I've been tutoring professionally for <strong>10+ years</strong>, across subjects ranging from algebra and AP Physics to machine learning, test prep (AFOQT, SAT/ACT, ASVAB), piano, martial arts, and conversational Mandarin. My students span high schoolers prepping for college admissions to military officers pursuing advanced degrees.
+        </p>
+        <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:2rem">
+          What makes FissionLab different is simple: <em>I actually use this knowledge in the field.</em> I don't teach from a textbook — I teach from experience, and I tailor every session to where you are and where you need to be.
+        </p>
+
+        <!-- Credential Tiles -->
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px">
+          <div style="background:var(--cream);border-radius:12px;padding:16px 18px;border:1px solid var(--cream-dark)">
+            <div style="font-size:1.2rem;margin-bottom:6px">🎓</div>
+            <div style="font-weight:700;color:var(--navy);font-size:0.9rem">B.S. Physics</div>
+            <div style="font-size:0.8rem;color:var(--muted);margin-top:2px">University of California, Berkeley · 2010</div>
+          </div>
+          <div style="background:var(--cream);border-radius:12px;padding:16px 18px;border:1px solid var(--cream-dark)">
+            <div style="font-size:1.2rem;margin-bottom:6px">⚛️</div>
+            <div style="font-weight:700;color:var(--navy);font-size:0.9rem">M.S. & Ph.D. Nuclear Engineering</div>
+            <div style="font-size:0.8rem;color:var(--muted);margin-top:2px">Air Force Institute of Technology (AFIT) · ML specialization</div>
+          </div>
+          <div style="background:var(--cream);border-radius:12px;padding:16px 18px;border:1px solid var(--cream-dark)">
+            <div style="font-size:1.2rem;margin-bottom:6px">✈️</div>
+            <div style="font-weight:700;color:var(--navy);font-size:0.9rem">U.S. Air Force Officer</div>
+            <div style="font-size:0.8rem;color:var(--muted);margin-top:2px">Technical &amp; leadership roles · Veteran</div>
+          </div>
+          <div style="background:var(--cream);border-radius:12px;padding:16px 18px;border:1px solid var(--cream-dark)">
+            <div style="font-size:1.2rem;margin-bottom:6px">📚</div>
+            <div style="font-weight:700;color:var(--navy);font-size:0.9rem">10+ Years Tutoring</div>
+            <div style="font-size:0.8rem;color:var(--muted);margin-top:2px">Math · Physics · ML · Test Prep · Piano · Martial Arts · Mandarin</div>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem">
+          <a href="#booking" class="btn-primary" style="display:inline-block;text-decoration:none">Book a Free Intro Call</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
