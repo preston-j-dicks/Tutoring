@@ -580,6 +580,7 @@
     <a href="#products">Products</a>
     <a href="#packages">Packages</a>
     <a href="#blog">Blog</a>
+    <a href="resources.html">Resources</a>
     <a href="#booking" class="nav-cta">Book a Call</a>
   </div>
 </nav>
@@ -1097,11 +1098,88 @@ We just had our first session with Preston, and it was a great experience! He is
   <a href="#booking" class="btn-primary" style="font-size:1rem; padding: 16px 36px;">Book Free Intro Call →</a>
 </div>
 
+<!-- EMAIL CAPTURE BAR -->
+<div id="email-capture-bar" style="background:var(--navy);border-top:3px solid var(--gold);padding:36px 2rem;text-align:center">
+  <p style="font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--cream);margin-bottom:8px">📬 Get Free AI Tips for Solopreneurs &amp; Tutors</p>
+  <p style="color:rgba(245,240,232,0.65);font-size:0.95rem;margin-bottom:20px">Join the list. Get practical AI workflows, AFOQT prep tips, and productivity systems — free.</p>
+  <div style="display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;max-width:500px;margin:0 auto 12px">
+    <input type="email" id="email-input" placeholder="your@email.com" style="flex:1;min-width:220px;padding:12px 16px;border-radius:8px;border:1.5px solid rgba(201,168,76,0.4);background:rgba(255,255,255,0.08);color:var(--cream);font-size:0.95rem;outline:none" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='rgba(201,168,76,0.4)'">
+    <button onclick="handleEmailSignup()" style="background:var(--gold);color:var(--navy);padding:12px 24px;border-radius:8px;font-weight:700;font-size:0.95rem;border:none;cursor:pointer;white-space:nowrap;transition:background 0.2s" onmouseover="this.style.background='var(--gold-light)'" onmouseout="this.style.background='var(--gold)'">Subscribe →</button>
+  </div>
+  <p style="color:rgba(245,240,232,0.4);font-size:0.78rem;margin:0">
+    🎁 Subscribe and get <strong style="color:var(--gold)">5 Free AI Prompts</strong> instantly —
+    <a href="assets/free-ai-prompts-sampler.pdf" download style="color:var(--gold);font-weight:600">download the PDF →</a>
+  </p>
+  <!-- Replace the href below with your ConvertKit/Beehiiv embed form action URL after signup -->
+  <!-- ConvertKit signup: app.convertkit.com — free up to 1,000 subscribers -->
+  <!-- Beehiiv signup: beehiiv.com — free up to 2,500 subscribers -->
+  <div id="email-msg" style="margin-top:10px;font-size:0.88rem;min-height:20px"></div>
+</div>
+
 <footer>
   <p>© 2026 · Expert Tutoring · Built with purpose · All sessions conducted via Zoom</p>
 </footer>
 
+<!-- EXIT-INTENT POPUP -->
+<div id="exit-popup" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:9999;align-items:center;justify-content:center">
+  <div style="background:var(--navy);border:2px solid var(--gold);border-radius:16px;padding:36px 40px;max-width:480px;width:90%;text-align:center;position:relative">
+    <button onclick="dismissPopup()" style="position:absolute;top:12px;right:16px;background:none;border:none;color:rgba(245,240,232,0.4);font-size:1.4rem;cursor:pointer;line-height:1">✕</button>
+    <p style="font-size:2rem;margin-bottom:12px">🎁</p>
+    <h3 style="font-family:'DM Serif Display',serif;font-size:1.6rem;color:var(--cream);margin-bottom:10px">Before you go...</h3>
+    <p style="color:rgba(245,240,232,0.7);font-size:0.95rem;margin-bottom:20px;line-height:1.6">Grab <strong style="color:var(--gold)">5 Free AI Prompts</strong> — practical prompts for AFOQT prep, physics, business writing, meeting notes, and content creation.</p>
+    <input type="email" id="popup-email" placeholder="your@email.com" style="width:100%;padding:12px 16px;border-radius:8px;border:1.5px solid rgba(201,168,76,0.4);background:rgba(255,255,255,0.08);color:var(--cream);font-size:0.95rem;outline:none;margin-bottom:12px" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='rgba(201,168,76,0.4)'">
+    <button onclick="handlePopupSignup()" style="width:100%;background:var(--gold);color:var(--navy);padding:13px;border-radius:8px;font-weight:700;font-size:1rem;border:none;cursor:pointer;margin-bottom:10px">Send me the prompts →</button>
+    <a href="assets/free-ai-prompts-sampler.pdf" download style="display:block;color:var(--gold);font-size:0.82rem;font-weight:600;text-decoration:none">Or download the PDF directly →</a>
+    <p style="margin-top:10px;font-size:0.75rem;color:rgba(245,240,232,0.3)">No spam. Unsubscribe anytime.</p>
+  </div>
+</div>
+
 <script>
+// ── Email capture ──────────────────────────────────────────────────────────────
+function handleEmailSignup() {
+  var email = document.getElementById('email-input').value.trim();
+  var msg = document.getElementById('email-msg');
+  if (!email || !email.includes('@')) {
+    msg.innerHTML = '<span style="color:#e74c3c">Please enter a valid email address.</span>';
+    return;
+  }
+  // TODO: Replace with ConvertKit/Beehiiv form submission endpoint
+  // For now, open the PDF download and show confirmation
+  msg.innerHTML = '<span style="color:#2ecc71">Thanks! <a href="assets/free-ai-prompts-sampler.pdf" download style="color:var(--gold);font-weight:700">Download your 5 free prompts →</a></span>';
+  document.getElementById('email-input').value = '';
+}
+
+// ── Exit intent popup ─────────────────────────────────────────────────────────
+function dismissPopup() {
+  document.getElementById('exit-popup').style.display = 'none';
+  localStorage.setItem('exit-popup-dismissed', '1');
+}
+
+function handlePopupSignup() {
+  var email = document.getElementById('popup-email').value.trim();
+  if (!email || !email.includes('@')) return;
+  // TODO: Replace with ConvertKit/Beehiiv endpoint
+  dismissPopup();
+  // Trigger PDF download
+  var a = document.createElement('a');
+  a.href = 'assets/free-ai-prompts-sampler.pdf';
+  a.download = 'free-ai-prompts-sampler.pdf';
+  a.click();
+}
+
+(function() {
+  if (localStorage.getItem('exit-popup-dismissed')) return;
+  var shown = false;
+  document.addEventListener('mouseleave', function(e) {
+    if (shown) return;
+    if (e.clientY <= 5) {
+      shown = true;
+      document.getElementById('exit-popup').style.display = 'flex';
+    }
+  });
+})();
+
+// ── FAQ ────────────────────────────────────────────────────────────────────────
 function toggleFaq(el) {
   const item = el.parentElement;
   const wasOpen = item.classList.contains('open');
