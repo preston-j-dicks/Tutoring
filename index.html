@@ -1519,12 +1519,12 @@ footer a:hover{color:var(--gold)}
 
 <!-- EMAIL CAPTURE BAR -->
 <div class="email-bar">
-  <h3>📬 Get Free AI Tips for Solopreneurs &amp; Tutors</h3>
-  <p>Join the list. Get practical AI workflows, AFOQT prep tips, and productivity systems — free.</p>
-  <div class="email-row">
-    <input type="email" id="email-input" placeholder="your@email.com">
-    <button onclick="handleEmailSignup()">Subscribe →</button>
-  </div>
+  <h3>📬 Get free AI tips every week</h3>
+  <p>Join tutors, students &amp; solopreneurs who use AI to work smarter.</p>
+  <form class="email-row" action="https://formspree.io/f/REPLACE_ME" method="POST" onsubmit="handleEmailSignup(event)">
+    <input type="email" id="email-input" name="email" placeholder="your@email.com" required>
+    <button type="submit">Subscribe →</button>
+  </form>
   <p class="pdf-note">🎁 Subscribe and get <strong style="color:var(--gold)">5 Free AI Prompts</strong> instantly — <a href="assets/free-ai-prompts-sampler.pdf" download>download the PDF →</a></p>
   <div id="email-msg" style="margin-top:10px;font-size:13px;min-height:20px"></div>
 </div>
@@ -1548,10 +1548,10 @@ footer a:hover{color:var(--gold)}
     <button class="exit-popup-close" onclick="dismissPopup()" aria-label="Close">✕</button>
     <p style="font-size:2rem;margin-bottom:12px">🎁</p>
     <h3>Before you go...</h3>
-    <p>Grab <strong style="color:var(--gold)">5 Free AI Prompts</strong> — practical prompts for AFOQT prep, physics, business writing, meeting notes, and content creation.</p>
+    <p>Get <strong style="color:var(--gold)">5 free AI prompts for students &amp; solopreneurs</strong> — practical, ready-to-use prompts for studying, productivity, and content creation.</p>
     <input type="email" id="popup-email" placeholder="your@email.com">
     <button onclick="handlePopupSignup()">Send me the prompts →</button>
-    <a href="assets/free-ai-prompts-sampler.pdf" download class="direct-dl">Or download the PDF directly →</a>
+    <a href="#" onclick="dismissPopup();return false;" class="direct-dl" style="color:rgba(240,235,224,0.45);font-weight:400;font-size:12px">No thanks, I don't want free prompts</a>
     <p class="spam-note">No spam. Unsubscribe anytime.</p>
   </div>
 </div>
@@ -1737,21 +1737,42 @@ function toggleFaq(el) {
 }
 
 // ── Email capture ──────────────────────────────────────────────────────────
-function handleEmailSignup() {
+function handleEmailSignup(e) {
+  if (e) e.preventDefault();
   var email = document.getElementById('email-input').value.trim();
   var msg = document.getElementById('email-msg');
   if (!email || !email.includes('@')) {
     msg.innerHTML = '<span style="color:#e74c3c">Please enter a valid email address.</span>';
     return;
   }
-  msg.innerHTML = '<span style="color:#2ecc71">Thanks! <a href="assets/free-ai-prompts-sampler.pdf" download style="color:var(--gold);font-weight:700">Download your 5 free prompts →</a></span>';
-  document.getElementById('email-input').value = '';
+  // Submit to Formspree via fetch for SPA-style UX
+  var form = document.querySelector('.email-bar form');
+  if (form) {
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(r) {
+      if (r.ok) {
+        msg.innerHTML = '<span style="color:#2ecc71">Thanks! <a href="assets/free-ai-prompts-sampler.pdf" download style="color:var(--gold);font-weight:700">Download your 5 free prompts →</a></span>';
+        document.getElementById('email-input').value = '';
+      } else {
+        msg.innerHTML = '<span style="color:#e74c3c">Something went wrong. Please try again.</span>';
+      }
+    }).catch(function() {
+      msg.innerHTML = '<span style="color:#2ecc71">Thanks! <a href="assets/free-ai-prompts-sampler.pdf" download style="color:var(--gold);font-weight:700">Download your 5 free prompts →</a></span>';
+      document.getElementById('email-input').value = '';
+    });
+  } else {
+    msg.innerHTML = '<span style="color:#2ecc71">Thanks! <a href="assets/free-ai-prompts-sampler.pdf" download style="color:var(--gold);font-weight:700">Download your 5 free prompts →</a></span>';
+    document.getElementById('email-input').value = '';
+  }
 }
 
 // ── Exit popup ─────────────────────────────────────────────────────────────
 function dismissPopup() {
   document.getElementById('exit-popup').style.display = 'none';
-  localStorage.setItem('exit-popup-dismissed', '1');
+  localStorage.setItem('exit_popup_seen', '1');
 }
 function handlePopupSignup() {
   var email = document.getElementById('popup-email').value.trim();
@@ -1763,10 +1784,10 @@ function handlePopupSignup() {
   a.click();
 }
 (function() {
-  if (localStorage.getItem('exit-popup-dismissed')) return;
+  if (localStorage.getItem('exit_popup_seen')) return;
   var shown = false;
   document.addEventListener('mouseleave', function(e) {
-    if (shown || e.clientY > 5) return;
+    if (shown || e.clientY > 10) return;
     shown = true;
     document.getElementById('exit-popup').style.display = 'flex';
   });

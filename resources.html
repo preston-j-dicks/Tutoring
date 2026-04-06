@@ -3,9 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dr. Preston's Recommended AI Tools &amp; Resources | FissionLab</title>
+<title>Dr. Preston's Recommended Tools &amp; Resources | FissionLab</title>
 <meta name="description" content="The AI tools Dr. Preston actually uses as a solopreneur, physicist, and educator. Honest reviews, affiliate links disclosed.">
 <link rel="canonical" href="https://fissionlab.net/resources.html">
+<meta property="og:title" content="Dr. Preston's Recommended Tools &amp; Resources | FissionLab">
+<meta property="og:description" content="Every tool on this page is one Dr. Preston has personally evaluated. No fluff — just what actually works for solopreneurs, students, and educators.">
+<meta property="og:url" content="https://fissionlab.net/resources.html">
+<meta property="og:type" content="website">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -31,56 +35,70 @@
   .page-hero { background: #0d1f3c; padding: 100px 2rem 60px; text-align: center; border-bottom: 2px solid var(--gold); }
   .page-hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 4vw, 3rem); color: #ffffff; margin-bottom: 14px; }
   .page-hero p { font-size: 1.1rem; color: rgba(240,235,224,0.82); max-width: 600px; margin: 0 auto 16px; line-height: 1.6; }
-  .disclosure-bar { background: rgba(13,31,60,0.9); border-bottom: 1px solid rgba(201,168,76,0.15); padding: 10px 2rem; text-align: center; font-size: 0.82rem; color: rgba(240,235,224,0.82); }
+  .disclosure-bar { background: rgba(13,31,60,0.9); border-bottom: 1px solid rgba(201,168,76,0.15); padding: 12px 2rem; text-align: center; font-size: 0.85rem; color: rgba(240,235,224,0.85); }
+  .disclosure-bar strong { color: var(--gold); }
 
-  .resources-wrap { max-width: 920px; margin: 0 auto; padding: 60px 2rem 80px; }
+  .resources-wrap { max-width: 960px; margin: 0 auto; padding: 60px 2rem 80px; }
 
-  .category-section { margin-bottom: 56px; }
+  .category-section { margin-bottom: 60px; }
   .category-title { font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: #ffffff; margin-bottom: 6px; }
   .category-desc { font-size: 0.9rem; color: rgba(240,235,224,0.82); margin-bottom: 24px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
 
-  .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+  .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 22px; }
 
   .tool-card {
     background: rgba(13,31,60,0.8);
     border: 1.5px solid var(--border);
     border-radius: 12px;
-    padding: 20px 22px;
+    padding: 22px 24px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     transition: box-shadow 0.2s, border-color 0.2s;
   }
   .tool-card:hover { border-color: var(--gold); box-shadow: 0 4px 24px rgba(0,0,0,0.3); }
 
-  .tool-top { display: flex; justify-content: space-between; align-items: flex-start; }
-  .tool-name { font-size: 1.05rem; font-weight: 700; color: #ffffff; }
-  .tool-rating { font-size: 0.75rem; color: var(--gold); font-weight: 700; letter-spacing: 0.05em; }
+  .tool-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .tool-name { font-size: 1.1rem; font-weight: 700; color: #ffffff; }
+  .tool-rating { font-size: 0.75rem; color: var(--gold); font-weight: 700; letter-spacing: 0.05em; white-space: nowrap; }
 
-  .tool-desc { font-size: 0.9rem; color: #f0ebe0; line-height: 1.6; flex: 1; }
+  .tool-desc { font-size: 0.9rem; color: #f0ebe0; line-height: 1.6; }
+
+  .tool-why {
+    background: rgba(201,168,76,0.08);
+    border-left: 3px solid #c9a84c;
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.85rem;
+    color: rgba(240,235,224,0.88);
+    line-height: 1.55;
+    font-style: italic;
+  }
+  .tool-why strong { color: var(--gold); font-style: normal; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 3px; }
 
   .tool-tags { display: flex; flex-wrap: wrap; gap: 5px; }
   .tag { font-size: 0.72rem; font-weight: 600; padding: 2px 8px; border-radius: 20px; letter-spacing: 0.05em; }
   .tag-free { background: rgba(111,207,151,0.12); color: #6fcf97; }
   .tag-paid { background: rgba(201,168,76,0.12); color: var(--gold); }
-  .tag-topick { background: rgba(201,168,76,0.08); color: var(--gold); }
+  .tag-topick { background: rgba(201,168,76,0.08); color: var(--gold); border: 1px solid rgba(201,168,76,0.3); }
 
-  .tool-footer { display: flex; justify-content: space-between; align-items: center; }
-  .tool-commission { font-size: 0.75rem; color: rgba(240,235,224,0.75); }
+  .tool-footer { display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
+  .tool-commission { font-size: 0.74rem; color: rgba(240,235,224,0.6); }
   .tool-cta {
     display: inline-block;
     background: var(--gold);
     color: var(--navy);
-    padding: 7px 16px;
+    padding: 8px 18px;
     border-radius: 6px;
     font-weight: 700;
-    font-size: 0.82rem;
+    font-size: 0.83rem;
     text-decoration: none;
     transition: background 0.2s;
+    white-space: nowrap;
   }
   .tool-cta:hover { background: var(--gold2); color: var(--navy); }
 
-  .own-tools { background: #0d1f3c; border: 1px solid var(--border); border-radius: 16px; padding: 32px 36px; margin-bottom: 48px; }
+  .own-tools { background: #0d1f3c; border: 1px solid var(--border); border-radius: 16px; padding: 32px 36px; margin-bottom: 52px; }
   .own-tools h2 { font-family: 'DM Serif Display', serif; color: var(--gold); font-size: 1.5rem; margin-bottom: 8px; }
   .own-tools p { color: rgba(240,235,224,0.82); margin-bottom: 20px; font-size: 0.95rem; line-height: 1.6; }
   .own-tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
@@ -90,14 +108,19 @@
   .own-tool-card a { color: var(--gold); font-size: 0.82rem; font-weight: 700; text-decoration: none; }
   .own-tool-card a:hover { text-decoration: underline; }
 
-  @media (max-width: 768px) { .nav-links { display: none; } .own-tools { padding: 24px 20px; } }
+  .affiliate-guide { background: rgba(13,31,60,0.8); border: 1.5px solid var(--border); border-radius: 12px; padding: 28px 32px; margin-top: 16px; }
+  .affiliate-guide h2 { font-family: 'DM Serif Display', serif; font-size: 1.4rem; color: #ffffff; margin-bottom: 8px; }
+  .affiliate-guide p { color: rgba(240,235,224,0.82); font-size: 0.92rem; margin-bottom: 16px; line-height: 1.6; }
+  .affiliate-guide ul { font-size: 0.9rem; line-height: 2; color: #f0ebe0; margin-left: 1.2rem; }
+
+  @media (max-width: 768px) { .nav-links { display: none; } .own-tools { padding: 24px 20px; } .affiliate-guide { padding: 24px 20px; } }
 </style>
 </head>
 <body>
 
 <nav>
   <a href="https://fissionlab.net" class="nav-logo" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:#fff;font-size:1rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">
-    <span style="color:#c9a84c">⚛</span> FISSION<span style="color:#c9a84c">LAB</span>
+    <span style="color:#c9a84c">&#9883;</span> FISSION<span style="color:#c9a84c">LAB</span>
   </a>
   <div class="nav-links">
     <a href="https://fissionlab.net/#services">Tutoring</a>
@@ -111,11 +134,11 @@
 
 <div class="page-hero">
   <h1>Dr. Preston's Recommended Tools</h1>
-  <p>Every tool on this page is one I've personally evaluated. No fluff, no filler — just what actually works for solopreneurs, students, and educators in 2026.</p>
+  <p>Every tool on this page is one I've personally evaluated and use in my own workflow. No fluff, no filler — just what actually works for solopreneurs, students, and educators in 2026.</p>
 </div>
 
 <div class="disclosure-bar">
-  <strong>Affiliate Disclosure:</strong> Some links below are affiliate links. I earn a small commission if you sign up — at no extra cost to you. I only list tools I'd recommend to a friend.
+  <strong>Affiliate Disclosure:</strong> Some links below are affiliate links. I only recommend tools I personally use. I earn a small commission if you sign up — at no extra cost to you.
 </div>
 
 <div class="resources-wrap">
@@ -123,80 +146,23 @@
   <!-- Own Products First -->
   <div class="own-tools">
     <h2>Built by Dr. Preston</h2>
-    <p>These are tools I built personally. They're free to try and the ones I use in my own workflow.</p>
+    <p>These are tools I built personally. They're free to try and the ones I use in my own workflow every day.</p>
     <div class="own-tools-grid">
       <div class="own-tool-card">
         <div class="otc-name">RepurposeAI</div>
         <div class="otc-desc">Turn one blog post into tweets, LinkedIn, newsletter, Instagram, video script, and thread — simultaneously.</div>
-        <a href="https://huggingface.co/spaces/Dr-P/RepurposeAI" target="_blank">Try free →</a>
+        <a href="https://huggingface.co/spaces/Dr-P/RepurposeAI" target="_blank">Try free &#8594;</a>
       </div>
       <div class="own-tool-card">
         <div class="otc-name">ClearMinutes AI</div>
         <div class="otc-desc">Paste any meeting transcript. Get summary, action items, decisions, follow-up email, and next agenda in 20 seconds.</div>
-        <a href="https://huggingface.co/spaces/Dr-P/ClearMinutes-AI" target="_blank">Try free →</a>
+        <a href="https://huggingface.co/spaces/Dr-P/ClearMinutes-AI" target="_blank">Try free &#8594;</a>
       </div>
       <div class="own-tool-card">
         <div class="otc-name">AI Workflow OS</div>
         <div class="otc-desc">Complete Notion system for AI-powered solopreneurs. Income tracker, content calendar, goal system, dashboards.</div>
-        <a href="https://prestonj.gumroad.com/l/aynnhp" target="_blank">Get for $49 →</a>
+        <a href="https://prestonj.gumroad.com/l/aynnhp" target="_blank">Get for $49 &#8594;</a>
       </div>
-    </div>
-  </div>
-
-  <!-- AI Writing & Content -->
-  <div class="category-section">
-    <div class="category-title">AI Writing &amp; Content</div>
-    <div class="category-desc">Tools for creating and repurposing written content faster.</div>
-    <div class="tools-grid">
-
-      <div class="tool-card">
-        <div class="tool-top">
-          <span class="tool-name">Jasper AI</span>
-          <span class="tool-rating">★★★★★</span>
-        </div>
-        <div class="tool-desc">The most mature AI writer for marketing copy — ads, landing pages, email sequences. Brand voice training is genuinely useful.</div>
-        <div class="tool-tags">
-          <span class="tag tag-paid">Paid</span>
-          <span class="tag tag-topick">Top Pick</span>
-        </div>
-        <div class="tool-footer">
-          <span class="tool-commission">25-30% recurring affiliate</span>
-          <a href="[JASPER-AFFILIATE-LINK]" class="tool-cta" target="_blank">Try free →</a>
-        </div>
-      </div>
-
-      <div class="tool-card">
-        <div class="tool-top">
-          <span class="tool-name">Writesonic</span>
-          <span class="tool-rating">★★★★☆</span>
-        </div>
-        <div class="tool-desc">Strong for SEO-focused content and includes a chatbot builder (Botsonic). 30% lifetime recurring affiliate commission.</div>
-        <div class="tool-tags">
-          <span class="tag tag-free">Free tier</span>
-          <span class="tag tag-paid">Paid plans</span>
-        </div>
-        <div class="tool-footer">
-          <span class="tool-commission">30% lifetime recurring</span>
-          <a href="[WRITESONIC-AFFILIATE-LINK]" class="tool-cta" target="_blank">Try free →</a>
-        </div>
-      </div>
-
-      <div class="tool-card">
-        <div class="tool-top">
-          <span class="tool-name">ElevenLabs</span>
-          <span class="tool-rating">★★★★★</span>
-        </div>
-        <div class="tool-desc">Best AI voice I've heard. Convert articles and newsletters to audio. Voice cloning is remarkable for anyone building a personal brand.</div>
-        <div class="tool-tags">
-          <span class="tag tag-free">Free tier</span>
-          <span class="tag tag-topick">Top Pick</span>
-        </div>
-        <div class="tool-footer">
-          <span class="tool-commission">Affiliate program</span>
-          <a href="[ELEVENLABS-AFFILIATE-LINK]" class="tool-cta" target="_blank">Try free →</a>
-        </div>
-      </div>
-
     </div>
   </div>
 
@@ -208,33 +174,130 @@
 
       <div class="tool-card">
         <div class="tool-top">
-          <span class="tool-name">Notion</span>
-          <span class="tool-rating">★★★★★</span>
+          <span class="tool-name">&#128196; Notion</span>
+          <span class="tool-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         </div>
-        <div class="tool-desc">The best all-in-one workspace for solopreneurs. Databases, notes, projects, wikis — all in one place. I run my whole business here.</div>
+        <div class="tool-desc">Best workspace for solopreneurs. Databases, notes, projects, wikis — all in one place. I run my whole business here.</div>
+        <div class="tool-why">
+          <strong>Why I use it</strong>
+          I use Notion for session planning and student tracking. Every tutoring client has their own database — session notes, goals, progress. Nothing falls through the cracks.
+        </div>
         <div class="tool-tags">
           <span class="tag tag-free">Free plan</span>
           <span class="tag tag-topick">Top Pick</span>
         </div>
         <div class="tool-footer">
           <span class="tool-commission">Affiliate program</span>
-          <a href="[NOTION-AFFILIATE-LINK]" class="tool-cta" target="_blank">Try free →</a>
+          <a href="[NOTION-AFFILIATE-LINK]" class="tool-cta" target="_blank">Try free &#8594;</a>
         </div>
       </div>
 
       <div class="tool-card">
         <div class="tool-top">
-          <span class="tool-name">HubSpot CRM</span>
-          <span class="tool-rating">★★★★★</span>
+          <span class="tool-name">&#128200; HubSpot CRM</span>
+          <span class="tool-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         </div>
-        <div class="tool-desc">The free CRM that's actually free. Contact management, deal tracking, email sequences, and meeting scheduler at zero cost. The best deal in SaaS.</div>
+        <div class="tool-desc">Best free CRM — actually free. Contact management, deal tracking, email sequences, and meeting scheduler at zero cost.</div>
+        <div class="tool-why">
+          <strong>Why I use it</strong>
+          Tracks my student pipeline. Every lead, inquiry, and follow-up lives in HubSpot. The 180-day cookie and 30% recurring commission makes it one of the best affiliate programs in SaaS too.
+        </div>
         <div class="tool-tags">
           <span class="tag tag-free">Forever free</span>
           <span class="tag tag-topick">Top Pick</span>
         </div>
         <div class="tool-footer">
           <span class="tool-commission">30% recurring, 180-day cookie</span>
-          <a href="[HUBSPOT-AFFILIATE-LINK]" class="tool-cta" target="_blank">Try free →</a>
+          <a href="[HUBSPOT-AFFILIATE-LINK]" class="tool-cta" target="_blank">Try free &#8594;</a>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-top">
+          <span class="tool-name">&#128197; Calendly</span>
+          <span class="tool-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </div>
+        <div class="tool-desc">Best scheduling tool. Set your availability once, send a link, and let clients book without the back-and-forth.</div>
+        <div class="tool-why">
+          <strong>Why I use it</strong>
+          Every student books through Calendly. It's the single biggest time-saver in my business — I spend zero time on scheduling logistics.
+        </div>
+        <div class="tool-tags">
+          <span class="tag tag-free">Free plan</span>
+          <span class="tag tag-topick">Top Pick</span>
+        </div>
+        <div class="tool-footer">
+          <span class="tool-commission">Affiliate program</span>
+          <a href="[CALENDLY-AFFILIATE-LINK]" class="tool-cta" target="_blank">Try free &#8594;</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- AI Writing & Content -->
+  <div class="category-section">
+    <div class="category-title">AI Writing &amp; Content</div>
+    <div class="category-desc">Tools for creating and repurposing written content faster.</div>
+    <div class="tools-grid">
+
+      <div class="tool-card">
+        <div class="tool-top">
+          <span class="tool-name">&#9997;&#65039; Jasper AI</span>
+          <span class="tool-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </div>
+        <div class="tool-desc">Best AI writer — the most mature AI writing platform for marketing copy, landing pages, and email sequences. Brand voice training is genuinely useful.</div>
+        <div class="tool-why">
+          <strong>Why I use it</strong>
+          I use Jasper for creating study materials and content. When I need to produce a structured lesson explainer or a well-formatted blog draft fast, Jasper consistently delivers better output than generic prompting.
+        </div>
+        <div class="tool-tags">
+          <span class="tag tag-paid">Paid</span>
+          <span class="tag tag-topick">Top Pick</span>
+        </div>
+        <div class="tool-footer">
+          <span class="tool-commission">25-30% recurring affiliate</span>
+          <a href="[JASPER-AFFILIATE-LINK]" class="tool-cta" target="_blank">Try free &#8594;</a>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-top">
+          <span class="tool-name">&#9997;&#65039; Writesonic</span>
+          <span class="tool-rating">&#9733;&#9733;&#9733;&#9733;&#9788;</span>
+        </div>
+        <div class="tool-desc">Best for content repurposing. Strong for SEO-focused content and includes a chatbot builder (Botsonic). 30% lifetime recurring affiliate commission.</div>
+        <div class="tool-why">
+          <strong>Why I use it</strong>
+          Powers my RepurposeAI workflow. When I have a longer-form piece that needs to be atomized into social content and email copy, Writesonic handles the SEO optimization layer better than most tools.
+        </div>
+        <div class="tool-tags">
+          <span class="tag tag-free">Free tier</span>
+          <span class="tag tag-paid">Paid plans</span>
+        </div>
+        <div class="tool-footer">
+          <span class="tool-commission">30% lifetime recurring</span>
+          <a href="[WRITESONIC-AFFILIATE-LINK]" class="tool-cta" target="_blank">Try free &#8594;</a>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-top">
+          <span class="tool-name">&#127908; ElevenLabs</span>
+          <span class="tool-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </div>
+        <div class="tool-desc">Best AI voice generation. Convert articles and newsletters to audio. Voice cloning is remarkable for anyone building a personal brand.</div>
+        <div class="tool-why">
+          <strong>Why I use it</strong>
+          I use ElevenLabs for creating audio study materials. Some students retain information better through audio review — ElevenLabs lets me convert written explanations into natural-sounding narration in minutes.
+        </div>
+        <div class="tool-tags">
+          <span class="tag tag-free">Free tier</span>
+          <span class="tag tag-topick">Top Pick</span>
+        </div>
+        <div class="tool-footer">
+          <span class="tool-commission">Affiliate program</span>
+          <a href="[ELEVENLABS-AFFILIATE-LINK]" class="tool-cta" target="_blank">Try free &#8594;</a>
         </div>
       </div>
 
@@ -249,48 +312,57 @@
 
       <div class="tool-card">
         <div class="tool-top">
-          <span class="tool-name">Thinkific</span>
-          <span class="tool-rating">★★★★☆</span>
+          <span class="tool-name">&#127891; Thinkific</span>
+          <span class="tool-rating">&#9733;&#9733;&#9733;&#9733;&#9788;</span>
         </div>
-        <div class="tool-desc">Best platform for launching your first online course. Free plan with no transaction fees. Clean student experience, integrated community, and scales well.</div>
+        <div class="tool-desc">Best platform for online courses. Free plan with no transaction fees. Clean student experience, integrated community, and scales well.</div>
+        <div class="tool-why">
+          <strong>Why I use it</strong>
+          My plan for scaling beyond 1:1 tutoring. When I launch my AFOQT Mastery and ML for Scientists courses, they'll live on Thinkific. The no-transaction-fee free plan is the best starting point for course creators.
+        </div>
         <div class="tool-tags">
           <span class="tag tag-free">Free to start</span>
         </div>
         <div class="tool-footer">
           <span class="tool-commission">30% lifetime recurring, 90-day cookie</span>
-          <a href="[THINKIFIC-AFFILIATE-LINK]" class="tool-cta" target="_blank">Try free →</a>
+          <a href="[THINKIFIC-AFFILIATE-LINK]" class="tool-cta" target="_blank">Try free &#8594;</a>
         </div>
       </div>
 
       <div class="tool-card">
         <div class="tool-top">
-          <span class="tool-name">Gumroad</span>
-          <span class="tool-rating">★★★★☆</span>
+          <span class="tool-name">&#128722; Gumroad</span>
+          <span class="tool-rating">&#9733;&#9733;&#9733;&#9733;&#9788;</span>
         </div>
-        <div class="tool-desc">Dead simple for selling PDFs, templates, and digital downloads. Zero monthly fee — they take a percentage per sale. I use it for my Notion templates.</div>
+        <div class="tool-desc">Dead simple for selling PDFs, templates, and digital downloads. Zero monthly fee — they take a percentage per sale.</div>
+        <div class="tool-why">
+          <strong>Why I use it</strong>
+          I use Gumroad for my Notion templates and digital products. The zero-upfront-cost model is perfect when you're starting out — you only pay when you make a sale.
+        </div>
         <div class="tool-tags">
           <span class="tag tag-free">No monthly fee</span>
         </div>
         <div class="tool-footer">
           <span class="tool-commission">No formal affiliate program</span>
-          <a href="https://gumroad.com" class="tool-cta" target="_blank">Try free →</a>
+          <a href="https://gumroad.com" class="tool-cta" target="_blank">Try free &#8594;</a>
         </div>
       </div>
 
     </div>
   </div>
 
-  <!-- Affiliate Signup Guide -->
-  <div style="background:rgba(13,31,60,0.8);border:1.5px solid var(--border);border-radius:12px;padding:28px 32px;margin-top:16px">
-    <h2 style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:#ffffff;margin-bottom:8px">Want to earn affiliate commissions on these tools?</h2>
-    <p style="color:rgba(240,235,224,0.82);font-size:0.92rem;margin-bottom:16px;line-height:1.6">These are the affiliate program sign-up pages for each tool. Most approve immediately or within a few business days.</p>
-    <ul style="font-size:0.9rem;line-height:2;color:#f0ebe0;margin-left:1.2rem">
+  <!-- Affiliate Program Guide -->
+  <div class="affiliate-guide">
+    <h2>Want to earn affiliate commissions on these tools?</h2>
+    <p>These are the affiliate program sign-up pages for each tool. Most approve immediately or within a few business days.</p>
+    <ul>
       <li>Notion: <strong style="color:#f0ebe0">notion.so/affiliates</strong></li>
       <li>Jasper AI: <strong style="color:#f0ebe0">jasper.ai/affiliates</strong> (25-30% recurring)</li>
       <li>Writesonic: <strong style="color:#f0ebe0">writesonic.com/affiliates</strong> (30% lifetime recurring)</li>
       <li>ElevenLabs: <strong style="color:#f0ebe0">elevenlabs.io/affiliates</strong></li>
       <li>HubSpot: <strong style="color:#f0ebe0">hubspot.com/partners/affiliates</strong> (30% recurring, 180-day cookie)</li>
       <li>Thinkific: <strong style="color:#f0ebe0">thinkific.com/affiliates</strong> (30% lifetime recurring, 90-day cookie)</li>
+      <li>Calendly: <strong style="color:#f0ebe0">calendly.com/affiliate-program</strong></li>
     </ul>
   </div>
 
@@ -304,7 +376,7 @@
     <a href="https://fissionlab.net/resources.html" style="color:rgba(201,168,76,0.7);text-decoration:none;font-size:11px;letter-spacing:0.05em;text-transform:uppercase">Resources</a>
     <a href="mailto:preston.j.dicks@gmail.com" style="color:rgba(201,168,76,0.7);text-decoration:none;font-size:11px;letter-spacing:0.05em;text-transform:uppercase">Contact</a>
   </div>
-  <p>© 2026 FissionLab · Expert Tutoring · All sessions via Zoom</p>
+  <p>&#169; 2026 FissionLab &middot; Expert Tutoring &middot; All sessions via Zoom</p>
 </footer>
 </body>
 </html>
