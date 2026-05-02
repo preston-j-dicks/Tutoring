@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free AFOQT Practice Questions — 60 Original Problems | FissionLab</title>
+<meta name="description" content="60 original AFOQT-style practice questions across all 12 subtests — Verbal Analogies, Math, Aviation, Instrument Comprehension, and more. Free answer key included.">
+<meta property="og:title" content="Free AFOQT Practice Questions (60) — FissionLab">
+<meta property="og:url" content="https://fissionlab.net/community/practice/">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{--navy:#0a1628;--navy2:#0d1f3c;--gold:#c9a84c;--gold2:#e8c97a;--white:#ffffff;--cream:#f0ebe0;--dim:rgba(240,235,224,0.82);--border:rgba(201,168,76,0.15);--border2:rgba(201,168,76,0.08);}
+body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--navy);color:var(--cream);overflow-x:hidden;font-size:16px;line-height:1.75;}
+nav{position:sticky;top:0;z-index:200;background:rgba(10,22,40,0.97);border-bottom:1px solid var(--border);height:64px;padding:0 8vw;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--white);font-size:1.05rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;}
+.nav-atom-core{color:var(--gold);font-size:16px;}
+.nav-logo-text span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{font-size:0.78rem;font-weight:500;color:rgba(240,235,224,0.72);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--white)}
+.nav-cta{background:var(--gold)!important;color:var(--navy)!important;padding:8px 20px!important;border-radius:6px;font-weight:700!important;}
+.nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;color:var(--cream);}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--cream);margin:5px 0;}
+.nav-overlay{display:none;position:fixed;inset:0;z-index:199;background:rgba(10,22,40,0.97);flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;}
+.nav-overlay.open{display:flex}
+.nav-overlay a{font-size:1.5rem;font-weight:600;color:var(--cream);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;}
+.nav-overlay a:hover{color:var(--gold)}
+.nav-overlay-close{position:absolute;top:24px;right:8vw;background:none;border:none;cursor:pointer;color:var(--cream);font-size:2rem;}
+footer{background:#060f1c;border-top:1px solid rgba(201,168,76,0.1);padding:48px 8vw;text-align:center;font-size:13px;color:rgba(240,235,224,0.35);}
+footer a{color:rgba(201,168,76,0.7);text-decoration:none;}footer a:hover{color:var(--gold)}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:24px;margin-bottom:20px;}
+.footer-links a{font-size:12px;letter-spacing:0.05em;text-transform:uppercase;}
+.page-hero{padding:90px 8vw 56px;max-width:1100px;margin:0 auto;}
+.hero-tag{display:inline-block;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+h1{font-family:Georgia,serif;font-size:clamp(32px,5vw,58px);font-weight:700;color:var(--white);line-height:1.1;margin-bottom:16px;}
+h1 em{color:var(--gold);font-style:normal}
+.hero-sub{font-size:clamp(14px,1.6vw,17px);color:var(--dim);max-width:600px;margin-bottom:20px;}
+.main-content{padding:0 8vw 80px;max-width:1100px;margin:0 auto;}
+.subtest-block{margin-bottom:56px;}
+.st-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid rgba(201,168,76,0.2);}
+h2.st-title{font-family:Georgia,serif;font-size:1.35rem;color:var(--gold);}
+.st-meta{font-size:12px;color:rgba(240,235,224,0.4);}
+.question{background:rgba(13,31,60,0.5);border:1px solid var(--border2);border-radius:10px;padding:22px 24px;margin-bottom:14px;}
+.q-num{font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(201,168,76,0.5);margin-bottom:8px;}
+.q-text{font-size:15px;color:var(--white);margin-bottom:14px;font-weight:500;}
+.q-passage{font-size:14px;color:var(--dim);background:rgba(0,0,0,0.2);border-left:3px solid rgba(201,168,76,0.3);padding:12px 16px;border-radius:0 6px 6px 0;margin-bottom:14px;font-style:italic;}
+.options{list-style:none;display:grid;gap:6px;}
+.options li{font-size:14px;color:var(--dim);padding:8px 14px;border:1px solid rgba(255,255,255,0.05);border-radius:6px;cursor:default;}
+.options li span{color:var(--gold);font-weight:700;margin-right:8px;}
+.likert-note{font-size:12px;color:rgba(240,235,224,0.35);font-style:italic;margin-top:8px;}
+.table-wrap{overflow-x:auto;margin-bottom:14px;}
+table.reading-table{border-collapse:collapse;font-size:13px;}
+table.reading-table th{background:rgba(201,168,76,0.1);color:var(--gold);padding:8px 16px;border:1px solid rgba(201,168,76,0.15);text-align:center;}
+table.reading-table td{padding:7px 16px;border:1px solid rgba(255,255,255,0.06);text-align:center;color:var(--dim);}
+.adsense-unit{background:rgba(255,255,255,0.02);border:1px dashed rgba(201,168,76,0.1);border-radius:8px;padding:48px 16px;text-align:center;color:rgba(240,235,224,0.15);font-size:12px;margin:32px 0;}
+.discord-cta-block{background:rgba(88,101,242,0.08);border:1px solid rgba(88,101,242,0.3);border-radius:12px;padding:36px;text-align:center;margin:48px 0;}
+.discord-cta-block h3{font-family:Georgia,serif;font-size:1.4rem;color:var(--white);margin-bottom:10px;}
+.discord-cta-block p{color:var(--dim);margin-bottom:22px;}
+.btn-discord{display:inline-block;background:#5865f2;color:#fff;padding:13px 32px;border-radius:7px;font-weight:700;font-size:15px;text-decoration:none;transition:background 0.2s;}
+.btn-discord:hover{background:#4752c4;}
+.book-strip{background:rgba(201,168,76,0.04);border:1px solid rgba(201,168,76,0.1);border-radius:10px;padding:24px;margin:40px 0;display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+.book-strip-text{flex:1;min-width:220px;}
+.book-strip-text h4{font-family:Georgia,serif;font-size:1rem;color:var(--white);margin-bottom:6px;}
+.book-strip-text p{font-size:13px;color:var(--dim);}
+.book-strip-links{display:flex;gap:10px;flex-wrap:wrap;}
+.book-link{display:inline-block;background:var(--gold);color:var(--navy);padding:8px 18px;border-radius:5px;font-size:13px;font-weight:700;text-decoration:none;transition:background 0.2s;}
+.book-link:hover{background:var(--gold2);}
+.answer-key-toggle{background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.2);border-radius:10px;padding:20px 28px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;margin-top:60px;user-select:none;}
+.answer-key-toggle h3{font-family:Georgia,serif;font-size:1.2rem;color:var(--gold);}
+.answer-key-toggle span{font-size:1.3rem;color:var(--gold);transition:transform 0.2s;}
+.answer-key-toggle.open span{transform:rotate(-180deg);}
+.answer-key{display:none;background:rgba(13,31,60,0.6);border:1px solid rgba(201,168,76,0.1);border-top:none;border-radius:0 0 10px 10px;padding:28px;}
+.answer-key.open{display:block;}
+.ak-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;}
+.ak-item{font-size:13px;color:var(--dim);padding:6px 10px;background:rgba(0,0,0,0.2);border-radius:5px;}
+.ak-item strong{color:var(--gold);}
+.ak-section{margin-bottom:20px;}
+.ak-section h4{font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(201,168,76,0.5);margin-bottom:8px;}
+.beehiiv-bar{background:rgba(201,168,76,0.05);border-top:1px solid rgba(201,168,76,0.1);padding:32px 8vw;text-align:center;}
+.beehiiv-bar p{font-size:14px;color:var(--dim);margin-bottom:14px;}
+.beehiiv-bar a{display:inline-block;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.35);color:var(--gold);padding:10px 28px;border-radius:6px;text-decoration:none;font-size:14px;font-weight:600;}
+.beehiiv-bar a:hover{background:rgba(201,168,76,0.22);}
+@media(max-width:768px){.nav-links{display:none}.nav-hamburger{display:block}.page-hero{padding:70px 5vw 40px;}.main-content{padding:0 5vw 60px;}.st-header{flex-direction:column;align-items:flex-start;gap:4px;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <span class="nav-atom-core">⚛</span>
+    <span class="nav-logo-text">FISSION<span>LAB</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="/#services">Tutoring</a>
+    <a href="/community/">Community</a>
+    <a href="/community/resources/">Resources</a>
+    <a href="/community/practice/" class="active">Practice</a>
+    <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" class="nav-cta">Book Free Intro</a>
+  </div>
+  <button class="nav-hamburger" onclick="document.getElementById('nov').classList.add('open')" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-overlay" id="nov">
+  <button class="nav-overlay-close" onclick="document.getElementById('nov').classList.remove('open')" aria-label="Close">✕</button>
+  <a href="/">Home</a>
+  <a href="/community/">Community</a>
+  <a href="/community/resources/">Resources</a>
+  <a href="/community/practice/">Practice</a>
+  <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" style="color:var(--gold)">Book Free Intro →</a>
+</div>
+
+<main>
+  <div class="page-hero">
+    <span class="hero-tag">60 Original Questions · All 12 Subtests</span>
+    <h1>Free AFOQT<br><em>Practice Problems</em></h1>
+    <p class="hero-sub">5 original questions per subtest — written from scratch to reflect AFOQT format and difficulty. Answer key at the bottom.</p>
+    <p style="font-size:13px;color:rgba(240,235,224,0.35);">⚠️ These are original practice questions for study purposes. They are not from any official AFOQT form.</p>
+  </div>
+
+  <div class="adsense-unit" data-ad-slot="placeholder" style="margin:0 8vw;">Advertisement</div>
+
+  <div class="main-content">
+
+    <!-- 1. VERBAL ANALOGIES -->
+    <div class="subtest-block">
+      <div class="st-header">
+        <h2 class="st-title">1 · Verbal Analogies</h2>
+        <span class="st-meta">25 Q · 8 min on actual test</span>
+      </div>
+      <div class="question">
+        <div class="q-num">Question 1</div>
+        <div class="q-text">ATOM : MOLECULE :: LETTER : ___</div>
+        <ul class="options"><li><span>A</span>Word</li><li><span>B</span>Sentence</li><li><span>C</span>Paragraph</li><li><span>D</span>Dictionary</li><li><span>E</span>Language</li></ul>
+      </div>
+      <div class="question">
+        <div class="q-num">Question 2</div>
+        <div class="q-text">THRUST : ENGINE :: LIFT : ___</div>
+        <ul class="options"><li><span>A</span>Rudder</li><li><span>B</span>Aileron</li><li><span>C</span>Wing</li><li><span>D</span>Fuselage</li><li><span>E</span>Stabilizer</li></ul>
+      </div>
+      <div class="question">
+        <div class="q-num">Question 3</div>
+        <div class="q-text">PILOT : COCKPIT :: SURGEON : ___</div>
+        <ul class="options"><li><span>A</span>Hospital</li><li><span>B</span>Clinic</li><li><span>C</span>Operating Room</li><li><span>D</span>Ward</li><li><span>E</span>Office</li></ul>
+      </div>
+      <div class="question">
+        <div class="q-num">Question 4</div>
+        <div class="q-text">FISSION : NUCLEUS :: COMBUSTION : ___</div>
+        <ul class="options"><li><span>A</span>Water</li><li><span>B</span>Metal</li><li><span>C</span>Fuel</li><li><span>D</span>Air</li><li><span>E</span>Smoke</li></ul>
+      </div>
+      <div class="question">
+        <div class="q-num">Question 5</div>
+        <div class="q-text">ALTITUDE : FEET :: HEADING : ___</div>
+        <ul class="options"><li><span>A</span>Knots</li><li><span>B</span>Degrees</li><li><span>C</span>Meters</li><li><span>D</span>Pounds</li><li><span>E</span>Mach</li></ul>
+      </div>
+    </div>
+
+    <!-- 2. ARITHMETIC REASONING -->
+    <div class="subtest-block">
+      <div class="st-header">
+        <h2 class="st-title">2 · Arithmetic Reasoning</h2>
+        <span class="st-meta">25 Q · 29 min on actual test</span>
+      </div>
+      <div class="question">
+        <div class="q-num">Question 6</div>
+        <div class="q-text">A flight from base Alpha to base Bravo is 420 nautical miles. An aircraft flies at 280 knots. How many minutes does the flight take?</div>
+        <ul class="options"><li><span>A</span>80 minutes</li><li><span>B</span>90 minutes</li><li><span>C</span>100 minutes</li><li><span>D</span>105 minutes</li><li><span>E</span>120 minutes</li></ul>
+      </div>
+      <div class="question">
+        <div class="q-num">Question 7</div>
+        <div class="q-text">An officer earns a monthly base pay of $3,800 plus a housing allowance equal to 18% of base pay. What is the total monthly compensation?</div>
+        <ul class="options"><li><span>A</span>$4,136</li><li><span>B</span>$4,284</li><li><span>C</span>$4,484</li><li><span>D</span>$4,550</li><li><span>E</span>$5,120</li></ul>
+      </div>
+      <div class="question">
+        <div class="q-num">Question 8</div>
+        <div class="q-text">A squadron has 48 aircraft. After 25% are grounded for maintenance, how many remain available?</div>
+        <ul class="options"><li><span>A</span>30</li><li><span>B</span>34</li><li><span>C</span>36</li><li><span>D</span>38</li><li><span>E</span>40</li></ul>
+      </div>
+      <div class="question">
+        <div class="q-num">Question 9</div>
+        <div class="q-text">A fuel tank holds 1,200 gallons at full capacity. If the aircraft burns 8 gallons per minute, how many hours of flight remain when the tank is ¾ full?</div>
+        <ul class="options"><li><span>A</span>1.75 hr</li><li><span>B</span>1.875 hr</li><li><span>C</span>2.0 hr</li><li><span>D</span>2.25 hr</li><li><span>E</span>2.5 hr</li></ul>
+      </div>
+      <div class="question">
+        <div class="q-num">Question 10</div>
+        <div class="q-text">If a pilot earns $52 per flight hour and flies 180 hours in a year, what is the annual flight pay?</div>
+        <ul class="options"><li><span>A</span>$9,360</li><li><span>B</span>$10,800</li><li><span>C</span>$11,520</li><li><span>D</span>$12,480</li><li><span>E</span>$13,200</li></ul>
+      </div>
+    </div>
+
+    <!-- 3. WORD KNOWLEDGE -->
+    <div class="subtest-block">
+      <div class="st-header">
+        <h2 class="st-title">3 · Word Knowledge</h2>
+        <span class="st-meta">25 Q · 5 min on actual test</span>
+      </div>
+      <div class="question"><div class="q-num">Question 11</div><div class="q-text">TENACIOUS most nearly means:</div><ul class="options"><li><span>A</span>Fragile</li><li><span>B</span>Persistent</li><li><span>C</span>Transparent</li><li><span>D</span>Cautious</li><li><span>E</span>Hostile</li></ul></div>
+      <div class="question"><div class="q-num">Question 12</div><div class="q-text">PROXIMITY most nearly means:</div><ul class="options"><li><span>A</span>Distance</li><li><span>B</span>Similarity</li><li><span>C</span>Nearness</li><li><span>D</span>Timing</li><li><span>E</span>Precision</li></ul></div>
+      <div class="question"><div class="q-num">Question 13</div><div class="q-text">ATTENUATE most nearly means:</div><ul class="options"><li><span>A</span>To strengthen</li><li><span>B</span>To weaken or reduce</li><li><span>C</span>To accelerate</li><li><span>D</span>To combine</li><li><span>E</span>To measure</li></ul></div>
+      <div class="question"><div class="q-num">Question 14</div><div class="q-text">STOIC most nearly means:</div><ul class="options"><li><span>A</span>Emotional</li><li><span>B</span>Logical</li><li><span>C</span>Indifferent to pleasure or pain</li><li><span>D</span>Ambitious</li><li><span>E</span>Methodical</li></ul></div>
+      <div class="question"><div class="q-num">Question 15</div><div class="q-text">EXPEDITE most nearly means:</div><ul class="options"><li><span>A</span>To delay</li><li><span>B</span>To explain</li><li><span>C</span>To speed up</li><li><span>D</span>To review</li><li><span>E</span>To cancel</li></ul></div>
+    </div>
+
+    <div class="adsense-unit" data-ad-slot="placeholder">Advertisement</div>
+
+    <!-- 4. MATH KNOWLEDGE -->
+    <div class="subtest-block">
+      <div class="st-header">
+        <h2 class="st-title">4 · Math Knowledge</h2>
+        <span class="st-meta">25 Q · 22 min on actual test</span>
+      </div>
+      <div class="question"><div class="q-num">Question 16</div><div class="q-text">Solve for x: &nbsp; 3x + 7 = 22</div><ul class="options"><li><span>A</span>3</li><li><span>B</span>4</li><li><span>C</span>5</li><li><span>D</span>6</li><li><span>E</span>7</li></ul></div>
+      <div class="question"><div class="q-num">Question 17</div><div class="q-text">What is the area of a triangle with base 12 cm and height 9 cm?</div><ul class="options"><li><span>A</span>54 cm²</li><li><span>B</span>72 cm²</li><li><span>C</span>108 cm²</li><li><span>D</span>48 cm²</li><li><span>E</span>63 cm²</li></ul></div>
+      <div class="question"><div class="q-num">Question 18</div><div class="q-text">Simplify: &nbsp; (4x²)(3x³)</div><ul class="options"><li><span>A</span>7x⁵</li><li><span>B</span>12x⁵</li><li><span>C</span>7x⁶</li><li><span>D</span>12x⁶</li><li><span>E</span>12x²·⁵</li></ul></div>
+      <div class="question"><div class="q-num">Question 19</div><div class="q-text">A circle has a radius of 6. What is its circumference? (Use π ≈ 3.14)</div><ul class="options"><li><span>A</span>18.84</li><li><span>B</span>25.12</li><li><span>C</span>37.68</li><li><span>D</span>113.04</li><li><span>E</span>56.52</li></ul></div>
+      <div class="question"><div class="q-num">Question 20</div><div class="q-text">If log₂(x) = 4, what is x?</div><ul class="options"><li><span>A</span>8</li><li><span>B</span>12</li><li><span>C</span>16</li><li><span>D</span>32</li><li><span>E</span>64</li></ul></div>
+    </div>
+
+    <!-- 5. READING COMPREHENSION -->
+    <div class="subtest-block">
+      <div class="st-header">
+        <h2 class="st-title">5 · Reading Comprehension</h2>
+        <span class="st-meta">25 Q · 38 min on actual test</span>
+      </div>
+      <p class="q-passage">The four forces acting on an aircraft in steady, level flight are thrust, drag, lift, and weight. Thrust is the forward force produced by the engine; drag is the rearward resistance from the air. Lift is generated as air flows over and under the wings at different speeds, creating a pressure differential. Weight, the pull of gravity, acts downward through the center of mass. For steady, level flight, thrust must equal drag and lift must equal weight. When these forces are balanced, the aircraft maintains constant altitude and airspeed. Pilots control the balance by adjusting engine power and control surfaces.</p>
+      <div class="question"><div class="q-num">Question 21</div><div class="q-text">According to the passage, what must be true for an aircraft to maintain steady, level flight?</div><ul class="options"><li><span>A</span>Thrust must exceed drag</li><li><span>B</span>Lift must equal weight and thrust must equal drag</li><li><span>C</span>Weight must be greater than lift</li><li><span>D</span>Drag must equal weight</li><li><span>E</span>Thrust must always be greater than lift</li></ul></div>
+      <div class="question"><div class="q-num">Question 22</div><div class="q-text">What generates lift on an aircraft, according to the passage?</div><ul class="options"><li><span>A</span>The engine</li><li><span>B</span>The rudder</li><li><span>C</span>Air pressure differential across the wings</li><li><span>D</span>The weight of the aircraft</li><li><span>E</span>Forward thrust</li></ul></div>
+      <div class="question"><div class="q-num">Question 23</div><div class="q-text">Which of the following is NOT one of the four forces described in the passage?</div><ul class="options"><li><span>A</span>Thrust</li><li><span>B</span>Lift</li><li><span>C</span>Torque</li><li><span>D</span>Drag</li><li><span>E</span>Weight</li></ul></div>
+      <div class="question"><div class="q-num">Question 24</div><div class="q-text">As used in the passage, "pressure differential" most nearly means:</div><ul class="options"><li><span>A</span>A change in temperature</li><li><span>B</span>A difference in air pressure</li><li><span>C</span>Equal air pressure on both sides</li><li><span>D</span>An increase in thrust</li><li><span>E</span>A reduction in drag</li></ul></div>
+      <div class="question"><div class="q-num">Question 25</div><div class="q-text">The passage states that pilots control the balance of forces by:</div><ul class="options"><li><span>A</span>Adjusting fuel mixture only</li><li><span>B</span>Changing aircraft weight</li><li><span>C</span>Adjusting engine power and control surfaces</li><li><span>D</span>Reducing drag manually</li><li><span>E</span>Increasing lift by banking</li></ul></div>
+    </div>
+
+    <!-- 6. SITUATIONAL JUDGMENT -->
+    <div class="subtest-block">
+      <div class="st-header">
+        <h2 class="st-title">6 · Situational Judgment</h2>
+        <span class="st-meta">50 Q · 35 min on actual test</span>
+      </div>
+      <div class="question"><div class="q-num">Question 26</div><div class="q-text">You are a junior officer and notice your supervisor inadvertently sharing sensitive information unsecurely. What is the BEST course of action?</div><ul class="options"><li><span>A</span>Ignore it — it is not your responsibility</li><li><span>B</span>Immediately report it to the Inspector General without speaking to your supervisor first</li><li><span>C</span>Privately and respectfully bring the issue to your supervisor's attention</li><li><span>D</span>Discuss it with peers to get their opinions</li><li><span>E</span>Document the behavior and take no further action</li></ul></div>
+      <div class="question"><div class="q-num">Question 27</div><div class="q-text">Your team is behind schedule on a critical project. A teammate suggests cutting corners on the safety review. What should you do?</div><ul class="options"><li><span>A</span>Agree — meeting the deadline is most important</li><li><span>B</span>Refuse; safety reviews are non-negotiable. Raise the scheduling concern to leadership instead</li><li><span>C</span>Skip the safety review but document it thoroughly</li><li><span>D</span>Ask a peer to make the decision</li><li><span>E</span>Suggest reducing the safety review time by half as a compromise</li></ul></div>
+      <div class="question"><div class="q-num">Question 28</div><div class="q-text">You are leading a small team and one member is consistently late to mandatory meetings. What is the MOST effective response?</div><ul class="options"><li><span>A</span>Report the member immediately to command for disciplinary action</li><li><span>B</span>Have a direct, private conversation to understand the issue and reinforce expectations</li><li><span>C</span>Publicly address the behavior during the next team meeting</li><li><span>D</span>Ignore it unless it becomes a pattern over several months</li><li><span>E</span>Ask another team member to address it on your behalf</li></ul></div>
+      <div class="question"><div class="q-num">Question 29</div><div class="q-text">You make a significant error during a training exercise. What is the BEST course of action?</div><ul class="options"><li><span>A</span>Hope no one noticed and move on</li><li><span>B</span>Blame equipment malfunction</li><li><span>C</span>Acknowledge the error, report it through the proper chain, and seek guidance to improve</li><li><span>D</span>Ask a peer to cover for you</li><li><span>E</span>Minimize the error in your after-action report</li></ul></div>
+      <div class="question"><div class="q-num">Question 30</div><div class="q-text">You are on a cross-functional team and conflicts arise during planning due to different working styles. What is MOST appropriate?</div><ul class="options"><li><span>A</span>Demand everyone adopt your unit's approach</li><li><span>B</span>Facilitate a discussion to find common ground and establish agreed team norms</li><li><span>C</span>Remove the most difficult team member</li><li><span>D</span>Complete the project independently to avoid conflict</li><li><span>E</span>Escalate the conflict immediately to senior leadership</li></ul></div>
+    </div>
+
+    <!-- 7. SELF-DESCRIPTION INVENTORY -->
+    <div class="subtest-block">
+      <div class="st-header">
+        <h2 class="st-title">7 · Self-Description Inventory</h2>
+        <span class="st-meta">220 Q · 40 min on actual test</span>
+      </div>
+      <p style="font-size:13px;color:rgba(240,235,224,0.4);margin-bottom:20px;background:rgba(255,255,255,0.03);padding:12px 16px;border-radius:6px;">ℹ️ The Self-Description Inventory is a personality assessment. There are no "correct" answers. Answer honestly. The sample items below are for familiarity only.</p>
+      <div class="question"><div class="q-num">Question 31</div><div class="q-text">I remain calm and focused even under significant pressure.</div><ul class="options"><li><span>A</span>Strongly Disagree</li><li><span>B</span>Disagree</li><li><span>C</span>Neither Agree nor Disagree</li><li><span>D</span>Agree</li><li><span>E</span>Strongly Agree</li></ul><div class="likert-note">No correct answer — respond as you honestly would.</div></div>
+      <div class="question"><div class="q-num">Question 32</div><div class="q-text">I enjoy taking on leadership responsibilities in group settings.</div><ul class="options"><li><span>A</span>Strongly Disagree</li><li><span>B</span>Disagree</li><li><span>C</span>Neither Agree nor Disagree</li><li><span>D</span>Agree</li><li><span>E</span>Strongly Agree</li></ul><div class="likert-note">No correct answer — respond as you honestly would.</div></div>
+      <div class="question"><div class="q-num">Question 33</div><div class="q-text">I tend to carefully plan before acting rather than improvising.</div><ul class="options"><li><span>A</span>Strongly Disagree</li><li><span>B</span>Disagree</li><li><span>C</span>Neither Agree nor Disagree</li><li><span>D</span>Agree</li><li><span>E</span>Strongly Agree</li></ul><div class="likert-note">No correct answer — respond as you honestly would.</div></div>
+      <div class="question"><div class="q-num">Question 34</div><div class="q-text">I find it easy to work effectively with people whose views differ significantly from my own.</div><ul class="options"><li><span>A</span>Strongly Disagree</li><li><span>B</span>Disagree</li><li><span>C</span>Neither Agree nor Disagree</li><li><span>D</span>Agree</li><li><span>E</span>Strongly Agree</li></ul><div class="likert-note">No correct answer — respond as you honestly would.</div></div>
+      <div class="question"><div class="q-num">Question 35</div><div class="q-text">I adapt quickly to new environments and unexpected changes.</div><ul class="options"><li><span>A</span>Strongly Disagree</li><li><span>B</span>Disagree</li><li><span>C</span>Neither Agree nor Disagree</li><li><span>D</span>Agree</li><li><span>E</span>Strongly Agree</li></ul><div class="likert-note">No correct answer — respond as you honestly would.</div></div>
+    </div>
+
+    <!-- 8. PHYSICAL SCIENCE -->
+    <div class="subtest-block">
+      <div class="st-header">
+        <h2 class="st-title">8 · Physical Science</h2>
+        <span class="st-meta">20 Q · 10 min on actual test</span>
+      </div>
+      <div class="question"><div class="q-num">Question 36</div><div class="q-text">Which of the following is the SI unit of force?</div><ul class="options"><li><span>A</span>Joule</li><li><span>B</span>Watt</li><li><span>C</span>Newton</li><li><span>D</span>Pascal</li><li><span>E</span>Ampere</li></ul></div>
+      <div class="question"><div class="q-num">Question 37</div><div class="q-text">An object is dropped from rest and falls for 3 seconds. Ignoring air resistance, what is its speed? (g = 10 m/s²)</div><ul class="options"><li><span>A</span>10 m/s</li><li><span>B</span>20 m/s</li><li><span>C</span>30 m/s</li><li><span>D</span>40 m/s</li><li><span>E</span>50 m/s</li></ul></div>
+      <div class="question"><div class="q-num">Question 38</div><div class="q-text">What is the atomic number of carbon?</div><ul class="options"><li><span>A</span>4</li><li><span>B</span>6</li><li><span>C</span>8</li><li><span>D</span>10</li><li><span>E</span>12</li></ul></div>
+      <div class="question"><div class="q-num">Question 39</div><div class="q-text">The speed of sound in air at sea level is approximately:</div><ul class="options"><li><span>A</span>300 m/s</li><li><span>B</span>340 m/s</li><li><span>C</span>400 m/s</li><li><span>D</span>760 m/s</li><li><span>E</span>1,000 m/s</li></ul></div>
+      <div class="question"><div class="q-num">Question 40</div><div class="q-text">According to Newton's second law, if the net force on an object doubles while its mass stays constant, the acceleration:</div><ul class="options"><li><span>A</span>Stays the same</li><li><span>B</span>Halves</li><li><span>C</span>Doubles</li><li><span>D</span>Quadruples</li><li><span>E</span>Is reduced by half</li></ul></div>
+    </div>
+
+    <!-- 9. TABLE READING -->
+    <div class="subtest-block">
+      <div class="st-header">
+        <h2 class="st-title">9 · Table Reading</h2>
+        <span class="st-meta">40 Q · 7 min on actual test</span>
+      </div>
+      <p style="font-size:13px;color:var(--dim);margin-bottom:16px;">Use the table below to answer questions 41–45.</p>
+      <div class="table-wrap">
+        <table class="reading-table">
+          <thead><tr><th>Altitude (ft)</th><th>Temperature (°C)</th><th>Air Density (kg/m³)</th></tr></thead>
+          <tbody>
+            <tr><td>0</td><td>15</td><td>1.225</td></tr>
+            <tr><td>5,000</td><td>5</td><td>1.056</td></tr>
+            <tr><td>10,000</td><td>–5</td><td>0.905</td></tr>
+            <tr><td>15,000</td><td>–15</td><td>0.771</td></tr>
+            <tr><td>20,000</td><td>–25</td><td>0.653</td></tr>
+            <tr><td>25,000</td><td>–35</td><td>0.549</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="question"><div class="q-num">Question 41</div><div class="q-text">What is the temperature at 15,000 feet?</div><ul class="options"><li><span>A</span>–5°C</li><li><span>B</span>–10°C</li><li><span>C</span>–15°C</li><li><span>D</span>–20°C</li><li><span>E</span>–25°C</li></ul></div>
+      <div class="question"><div class="q-num">Question 42</div><div class="q-text">At what altitude is the air density 0.905 kg/m³?</div><ul class="options"><li><span>A</span>5,000 ft</li><li><span>B</span>8,000 ft</li><li><span>C</span>10,000 ft</li><li><span>D</span>12,000 ft</li><li><span>E</span>15,000 ft</li></ul></div>
+      <div class="question"><div class="q-num">Question 43</div><div class="q-text">What is the total temperature drop from 0 to 10,000 feet?</div><ul class="options"><li><span>A</span>5°C</li><li><span>B</span>10°C</li><li><span>C</span>15°C</li><li><span>D</span>20°C</li><li><span>E</span>25°C</li></ul></div>
+      <div class="question"><div class="q-num">Question 44</div><div class="q-text">Which altitude has the lowest air density shown?</div><ul class="options"><li><span>A</span>10,000 ft</li><li><span>B</span>15,000 ft</li><li><span>C</span>20,000 ft</li><li><span>D</span>25,000 ft</li><li><span>E</span>5,000 ft</li></ul></div>
+      <div class="question"><div class="q-num">Question 45</div><div class="q-text">At 20,000 feet, what is the temperature?</div><ul class="options"><li><span>A</span>–15°C</li><li><span>B</span>–20°C</li><li><span>C</span>–25°C</li><li><span>D</span>–30°C</li><li><span>E</span>–35°C</li></ul></div>
+    </div>
+
+    <!-- 10. INSTRUMENT COMPREHENSION -->
+    <div class="subtest-block">
+      <div class="st-header">
+        <h2 class="st-title">10 · Instrument Comprehension</h2>
+        <span class="st-meta">25 Q · 5 min on actual test</span>
+      </div>
+      <p style="font-size:13px;color:rgba(240,235,224,0.4);margin-bottom:16px;background:rgba(255,255,255,0.03);padding:12px 16px;border-radius:6px;">ℹ️ On the real test, you interpret actual instrument dial images. These questions use descriptions instead. Use <a href="https://amazon.com/dp/076894113X?tag=fissionlab-20" target="_blank" rel="noopener sponsored" style="color:var(--gold);">Peterson's book</a> for image-based practice.</p>
+      <div class="question"><div class="q-num">Question 46</div><div class="q-text">Your airspeed reads 250 knots. Your altimeter reads 15,000 ft. Your vertical speed indicator shows 0 ft/min. What is your flight condition?</div><ul class="options"><li><span>A</span>Climbing at 250 knots</li><li><span>B</span>Descending rapidly</li><li><span>C</span>Straight and level flight at 15,000 ft</li><li><span>D</span>Decelerating rapidly</li><li><span>E</span>In a steep bank</li></ul></div>
+      <div class="question"><div class="q-num">Question 47</div><div class="q-text">Your attitude indicator shows the nose 10° above the horizon with wings level. Throttle is at maximum power. What is the most likely condition?</div><ul class="options"><li><span>A</span>Level flight</li><li><span>B</span>Climbing with wings level</li><li><span>C</span>Descending</li><li><span>D</span>Turning</li><li><span>E</span>Stalling</li></ul></div>
+      <div class="question"><div class="q-num">Question 48</div><div class="q-text">Your compass reads 090°. You turn left 45°. What is your new heading?</div><ul class="options"><li><span>A</span>045°</li><li><span>B</span>090°</li><li><span>C</span>135°</li><li><span>D</span>180°</li><li><span>E</span>270°</li></ul></div>
+      <div class="question"><div class="q-num">Question 49</div><div class="q-text">Your turn coordinator shows a 30° left bank with the ball centered. This indicates:</div><ul class="options"><li><span>A</span>A skidding turn</li><li><span>B</span>A slipping turn</li><li><span>C</span>A coordinated left turn</li><li><span>D</span>Straight flight with a roll tendency</li><li><span>E</span>An incipient stall</li></ul></div>
+      <div class="question"><div class="q-num">Question 50</div><div class="q-text">Your VSI reads –500 ft/min and your altimeter reads 8,500 ft. How long will it take to reach 6,500 ft if the rate is constant?</div><ul class="options"><li><span>A</span>2 minutes</li><li><span>B</span>3 minutes</li><li><span>C</span>4 minutes</li><li><span>D</span>5 minutes</li><li><span>E</span>6 minutes</li></ul></div>
+    </div>
+
+    <!-- 11. BLOCK COUNTING -->
+    <div class="subtest-block">
+      <div class="st-header">
+        <h2 class="st-title">11 · Block Counting</h2>
+        <span class="st-meta">30 Q · 4.5 min on actual test</span>
+      </div>
+      <p style="font-size:13px;color:rgba(240,235,224,0.4);margin-bottom:16px;background:rgba(255,255,255,0.03);padding:12px 16px;border-radius:6px;">ℹ️ Real AFOQT block counting uses 3D rendered figures. These questions use descriptions. For image-based practice, use <a href="https://amazon.com/dp/1637985436?tag=fissionlab-20" target="_blank" rel="noopener sponsored" style="color:var(--gold);">Trivium's guide</a>.</p>
+      <div class="question"><div class="q-num">Question 51</div><div class="q-text">A rectangular solid measures 4 blocks long, 3 blocks wide, and 2 blocks tall. How many unit blocks are in this solid?</div><ul class="options"><li><span>A</span>9</li><li><span>B</span>12</li><li><span>C</span>18</li><li><span>D</span>24</li><li><span>E</span>36</li></ul></div>
+      <div class="question"><div class="q-num">Question 52</div><div class="q-text">A 3×3×3 cube has one corner block removed. How many unit blocks remain?</div><ul class="options"><li><span>A</span>24</li><li><span>B</span>25</li><li><span>C</span>26</li><li><span>D</span>27</li><li><span>E</span>28</li></ul></div>
+      <div class="question"><div class="q-num">Question 53</div><div class="q-text">A pyramid has 3 layers: a 3×3 base (9 blocks), a 2×2 middle (4 blocks), and 1 block on top. How many blocks total?</div><ul class="options"><li><span>A</span>12</li><li><span>B</span>14</li><li><span>C</span>16</li><li><span>D</span>18</li><li><span>E</span>20</li></ul></div>
+      <div class="question"><div class="q-num">Question 54</div><div class="q-text">A 5×5×5 solid cube is cut into 1×1×1 unit cubes. How many unit cubes have paint on exactly 3 faces?</div><ul class="options"><li><span>A</span>4</li><li><span>B</span>6</li><li><span>C</span>8</li><li><span>D</span>12</li><li><span>E</span>24</li></ul></div>
+      <div class="question"><div class="q-num">Question 55</div><div class="q-text">An L-shaped structure consists of a 2×2×1 flat base with a 3×1×1 column attached to one side. How many blocks total?</div><ul class="options"><li><span>A</span>5</li><li><span>B</span>6</li><li><span>C</span>7</li><li><span>D</span>8</li><li><span>E</span>9</li></ul></div>
+    </div>
+
+    <!-- 12. AVIATION INFORMATION -->
+    <div class="subtest-block">
+      <div class="st-header">
+        <h2 class="st-title">12 · Aviation Information</h2>
+        <span class="st-meta">20 Q · 8 min on actual test</span>
+      </div>
+      <div class="question"><div class="q-num">Question 56</div><div class="q-text">What does VFR stand for?</div><ul class="options"><li><span>A</span>Vertical Flight Rules</li><li><span>B</span>Visual Flight Rules</li><li><span>C</span>Variable Frequency Radio</li><li><span>D</span>Verified Flight Report</li><li><span>E</span>Vertical Force Ratio</li></ul></div>
+      <div class="question"><div class="q-num">Question 57</div><div class="q-text">The primary purpose of an aircraft's ailerons is to control:</div><ul class="options"><li><span>A</span>Pitch</li><li><span>B</span>Yaw</li><li><span>C</span>Roll</li><li><span>D</span>Overall drag</li><li><span>E</span>Lift independently of speed</li></ul></div>
+      <div class="question"><div class="q-num">Question 58</div><div class="q-text">A Mach number of 1.0 represents:</div><ul class="options"><li><span>A</span>100 knots</li><li><span>B</span>400 knots</li><li><span>C</span>The speed of sound</li><li><span>D</span>The speed of light</li><li><span>E</span>Twice the speed of sound</li></ul></div>
+      <div class="question"><div class="q-num">Question 59</div><div class="q-text">What color is the LEFT wingtip navigation light on an aircraft?</div><ul class="options"><li><span>A</span>White</li><li><span>B</span>Green</li><li><span>C</span>Red</li><li><span>D</span>Yellow</li><li><span>E</span>Blue</li></ul></div>
+      <div class="question"><div class="q-num">Question 60</div><div class="q-text">What does NOTAM stand for?</div><ul class="options"><li><span>A</span>Notice to Air Missions</li><li><span>B</span>National Order of Traffic and Movement</li><li><span>C</span>Navigation Over Terrain and Mountains</li><li><span>D</span>Notice of Terminal Approach Movement</li><li><span>E</span>National Oceanic Temperature and Altitude Monitor</li></ul></div>
+    </div>
+
+    <!-- DISCORD CTA -->
+    <div class="discord-cta-block">
+      <h3>Want 600+ more practice questions?</h3>
+      <p>Join the Discord community — daily questions, full practice sets, and direct feedback from Dr. Preston on your answers.</p>
+      <a href="[DISCORD_INVITE_LINK]" target="_blank" rel="noopener" class="btn-discord">Join the Discord — Free →</a>
+    </div>
+
+    <!-- BOOK AFFILIATE STRIP -->
+    <div class="book-strip">
+      <span style="font-size:2rem;">📚</span>
+      <div class="book-strip-text">
+        <h4>Study with the best books</h4>
+        <p>These are Dr. Preston's recommended resources for full-length practice with actual AFOQT-format questions and instrument images.</p>
+      </div>
+      <div class="book-strip-links">
+        <a href="https://amazon.com/dp/076894113X?tag=fissionlab-20" target="_blank" rel="noopener sponsored" class="book-link">Peterson's →</a>
+        <a href="https://amazon.com/dp/1637985436?tag=fissionlab-20" target="_blank" rel="noopener sponsored" class="book-link">Trivium →</a>
+        <a href="https://amazon.com/dp/1438005695?tag=fissionlab-20" target="_blank" rel="noopener sponsored" class="book-link">Barron's →</a>
+      </div>
+    </div>
+    <p style="font-size:11px;color:rgba(240,235,224,0.25);margin-top:-8px;">Amazon links use the fissionlab-20 affiliate tag.</p>
+
+    <!-- ANSWER KEY -->
+    <div class="answer-key-toggle" onclick="toggleKey(this)" id="ak-toggle">
+      <h3>📋 Reveal Answer Key (Questions 1–60)</h3>
+      <span>▾</span>
+    </div>
+    <div class="answer-key" id="ak">
+      <div class="ak-section">
+        <h4>1 · Verbal Analogies</h4>
+        <div class="ak-grid">
+          <div class="ak-item"><strong>Q1</strong> A — A letter combines to form a word, as atoms combine to form a molecule.</div>
+          <div class="ak-item"><strong>Q2</strong> C — Thrust is produced by the engine; lift is produced by the wing.</div>
+          <div class="ak-item"><strong>Q3</strong> C — A pilot works in the cockpit; a surgeon works in the operating room.</div>
+          <div class="ak-item"><strong>Q4</strong> C — Fission splits a nucleus; combustion consumes fuel.</div>
+          <div class="ak-item"><strong>Q5</strong> B — Altitude is measured in feet; heading is measured in degrees.</div>
+        </div>
+      </div>
+      <div class="ak-section">
+        <h4>2 · Arithmetic Reasoning</h4>
+        <div class="ak-grid">
+          <div class="ak-item"><strong>Q6</strong> B — 420 ÷ 280 = 1.5 hr = 90 min.</div>
+          <div class="ak-item"><strong>Q7</strong> C — 3800 × 0.18 = 684; 3800 + 684 = $4,484.</div>
+          <div class="ak-item"><strong>Q8</strong> C — 48 × 0.75 = 36 aircraft available.</div>
+          <div class="ak-item"><strong>Q9</strong> B — ¾ × 1200 = 900 gal; 900 ÷ 8 = 112.5 min = 1.875 hr.</div>
+          <div class="ak-item"><strong>Q10</strong> A — 52 × 180 = $9,360.</div>
+        </div>
+      </div>
+      <div class="ak-section">
+        <h4>3 · Word Knowledge</h4>
+        <div class="ak-grid">
+          <div class="ak-item"><strong>Q11</strong> B — Tenacious means persistent, determined.</div>
+          <div class="ak-item"><strong>Q12</strong> C — Proximity means nearness, closeness.</div>
+          <div class="ak-item"><strong>Q13</strong> B — Attenuate means to weaken or reduce in intensity.</div>
+          <div class="ak-item"><strong>Q14</strong> C — Stoic means showing indifference to pleasure or pain.</div>
+          <div class="ak-item"><strong>Q15</strong> C — Expedite means to speed up or accelerate.</div>
+        </div>
+      </div>
+      <div class="ak-section">
+        <h4>4 · Math Knowledge</h4>
+        <div class="ak-grid">
+          <div class="ak-item"><strong>Q16</strong> C — 3x = 15; x = 5.</div>
+          <div class="ak-item"><strong>Q17</strong> A — ½ × 12 × 9 = 54 cm².</div>
+          <div class="ak-item"><strong>Q18</strong> B — 4×3 = 12; x²⁺³ = x⁵; answer: 12x⁵.</div>
+          <div class="ak-item"><strong>Q19</strong> C — C = 2πr = 2 × 3.14 × 6 = 37.68.</div>
+          <div class="ak-item"><strong>Q20</strong> C — 2⁴ = 16.</div>
+        </div>
+      </div>
+      <div class="ak-section">
+        <h4>5 · Reading Comprehension</h4>
+        <div class="ak-grid">
+          <div class="ak-item"><strong>Q21</strong> B — Directly stated in the passage.</div>
+          <div class="ak-item"><strong>Q22</strong> C — "Creating a pressure differential."</div>
+          <div class="ak-item"><strong>Q23</strong> C — Torque is not mentioned in the passage.</div>
+          <div class="ak-item"><strong>Q24</strong> B — Pressure differential = difference in air pressure.</div>
+          <div class="ak-item"><strong>Q25</strong> C — "Adjusting engine power and control surfaces."</div>
+        </div>
+      </div>
+      <div class="ak-section">
+        <h4>6 · Situational Judgment</h4>
+        <div class="ak-grid">
+          <div class="ak-item"><strong>Q26</strong> C — Address through proper channels, directly and professionally.</div>
+          <div class="ak-item"><strong>Q27</strong> B — Safety is non-negotiable; escalate the scheduling problem instead.</div>
+          <div class="ak-item"><strong>Q28</strong> B — Private, direct conversation is the most effective first step.</div>
+          <div class="ak-item"><strong>Q29</strong> C — Accountability and continuous improvement are core officer values.</div>
+          <div class="ak-item"><strong>Q30</strong> B — Facilitate common ground; don't impose or avoid.</div>
+        </div>
+      </div>
+      <div class="ak-section">
+        <h4>7 · Self-Description Inventory</h4>
+        <div class="ak-grid">
+          <div class="ak-item"><strong>Q31–35</strong> No correct answers. Answer honestly and consistently throughout the actual test.</div>
+        </div>
+      </div>
+      <div class="ak-section">
+        <h4>8 · Physical Science</h4>
+        <div class="ak-grid">
+          <div class="ak-item"><strong>Q36</strong> C — The Newton (N) is the SI unit of force.</div>
+          <div class="ak-item"><strong>Q37</strong> C — v = g × t = 10 × 3 = 30 m/s.</div>
+          <div class="ak-item"><strong>Q38</strong> B — Carbon has atomic number 6.</div>
+          <div class="ak-item"><strong>Q39</strong> B — ~340 m/s at sea level (approx. 767 mph).</div>
+          <div class="ak-item"><strong>Q40</strong> C — F = ma; if F doubles and m is constant, a doubles.</div>
+        </div>
+      </div>
+      <div class="ak-section">
+        <h4>9 · Table Reading</h4>
+        <div class="ak-grid">
+          <div class="ak-item"><strong>Q41</strong> C — Table shows –15°C at 15,000 ft.</div>
+          <div class="ak-item"><strong>Q42</strong> C — 0.905 kg/m³ is at 10,000 ft.</div>
+          <div class="ak-item"><strong>Q43</strong> D — 15°C at 0 ft to –5°C at 10,000 ft = 20°C drop.</div>
+          <div class="ak-item"><strong>Q44</strong> D — Lowest density: 0.549 at 25,000 ft.</div>
+          <div class="ak-item"><strong>Q45</strong> C — Table shows –25°C at 20,000 ft.</div>
+        </div>
+      </div>
+      <div class="ak-section">
+        <h4>10 · Instrument Comprehension</h4>
+        <div class="ak-grid">
+          <div class="ak-item"><strong>Q46</strong> C — VSI = 0, altimeter steady = straight and level.</div>
+          <div class="ak-item"><strong>Q47</strong> B — Nose high + wings level + full power = climbing.</div>
+          <div class="ak-item"><strong>Q48</strong> A — 090° – 45° = 045°.</div>
+          <div class="ak-item"><strong>Q49</strong> C — Ball centered in a banked turn = coordinated.</div>
+          <div class="ak-item"><strong>Q50</strong> C — 2,000 ft ÷ 500 fpm = 4 minutes.</div>
+        </div>
+      </div>
+      <div class="ak-section">
+        <h4>11 · Block Counting</h4>
+        <div class="ak-grid">
+          <div class="ak-item"><strong>Q51</strong> D — 4 × 3 × 2 = 24 blocks.</div>
+          <div class="ak-item"><strong>Q52</strong> C — 27 – 1 = 26 blocks.</div>
+          <div class="ak-item"><strong>Q53</strong> B — 9 + 4 + 1 = 14 blocks.</div>
+          <div class="ak-item"><strong>Q54</strong> C — Exactly 3 painted faces = corner unit cubes = 8.</div>
+          <div class="ak-item"><strong>Q55</strong> C — 2×2×1 = 4; 3×1×1 = 3; total = 7 blocks.</div>
+        </div>
+      </div>
+      <div class="ak-section">
+        <h4>12 · Aviation Information</h4>
+        <div class="ak-grid">
+          <div class="ak-item"><strong>Q56</strong> B — VFR = Visual Flight Rules.</div>
+          <div class="ak-item"><strong>Q57</strong> C — Ailerons control roll (banking left/right).</div>
+          <div class="ak-item"><strong>Q58</strong> C — Mach 1.0 = speed of sound (~340 m/s at sea level).</div>
+          <div class="ak-item"><strong>Q59</strong> C — Left (port) wingtip = red; right (starboard) = green.</div>
+          <div class="ak-item"><strong>Q60</strong> A — NOTAM = Notice to Air Missions (updated 2021 terminology).</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end main-content -->
+</main>
+
+<div class="beehiiv-bar">
+  <p>Get weekly AFOQT tips, new practice questions, and community updates — free newsletter from Dr. Preston.</p>
+  <a href="https://www.beehiiv.com/?via=preston-dicks" target="_blank" rel="noopener sponsored">Subscribe to the FissionLab Newsletter →</a>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/community/">Community</a>
+    <a href="/community/resources/">Resources</a>
+    <a href="/community/practice/">Practice</a>
+    <a href="/community/forum/">Forum</a>
+    <a href="/community/about/">About</a>
+    <a href="mailto:preston.j.dicks@gmail.com">Contact</a>
+  </div>
+  <p>© 2026 FissionLab · AFOQT Study Community</p>
+  <p style="font-size:11px;color:rgba(240,235,224,0.3);margin-top:10px;padding:8px 20px;border:1px solid rgba(201,168,76,0.08);border-radius:4px;display:inline-block;">
+    <strong style="color:rgba(201,168,76,0.6);">Affiliate Disclosure:</strong> This site contains affiliate links. We may earn a commission at no cost to you.
+    <a href="/affiliate-disclosure/" style="color:rgba(201,168,76,0.45);">Full disclosure →</a>
+  </p>
+</footer>
+
+<script>
+function toggleKey(el){el.classList.toggle('open');document.getElementById('ak').classList.toggle('open');}
+</script>
+</body>
+</html>
