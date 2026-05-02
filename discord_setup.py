@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 """
-FissionLab Discord Server Setup
-Configures the FissionLab server: categories, channels, roles, permissions, pinned messages.
+FissionLab Discord Server Setup — Upgraded
+Builds the full study-server structure: roles, categories, text + voice channels, pinned messages.
 
 Usage:
     pip install discord.py python-dotenv
-    Add DISCORD_BOT_TOKEN=your_token to .env
-    Add DISCORD_GUILD_ID=your_server_id to .env (optional — auto-detects if bot is in one server)
+    Set DISCORD_BOT_TOKEN and DISCORD_GUILD_ID in .env
     python discord_setup.py
 """
 
@@ -14,6 +13,8 @@ import asyncio
 import os
 import sys
 from pathlib import Path
+
+sys.stdout.reconfigure(encoding='utf-8')
 
 import discord
 from discord import PermissionOverwrite
@@ -27,88 +28,230 @@ CALENDLY = "https://calendly.com/preston-j-dicks/introductory-meeting"
 SITE = "https://fissionlab.net"
 DISCORD_INVITE = "https://discord.gg/rkzrxET7"
 
+# ---------------------------------------------------------------------------
+# Roles
+# ---------------------------------------------------------------------------
+
+STAFF_ROLES = [
+    {"name": "Dr. Preston", "color": 0xC9A84C, "admin": True,  "hoist": True},
+    {"name": "Moderator",   "color": 0x6BA3D6, "admin": False, "hoist": True},
+    {"name": "Tutor",       "color": 0x4CA878, "admin": False, "hoist": True},
+]
+
+TIER_ROLES = [
+    {"name": "General",    "color": 0xE74C3C, "hoist": True},
+    {"name": "Colonel",    "color": 0xE67E22, "hoist": True},
+    {"name": "Captain",    "color": 0xC9A84C, "hoist": True},
+    {"name": "Lieutenant", "color": 0x9B59B6, "hoist": True},
+    {"name": "Sergeant",   "color": 0x6BA3D6, "hoist": True},
+    {"name": "Corporal",   "color": 0x4CA878, "hoist": True},
+    {"name": "Private",    "color": 0xFFFFFF, "hoist": False},
+    {"name": "Recruit",    "color": 0x95A5A6, "hoist": False},
+]
+
+ACHIEVEMENT_ROLES = [
+    {"name": "Test Passed",      "color": 0xF1C40F},
+    {"name": "Study Streak 30",  "color": 0xE67E22},
+    {"name": "Study Streak 7",   "color": 0x2ECC71},
+    {"name": "100 Questions",    "color": 0x3498DB},
+    {"name": "Helper",           "color": 0x9B59B6},
+    {"name": "OG Member",        "color": 0xC9A84C},
+]
+
+SUBJECT_ROLES = [
+    {"name": "All Subtests",       "color": 0xC9A84C},
+    {"name": "Physical Science Focus", "color": 0xE67E22},
+    {"name": "Aviation Focus",     "color": 0x87CEEB},
+    {"name": "Verbal Focus",       "color": 0xFF69B4},
+    {"name": "Math Focus",         "color": 0xF1C40F},
+]
+
+ALL_ROLES = STAFF_ROLES + TIER_ROLES + ACHIEVEMENT_ROLES + SUBJECT_ROLES
+
+# ---------------------------------------------------------------------------
+# Channel structure
+# ---------------------------------------------------------------------------
+
 CATEGORIES = [
     {
-        "name": "📋 INFORMATION",
-        "channels": ["welcome", "announcements", "resources", "ask-dr-preston"],
-        "dr_only_send": ["announcements"],
-        "readonly": ["announcements"],
+        "name": "🚀 START HERE",
+        "text": ["welcome", "announcements", "changelog", "choose-your-roles"],
+        "dr_only_send": ["announcements", "changelog"],
+        "readonly": ["announcements", "changelog"],
     },
     {
-        "name": "📚 AFOQT STUDY ROOMS",
-        "channels": [
-            "general-afoqt", "math-knowledge", "verbal",
-            "aviation-instruments", "physical-science",
-            "reading-comp", "study-schedules",
+        "name": "🎯 ONBOARDING",
+        "text": ["introductions", "test-dates", "goals", "study-plans"],
+    },
+    {
+        "name": "📚 AFOQT SUBTESTS",
+        "text": [
+            "math-knowledge", "verbal", "reading-comp", "physical-science",
+            "aviation-info", "instrument-comp", "block-counting", "situational-judgment",
         ],
     },
     {
-        "name": "📝 PRACTICE & SCORES",
-        "channels": ["daily-question", "score-reports", "study-partners", "test-dates"],
+        "name": "📝 PRACTICE",
+        "text": [
+            "daily-question", "practice-problems", "score-reports",
+            "answer-explanations", "full-practice-tests",
+        ],
+    },
+    {
+        "name": "📖 RESOURCES",
+        "text": [
+            "pinned-resources", "book-recommendations", "youtube-videos",
+            "study-techniques", "websites-and-apps", "share-your-notes",
+        ],
+        "dr_only_send": ["pinned-resources"],
+        "readonly": ["pinned-resources"],
+    },
+    {
+        "name": "⏱️ STUDY ROOMS",
+        "voice": [
+            "📚 Study Room 1",
+            "📚 Study Room 2",
+            "🔇 Silent Study",
+            "⏱️ Pomodoro Room",
+            "🎯 Test Prep Sprint",
+            "🎙️ Office Hours",
+        ],
+    },
+    {
+        "name": "🏆 COMMUNITY",
+        "text": [
+            "leaderboard", "wins-and-milestones", "accountability",
+            "study-buddy-finder", "motivation",
+        ],
+    },
+    {
+        "name": "💬 GENERAL",
+        "text": ["general-chat", "memes-and-humor", "off-topic"],
     },
     {
         "name": "🎓 DR. PRESTON",
-        "channels": ["office-hours", "book-a-session", "success-stories"],
-        "readonly": ["office-hours", "book-a-session"],
-    },
-    {
-        "name": "🔧 COMMUNITY",
-        "channels": ["introductions", "off-topic"],
+        "text": [
+            "ask-dr-preston", "office-hours-info", "book-a-session",
+            "student-success", "tutoring-resources",
+        ],
+        "dr_only_send": ["office-hours-info", "book-a-session"],
+        "readonly": ["office-hours-info", "book-a-session", "tutoring-resources"],
     },
 ]
 
-ROLES_CONFIG = [
-    {"name": "Dr. Preston",       "color": 0xC9A84C, "admin": True,  "hoist": True},
-    {"name": "Tutor",             "color": 0x3498DB, "admin": False, "hoist": True},
-    {"name": "Study Group Leader","color": 0x9B59B6, "admin": False, "hoist": False},
-    {"name": "Test Passed ✓",     "color": 0x2ECC71, "admin": False, "hoist": False},
-    {"name": "AFOQT Student",     "color": 0x95A5A6, "admin": False, "hoist": False},
-]
+# ---------------------------------------------------------------------------
+# Pinned messages
+# ---------------------------------------------------------------------------
 
 PINNED_MESSAGES = {
     "welcome": f"""\
-Welcome to FissionLab — the AFOQT Study Community run by Dr. Preston, \
-PhD Nuclear Engineering and USAF Captain.
+Welcome to FissionLab — the AFOQT Study Community
+Run by Dr. Preston | PhD Nuclear Engineering | USAF Captain
 
-This server is completely free. Here's how to get started:
+NEW HERE? Do these 5 things:
+1. Read the rules (pinned below)
+2. Go to #choose-your-roles and pick your focus subjects
+3. Introduce yourself in #introductions (test date + weak subtest)
+4. Pin your test date in #test-dates
+5. Jump into today's question in #daily-question
 
-1. Introduce yourself in #introductions
-2. Tell us your target test date in #study-schedules
-3. Explore the study channels for your weak subtests
-4. Check #daily-question every day for practice
-5. Book a 1:1 tutoring session: {CALENDLY}
+HOW TO RANK UP:
+Chat, help others, and show up daily — MEE6 tracks your XP automatically.
+Recruit → Private → Corporal → Sergeant → Lieutenant → Captain → Colonel → General
 
-Free resources at {SITE}/community/
+RULES:
+1. Be respectful — everyone here is working toward the same goal
+2. Keep questions in the right channel (math in #math-knowledge, etc.)
+3. No spam, no unsolicited DMs, no self-promotion without permission
+4. Share your scores and schedules — accountability is the point
+5. Do not post actual AFOQT questions from a test you took
 
-📋 RULES
-• Be respectful — everyone here is working toward the same goal
-• Keep questions in the right channel (math in #math-knowledge, etc.)
-• No spam, no unsolicited DMs
-• Share your scores and schedules — accountability is the point
-• Do not post actual AFOQT questions from a test you took""",
+FREE RESOURCES: {SITE}/community/
+BOOK A SESSION: {SITE} (Calendly)
+DISCORD: {DISCORD_INVITE}""",
 
-    "resources": f"""\
-Free AFOQT resources from Dr. Preston:
+    "choose-your-roles": f"""\
+React to get your subject focus role:
 
-📚 Full subtest breakdown: {SITE}/community/resources/
-✏️ 60 free practice questions: {SITE}/community/practice/
-📖 Book recommendations: {SITE}/community/resources/
-📧 Weekly newsletter: https://www.beehiiv.com/?via=preston-dicks
-📅 Book a session: {CALENDLY}""",
+🔢 = Math Focus
+📖 = Verbal Focus
+✈️ = Aviation Focus
+🔬 = Physical Science Focus
+🎯 = All Subtests
+
+React to 🔔 for daily question notifications
+React to 📅 for office hours reminders
+
+(Use Carl-bot reaction roles — instructions in #changelog)""",
+
+    "pinned-resources": f"""\
+FREE AFOQT RESOURCES FROM DR. PRESTON
+
+Full subtest breakdown + study tips:
+{SITE}/community/resources/
+
+60 free practice questions:
+{SITE}/community/practice/
+
+Recommended books (Amazon affiliate):
+{SITE}/community/resources/#books
+
+Book a 1:1 session with Dr. Preston:
+{CALENDLY}
+
+Weekly newsletter + study tips:
+https://www.beehiiv.com/?via=preston-dicks
+
+Best YouTube AFOQT resources:
+- Search: "AFOQT [subtest name] tips" on YouTube
+- Pilot's Path channel (aviation + instruments)
+- Military Flight Aptitude Test prep playlists""",
 
     "book-a-session": f"""\
-Ready to work with Dr. Preston 1:1?
+Work 1:1 with Dr. Preston
 
-🎓 PhD Nuclear Engineering · USAF Captain · Expert AFOQT tutor
+PhD Nuclear Engineering · USAF Captain · 6+ years active duty
+Commissioned at 19 · Trained by the best military educators
 
-Book your session: {CALENDLY}
+PACKAGES:
+Single session — $70/hr
+5-session pack — save $25
+10-session pack — save $100
 
-Packages available at {SITE}:
-• Single session $70/hr
-• 5-session pack (save $25)
-• 10-session pack (save $100)""",
+BOOK NOW: {CALENDLY}
+
+Results from 1:1 students in #student-success""",
+
+    "daily-question": """\
+DAILY QUESTION — Day 1
+
+MATH KNOWLEDGE
+If 3x + 7 = 22, what is the value of 2x?
+
+A) 5
+B) 10
+C) 15
+D) 20
+
+React with your answer: A / B / C / D
+
+Answer revealed tomorrow. More practice in #practice-problems.""",
 }
 
+
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
+
+def _p(msg):
+    """Print with flush, stripping non-ASCII for Windows terminal safety."""
+    safe = msg.encode('ascii', errors='replace').decode('ascii')
+    print(safe, flush=True)
+
+
+# ---------------------------------------------------------------------------
+# Bot
+# ---------------------------------------------------------------------------
 
 class SetupBot(discord.Client):
     def __init__(self, guild_id):
@@ -119,16 +262,16 @@ class SetupBot(discord.Client):
         self.target_guild_id = guild_id
 
     async def on_ready(self):
-        print(f"Logged in as {self.user}")
+        _p(f"Logged in as {self.user}")
         guild = self._find_guild()
         if guild is None:
-            print("ERROR: Could not find target guild. Make sure the bot is invited to the server.")
+            _p("ERROR: Could not find target guild. Bot must be in the server.")
             await self.close()
             return
         try:
-            await self._setup_guild(guild)
+            await self._setup(guild)
         except Exception as e:
-            print(f"ERROR during setup: {e}")
+            _p(f"ERROR during setup: {e}")
             raise
         finally:
             await self.close()
@@ -138,116 +281,135 @@ class SetupBot(discord.Client):
             return discord.utils.get(self.guilds, id=self.target_guild_id)
         if len(self.guilds) == 1:
             return self.guilds[0]
-        if len(self.guilds) == 0:
-            return None
-        print(f"Bot is in {len(self.guilds)} servers. Set DISCORD_GUILD_ID in .env.")
+        _p(f"Bot is in {len(self.guilds)} servers. Set DISCORD_GUILD_ID in .env.")
         for g in self.guilds:
-            print(f"  {g.id}: {g.name}")
+            _p(f"  {g.id}: {g.name}")
         return None
 
-    async def _setup_guild(self, guild):
-        print(f"\nConfiguring: {guild.name} ({guild.id})")
+    async def _setup(self, guild):
+        _p(f"\nConfiguring: {guild.name} ({guild.id})")
 
-        # --- Roles (create bottom-to-top so hoisting works correctly) ---
-        print("\n[1/4] Creating roles...")
-        role_map = {r.name: r for r in guild.roles}
+        dr_role = await self._create_roles(guild)
+        await self._create_channels(guild, dr_role)
+        await self._post_pinned(guild)
+
+        _p("\n[4/4] Done.")
+        _p(f"  Guild:    {guild.name}")
+        _p(f"  Invite:   {DISCORD_INVITE}")
+        _p(f"  Calendly: {CALENDLY}")
+        _p("\nNEXT STEPS:")
+        _p("  1. Configure MEE6 XP level roles — see MEE6_SETUP.md")
+        _p("  2. Configure Carl-bot reaction roles in #choose-your-roles — see MEE6_SETUP.md")
+        _p("  3. Assign yourself @Dr. Preston in Server Settings -> Members")
+        _p("\nRUN COMPLETE")
+        _p(f"Live site: {SITE}/community/")
+
+    async def _create_roles(self, guild):
+        _p("\n[1/4] Creating roles...")
+        existing = {r.name: r for r in guild.roles}
         dr_role = None
-        student_role = None
 
-        for cfg in reversed(ROLES_CONFIG):
-            existing = role_map.get(cfg["name"])
-            if existing:
-                print(f"  role exists: {cfg['name']}")
-                role = existing
-            else:
-                perms = discord.Permissions.all() if cfg.get("admin") else discord.Permissions.none()
-                role = await guild.create_role(
-                    name=cfg["name"],
-                    color=discord.Color(cfg["color"]),
-                    permissions=perms,
-                    hoist=cfg["hoist"],
-                    reason="FissionLab setup",
-                )
-                print(f"  created role: {cfg['name']}")
-            if cfg["name"] == "Dr. Preston":
+        for cfg in reversed(ALL_ROLES):
+            name = cfg["name"]
+            if name in existing:
+                _p(f"  exists: {name}")
+                if name == "Dr. Preston":
+                    dr_role = existing[name]
+                continue
+
+            role = await guild.create_role(
+                name=name,
+                color=discord.Color(cfg["color"]),
+                hoist=cfg.get("hoist", False),
+                reason="FissionLab setup",
+            )
+            _p(f"  created: {name}")
+            if name == "Dr. Preston":
                 dr_role = role
-            if cfg["name"] == "AFOQT Student":
-                student_role = role
 
-        # --- Categories & Channels ---
-        print("\n[2/4] Creating categories and channels...")
+        return dr_role
+
+    async def _create_channels(self, guild, dr_role):
+        _p("\n[2/4] Creating categories and channels...")
         everyone = guild.default_role
-        channel_map = {c.name: c for c in guild.channels}
-        cat_map = {c.name: c for c in guild.categories}
+        existing_text = {c.name: c for c in guild.text_channels}
+        existing_voice = {c.name: c for c in guild.voice_channels}
+        existing_cats = {c.name: c for c in guild.categories}
 
         for cat_cfg in CATEGORIES:
             cat_name = cat_cfg["name"]
-            readonly_names = set(cat_cfg.get("readonly", []))
-            dr_only_names = set(cat_cfg.get("dr_only_send", []))
+            readonly = set(cat_cfg.get("readonly", []))
+            dr_only = set(cat_cfg.get("dr_only_send", []))
 
-            cat = cat_map.get(cat_name)
+            cat = existing_cats.get(cat_name)
             if cat is None:
                 cat = await guild.create_category(cat_name, reason="FissionLab setup")
-                print(f"  category: {cat_name}")
+                _p(f"  category: {cat_name}")
             else:
-                print(f"  category exists: {cat_name}")
+                _p(f"  category exists: {cat_name}")
 
-            for ch_name in cat_cfg["channels"]:
-                if ch_name in channel_map:
-                    print(f"    channel exists: #{ch_name}")
+            for ch_name in cat_cfg.get("text", []):
+                if ch_name in existing_text:
+                    _p(f"    text exists: #{ch_name}")
                     continue
-
-                overwrites = {}
-                if ch_name in readonly_names:
-                    overwrites[everyone] = PermissionOverwrite(send_messages=False, read_messages=True)
+                ow = {}
+                if ch_name in readonly or ch_name in dr_only:
+                    ow[everyone] = PermissionOverwrite(send_messages=False, read_messages=True)
                     if dr_role:
-                        overwrites[dr_role] = PermissionOverwrite(send_messages=True, read_messages=True)
-                elif ch_name in dr_only_names:
-                    overwrites[everyone] = PermissionOverwrite(send_messages=False, read_messages=True)
-                    if dr_role:
-                        overwrites[dr_role] = PermissionOverwrite(send_messages=True, read_messages=True)
+                        ow[dr_role] = PermissionOverwrite(send_messages=True, read_messages=True)
+                ch = await guild.create_text_channel(ch_name, category=cat, overwrites=ow, reason="FissionLab setup")
+                existing_text[ch_name] = ch
+                _p(f"    created text: #{ch_name}")
 
-                ch = await guild.create_text_channel(
-                    ch_name,
-                    category=cat,
-                    overwrites=overwrites,
-                    reason="FissionLab setup",
-                )
-                print(f"    created: #{ch_name}")
-                channel_map[ch_name] = ch
+            for vc_name in cat_cfg.get("voice", []):
+                if vc_name in existing_voice:
+                    _p(f"    voice exists: {vc_name}")
+                    continue
+                await guild.create_voice_channel(vc_name, category=cat, reason="FissionLab setup")
+                existing_voice[vc_name] = True
+                _p(f"    created voice: {vc_name}")
 
-        # --- Pinned Messages ---
-        print("\n[3/4] Posting and pinning messages...")
+    async def _post_pinned(self, guild):
+        _p("\n[3/4] Posting pinned messages...")
+        ch_map = {c.name: c for c in guild.text_channels}
+        needs_manual_pin = []
+
         for ch_name, msg_text in PINNED_MESSAGES.items():
-            ch = channel_map.get(ch_name)
+            ch = ch_map.get(ch_name)
             if ch is None:
-                print(f"  WARNING: #{ch_name} not found, skipping pin")
+                _p(f"  WARNING: #{ch_name} not found, skipping")
                 continue
-            # Check if already pinned (avoid duplicates on re-runs)
-            pins = await ch.pins()
-            already_pinned = any(p.author == self.user for p in pins)
-            if already_pinned:
-                print(f"  already pinned in #{ch_name}")
+            already = False
+            async for pin in ch.pins():
+                if pin.author == self.user:
+                    already = True
+                    break
+            if already:
+                _p(f"  already posted: #{ch_name}")
                 continue
-            msg = await ch.send(msg_text)
-            await msg.pin()
-            print(f"  pinned in #{ch_name}")
+            try:
+                msg = await ch.send(msg_text)
+            except discord.Forbidden:
+                needs_manual_pin.append(ch_name)
+                _p(f"  SKIPPED (no send permission): #{ch_name} — post manually")
+                continue
+            try:
+                await msg.pin()
+                _p(f"  posted + pinned: #{ch_name}")
+            except discord.Forbidden:
+                needs_manual_pin.append(ch_name)
+                _p(f"  posted (pin manually): #{ch_name}")
 
-        # --- Summary ---
-        print("\n[4/4] Setup complete.")
-        print(f"\n  Guild:   {guild.name}")
-        print(f"  Invite:  {DISCORD_INVITE}")
-        print(f"  Calendly: {CALENDLY}")
-        if student_role:
-            print(f"\n  NOTE: Configure MEE6 (mee6.xyz) to auto-assign @{student_role.name} on join.")
-        print("\nRUN COMPLETE")
-        print(f"Live site: {SITE}/community/")
+        if needs_manual_pin:
+            _p("\n  ACTION NEEDED: Bot lacks Manage Messages — pin these manually:")
+            for ch_name in needs_manual_pin:
+                _p(f"    #{ch_name}")
 
 
 def main():
     if not TOKEN:
-        print("No DISCORD_BOT_TOKEN found in .env")
-        print("See DISCORD_SETUP_INSTRUCTIONS.md for setup steps.")
+        _p("No DISCORD_BOT_TOKEN found in .env")
+        _p("See DISCORD_SETUP_INSTRUCTIONS.md for setup steps.")
         sys.exit(1)
 
     guild_id = int(GUILD_ID) if GUILD_ID else None
@@ -256,7 +418,7 @@ def main():
     try:
         client.run(TOKEN)
     except discord.LoginFailure:
-        print("ERROR: Invalid bot token. Check DISCORD_BOT_TOKEN in .env")
+        _p("ERROR: Invalid bot token. Check DISCORD_BOT_TOKEN in .env")
         sys.exit(1)
 
 
