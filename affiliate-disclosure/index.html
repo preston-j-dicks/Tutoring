@@ -21,8 +21,18 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body { font-family: 'DM Sans', sans-serif; background: #0a1628; color: #f0ebe0; }
+  body.no-webgl{background:radial-gradient(ellipse at 20% 50%,#0d1f3c 0%,#0a1628 70%);}
+  #particle-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;}
+  main,section,header,footer,.nav-wrap,.about-wrap,.hero,.page-hero,.main-content,.beehiiv-bar{position:relative;z-index:1}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes breathe{0%,100%{opacity:.6}50%{opacity:1}}
+  .fade-up{opacity:0;transform:translateY(22px);transition:opacity 0.7s ease,transform 0.7s ease}
+  .fade-up.visible{opacity:1;transform:translateY(0)}
+  .anim-1{animation:fadeUp 0.8s 0.3s ease forwards}
+  .anim-2{animation:fadeUp 0.8s 0.5s ease forwards}
+  .anim-3{animation:fadeUp 0.8s 0.7s ease forwards}
 
-  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,22,40,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba(10,22,40,0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
   .nav-links { display: flex; gap: 2rem; align-items: center; }
   .nav-links a { font-size: 0.85rem; font-weight: 500; color: rgba(240,235,224,0.75); text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
   .nav-links a:hover { color: var(--gold); }
@@ -52,6 +62,7 @@
 </style>
 </head>
 <body>
+<canvas id="particle-canvas"></canvas>
 
 <nav>
   <a href="https://fissionlab.net" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:#fff;font-size:1rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">
@@ -68,26 +79,26 @@
 </nav>
 
 <div class="page-hero">
-  <h1>Affiliate Disclosure</h1>
-  <p>FissionLab participates in affiliate programs. Here is exactly how that works and what it means for you.</p>
+  <h1 class="fade-up">Affiliate Disclosure</h1>
+  <p class="fade-up">FissionLab participates in affiliate programs. Here is exactly how that works and what it means for you.</p>
 </div>
 
 <div class="content-wrap">
 
   <span class="updated">Last updated: April 2026</span>
 
-  <div class="callout">
+  <div class="callout fade-up">
     <p><strong>The short version:</strong> FissionLab participates in affiliate programs. We may earn a commission when you purchase through our links — at no extra cost to you. We only recommend products and tools we have personally evaluated and genuinely use.</p>
   </div>
 
-  <div class="section">
+  <div class="section fade-up">
     <h2>General Affiliate Disclosure</h2>
     <p>FissionLab (fissionlab.net) participates in various affiliate marketing programs. This means that when you click a link on this website to an external product or service and make a purchase or sign up, we may receive a commission or referral fee from the company at no additional cost to you.</p>
     <p>This disclosure is provided in accordance with the Federal Trade Commission's guidelines on endorsements and testimonials, 16 C.F.R. Part 255, and the FTC's Dot Com Disclosures guidelines.</p>
     <p>Our editorial content is not influenced by affiliate relationships. If we recommend a product, it is because we believe it is genuinely useful — not because of the commission it generates. We will not recommend a product solely for compensation purposes.</p>
   </div>
 
-  <div class="section">
+  <div class="section fade-up">
     <h2>Amazon Associates Program</h2>
     <p>FissionLab is a participant in the <strong>Amazon Services LLC Associates Program</strong>, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.</p>
     <p>Amazon affiliate links on this site use the tag <strong>fissionlab-20</strong> and are formatted as:</p>
@@ -96,13 +107,13 @@
     <p>Book and product recommendations on this site reflect Dr. Preston's honest assessment based on personal use, professional expertise, or thorough research. Amazon affiliate income helps support the free content on this site.</p>
   </div>
 
-  <div class="section">
+  <div class="section fade-up">
     <h2>Beehiiv Newsletter Platform</h2>
     <p>FissionLab participates in the <strong>Beehiiv</strong> referral program. Links to Beehiiv on this site use a referral tag and may result in a commission if you sign up for a Beehiiv account.</p>
     <p>Dr. Preston uses Beehiiv for his own newsletter operations. The recommendation is based on firsthand use, not solely on affiliate income.</p>
   </div>
 
-  <div class="section">
+  <div class="section fade-up">
     <h2>Other Affiliate Programs</h2>
     <p>FissionLab may also participate in affiliate or referral programs for other tools and services mentioned on this site, including but not limited to:</p>
     <ul>
@@ -117,7 +128,7 @@
     <p>Where affiliate links are present, they will be clearly identified with language such as "affiliate link" or the page will include a disclosure notice at the top.</p>
   </div>
 
-  <div class="section">
+  <div class="section fade-up">
     <h2>Our Editorial Standards</h2>
     <p>Every product recommendation on FissionLab reflects an honest, independent assessment. Dr. Preston is a PhD Nuclear Engineer, active duty Air Force officer, and professional educator. His recommendations are grounded in domain expertise — not marketing incentives.</p>
     <p>Specifically:</p>
@@ -129,7 +140,7 @@
     </ul>
   </div>
 
-  <div class="section">
+  <div class="section fade-up">
     <h2>Questions</h2>
     <p>If you have any questions about this disclosure or our affiliate relationships, please contact us at <a href="mailto:preston.j.dicks@gmail.com">preston.j.dicks@gmail.com</a>.</p>
   </div>
@@ -147,5 +158,68 @@
   <p>&#169; 2026 FissionLab &middot; Expert Tutoring &middot; All sessions via Zoom</p>
   <p style="margin-top:8px;font-size:11px;color:rgba(240,235,224,0.4)">Some links on this site are affiliate links. <a href="https://fissionlab.net/affiliate-disclosure/" style="color:rgba(201,168,76,0.55);text-decoration:none">See our affiliate disclosure for details.</a></p>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+<script>
+window.addEventListener('load',function(){
+  var canvas=document.getElementById('particle-canvas');
+  var isMobile=window.innerWidth<768;
+  try{var t=canvas.getContext('webgl')||canvas.getContext('experimental-webgl');if(!t)throw new Error();}
+  catch(e){document.body.classList.add('no-webgl');canvas.style.display='none';return;}
+  if(typeof THREE==='undefined'){document.body.classList.add('no-webgl');canvas.style.display='none';return;}
+  var renderer=new THREE.WebGLRenderer({canvas:canvas,antialias:false,alpha:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+  renderer.setSize(window.innerWidth,window.innerHeight);
+  renderer.setClearColor(0x000000,0);
+  var scene=new THREE.Scene();
+  var camera=new THREE.PerspectiveCamera(60,window.innerWidth/window.innerHeight,0.1,1000);
+  camera.position.z=80;
+  var count=isMobile?1200:3000;
+  var positions=new Float32Array(count*3);
+  var colors=new Float32Array(count*3);
+  var goldColor=new THREE.Color(0xc9a84c);
+  var blueColor=new THREE.Color(0x2a4a7a);
+  for(var i=0;i<count;i++){
+    var phi=Math.acos(2*Math.random()-1);
+    var theta=2*Math.PI*Math.random();
+    var r=20+Math.random()*60;
+    positions[i*3]=r*Math.sin(phi)*Math.cos(theta);
+    positions[i*3+1]=r*Math.sin(phi)*Math.sin(theta);
+    positions[i*3+2]=r*Math.cos(phi);
+    var c=Math.random()<0.30?goldColor:blueColor;
+    colors[i*3]=c.r;colors[i*3+1]=c.g;colors[i*3+2]=c.b;
+  }
+  var geometry=new THREE.BufferGeometry();
+  geometry.setAttribute('position',new THREE.BufferAttribute(positions,3));
+  geometry.setAttribute('color',new THREE.BufferAttribute(colors,3));
+  var material=new THREE.PointsMaterial({size:0.5,vertexColors:true,transparent:true,opacity:0.8,sizeAttenuation:true});
+  var particles=new THREE.Points(geometry,material);
+  scene.add(particles);
+  var mouseX=0,mouseY=0,scrollY=0;
+  if(!isMobile){document.addEventListener('mousemove',function(e){mouseX=(e.clientX/window.innerWidth-0.5)*2;mouseY=(e.clientY/window.innerHeight-0.5)*2;});}
+  window.addEventListener('scroll',function(){scrollY=window.scrollY;});
+  window.addEventListener('resize',function(){isMobile=window.innerWidth<768;camera.aspect=window.innerWidth/window.innerHeight;camera.updateProjectionMatrix();renderer.setSize(window.innerWidth,window.innerHeight);});
+  var clock=new THREE.Clock();
+  function animate(){
+    requestAnimationFrame(animate);
+    var t=clock.getElapsedTime();
+    var speed=isMobile?0.5:1.0;
+    particles.rotation.y=t*0.08*speed;
+    particles.rotation.x=t*0.04*speed;
+    if(!isMobile){particles.rotation.y+=mouseX*0.04;particles.rotation.x+=mouseY*0.04;}
+    particles.position.y=-scrollY*0.015;
+    var breathe=1+Math.sin(t*0.5)*0.015;
+    particles.scale.setScalar(breathe);
+    renderer.render(scene,camera);
+  }
+  animate();
+});
+
+var revealObserver=new IntersectionObserver(function(entries){
+  entries.forEach(function(entry){
+    if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target);}
+  });
+},{threshold:0.12});
+document.querySelectorAll('.fade-up').forEach(function(el){revealObserver.observe(el);});
+</script>
 </body>
 </html>

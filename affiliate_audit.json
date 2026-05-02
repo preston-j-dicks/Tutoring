@@ -1,0 +1,52 @@
+{
+  "generated": "2026-05-02",
+  "tag": "fissionlab-20",
+  "amazon_links": [
+    {
+      "title": "Master the Military Flight Aptitude Tests",
+      "publisher": "Peterson's",
+      "asin": "0768941733",
+      "url": "https://www.amazon.com/dp/0768941733?tag=fissionlab-20",
+      "tag_present": true,
+      "pages_used": ["community/resources/index.html"]
+    },
+    {
+      "title": "AFOQT Study Guide 2024-2025",
+      "publisher": "Trivium Test Prep",
+      "asin": "1637981066",
+      "url": "https://www.amazon.com/dp/1637981066?tag=fissionlab-20",
+      "tag_present": true,
+      "pages_used": ["community/resources/index.html"]
+    },
+    {
+      "title": "Barron's Military Flight Aptitude Tests",
+      "publisher": "Barron's",
+      "asin": "1438011768",
+      "url": "https://www.amazon.com/dp/1438011768?tag=fissionlab-20",
+      "tag_present": true,
+      "pages_used": ["community/resources/index.html"]
+    },
+    {
+      "title": "AFOQT Secrets Study Guide",
+      "publisher": "Mometrix",
+      "asin": "1609714792",
+      "url": "https://www.amazon.com/dp/1609714792?tag=fissionlab-20",
+      "tag_present": true,
+      "pages_used": ["community/resources/index.html"]
+    },
+    {
+      "title": "Officer Candidate Tests For Dummies",
+      "publisher": "For Dummies",
+      "asin": "0470598239",
+      "url": "https://www.amazon.com/dp/0470598239?tag=fissionlab-20",
+      "tag_present": true,
+      "pages_used": ["community/resources/index.html"]
+    }
+  ],
+  "beehiiv": {
+    "referral": "https://www.beehiiv.com/?via=preston-dicks",
+    "status": "active",
+    "pages": ["all community pages"]
+  },
+  "notes": "All Amazon links use fissionlab-20 tag. Verify ASINs at amazon.com/dp/[ASIN] before launch."
+}

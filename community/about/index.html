@@ -42,8 +42,20 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 :root{--navy:#0a1628;--navy2:#0d1f3c;--gold:#c9a84c;--gold2:#e8c97a;--white:#ffffff;--cream:#f0ebe0;--dim:rgba(240,235,224,0.82);--border:rgba(201,168,76,0.15);--border2:rgba(201,168,76,0.08);}
-body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--navy);color:var(--cream);overflow-x:hidden;font-size:16px;line-height:1.75;}
-nav{position:sticky;top:0;z-index:200;background:rgba(10,22,40,0.97);border-bottom:1px solid var(--border);height:64px;padding:0 8vw;display:flex;align-items:center;justify-content:space-between;}
+body.no-webgl{background:radial-gradient(ellipse at 20% 50%,#0d1f3c 0%,#0a1628 70%);}
+#particle-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;}
+main,section,header,footer,.nav-wrap,.about-wrap,.hero,.page-hero,.main-content,.beehiiv-bar{position:relative;z-index:1}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes breathe{0%,100%{opacity:.6}50%{opacity:1}}
+.fade-up{opacity:0;transform:translateY(22px);transition:opacity 0.7s ease,transform 0.7s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+.anim-1{animation:fadeUp 0.8s 0.3s ease forwards}
+.anim-2{animation:fadeUp 0.8s 0.5s ease forwards}
+.anim-3{animation:fadeUp 0.8s 0.7s ease forwards}
+body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--navy);color:var(--cream);overflow-x:hidden;font-size:16px;line-height:1.75;padding-top:64px}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:64px;padding:0 8vw;display:flex;align-items:center;justify-content:space-between;}
+.about-photo{width:100%;max-width:340px;border-radius:12px;object-fit:cover;aspect-ratio:3/4;border:2px solid rgba(201,168,76,0.4);box-shadow:0 20px 60px rgba(0,0,0,0.4);transition:box-shadow 0.3s;}
+.about-photo:hover{box-shadow:0 0 40px rgba(201,168,76,0.15),0 20px 60px rgba(0,0,0,0.4);}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--white);font-size:1.05rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;}
 .nav-atom-core{color:var(--gold);font-size:16px;}
 .nav-logo-text span{color:var(--gold)}
@@ -95,6 +107,7 @@ footer a{color:rgba(201,168,76,0.7);text-decoration:none;}footer a:hover{color:v
 </style>
 </head>
 <body>
+<canvas id="particle-canvas"></canvas>
 
 <nav>
   <a href="/" class="nav-logo">
@@ -124,12 +137,9 @@ footer a{color:rgba(201,168,76,0.7);text-decoration:none;}footer a:hover{color:v
 <main>
   <div class="about-wrap">
 
-    <div class="about-grid">
+    <div class="about-grid fade-up">
       <div>
-        <div class="about-photo-placeholder">
-          <span>🔬</span>
-          <p>Photo coming soon</p>
-        </div>
+        <img src="/assets/dr-preston.jpg" alt="Dr. Preston" class="about-photo" loading="lazy">
       </div>
       <div>
         <div class="cred-row">
@@ -151,10 +161,28 @@ footer a{color:rgba(201,168,76,0.7);text-decoration:none;}footer a:hover{color:v
           <div class="stat-box"><div class="stat-num">6</div><div class="stat-label">Years USAF Service</div></div>
           <div class="stat-box"><div class="stat-num">10+</div><div class="stat-label">Students Helped</div></div>
         </div>
+        <div class="cred-list" style="margin-top:24px">
+          <div class="cred-item" style="display:flex;gap:12px;padding:10px 0;border-bottom:1px solid rgba(201,168,76,0.1);">
+            <div style="width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:9px;"></div>
+            <div><div style="font-size:15px;color:var(--white)">B.A. Physics — University of California, Berkeley · 2020</div></div>
+          </div>
+          <div class="cred-item" style="display:flex;gap:12px;padding:10px 0;border-bottom:1px solid rgba(201,168,76,0.1);">
+            <div style="width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:9px;"></div>
+            <div><div style="font-size:15px;color:var(--white)">M.S. Nuclear Engineering — Air Force Institute of Technology · 2022</div><div style="font-size:12px;color:rgba(240,235,224,0.5);margin-top:2px">Applied AI &amp; Machine Learning</div></div>
+          </div>
+          <div class="cred-item" style="display:flex;gap:12px;padding:10px 0;border-bottom:1px solid rgba(201,168,76,0.1);">
+            <div style="width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:9px;"></div>
+            <div><div style="font-size:15px;color:var(--white)">Ph.D. Nuclear Engineering — AFIT · 2025</div><div style="font-size:12px;color:rgba(240,235,224,0.5);margin-top:2px">Youngest graduate in program history</div></div>
+          </div>
+          <div class="cred-item" style="display:flex;gap:12px;padding:10px 0;">
+            <div style="width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:9px;"></div>
+            <div><div style="font-size:15px;color:var(--white)">U.S. Air Force Captain · 6 Years Active Duty</div><div style="font-size:12px;color:rgba(240,235,224,0.5);margin-top:2px">Commissioned at 19 · Technical &amp; Leadership Roles</div></div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <h2 class="section-title">Tutoring Philosophy</h2>
+    <h2 class="section-title fade-up">Tutoring Philosophy</h2>
     <div class="philosophy-grid">
       <div class="phil-card">
         <span class="phil-icon">🎯</span>
@@ -178,7 +206,7 @@ footer a{color:rgba(201,168,76,0.7);text-decoration:none;}footer a:hover{color:v
       </div>
     </div>
 
-    <div class="booking-cta">
+    <div class="booking-cta fade-up">
       <h2>Ready to work with Dr. Preston directly?</h2>
       <p>Book a free introductory call to talk about your test date, current scores, target composites, and whether 1:1 tutoring is the right fit. No obligation.</p>
       <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" class="btn-primary">Book a Free Intro Call →</a>
@@ -210,5 +238,68 @@ footer a{color:rgba(201,168,76,0.7);text-decoration:none;}footer a:hover{color:v
   </p>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+<script>
+window.addEventListener('load',function(){
+  var canvas=document.getElementById('particle-canvas');
+  var isMobile=window.innerWidth<768;
+  try{var t=canvas.getContext('webgl')||canvas.getContext('experimental-webgl');if(!t)throw new Error();}
+  catch(e){document.body.classList.add('no-webgl');canvas.style.display='none';return;}
+  if(typeof THREE==='undefined'){document.body.classList.add('no-webgl');canvas.style.display='none';return;}
+  var renderer=new THREE.WebGLRenderer({canvas:canvas,antialias:false,alpha:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+  renderer.setSize(window.innerWidth,window.innerHeight);
+  renderer.setClearColor(0x000000,0);
+  var scene=new THREE.Scene();
+  var camera=new THREE.PerspectiveCamera(60,window.innerWidth/window.innerHeight,0.1,1000);
+  camera.position.z=80;
+  var count=isMobile?1200:3000;
+  var positions=new Float32Array(count*3);
+  var colors=new Float32Array(count*3);
+  var goldColor=new THREE.Color(0xc9a84c);
+  var blueColor=new THREE.Color(0x2a4a7a);
+  for(var i=0;i<count;i++){
+    var phi=Math.acos(2*Math.random()-1);
+    var theta=2*Math.PI*Math.random();
+    var r=20+Math.random()*60;
+    positions[i*3]=r*Math.sin(phi)*Math.cos(theta);
+    positions[i*3+1]=r*Math.sin(phi)*Math.sin(theta);
+    positions[i*3+2]=r*Math.cos(phi);
+    var c=Math.random()<0.30?goldColor:blueColor;
+    colors[i*3]=c.r;colors[i*3+1]=c.g;colors[i*3+2]=c.b;
+  }
+  var geometry=new THREE.BufferGeometry();
+  geometry.setAttribute('position',new THREE.BufferAttribute(positions,3));
+  geometry.setAttribute('color',new THREE.BufferAttribute(colors,3));
+  var material=new THREE.PointsMaterial({size:0.5,vertexColors:true,transparent:true,opacity:0.8,sizeAttenuation:true});
+  var particles=new THREE.Points(geometry,material);
+  scene.add(particles);
+  var mouseX=0,mouseY=0,scrollY=0;
+  if(!isMobile){document.addEventListener('mousemove',function(e){mouseX=(e.clientX/window.innerWidth-0.5)*2;mouseY=(e.clientY/window.innerHeight-0.5)*2;});}
+  window.addEventListener('scroll',function(){scrollY=window.scrollY;});
+  window.addEventListener('resize',function(){isMobile=window.innerWidth<768;camera.aspect=window.innerWidth/window.innerHeight;camera.updateProjectionMatrix();renderer.setSize(window.innerWidth,window.innerHeight);});
+  var clock=new THREE.Clock();
+  function animate(){
+    requestAnimationFrame(animate);
+    var t=clock.getElapsedTime();
+    var speed=isMobile?0.5:1.0;
+    particles.rotation.y=t*0.08*speed;
+    particles.rotation.x=t*0.04*speed;
+    if(!isMobile){particles.rotation.y+=mouseX*0.04;particles.rotation.x+=mouseY*0.04;}
+    particles.position.y=-scrollY*0.015;
+    var breathe=1+Math.sin(t*0.5)*0.015;
+    particles.scale.setScalar(breathe);
+    renderer.render(scene,camera);
+  }
+  animate();
+});
+
+var revealObserver=new IntersectionObserver(function(entries){
+  entries.forEach(function(entry){
+    if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target);}
+  });
+},{threshold:0.12});
+document.querySelectorAll('.fade-up').forEach(function(el){revealObserver.observe(el);});
+</script>
 </body>
 </html>
