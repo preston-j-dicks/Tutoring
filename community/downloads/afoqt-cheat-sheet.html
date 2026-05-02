@@ -4,175 +4,303 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AFOQT Master Cheat Sheet — All 12 Subtests | FissionLab</title>
-<meta name="description" content="Complete AFOQT cheat sheet covering all 12 subtests: formulas, key tips, timing, aviation reference, vocabulary roots, and book recommendations. Print-friendly.">
+<meta name="description" content="Complete AFOQT cheat sheet covering all 12 subtests: formulas, key tips, timing, aviation reference, vocabulary, 50 high-frequency words, and book recommendations. Print-friendly PDF.">
 <meta property="og:title" content="AFOQT Master Cheat Sheet — All 12 Subtests | FissionLab">
 <meta property="og:url" content="https://fissionlab.net/community/downloads/afoqt-cheat-sheet.html">
+<meta name="google-adsense-account" content="ca-pub-3289071681648577">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3289071681648577" crossorigin="anonymous"></script>
+<!-- GA placeholder -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> -->
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-:root{--navy:#0a1628;--navy2:#0d1f3c;--gold:#c9a84c;--gold2:#e8c97a;--white:#ffffff;--cream:#f0ebe0;--dim:rgba(240,235,224,0.82);--border:rgba(201,168,76,0.15);--border2:rgba(201,168,76,0.08);}
-body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--navy);color:var(--cream);overflow-x:hidden;font-size:16px;line-height:1.75;padding-top:64px;}
-body.no-webgl{background:radial-gradient(ellipse at 20% 50%,#0d1f3c 0%,#0a1628 70%);}
-#particle-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;}
-main,section,header,footer,.beehiiv-bar{position:relative;z-index:1;}
-.fade-up{opacity:0;transform:translateY(22px);transition:opacity 0.7s ease,transform 0.7s ease;}
-.fade-up.visible{opacity:1;transform:translateY(0);}
-nav{position:fixed;left:0;right:0;top:0;z-index:200;background:rgba(10,22,40,0.97);border-bottom:1px solid var(--border);height:64px;padding:0 8vw;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);}
-.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--white);font-size:1.05rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;}
-.nav-atom-core{color:var(--gold);font-size:16px;}
-.nav-logo-text span{color:var(--gold)}
-.nav-links{display:flex;gap:2rem;align-items:center}
-.nav-links a{font-size:0.78rem;font-weight:500;color:rgba(240,235,224,0.72);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s;}
-.nav-links a:hover,.nav-links a.active{color:var(--white)}
-.nav-cta{background:var(--gold)!important;color:var(--navy)!important;padding:8px 20px!important;border-radius:6px;font-weight:700!important;}
-.nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;color:var(--cream);}
-.nav-hamburger span{display:block;width:24px;height:2px;background:var(--cream);margin:5px 0;}
-.nav-overlay{display:none;position:fixed;inset:0;z-index:199;background:rgba(10,22,40,0.97);flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;}
-.nav-overlay.open{display:flex}
-.nav-overlay a{font-size:1.5rem;font-weight:600;color:var(--cream);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;}
-.nav-overlay a:hover{color:var(--gold)}
-.nav-overlay-close{position:absolute;top:24px;right:8vw;background:none;border:none;cursor:pointer;color:var(--cream);font-size:2rem;}
-footer{background:#060f1c;border-top:1px solid rgba(201,168,76,0.1);padding:48px 8vw;text-align:center;font-size:13px;color:rgba(240,235,224,0.35);}
-footer a{color:rgba(201,168,76,0.7);text-decoration:none;}footer a:hover{color:var(--gold)}
-.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:24px;margin-bottom:20px;}
-.footer-links a{font-size:12px;letter-spacing:0.05em;text-transform:uppercase;}
-
-/* Page layout */
-.page-hero{padding:72px 8vw 48px;max-width:1200px;margin:0 auto;}
-.hero-tag{display:inline-block;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
-h1{font-family:Georgia,serif;font-size:clamp(28px,4.5vw,52px);font-weight:700;color:var(--white);line-height:1.12;margin-bottom:16px;}
-h1 em{color:var(--gold);font-style:normal}
-.hero-sub{font-size:clamp(14px,1.6vw,17px);color:var(--dim);max-width:680px;margin-bottom:24px;}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
-.btn-primary{display:inline-block;background:var(--gold);color:var(--navy);padding:12px 28px;border-radius:7px;font-weight:700;font-size:14px;text-decoration:none;border:none;cursor:pointer;transition:background 0.2s;letter-spacing:0.04em;}
-.btn-primary:hover{background:var(--gold2);}
-.btn-secondary{display:inline-block;background:transparent;border:1px solid rgba(201,168,76,0.4);color:var(--gold);padding:11px 24px;border-radius:7px;font-weight:600;font-size:14px;text-decoration:none;cursor:pointer;transition:border-color 0.2s,color 0.2s;}
-.btn-secondary:hover{border-color:var(--gold);color:var(--gold2);}
-
-/* Sections */
-.section{padding:60px 8vw;}
-.section-inner{max-width:1200px;margin:0 auto;}
-.section-tag{display:block;font-size:10px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
-h2.sec-title{font-family:Georgia,serif;font-size:clamp(20px,2.8vw,32px);color:var(--white);margin-bottom:10px;}
-.sec-sub{font-size:14px;color:var(--dim);max-width:640px;margin-bottom:32px;}
-
-/* Subtest cards */
-.subtest-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;}
-.subtest-card{background:rgba(13,31,60,0.65);border:1px solid var(--border2);border-radius:10px;padding:22px;}
-.subtest-card:hover{border-color:var(--border);}
-.st-head{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:10px;}
-.st-name{font-family:Georgia,serif;font-size:0.98rem;color:var(--white);font-weight:700;}
-.st-badge{font-size:10px;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.2);color:var(--gold);padding:3px 9px;border-radius:10px;white-space:nowrap;flex-shrink:0;}
-.st-composite{font-size:11px;color:rgba(201,168,76,0.55);margin-bottom:8px;}
-.st-tips{list-style:none;padding:0;}
-.st-tips li{font-size:13px;color:var(--dim);padding:4px 0 4px 14px;position:relative;border-left:2px solid rgba(201,168,76,0.2);margin-bottom:6px;padding-left:10px;}
-.st-formula{font-size:12px;font-family:'Courier New',monospace;background:rgba(0,0,0,0.3);border:1px solid rgba(201,168,76,0.1);border-radius:5px;padding:8px 12px;margin-top:10px;color:var(--gold2);}
-
-/* Formula reference */
-.formula-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;}
-.formula-card{background:rgba(13,31,60,0.65);border:1px solid var(--border2);border-radius:10px;padding:20px;}
-.formula-card h3{font-family:Georgia,serif;font-size:1rem;color:var(--gold);margin-bottom:12px;}
-.formula-table{width:100%;border-collapse:collapse;}
-.formula-table td{font-size:13px;padding:5px 0;border-bottom:1px solid rgba(201,168,76,0.06);color:var(--dim);}
-.formula-table td:first-child{color:var(--white);font-weight:600;width:50%;font-family:'Courier New',monospace;font-size:12px;}
-
-/* Vocab section */
-.vocab-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;}
-.vocab-card{background:rgba(13,31,60,0.5);border:1px solid var(--border2);border-radius:8px;padding:14px 16px;}
-.vocab-root{font-size:14px;font-weight:700;color:var(--gold);margin-bottom:2px;}
-.vocab-meaning{font-size:12px;color:var(--dim);margin-bottom:4px;}
-.vocab-examples{font-size:11px;color:rgba(240,235,224,0.4);font-style:italic;}
-
-/* Aviation section */
-.avi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;}
-.avi-card{background:rgba(13,31,60,0.65);border:1px solid var(--border2);border-radius:10px;padding:20px;}
-.avi-card h3{font-family:Georgia,serif;font-size:1rem;color:var(--gold);margin-bottom:12px;}
-.avi-list{list-style:none;padding:0;}
-.avi-list li{font-size:13px;color:var(--dim);padding:5px 0;border-bottom:1px solid rgba(201,168,76,0.06);}
-.avi-list li strong{color:var(--white);}
-
-/* Books */
-.book-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;}
-.book-card{background:rgba(13,31,60,0.65);border:1px solid var(--border2);border-radius:10px;padding:22px;text-decoration:none;color:inherit;transition:border-color 0.2s,transform 0.2s;display:block;}
-.book-card:hover{border-color:rgba(201,168,76,0.4);transform:translateY(-3px);}
-.book-tag{font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block;}
-.book-title{font-family:Georgia,serif;font-size:1rem;color:var(--white);margin-bottom:4px;}
-.book-author{font-size:12px;color:rgba(240,235,224,0.4);margin-bottom:10px;}
-.book-desc{font-size:13px;color:var(--dim);margin-bottom:14px;}
-.book-buy{display:inline-block;background:var(--gold);color:var(--navy);padding:8px 20px;border-radius:6px;font-weight:700;font-size:12px;text-decoration:none;transition:background 0.2s;}
-.book-buy:hover{background:var(--gold2);}
-
-/* Composite score table */
-.composite-table{width:100%;border-collapse:collapse;margin-bottom:24px;}
-.composite-table th{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);padding:10px 14px;text-align:left;border-bottom:1px solid rgba(201,168,76,0.2);}
-.composite-table td{font-size:13px;color:var(--dim);padding:10px 14px;border-bottom:1px solid var(--border2);}
-.composite-table td:first-child{color:var(--white);font-weight:600;}
-
-/* Email capture */
-.email-block{background:rgba(201,168,76,0.04);border:1px solid rgba(201,168,76,0.2);border-radius:12px;padding:36px;text-align:center;margin:40px 0;}
-.email-block h3{font-family:Georgia,serif;font-size:1.4rem;color:var(--white);margin-bottom:10px;}
-.email-block p{font-size:14px;color:var(--dim);margin-bottom:22px;max-width:480px;margin-left:auto;margin-right:auto;}
-
-/* Beehiiv bar */
-.beehiiv-bar{background:rgba(201,168,76,0.05);border-top:1px solid rgba(201,168,76,0.1);padding:32px 8vw;text-align:center;}
-.beehiiv-bar p{font-size:14px;color:var(--dim);margin-bottom:14px;}
-.beehiiv-bar a{display:inline-block;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.35);color:var(--gold);padding:10px 28px;border-radius:6px;text-decoration:none;font-size:14px;font-weight:600;transition:background 0.2s;}
-.beehiiv-bar a:hover{background:rgba(201,168,76,0.22);}
-
-/* Score scale */
-.score-block{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:24px;}
-.score-item{background:rgba(13,31,60,0.5);border:1px solid var(--border2);border-radius:8px;padding:14px 20px;flex:1;min-width:150px;text-align:center;}
-.score-num{font-family:Georgia,serif;font-size:1.6rem;color:var(--gold);font-weight:700;}
-.score-label{font-size:11px;color:rgba(240,235,224,0.5);letter-spacing:0.08em;text-transform:uppercase;}
-
-@media(max-width:768px){
-  .nav-links{display:none}
-  .nav-hamburger{display:block}
-  .page-hero{padding:56px 6vw 36px;}
-  .section{padding:44px 6vw;}
-  .hero-actions{flex-direction:column;align-items:flex-start;}
-}
-
 /* ===== PRINT STYLES ===== */
 @media print {
-  #particle-canvas,nav,.nav-overlay,.hero-actions,.beehiiv-bar,.email-block,.btn-primary,.btn-secondary{display:none!important;}
-  body{background:#fff!important;color:#111!important;font-size:11pt;padding-top:0!important;}
-  :root{--gold:#8a6f2e;--white:#111;--cream:#222;--dim:#333;--navy:#fff;--navy2:#f8f8f5;}
-  h1,h2,h3{color:#111!important;font-family:Georgia,serif;}
-  h1{font-size:20pt;margin-bottom:6pt;}
-  h1 em{color:#8a6f2e!important;}
-  .page-hero{padding:12pt 0 8pt;}
-  .hero-sub{color:#333!important;}
-  .section{padding:14pt 0;}
-  .section-inner{max-width:100%;}
-  .subtest-grid,.formula-grid,.vocab-grid,.avi-grid,.book-grid{grid-template-columns:repeat(2,1fr);gap:8pt;}
-  .subtest-card,.formula-card,.vocab-card,.avi-card,.book-card{background:#f8f8f5!important;border:1px solid #ccc!important;border-radius:4pt;padding:10pt;break-inside:avoid;}
-  .st-name,.book-title,.avi-card h3,.formula-card h3{color:#111!important;}
-  .st-badge{background:#eee!important;border-color:#bbb!important;color:#8a6f2e!important;}
-  .st-formula{background:#f0ede3!important;color:#5a4010!important;border-color:#ccc!important;}
-  .formula-table td:first-child{color:#333!important;}
-  .composite-table th{color:#8a6f2e!important;}
-  .composite-table td{color:#333!important;}
-  .composite-table td:first-child{color:#111!important;}
-  footer{display:none;}
-  .book-buy{display:none;}
-  a{color:#8a6f2e!important;}
-  .vocab-root{color:#8a6f2e!important;}
-  .section-tag{color:#8a6f2e!important;}
-  h2.sec-title{font-size:14pt;}
-  .sec-sub{color:#444!important;}
-  .score-item{background:#f0ede3!important;border-color:#ccc!important;}
-  .score-num{color:#8a6f2e!important;}
-  .score-label{color:#555!important;}
-  .avi-list li{color:#333!important;}
-  .avi-list li strong{color:#111!important;}
-  @page{margin:0.75in;size:letter;}
+  body { background: white !important; color: black !important; }
+  #email-gate, #bottom-bar, #exit-modal, nav, .particle-canvas, canvas { display: none !important; }
+  .print-content { display: block !important; }
+  .no-print { display: none !important; }
+  a { color: black; }
+  .cheat-section { break-inside: avoid; }
+  #particle-canvas, .nav-overlay, .hero-actions, .beehiiv-bar, .email-block,
+  .btn-primary, .btn-secondary, footer { display: none !important; }
+  body { font-size: 11pt; padding-top: 0 !important; }
+  :root { --gold: #8a6f2e; --white: #111; --cream: #222; --dim: #333; --navy: #fff; --navy2: #f8f8f5; }
+  h1, h2, h3 { color: #111 !important; font-family: Georgia, serif; }
+  h1 { font-size: 20pt; margin-bottom: 6pt; }
+  h1 em { color: #8a6f2e !important; }
+  .page-hero { padding: 12pt 0 8pt; }
+  .section { padding: 14pt 0; }
+  .section-inner { max-width: 100%; }
+  .subtest-grid, .formula-grid, .vocab-grid, .avi-grid, .book-grid { grid-template-columns: repeat(2,1fr); gap: 8pt; }
+  .subtest-card, .formula-card, .vocab-card, .avi-card, .book-card { background: #f8f8f5 !important; border: 1px solid #ccc !important; border-radius: 4pt; padding: 10pt; break-inside: avoid; }
+  .book-buy { display: none; }
+  .score-item { background: #f0ede3 !important; border-color: #ccc !important; }
+  .score-num { color: #8a6f2e !important; }
+  .vocab-card { background: #f8f8f5 !important; border: 1px solid #ccc !important; }
+  .vocab-word { color: #8a6f2e !important; }
+  @page { margin: 0.75in; size: letter; }
+}
+
+/* ===== RESET & VARIABLES ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+:root {
+  --navy: #0a1628;
+  --navy2: #0d1f3c;
+  --gold: #c9a84c;
+  --gold2: #e8c97a;
+  --white: #ffffff;
+  --cream: #f0ebe0;
+  --dim: rgba(240,235,224,0.82);
+  --border: rgba(201,168,76,0.15);
+  --border2: rgba(201,168,76,0.08);
+}
+body { font-family: system-ui,-apple-system,'Segoe UI',sans-serif; background: var(--navy); color: var(--cream); overflow-x: hidden; font-size: 16px; line-height: 1.75; padding-top: 64px; }
+body.no-webgl { background: radial-gradient(ellipse at 20% 50%, #0d1f3c 0%, #0a1628 70%); }
+#particle-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+main, section, header, footer, .beehiiv-bar { position: relative; z-index: 1; }
+.fade-up { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* ===== EMAIL GATE ===== */
+#email-gate {
+  position: fixed; inset: 0; z-index: 9000;
+  background: rgba(10,22,40,0.97);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+}
+.gate-inner {
+  background: var(--navy2);
+  border: 1px solid rgba(201,168,76,0.35);
+  border-radius: 14px;
+  padding: 44px 40px;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+}
+.gate-logo { font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; display: block; }
+.gate-inner h2 { font-family: Georgia, serif; font-size: 1.65rem; color: var(--white); margin-bottom: 12px; line-height: 1.2; }
+.gate-inner p { font-size: 14px; color: var(--dim); margin-bottom: 24px; line-height: 1.65; }
+.gate-bullets { list-style: none; text-align: left; margin: 0 0 28px; padding: 0; display: inline-block; }
+.gate-bullets li { font-size: 13px; color: var(--dim); padding: 4px 0 4px 20px; position: relative; }
+.gate-bullets li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+#gate-form { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 14px; }
+#gate-email {
+  flex: 1 1 240px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 7px;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--white);
+  outline: none;
+  transition: border-color 0.2s;
+}
+#gate-email::placeholder { color: rgba(240,235,224,0.35); }
+#gate-email:focus { border-color: var(--gold); }
+#gate-submit {
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+  border-radius: 7px;
+  padding: 12px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+  letter-spacing: 0.03em;
+}
+#gate-submit:hover { background: var(--gold2); }
+.gate-fine { font-size: 11px; color: rgba(240,235,224,0.3); margin-top: 4px; }
+.gate-skip { margin-top: 16px; display: block; font-size: 12px; color: rgba(240,235,224,0.3); cursor: pointer; text-decoration: underline; }
+.gate-skip:hover { color: rgba(240,235,224,0.6); }
+
+/* ===== NAV ===== */
+nav { position: fixed; left: 0; right: 0; top: 0; z-index: 200; background: rgba(10,22,40,0.97); border-bottom: 1px solid var(--border); height: 64px; padding: 0 8vw; display: flex; align-items: center; justify-content: space-between; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--white); font-size: 1.05rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+.nav-atom-core { color: var(--gold); font-size: 16px; }
+.nav-logo-text span { color: var(--gold); }
+.nav-links { display: flex; gap: 2rem; align-items: center; }
+.nav-links a { font-size: 0.78rem; font-weight: 500; color: rgba(240,235,224,0.72); text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--white); }
+.nav-cta { background: var(--gold) !important; color: var(--navy) !important; padding: 8px 20px !important; border-radius: 6px; font-weight: 700 !important; }
+.nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; color: var(--cream); }
+.nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--cream); margin: 5px 0; }
+.nav-overlay { display: none; position: fixed; inset: 0; z-index: 199; background: rgba(10,22,40,0.97); flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; }
+.nav-overlay.open { display: flex; }
+.nav-overlay a { font-size: 1.5rem; font-weight: 600; color: var(--cream); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; }
+.nav-overlay a:hover { color: var(--gold); }
+.nav-overlay-close { position: absolute; top: 24px; right: 8vw; background: none; border: none; cursor: pointer; color: var(--cream); font-size: 2rem; }
+
+/* ===== LAYOUT ===== */
+.page-hero { padding: 72px 8vw 48px; max-width: 1200px; margin: 0 auto; }
+.hero-tag { display: inline-block; font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+h1 { font-family: Georgia, serif; font-size: clamp(28px,4.5vw,52px); font-weight: 700; color: var(--white); line-height: 1.12; margin-bottom: 16px; }
+h1 em { color: var(--gold); font-style: normal; }
+.hero-sub { font-size: clamp(14px,1.6vw,17px); color: var(--dim); max-width: 680px; margin-bottom: 24px; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.btn-primary { display: inline-block; background: var(--gold); color: var(--navy); padding: 12px 28px; border-radius: 7px; font-weight: 700; font-size: 14px; text-decoration: none; border: none; cursor: pointer; transition: background 0.2s; letter-spacing: 0.04em; }
+.btn-primary:hover { background: var(--gold2); }
+.btn-secondary { display: inline-block; background: transparent; border: 1px solid rgba(201,168,76,0.4); color: var(--gold); padding: 11px 24px; border-radius: 7px; font-weight: 600; font-size: 14px; text-decoration: none; cursor: pointer; transition: border-color 0.2s, color 0.2s; }
+.btn-secondary:hover { border-color: var(--gold); color: var(--gold2); }
+.section { padding: 60px 8vw; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+.section-tag { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+h2.sec-title { font-family: Georgia, serif; font-size: clamp(20px,2.8vw,32px); color: var(--white); margin-bottom: 10px; }
+.sec-sub { font-size: 14px; color: var(--dim); max-width: 640px; margin-bottom: 32px; }
+
+/* ===== TEST OVERVIEW TABLE ===== */
+.overview-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+.overview-table th { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); padding: 10px 14px; text-align: left; border-bottom: 1px solid rgba(201,168,76,0.25); }
+.overview-table td { font-size: 13px; color: var(--dim); padding: 9px 14px; border-bottom: 1px solid var(--border2); }
+.overview-table td:first-child { color: var(--white); font-weight: 600; }
+.overview-table tr:hover td { background: rgba(201,168,76,0.04); }
+
+/* ===== SCORE BLOCK ===== */
+.score-block { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
+.score-item { background: rgba(13,31,60,0.5); border: 1px solid var(--border2); border-radius: 8px; padding: 14px 20px; flex: 1; min-width: 150px; text-align: center; }
+.score-num { font-family: Georgia, serif; font-size: 1.6rem; color: var(--gold); font-weight: 700; }
+.score-label { font-size: 11px; color: rgba(240,235,224,0.5); letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* ===== COMPOSITE TABLE ===== */
+.composite-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+.composite-table th { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); padding: 10px 14px; text-align: left; border-bottom: 1px solid rgba(201,168,76,0.2); }
+.composite-table td { font-size: 13px; color: var(--dim); padding: 10px 14px; border-bottom: 1px solid var(--border2); }
+.composite-table td:first-child { color: var(--white); font-weight: 600; }
+
+/* ===== SUBTEST CARDS ===== */
+.subtest-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(320px,1fr)); gap: 16px; }
+.subtest-card { background: rgba(13,31,60,0.65); border: 1px solid var(--border2); border-radius: 10px; padding: 22px; }
+.subtest-card:hover { border-color: var(--border); }
+.st-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
+.st-name { font-family: Georgia, serif; font-size: 0.98rem; color: var(--white); font-weight: 700; }
+.st-badge { font-size: 10px; background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); color: var(--gold); padding: 3px 9px; border-radius: 10px; white-space: nowrap; flex-shrink: 0; }
+.st-composite { font-size: 11px; color: rgba(201,168,76,0.55); margin-bottom: 8px; }
+.st-tips { list-style: none; padding: 0; }
+.st-tips li { font-size: 13px; color: var(--dim); padding: 4px 0 4px 14px; position: relative; border-left: 2px solid rgba(201,168,76,0.2); margin-bottom: 6px; padding-left: 10px; }
+.st-formula { font-size: 12px; font-family: 'Courier New', monospace; background: rgba(0,0,0,0.3); border: 1px solid rgba(201,168,76,0.1); border-radius: 5px; padding: 8px 12px; margin-top: 10px; color: var(--gold2); }
+
+/* ===== FORMULA CARDS ===== */
+.formula-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 16px; }
+.formula-card { background: rgba(13,31,60,0.65); border: 1px solid var(--border2); border-radius: 10px; padding: 20px; }
+.formula-card h3 { font-family: Georgia, serif; font-size: 1rem; color: var(--gold); margin-bottom: 12px; }
+.formula-table { width: 100%; border-collapse: collapse; }
+.formula-table td { font-size: 13px; padding: 5px 0; border-bottom: 1px solid rgba(201,168,76,0.06); color: var(--dim); }
+.formula-table td:first-child { color: var(--white); font-weight: 600; width: 50%; font-family: 'Courier New', monospace; font-size: 12px; }
+
+/* ===== VOCAB SECTION ===== */
+.vocab-grid-50 { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 10px; }
+.vocab-card-50 { background: rgba(13,31,60,0.5); border: 1px solid var(--border2); border-radius: 8px; padding: 12px 14px; }
+.vocab-word { font-size: 14px; font-weight: 700; color: var(--gold); margin-bottom: 3px; }
+.vocab-def { font-size: 12px; color: var(--dim); line-height: 1.45; }
+
+/* ===== ANALOGY TYPES ===== */
+.analogy-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 10px; margin-bottom: 24px; }
+.analogy-pill { background: rgba(13,31,60,0.5); border: 1px solid var(--border2); border-radius: 8px; padding: 12px 16px; }
+.analogy-type { font-size: 13px; font-weight: 700; color: var(--gold); margin-bottom: 3px; }
+.analogy-ex { font-size: 12px; color: var(--dim); font-style: italic; }
+
+/* ===== AVIATION CARDS ===== */
+.avi-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 16px; }
+.avi-card { background: rgba(13,31,60,0.65); border: 1px solid var(--border2); border-radius: 10px; padding: 20px; }
+.avi-card h3 { font-family: Georgia, serif; font-size: 1rem; color: var(--gold); margin-bottom: 12px; }
+.avi-list { list-style: none; padding: 0; }
+.avi-list li { font-size: 13px; color: var(--dim); padding: 5px 0; border-bottom: 1px solid rgba(201,168,76,0.06); }
+.avi-list li strong { color: var(--white); }
+
+/* ===== STUDY PLAN ===== */
+.plan-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 14px; }
+.plan-card { background: rgba(13,31,60,0.65); border: 1px solid var(--border2); border-radius: 10px; padding: 18px 20px; }
+.plan-days { font-family: Georgia, serif; font-size: 1.1rem; color: var(--gold); font-weight: 700; margin-bottom: 6px; }
+.plan-focus { font-size: 14px; color: var(--white); font-weight: 600; margin-bottom: 4px; }
+.plan-hours { font-size: 12px; color: rgba(201,168,76,0.6); margin-bottom: 8px; }
+.plan-desc { font-size: 13px; color: var(--dim); line-height: 1.5; }
+
+/* ===== BOOK CARDS ===== */
+.book-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 18px; }
+.book-card { background: rgba(13,31,60,0.65); border: 1px solid var(--border2); border-radius: 10px; padding: 22px; text-decoration: none; color: inherit; transition: border-color 0.2s, transform 0.2s; display: block; }
+.book-card:hover { border-color: rgba(201,168,76,0.4); transform: translateY(-3px); }
+.book-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; display: block; }
+.book-title { font-family: Georgia, serif; font-size: 1rem; color: var(--white); margin-bottom: 4px; }
+.book-author { font-size: 12px; color: rgba(240,235,224,0.4); margin-bottom: 10px; }
+.book-desc { font-size: 13px; color: var(--dim); margin-bottom: 14px; }
+.book-buy { display: inline-block; background: var(--gold); color: var(--navy); padding: 8px 20px; border-radius: 6px; font-weight: 700; font-size: 12px; text-decoration: none; transition: background 0.2s; }
+.book-buy:hover { background: var(--gold2); }
+
+/* ===== EMAIL / BEEHIIV ===== */
+.email-block { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.2); border-radius: 12px; padding: 36px; text-align: center; margin: 40px 0; }
+.email-block h3 { font-family: Georgia, serif; font-size: 1.4rem; color: var(--white); margin-bottom: 10px; }
+.email-block p { font-size: 14px; color: var(--dim); margin-bottom: 22px; max-width: 480px; margin-left: auto; margin-right: auto; }
+.email-inline-form { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 12px; }
+.email-inline-form input[type="email"] { flex: 1 1 240px; background: rgba(255,255,255,0.06); border: 1px solid rgba(201,168,76,0.3); border-radius: 7px; padding: 12px 16px; font-size: 14px; color: var(--white); outline: none; transition: border-color 0.2s; }
+.email-inline-form input[type="email"]::placeholder { color: rgba(240,235,224,0.35); }
+.email-inline-form input[type="email"]:focus { border-color: var(--gold); }
+.email-inline-form button { background: var(--gold); color: var(--navy); border: none; border-radius: 7px; padding: 12px 22px; font-size: 14px; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+.email-inline-form button:hover { background: var(--gold2); }
+
+.beehiiv-bar { background: rgba(201,168,76,0.05); border-top: 1px solid rgba(201,168,76,0.1); padding: 32px 8vw; text-align: center; position: relative; z-index: 1; }
+.beehiiv-bar p { font-size: 14px; color: var(--dim); margin-bottom: 14px; }
+.beehiiv-bar a { display: inline-block; background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.35); color: var(--gold); padding: 10px 28px; border-radius: 6px; text-decoration: none; font-size: 14px; font-weight: 600; transition: background 0.2s; }
+.beehiiv-bar a:hover { background: rgba(201,168,76,0.22); }
+
+/* ===== FOOTER ===== */
+footer { background: #060f1c; border-top: 1px solid rgba(201,168,76,0.1); padding: 48px 8vw; text-align: center; font-size: 13px; color: rgba(240,235,224,0.35); position: relative; z-index: 1; }
+footer a { color: rgba(201,168,76,0.7); text-decoration: none; }
+footer a:hover { color: var(--gold); }
+.footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; margin-bottom: 20px; }
+.footer-links a { font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; }
+
+/* ===== PRINT BUTTON BAR ===== */
+.print-bar { background: rgba(201,168,76,0.06); border-bottom: 1px solid rgba(201,168,76,0.12); padding: 14px 8vw; text-align: right; position: relative; z-index: 1; }
+.print-bar-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.print-bar-inner span { font-size: 13px; color: var(--dim); }
+
+/* ===== VOCAB ROOTS ===== */
+.vocab-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 12px; }
+.vocab-card { background: rgba(13,31,60,0.5); border: 1px solid var(--border2); border-radius: 8px; padding: 14px 16px; }
+.vocab-root { font-size: 14px; font-weight: 700; color: var(--gold); margin-bottom: 2px; }
+.vocab-meaning { font-size: 12px; color: var(--dim); margin-bottom: 4px; }
+.vocab-examples { font-size: 11px; color: rgba(240,235,224,0.4); font-style: italic; }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-hamburger { display: block; }
+  .page-hero { padding: 56px 6vw 36px; }
+  .section { padding: 44px 6vw; }
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+  .gate-inner { padding: 32px 24px; }
+  #gate-form { flex-direction: column; }
+  #gate-email, #gate-submit { width: 100%; }
 }
 </style>
 </head>
 <body>
 <canvas id="particle-canvas"></canvas>
 
+<!-- ===== EMAIL GATE ===== -->
+<div id="email-gate">
+  <div class="gate-inner">
+    <span class="gate-logo">&#9883; FissionLab · Free Study Resource</span>
+    <h2>Get the Free AFOQT<br>Master Cheat Sheet</h2>
+    <p>Instant access to the complete reference covering all 12 subtests, math formulas, 50 high-frequency vocab words, aviation reference, and a print-ready PDF.</p>
+    <ul class="gate-bullets">
+      <li>All 12 subtests · timing &amp; strategy tips</li>
+      <li>Math formulas &amp; physics quick-reference</li>
+      <li>Top 50 AFOQT vocabulary words</li>
+      <li>Aviation &amp; instrument comprehension guide</li>
+      <li>30-day study plan · book recommendations</li>
+    </ul>
+    <form id="gate-form" onsubmit="unlockCheatSheet(event)">
+      <input type="email" id="gate-email" placeholder="your@email.com" required autocomplete="email">
+      <button type="submit" id="gate-submit">Get Free Access &#8594;</button>
+    </form>
+    <p class="gate-fine">No spam. Unsubscribe anytime. Powered by Dr. Preston's FissionLab newsletter.</p>
+    <span class="gate-skip" onclick="skipGate()">Already subscribed? Skip &rarr;</span>
+  </div>
+</div>
+
+<!-- ===== NAV ===== -->
 <nav>
   <a href="/" class="nav-logo">
     <span class="nav-atom-core">&#9883;</span>
@@ -198,31 +326,78 @@ h2.sec-title{font-family:Georgia,serif;font-size:clamp(20px,2.8vw,32px);color:va
   <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" style="color:var(--gold)">Book Free Intro &#8594;</a>
 </div>
 
+<!-- ===== CHEAT SHEET CONTENT (hidden until gate unlocked) ===== -->
+<div id="cheat-content" style="display:none;">
+
+<!-- Print bar -->
+<div class="print-bar no-print">
+  <div class="print-bar-inner">
+    <span>AFOQT Master Cheat Sheet &mdash; All 12 Subtests &mdash; FissionLab</span>
+    <button onclick="window.print()" class="btn-primary no-print" style="padding:9px 22px;font-size:13px;">&#128438; Print / Save as PDF</button>
+  </div>
+</div>
+
 <main>
+
   <!-- HERO -->
-  <div class="page-hero fade-up">
+  <div class="page-hero fade-up cheat-section">
     <span class="hero-tag">Free Study Reference</span>
     <h1>AFOQT Master Cheat Sheet<br><em>All 12 Subtests</em></h1>
-    <p class="hero-sub">The complete reference guide for every AFOQT subtest — timing, key formulas, strategy tips, aviation basics, vocabulary roots, and composite score breakdown. Print it, study it, ace it.</p>
-    <div class="hero-actions">
-      <button class="btn-primary" onclick="window.print()">Print / Save as PDF</button>
+    <p class="hero-sub">The complete reference guide for every AFOQT subtest — timing, formulas, strategy tips, aviation basics, 50 high-frequency vocabulary words, a 30-day study plan, and composite score breakdown. Print it, study it, ace it.</p>
+    <div class="hero-actions no-print">
+      <button class="btn-primary" onclick="window.print()">&#128438; Print / Save as PDF</button>
       <a href="/community/practice/" class="btn-secondary">Practice Questions &#8594;</a>
+      <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" class="btn-secondary">Book Free Intro &#8594;</a>
+    </div>
+  </div>
+
+  <!-- TEST OVERVIEW TABLE -->
+  <div class="section cheat-section" style="padding-top:0;">
+    <div class="section-inner fade-up">
+      <span class="section-tag">Test Overview</span>
+      <h2 class="sec-title">All 12 Subtests at a Glance</h2>
+      <p class="sec-sub">Know your time budget before test day. Seconds per question is your real pacing target.</p>
+      <div class="score-block">
+        <div class="score-item"><div class="score-num">99</div><div class="score-label">Max Score</div></div>
+        <div class="score-item"><div class="score-num">12</div><div class="score-label">Subtests</div></div>
+        <div class="score-item"><div class="score-num">~3.5h</div><div class="score-label">Test Time</div></div>
+        <div class="score-item"><div class="score-num">25+</div><div class="score-label">Pilot Min</div></div>
+        <div class="score-item"><div class="score-num">60+</div><div class="score-label">Competitive Pilot</div></div>
+      </div>
+      <table class="overview-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Subtest</th>
+            <th>Questions</th>
+            <th>Time</th>
+            <th>Sec / Q</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Verbal Analogies</td><td>25</td><td>8 min</td><td>19 s</td></tr>
+          <tr><td>2</td><td>Arithmetic Reasoning</td><td>25</td><td>29 min</td><td>70 s</td></tr>
+          <tr><td>3</td><td>Word Knowledge</td><td>25</td><td>5 min</td><td>12 s</td></tr>
+          <tr><td>4</td><td>Math Knowledge</td><td>25</td><td>22 min</td><td>53 s</td></tr>
+          <tr><td>5</td><td>Reading Comprehension</td><td>25</td><td>38 min</td><td>91 s</td></tr>
+          <tr><td>6</td><td>Situational Judgment</td><td>50</td><td>35 min</td><td>42 s</td></tr>
+          <tr><td>7</td><td>Self-Description Inventory</td><td>240</td><td>40 min</td><td>10 s</td></tr>
+          <tr><td>8</td><td>Physical Science</td><td>20</td><td>10 min</td><td>30 s</td></tr>
+          <tr><td>9</td><td>Table Reading</td><td>40</td><td>7 min</td><td>10 s</td></tr>
+          <tr><td>10</td><td>Instrument Comprehension</td><td>25</td><td>5 min</td><td>12 s</td></tr>
+          <tr><td>11</td><td>Block Counting</td><td>30</td><td>4.5 min</td><td>9 s</td></tr>
+          <tr><td>12</td><td>Aviation Information</td><td>20</td><td>8 min</td><td>24 s</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
   <!-- COMPOSITE SCORE TABLE -->
-  <div class="section" style="padding-top:0;">
+  <div class="section cheat-section" style="background:rgba(13,31,60,0.2);padding-top:0;">
     <div class="section-inner fade-up">
       <span class="section-tag">Score Overview</span>
       <h2 class="sec-title">Composite Score Breakdown</h2>
       <p class="sec-sub">Each AFOQT composite is built from specific subtests. Know which ones matter most for your target career field.</p>
-      <div class="score-block">
-        <div class="score-item"><div class="score-num">99</div><div class="score-label">Max Score</div></div>
-        <div class="score-item"><div class="score-num">12</div><div class="score-label">Subtests</div></div>
-        <div class="score-item"><div class="score-num">3.5h</div><div class="score-label">Test Time</div></div>
-        <div class="score-item"><div class="score-num">25+</div><div class="score-label">Pilot Composite Min</div></div>
-        <div class="score-item"><div class="score-num">50+</div><div class="score-label">Competitive PCSM</div></div>
-      </div>
       <table class="composite-table">
         <thead>
           <tr>
@@ -245,12 +420,330 @@ h2.sec-title{font-family:Georgia,serif;font-size:clamp(20px,2.8vw,32px);color:va
     </div>
   </div>
 
-  <!-- ALL 12 SUBTESTS -->
-  <div class="section" style="background:rgba(13,31,60,0.2);">
+  <!-- MATH KNOWLEDGE FORMULAS -->
+  <div class="section cheat-section">
     <div class="section-inner">
-      <span class="section-tag">All 12 Subtests</span>
-      <h2 class="sec-title fade-up">Timing, Tips, and Key Patterns</h2>
-      <p class="sec-sub fade-up">Master the format before you master the content. These are the highest-leverage tips per subtest.</p>
+      <span class="section-tag">Math Quick Reference</span>
+      <h2 class="sec-title fade-up">Math Knowledge &amp; Arithmetic Reasoning Formulas</h2>
+      <p class="sec-sub fade-up">Memorize these cold. They cover roughly 80% of what you need for the quantitative subtests.</p>
+      <div class="formula-grid">
+
+        <div class="formula-card fade-up">
+          <h3>Area &amp; Perimeter</h3>
+          <table class="formula-table">
+            <tr><td>Triangle area</td><td>A = &frac12;bh</td></tr>
+            <tr><td>Rectangle area</td><td>A = lw</td></tr>
+            <tr><td>Circle area</td><td>A = &#960;r&#178;</td></tr>
+            <tr><td>Rectangle perimeter</td><td>P = 2(l+w)</td></tr>
+            <tr><td>Circle circumference</td><td>C = 2&#960;r</td></tr>
+            <tr><td>Trapezoid area</td><td>A = &frac12;(b&#8321;+b&#8322;)h</td></tr>
+          </table>
+        </div>
+
+        <div class="formula-card fade-up">
+          <h3>Volume</h3>
+          <table class="formula-table">
+            <tr><td>Rectangular prism</td><td>V = lwh</td></tr>
+            <tr><td>Cylinder</td><td>V = &#960;r&#178;h</td></tr>
+            <tr><td>Sphere</td><td>V = (4/3)&#960;r&#179;</td></tr>
+            <tr><td>Cone</td><td>V = (1/3)&#960;r&#178;h</td></tr>
+            <tr><td>Pythagorean theorem</td><td>a&#178; + b&#178; = c&#178;</td></tr>
+            <tr><td>Special triangles</td><td>3-4-5, 5-12-13, 8-15-17</td></tr>
+          </table>
+        </div>
+
+        <div class="formula-card fade-up">
+          <h3>Algebra</h3>
+          <table class="formula-table">
+            <tr><td>Quadratic formula</td><td>x = (-b &#177; &#8730;(b&#178;-4ac)) / 2a</td></tr>
+            <tr><td>FOIL</td><td>(a+b)(c+d) = ac+ad+bc+bd</td></tr>
+            <tr><td>Difference of squares</td><td>a&#178;-b&#178; = (a+b)(a-b)</td></tr>
+            <tr><td>Exponent product</td><td>x&#8319; &middot; x&#7504; = x&#8319;&#8314;&#7504;</td></tr>
+            <tr><td>Exponent power</td><td>(x&#8319;)&#7504; = x&#8319;&#7504;</td></tr>
+            <tr><td>Zero exponent</td><td>x&#8304; = 1</td></tr>
+          </table>
+        </div>
+
+        <div class="formula-card fade-up">
+          <h3>Percent &amp; Ratios</h3>
+          <table class="formula-table">
+            <tr><td>Percent of</td><td>P = (part/whole) &#215; 100</td></tr>
+            <tr><td>Percent change</td><td>((new-old)/old) &#215; 100</td></tr>
+            <tr><td>Slope</td><td>m = (y&#8322;-y&#8321;)/(x&#8322;-x&#8321;)</td></tr>
+            <tr><td>Slope-intercept</td><td>y = mx + b</td></tr>
+            <tr><td>Simple interest</td><td>I = Prt</td></tr>
+            <tr><td>Average</td><td>Mean = sum / count</td></tr>
+          </table>
+        </div>
+
+        <div class="formula-card fade-up">
+          <h3>Arithmetic Reasoning Strategies</h3>
+          <table class="formula-table">
+            <tr><td>"of" = multiply</td><td>"is" = equals</td></tr>
+            <tr><td>"what percent" =</td><td>x/100</td></tr>
+            <tr><td>Rate &times; Time</td><td>= Distance</td></tr>
+            <tr><td>Total</td><td>= Rate &times; Count</td></tr>
+            <tr><td>Combined rate</td><td>1/a + 1/b = 1/t</td></tr>
+            <tr><td>Mixture</td><td>c&#8321;V&#8321; + c&#8322;V&#8322; = c&#8323;V&#8323;</td></tr>
+          </table>
+        </div>
+
+        <div class="formula-card fade-up">
+          <h3>Trigonometry</h3>
+          <table class="formula-table">
+            <tr><td>SOH</td><td>sin&#952; = Opp/Hyp</td></tr>
+            <tr><td>CAH</td><td>cos&#952; = Adj/Hyp</td></tr>
+            <tr><td>TOA</td><td>tan&#952; = Opp/Adj</td></tr>
+            <tr><td>sin 30&#176;</td><td>1/2</td></tr>
+            <tr><td>sin 45&#176;</td><td>&#8730;2/2</td></tr>
+            <tr><td>sin 60&#176;</td><td>&#8730;3/2</td></tr>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- VERBAL ANALOGIES -->
+  <div class="section cheat-section" style="background:rgba(13,31,60,0.2);">
+    <div class="section-inner">
+      <span class="section-tag">Verbal Reference</span>
+      <h2 class="sec-title fade-up">Verbal Analogies — Relationship Types</h2>
+      <p class="sec-sub fade-up">Build a bridge sentence: "A [verb] B, so C [verb] ___". Identify the relationship type first, then match it.</p>
+      <div class="analogy-grid">
+        <div class="analogy-pill fade-up"><div class="analogy-type">Part : Whole</div><div class="analogy-ex">chapter : book, petal : flower</div></div>
+        <div class="analogy-pill fade-up"><div class="analogy-type">Cause : Effect</div><div class="analogy-ex">rain : flood, study : knowledge</div></div>
+        <div class="analogy-pill fade-up"><div class="analogy-type">Synonym</div><div class="analogy-ex">brave : courageous, fast : swift</div></div>
+        <div class="analogy-pill fade-up"><div class="analogy-type">Antonym</div><div class="analogy-ex">ascend : descend, praise : criticize</div></div>
+        <div class="analogy-pill fade-up"><div class="analogy-type">Function / Use</div><div class="analogy-ex">knife : cut, pen : write</div></div>
+        <div class="analogy-pill fade-up"><div class="analogy-type">Worker : Tool</div><div class="analogy-ex">surgeon : scalpel, painter : brush</div></div>
+        <div class="analogy-pill fade-up"><div class="analogy-type">Worker : Product</div><div class="analogy-ex">baker : bread, author : novel</div></div>
+        <div class="analogy-pill fade-up"><div class="analogy-type">Degree / Intensity</div><div class="analogy-ex">warm : scorching, dislike : loathe</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOP 50 VOCABULARY WORDS -->
+  <div class="section cheat-section">
+    <div class="section-inner">
+      <span class="section-tag">Word Knowledge</span>
+      <h2 class="sec-title fade-up">Top 50 High-Frequency AFOQT Vocabulary Words</h2>
+      <p class="sec-sub fade-up">These words appear most often across AFOQT Word Knowledge and Verbal Analogies sections. Know them cold.</p>
+      <div class="vocab-grid-50">
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">tenacious</div><div class="vocab-def">stubbornly persistent; refusing to give up</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">proximity</div><div class="vocab-def">nearness in space, time, or relationship</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">attenuate</div><div class="vocab-def">to weaken or reduce in force, intensity</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">stoic</div><div class="vocab-def">enduring pain without complaint; emotionally restrained</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">expedite</div><div class="vocab-def">to speed up or make easier; to facilitate</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">laconic</div><div class="vocab-def">using very few words; brief and concise</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">egregious</div><div class="vocab-def">outstandingly bad; flagrant; remarkably shocking</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">perspicacious</div><div class="vocab-def">having a ready insight; shrewd; perceptive</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">equivocal</div><div class="vocab-def">ambiguous; open to more than one interpretation</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">succinct</div><div class="vocab-def">briefly and clearly expressed; to the point</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">ameliorate</div><div class="vocab-def">to make something bad less severe; to improve</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">perfidious</div><div class="vocab-def">deceitful and untrustworthy; treacherous</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">disparate</div><div class="vocab-def">essentially different; distinct and unlike</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">obsequious</div><div class="vocab-def">excessively servile; fawning; overly compliant</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">recalcitrant</div><div class="vocab-def">stubbornly uncooperative; defiant of authority</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">acrimonious</div><div class="vocab-def">angry and bitter; harsh in tone or manner</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">taciturn</div><div class="vocab-def">reserved or uncommunicative in speech; saying little</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">sanguine</div><div class="vocab-def">optimistic, especially in a difficult situation</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">intrepid</div><div class="vocab-def">fearless and adventurous; boldly courageous</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">austere</div><div class="vocab-def">severe; strict; without luxury or comfort</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">diligent</div><div class="vocab-def">having or showing careful, steady effort; hardworking</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">sagacious</div><div class="vocab-def">having good judgment; wise and shrewd</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">prudent</div><div class="vocab-def">acting with care and thought for the future</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">arduous</div><div class="vocab-def">demanding great effort or difficulty; strenuous</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">inimical</div><div class="vocab-def">tending to obstruct or harm; hostile; unfriendly</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">loquacious</div><div class="vocab-def">tending to talk a great deal; talkative</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">languid</div><div class="vocab-def">weak, tired, lacking energy; slow and relaxed</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">acumen</div><div class="vocab-def">the ability to make good judgments quickly; keenness</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">efficacy</div><div class="vocab-def">the ability to produce a desired result; effectiveness</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">proficient</div><div class="vocab-def">competent or skilled in doing something</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">adroit</div><div class="vocab-def">clever or skillful in using hands or mind</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">steadfast</div><div class="vocab-def">resolutely firm and unwavering; constant</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">resolute</div><div class="vocab-def">admirably purposeful; determined; unwavering</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">vigilant</div><div class="vocab-def">keeping careful watch for danger or difficulties</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">meticulous</div><div class="vocab-def">showing great attention to detail; very careful</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">indefatigable</div><div class="vocab-def">persisting tirelessly; incapable of being fatigued</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">impetuous</div><div class="vocab-def">acting quickly without thought; impulsive</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">circumspect</div><div class="vocab-def">wary and unwilling to take risks; cautious</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">magnanimous</div><div class="vocab-def">generous or forgiving, especially toward a rival</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">parsimonious</div><div class="vocab-def">unwilling to spend; extremely frugal; stingy</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">facetious</div><div class="vocab-def">treating serious issues with inappropriate humor</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">gregarious</div><div class="vocab-def">fond of company; sociable; outgoing</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">vociferous</div><div class="vocab-def">expressing opinions loudly and forcefully</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">volatile</div><div class="vocab-def">liable to change rapidly; unstable; explosive</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">astute</div><div class="vocab-def">having shrewd judgment; clever and perceptive</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">lucid</div><div class="vocab-def">clearly expressed; easy to understand; clear-headed</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">insidious</div><div class="vocab-def">proceeding gradually in a subtle but harmful way</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">benevolent</div><div class="vocab-def">well-meaning and kindly; charitable; generous</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">venerate</div><div class="vocab-def">to regard with great respect; to revere</div></div>
+        <div class="vocab-card-50 fade-up"><div class="vocab-word">pensive</div><div class="vocab-def">engaged in deep, often sad, thought; reflective</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHYSICAL SCIENCE -->
+  <div class="section cheat-section" style="background:rgba(13,31,60,0.2);">
+    <div class="section-inner">
+      <span class="section-tag">Physical Science</span>
+      <h2 class="sec-title fade-up">Physical Science Quick Reference</h2>
+      <p class="sec-sub fade-up">20 questions in 10 minutes. Focus on Newton's Laws, basic kinematics, electricity, and atomic structure.</p>
+      <div class="formula-grid">
+        <div class="formula-card fade-up">
+          <h3>Newton's Laws</h3>
+          <table class="formula-table">
+            <tr><td>1st Law (Inertia)</td><td>Objects at rest stay at rest; objects in motion stay in motion — unless acted on by a net force</td></tr>
+            <tr><td>2nd Law</td><td>F = ma (force equals mass times acceleration)</td></tr>
+            <tr><td>3rd Law</td><td>Every action has an equal and opposite reaction</td></tr>
+          </table>
+        </div>
+        <div class="formula-card fade-up">
+          <h3>Kinematic Equations</h3>
+          <table class="formula-table">
+            <tr><td>Velocity</td><td>v = d/t</td></tr>
+            <tr><td>Force</td><td>F = ma</td></tr>
+            <tr><td>Kinetic energy</td><td>KE = &frac12;mv&#178;</td></tr>
+            <tr><td>Potential energy</td><td>PE = mgh</td></tr>
+            <tr><td>Kinematics</td><td>v&#178; = u&#178; + 2as</td></tr>
+            <tr><td>Displacement</td><td>s = ut + &frac12;at&#178;</td></tr>
+          </table>
+        </div>
+        <div class="formula-card fade-up">
+          <h3>Constants &amp; Units</h3>
+          <table class="formula-table">
+            <tr><td>Speed of sound</td><td>~340 m/s at sea level</td></tr>
+            <tr><td>Speed of light</td><td>~3 &times; 10&#8308; m/s</td></tr>
+            <tr><td>Force unit</td><td>Newton (N) = kg&middot;m/s&#178;</td></tr>
+            <tr><td>Energy unit</td><td>Joule (J) = N&middot;m</td></tr>
+            <tr><td>Power unit</td><td>Watt (W) = J/s</td></tr>
+            <tr><td>Pressure unit</td><td>Pascal (Pa) = N/m&#178;</td></tr>
+          </table>
+        </div>
+        <div class="formula-card fade-up">
+          <h3>Atomic Structure</h3>
+          <table class="formula-table">
+            <tr><td>Atomic number</td><td>= number of protons</td></tr>
+            <tr><td>Mass number</td><td>= protons + neutrons</td></tr>
+            <tr><td>Neutral atom</td><td>protons = electrons</td></tr>
+            <tr><td>Ohm's Law</td><td>V = IR</td></tr>
+            <tr><td>Electrical power</td><td>P = IV = I&#178;R</td></tr>
+            <tr><td>Wave speed</td><td>v = f&#955;</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AVIATION INFORMATION -->
+  <div class="section cheat-section">
+    <div class="section-inner">
+      <span class="section-tag">Aviation Reference</span>
+      <h2 class="sec-title fade-up">Aviation Information &amp; Instrument Comprehension</h2>
+      <p class="sec-sub fade-up">Covers subtests 10 and 12. This is high-value content for the Pilot and CSO composites.</p>
+      <div class="avi-grid">
+
+        <div class="avi-card fade-up">
+          <h3>4 Forces of Flight</h3>
+          <ul class="avi-list">
+            <li><strong>Lift</strong> — acts upward, perpendicular to wing; generated by Bernoulli effect and angle of attack</li>
+            <li><strong>Weight</strong> — acts downward; gravity pulling aircraft toward earth</li>
+            <li><strong>Thrust</strong> — acts forward; produced by engine/propeller</li>
+            <li><strong>Drag</strong> — acts rearward; opposes forward motion</li>
+            <li>Level flight: Lift = Weight, Thrust = Drag</li>
+          </ul>
+        </div>
+
+        <div class="avi-card fade-up">
+          <h3>Control Surfaces</h3>
+          <ul class="avi-list">
+            <li><strong>Ailerons</strong> — trailing edge of wings; control <strong>roll</strong></li>
+            <li><strong>Elevator</strong> — horizontal tail stabilizer; control <strong>pitch</strong> (nose up/down)</li>
+            <li><strong>Rudder</strong> — vertical tail stabilizer; control <strong>yaw</strong> (nose left/right)</li>
+            <li><strong>Flaps</strong> — increase lift and drag for takeoff/landing</li>
+            <li><strong>Spoilers</strong> — reduce lift; increase drag</li>
+          </ul>
+        </div>
+
+        <div class="avi-card fade-up">
+          <h3>Navigation Lights</h3>
+          <ul class="avi-list">
+            <li><strong>Red</strong> — left wing (port)</li>
+            <li><strong>Green</strong> — right wing (starboard)</li>
+            <li><strong>White</strong> — tail</li>
+            <li><strong>VFR</strong> — Visual Flight Rules (visual navigation)</li>
+            <li><strong>IFR</strong> — Instrument Flight Rules (instruments only)</li>
+            <li><strong>NOTAM</strong> — Notice to Air Missions</li>
+          </ul>
+        </div>
+
+        <div class="avi-card fade-up">
+          <h3>Flight Instruments</h3>
+          <ul class="avi-list">
+            <li><strong>Altimeter</strong> — altitude above sea level</li>
+            <li><strong>VSI</strong> — Vertical Speed Indicator: + = climbing, &minus; = descending, 0 = level</li>
+            <li><strong>Airspeed Indicator</strong> — aircraft speed through air</li>
+            <li><strong>Artificial Horizon</strong> — pitch and bank attitude</li>
+            <li><strong>Turn Coordinator</strong> — rate of turn and coordination</li>
+          </ul>
+        </div>
+
+        <div class="avi-card fade-up">
+          <h3>Instrument Comprehension Guide</h3>
+          <ul class="avi-list">
+            <li><strong>Artificial horizon bar tilted right</strong> = aircraft in left bank (right wing high)</li>
+            <li><strong>Bar tilted left</strong> = aircraft in right bank (left wing high)</li>
+            <li><strong>Bar above center</strong> = nose pitched down</li>
+            <li><strong>Bar below center</strong> = nose pitched up</li>
+            <li><strong>Compass</strong>: 360/000=N, 090=E, 180=S, 270=W</li>
+          </ul>
+        </div>
+
+        <div class="avi-card fade-up">
+          <h3>Compass Headings</h3>
+          <ul class="avi-list">
+            <li>N = 0&#176; / 360&#176; &nbsp;&#183;&nbsp; NE = 45&#176;</li>
+            <li>E = 90&#176; &nbsp;&#183;&nbsp; SE = 135&#176;</li>
+            <li>S = 180&#176; &nbsp;&#183;&nbsp; SW = 225&#176;</li>
+            <li>W = 270&#176; &nbsp;&#183;&nbsp; NW = 315&#176;</li>
+            <li>Runway number = magnetic heading &#247; 10 (rounded)</li>
+            <li>Runway 18 = 180&#176; South &nbsp;&#183;&nbsp; Runway 27 = 270&#176; West</li>
+          </ul>
+        </div>
+
+        <div class="avi-card fade-up">
+          <h3>Block Counting Tips</h3>
+          <ul class="avi-list">
+            <li>Count how many blocks <strong>share a face</strong> with the numbered block</li>
+            <li>Diagonal contact does NOT count — faces only</li>
+            <li>Max faces per block = 6 (top, bottom, front, back, left, right)</li>
+            <li>Work top-to-bottom, front-to-back systematically</li>
+            <li>Rotate the image mentally — hidden blocks count</li>
+          </ul>
+        </div>
+
+        <div class="avi-card fade-up">
+          <h3>Aerodynamics Basics</h3>
+          <ul class="avi-list">
+            <li><strong>Bernoulli's Principle</strong>: faster airflow = lower pressure</li>
+            <li>Curved wing (camber) creates faster air over top = lift</li>
+            <li><strong>Angle of Attack</strong>: angle between wing chord and relative wind</li>
+            <li><strong>Stall</strong>: exceeds critical angle of attack; lift collapses</li>
+            <li>Standard lapse rate: temp drops ~2&#176;C per 1,000 ft gain</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ALL 12 SUBTEST TIPS -->
+  <div class="section cheat-section" style="background:rgba(13,31,60,0.2);">
+    <div class="section-inner">
+      <span class="section-tag">Strategy</span>
+      <h2 class="sec-title fade-up">Subtest-by-Subtest Strategy Tips</h2>
+      <p class="sec-sub fade-up">Highest-leverage tips for each subtest. Use these in combination with the formula and content sections above.</p>
       <div class="subtest-grid">
 
         <div class="subtest-card fade-up">
@@ -258,23 +751,23 @@ h2.sec-title{font-family:Georgia,serif;font-size:clamp(20px,2.8vw,32px);color:va
           <div class="st-composite">Verbal, Academic Aptitude</div>
           <ul class="st-tips">
             <li>Build a bridge sentence: "A [verb] B, so C [verb] ___"</li>
-            <li>Relationship types: part-to-whole, cause-effect, synonym, antonym, function, category</li>
-            <li>Eliminate options that flip the relationship direction</li>
-            <li>19 seconds per question — don't overthink</li>
+            <li>Identify relationship type first (see relationship types section)</li>
+            <li>Eliminate options that flip the direction of the relationship</li>
+            <li>19 seconds per question — commit and move on</li>
           </ul>
-          <div class="st-formula">Common patterns: tool:function, item:category, word:antonym, cause:effect</div>
+          <div class="st-formula">Common: tool:function, item:category, word:antonym, cause:effect</div>
         </div>
 
         <div class="subtest-card fade-up">
           <div class="st-head"><div class="st-name">2. Arithmetic Reasoning</div><span class="st-badge">25 Q / 29 min</span></div>
           <div class="st-composite">Quantitative, Academic Aptitude</div>
           <ul class="st-tips">
-            <li>Word problems — underline the question, not just the numbers</li>
-            <li>Sketch the scenario (distance problems, mixture problems)</li>
+            <li>Underline the question, not just the numbers</li>
+            <li>Sketch the scenario (distance, mixture problems)</li>
             <li>Watch unit conversions: miles vs. km, hours vs. minutes</li>
-            <li>Use d = rt, work = rate × time as default setups</li>
+            <li>Default setups: d = rt, work rate = 1/a + 1/b = 1/t</li>
           </ul>
-          <div class="st-formula">d = r&#183;t | work = r&#183;t | % change = (new-old)/old &#183; 100</div>
+          <div class="st-formula">d = r&middot;t | 1/a + 1/b = 1/t | % change = (new-old)/old &middot; 100</div>
         </div>
 
         <div class="subtest-card fade-up">
@@ -283,10 +776,10 @@ h2.sec-title{font-family:Georgia,serif;font-size:clamp(20px,2.8vw,32px);color:va
           <ul class="st-tips">
             <li>12 seconds per question — fastest subtest on the test</li>
             <li>Use Latin/Greek roots to decode unknown words</li>
-            <li>Look for the "closest meaning" not the exact dictionary definition</li>
-            <li>Context clues help even without a passage</li>
+            <li>Look for "closest meaning" not exact dictionary definition</li>
+            <li>When guessing: eliminate obvious wrong answers first</li>
           </ul>
-          <div class="st-formula">bene=good | mal=bad | pre=before | post=after | sub=under | super=above</div>
+          <div class="st-formula">bene=good | mal=bad | pre=before | sub=under | super=above</div>
         </div>
 
         <div class="subtest-card fade-up">
@@ -296,21 +789,21 @@ h2.sec-title{font-family:Georgia,serif;font-size:clamp(20px,2.8vw,32px);color:va
             <li>Highest ROI subtest for Pilot composite — prioritize this</li>
             <li>Know exponent rules, FOIL, factoring, quadratic formula cold</li>
             <li>Geometry: area, perimeter, volume, Pythagorean theorem</li>
-            <li>Basic trig: SOH-CAH-TOA, unit circle values at 0/30/45/60/90</li>
+            <li>Basic trig: SOH-CAH-TOA, sin/cos at 30/45/60</li>
           </ul>
-          <div class="st-formula">x = (-b &#177; &#8730;(b&#178;-4ac)) / 2a | a&#178;+b&#178;=c&#178; | sin/cos/tan = Opp/Hyp, Adj/Hyp, Opp/Adj</div>
+          <div class="st-formula">x = (-b &plusmn; &radic;(b&sup2;-4ac)) / 2a | a&sup2;+b&sup2;=c&sup2;</div>
         </div>
 
         <div class="subtest-card fade-up">
           <div class="st-head"><div class="st-name">5. Reading Comprehension</div><span class="st-badge">25 Q / 38 min</span></div>
           <div class="st-composite">Verbal, Academic Aptitude</div>
           <ul class="st-tips">
-            <li>Read the questions first — target your passage scanning</li>
+            <li>Read the questions first — target your scanning</li>
             <li>Correct answer is always directly supported by passage text</li>
-            <li>Beware "true in the real world but not stated here" traps</li>
-            <li>Main idea questions: first and last sentence of each paragraph</li>
+            <li>Avoid "true in real life but not stated here" traps</li>
+            <li>Main idea = first and last sentence of each paragraph</li>
           </ul>
-          <div class="st-formula">Strategy order: Questions &#8594; Skim passage &#8594; Find evidence &#8594; Eliminate wrong answers</div>
+          <div class="st-formula">Order: Questions &rarr; Skim &rarr; Find evidence &rarr; Eliminate wrong answers</div>
         </div>
 
         <div class="subtest-card fade-up">
@@ -318,21 +811,21 @@ h2.sec-title{font-family:Georgia,serif;font-size:clamp(20px,2.8vw,32px);color:va
           <div class="st-composite">Officer Leadership Composite</div>
           <ul class="st-tips">
             <li>Think: what would a professional, ethical AF officer do?</li>
-            <li>Chain of command matters — report up before acting independently</li>
+            <li>Chain of command matters — report up before acting alone</li>
             <li>Mission first, but never at the expense of safety or ethics</li>
-            <li>Avoid extremes: neither passive (do nothing) nor rogue (bypass chain)</li>
+            <li>Avoid extremes: neither passive nor rogue; work within authority</li>
           </ul>
-          <div class="st-formula">Best answer: address issue professionally, within authority, through proper channels</div>
+          <div class="st-formula">Best answer: address professionally, within authority, through proper channels</div>
         </div>
 
         <div class="subtest-card fade-up">
-          <div class="st-head"><div class="st-name">7. Self-Description Inventory</div><span class="st-badge">220 Q / 40 min</span></div>
+          <div class="st-head"><div class="st-name">7. Self-Description Inventory</div><span class="st-badge">240 Q / 40 min</span></div>
           <div class="st-composite">Officer Leadership Composite</div>
           <ul class="st-tips">
             <li>Personality assessment — there are no trick answers</li>
-            <li>Answer honestly and consistently — inconsistency is flagged algorithmically</li>
-            <li>Genuine leadership tendencies are what's measured</li>
-            <li>Don't overthink; your first instinct is usually right</li>
+            <li>Answer honestly and consistently — inconsistency is flagged</li>
+            <li>Genuine leadership tendencies are what is measured</li>
+            <li>First instinct is usually right — do not overthink</li>
           </ul>
           <div class="st-formula">Do not try to "game" this subtest — authentic responses score best</div>
         </div>
@@ -342,11 +835,11 @@ h2.sec-title{font-family:Georgia,serif;font-size:clamp(20px,2.8vw,32px);color:va
           <div class="st-composite">Academic Aptitude, CSO</div>
           <ul class="st-tips">
             <li>Newton's 3 Laws: inertia, F=ma, equal and opposite reactions</li>
-            <li>Ohm's Law: V = IR | Power: P = IV = I&#178;R</li>
-            <li>Know states of matter, atomic structure basics, periodic table trends</li>
-            <li>Speed of light: 3&#215;10&#8308; m/s | Speed of sound: ~343 m/s at sea level</li>
+            <li>Ohm's Law: V = IR | Power: P = IV</li>
+            <li>Know atomic structure: protons, neutrons, electrons</li>
+            <li>Speed of light: ~3&times;10&#8308; m/s | Speed of sound: ~340 m/s</li>
           </ul>
-          <div class="st-formula">F=ma | V=IR | E=mc&#178; | KE=&#189;mv&#178; | PE=mgh | p=mv</div>
+          <div class="st-formula">F=ma | V=IR | KE=&frac12;mv&#178; | PE=mgh | v=d/t</div>
         </div>
 
         <div class="subtest-card fade-up">
@@ -356,9 +849,9 @@ h2.sec-title{font-family:Georgia,serif;font-size:clamp(20px,2.8vw,32px);color:va
             <li>10 seconds per question — pure speed drill</li>
             <li>Find row (X value) and column (Y value), trace to intersection</li>
             <li>Practice with grid paper under 10-second time pressure</li>
-            <li>Don't double-check unless you have time — first reading is usually right</li>
+            <li>First reading is usually right — no time to double-check</li>
           </ul>
-          <div class="st-formula">Drill: find X on left axis &#8594; find Y on top axis &#8594; trace to intersection</div>
+          <div class="st-formula">Find X on left axis &rarr; find Y on top axis &rarr; trace to intersection</div>
         </div>
 
         <div class="subtest-card fade-up">
@@ -366,357 +859,130 @@ h2.sec-title{font-family:Georgia,serif;font-size:clamp(20px,2.8vw,32px);color:va
           <div class="st-composite">Pilot, CSO</div>
           <ul class="st-tips">
             <li>Read artificial horizon AND compass simultaneously</li>
-            <li>Artificial horizon: bar shows horizon; bank left = right wing high</li>
-            <li>Compass: 0/360=North, 90=East, 180=South, 270=West</li>
-            <li>Practice "level left bank right" mental model until automatic</li>
+            <li>Bar tilts toward high wing: bar right = left bank</li>
+            <li>Compass: 0/360=N, 90=E, 180=S, 270=W</li>
+            <li>Practice until the mental model is automatic</li>
           </ul>
-          <div class="st-formula">N=0&#176;/360&#176; | E=90&#176; | S=180&#176; | W=270&#176; | NE=45&#176; | NW=315&#176;</div>
+          <div class="st-formula">N=0&deg;/360&deg; | E=90&deg; | S=180&deg; | W=270&deg; | NE=45&deg; | NW=315&deg;</div>
         </div>
 
         <div class="subtest-card fade-up">
           <div class="st-head"><div class="st-name">11. Block Counting</div><span class="st-badge">30 Q / 4.5 min</span></div>
           <div class="st-composite">Pilot, CSO</div>
           <ul class="st-tips">
-            <li>Count how many blocks are touching the numbered block (shared faces)</li>
-            <li>Diagonal touching does NOT count — faces only</li>
+            <li>Count blocks sharing a face — not edges or corners</li>
             <li>Work top-to-bottom, front-to-back systematically</li>
-            <li>Rotate the image mentally — hidden blocks matter</li>
+            <li>Rotate the 3D image mentally — hidden blocks count</li>
+            <li>9 seconds per question — don't over-examine each one</li>
           </ul>
-          <div class="st-formula">Max faces = 6 per block | Count only shared face contact, not edge/corner</div>
+          <div class="st-formula">Max faces = 6 | Count only shared face contact, not edge/corner</div>
         </div>
 
         <div class="subtest-card fade-up">
           <div class="st-head"><div class="st-name">12. Aviation Information</div><span class="st-badge">20 Q / 8 min</span></div>
           <div class="st-composite">Pilot, ABM</div>
           <ul class="st-tips">
-            <li>Study FAA Pilot's Handbook (free at faa.gov) — it's the source</li>
+            <li>FAA Pilot's Handbook (free at faa.gov) is the primary source</li>
             <li>Four forces: Lift, Weight, Thrust, Drag — know their relationships</li>
             <li>Flight controls: ailerons (roll), elevator (pitch), rudder (yaw)</li>
-            <li>Airport markings: numbers = runway heading in tens of degrees</li>
+            <li>Nav lights: Red=left, Green=right, White=tail</li>
           </ul>
-          <div class="st-formula">Lift = roll, Pitch = nose up/down, Yaw = nose left/right | Bernoulli: faster air = lower pressure</div>
+          <div class="st-formula">Bernoulli: faster air = lower pressure | Stall = exceeded critical AoA</div>
         </div>
 
       </div>
     </div>
   </div>
 
-  <!-- MATH FORMULA REFERENCE -->
-  <div class="section">
+  <!-- 30-DAY STUDY PLAN -->
+  <div class="section cheat-section">
     <div class="section-inner">
-      <span class="section-tag">Math Quick Reference</span>
-      <h2 class="sec-title fade-up">Key Formulas — Math Knowledge &amp; Arithmetic Reasoning</h2>
-      <p class="sec-sub fade-up">Memorize these cold. They cover roughly 80% of what you need for the quantitative subtests.</p>
-      <div class="formula-grid">
-
-        <div class="formula-card fade-up">
-          <h3>Algebra Essentials</h3>
-          <table class="formula-table">
-            <tr><td>Quadratic formula</td><td>x = (-b &#177; &#8730;(b&#178;-4ac)) / 2a</td></tr>
-            <tr><td>Difference of squares</td><td>a&#178;-b&#178; = (a+b)(a-b)</td></tr>
-            <tr><td>Perfect square</td><td>(a+b)&#178; = a&#178;+2ab+b&#178;</td></tr>
-            <tr><td>FOIL</td><td>(a+b)(c+d) = ac+ad+bc+bd</td></tr>
-            <tr><td>Exponent rules</td><td>a&#8319;&#183;a&#7504; = a&#8319;&#8314;&#7504; | a&#8319;/a&#7504; = a&#8319;&#8331;&#7504;</td></tr>
-            <tr><td>Negative exponent</td><td>a&#8315;&#8319; = 1/a&#8319;</td></tr>
-            <tr><td>Slope</td><td>m = (y&#8322;-y&#8321;)/(x&#8322;-x&#8321;)</td></tr>
-            <tr><td>Slope-intercept</td><td>y = mx + b</td></tr>
-          </table>
+      <span class="section-tag">Study Plan</span>
+      <h2 class="sec-title fade-up">30-Day AFOQT Study Plan</h2>
+      <p class="sec-sub fade-up">A structured 30-day sprint to test day. Adjust daily hours to your schedule — the phase order is what matters.</p>
+      <div class="plan-grid">
+        <div class="plan-card fade-up">
+          <div class="plan-days">Days 1–7</div>
+          <div class="plan-focus">Verbal + Word Knowledge</div>
+          <div class="plan-hours">3 hours/day</div>
+          <div class="plan-desc">Master the 50 vocab words above. Study Latin/Greek roots. Drill Verbal Analogies using bridge sentence method. Read one editorial per day.</div>
         </div>
-
-        <div class="formula-card fade-up">
-          <h3>Geometry — Area &amp; Perimeter</h3>
-          <table class="formula-table">
-            <tr><td>Rectangle area</td><td>A = l &#215; w</td></tr>
-            <tr><td>Triangle area</td><td>A = &#189; b &#215; h</td></tr>
-            <tr><td>Circle area</td><td>A = &#960;r&#178;</td></tr>
-            <tr><td>Circle circumference</td><td>C = 2&#960;r = &#960;d</td></tr>
-            <tr><td>Trapezoid area</td><td>A = &#189;(b&#8321;+b&#8322;) &#215; h</td></tr>
-            <tr><td>Pythagorean theorem</td><td>a&#178; + b&#178; = c&#178;</td></tr>
-            <tr><td>Special triangles</td><td>3-4-5, 5-12-13, 8-15-17</td></tr>
-            <tr><td>45-45-90</td><td>legs: x, x | hyp: x&#8730;2</td></tr>
-          </table>
+        <div class="plan-card fade-up">
+          <div class="plan-days">Days 8–14</div>
+          <div class="plan-focus">Math Knowledge + Arithmetic Reasoning</div>
+          <div class="plan-hours">3 hours/day</div>
+          <div class="plan-desc">Memorize all formulas on this sheet. Do 25 timed Math Knowledge drills daily. Translate word problems using the keyword strategy (of = multiply, etc.).</div>
         </div>
-
-        <div class="formula-card fade-up">
-          <h3>Geometry — Volume &amp; Surface Area</h3>
-          <table class="formula-table">
-            <tr><td>Rectangular prism</td><td>V = l&#183;w&#183;h</td></tr>
-            <tr><td>Cylinder volume</td><td>V = &#960;r&#178;h</td></tr>
-            <tr><td>Sphere volume</td><td>V = (4/3)&#960;r&#179;</td></tr>
-            <tr><td>Cone volume</td><td>V = (1/3)&#960;r&#178;h</td></tr>
-            <tr><td>Sum of interior angles</td><td>(n-2) &#215; 180&#176;</td></tr>
-            <tr><td>Exterior angle theorem</td><td>ext. angle = sum of remote interior</td></tr>
-            <tr><td>30-60-90 triangle</td><td>legs: x, x&#8730;3 | hyp: 2x</td></tr>
-            <tr><td>Circle arc length</td><td>s = r&#952; (&#952; in radians)</td></tr>
-          </table>
+        <div class="plan-card fade-up">
+          <div class="plan-days">Days 15–21</div>
+          <div class="plan-focus">Physical Science + Aviation + Instruments</div>
+          <div class="plan-hours">2 hours/day</div>
+          <div class="plan-desc">Review Newton's Laws, kinematics, and atomic structure. Study the FAA handbook sections on flight controls and aerodynamics. Practice instrument reading drills.</div>
         </div>
-
-        <div class="formula-card fade-up">
-          <h3>Word Problem Setups</h3>
-          <table class="formula-table">
-            <tr><td>Distance</td><td>d = r&#183;t</td></tr>
-            <tr><td>Combined rate</td><td>1/t = 1/t&#8321; + 1/t&#8322;</td></tr>
-            <tr><td>Percent of</td><td>P = (part/whole) &#215; 100</td></tr>
-            <tr><td>Percent change</td><td>((new-old)/old) &#215; 100</td></tr>
-            <tr><td>Simple interest</td><td>I = P&#183;r&#183;t</td></tr>
-            <tr><td>Compound interest</td><td>A = P(1+r/n)&#8319;&#7504;</td></tr>
-            <tr><td>Average</td><td>Mean = sum / count</td></tr>
-            <tr><td>Mixture problem</td><td>c&#8321;V&#8321; + c&#8322;V&#8322; = c&#8323;V&#8323;</td></tr>
-          </table>
+        <div class="plan-card fade-up">
+          <div class="plan-days">Days 22–26</div>
+          <div class="plan-focus">Full Practice Tests + Score Analysis</div>
+          <div class="plan-hours">4 hours/day</div>
+          <div class="plan-desc">Take timed full-length practice tests. Log every missed question by subtest. Identify your weakest composite and calculate realistic score projection.</div>
         </div>
-
-        <div class="formula-card fade-up">
-          <h3>Trigonometry</h3>
-          <table class="formula-table">
-            <tr><td>SOH</td><td>sin&#952; = Opposite/Hypotenuse</td></tr>
-            <tr><td>CAH</td><td>cos&#952; = Adjacent/Hypotenuse</td></tr>
-            <tr><td>TOA</td><td>tan&#952; = Opposite/Adjacent</td></tr>
-            <tr><td>sin 0&#176;</td><td>0</td></tr>
-            <tr><td>sin 30&#176;</td><td>1/2</td></tr>
-            <tr><td>sin 45&#176;</td><td>&#8730;2/2</td></tr>
-            <tr><td>sin 60&#176;</td><td>&#8730;3/2</td></tr>
-            <tr><td>sin 90&#176;</td><td>1</td></tr>
-          </table>
+        <div class="plan-card fade-up">
+          <div class="plan-days">Days 27–30</div>
+          <div class="plan-focus">Target Weaknesses Only</div>
+          <div class="plan-hours">2 hours/day</div>
+          <div class="plan-desc">Drill only your two weakest subtests. Review flagged questions from practice tests. Light review on test-day morning — no new material.</div>
         </div>
-
-        <div class="formula-card fade-up">
-          <h3>Physical Science Essentials</h3>
-          <table class="formula-table">
-            <tr><td>Newton's 2nd Law</td><td>F = m&#183;a</td></tr>
-            <tr><td>Ohm's Law</td><td>V = I&#183;R</td></tr>
-            <tr><td>Electrical power</td><td>P = I&#183;V = I&#178;R</td></tr>
-            <tr><td>Kinetic energy</td><td>KE = &#189;mv&#178;</td></tr>
-            <tr><td>Potential energy</td><td>PE = mgh</td></tr>
-            <tr><td>Momentum</td><td>p = mv</td></tr>
-            <tr><td>Wave speed</td><td>v = f&#955;</td></tr>
-            <tr><td>Density</td><td>&#961; = m/V</td></tr>
-          </table>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- VERBAL / VOCABULARY ROOTS -->
-  <div class="section" style="background:rgba(13,31,60,0.2);">
-    <div class="section-inner">
-      <span class="section-tag">Verbal Reference</span>
-      <h2 class="sec-title fade-up">Latin &amp; Greek Root Words</h2>
-      <p class="sec-sub fade-up">Knowing these 40 roots unlocks the meaning of hundreds of AFOQT vocabulary words. High ROI for Word Knowledge and Verbal Analogies.</p>
-      <div class="vocab-grid">
-        <div class="vocab-card fade-up"><div class="vocab-root">BENE / BON</div><div class="vocab-meaning">good, well</div><div class="vocab-examples">benefit, benevolent, bonus</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">MAL / MALE</div><div class="vocab-meaning">bad, evil</div><div class="vocab-examples">malice, malevolent, malfunction</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">CHRON</div><div class="vocab-meaning">time</div><div class="vocab-examples">chronology, synchronize, anachronism</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">GEO</div><div class="vocab-meaning">earth</div><div class="vocab-examples">geography, geology, geothermal</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">GRAPH / GRAM</div><div class="vocab-meaning">write, record</div><div class="vocab-examples">photograph, biography, telegram</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">LOG / LOGUE</div><div class="vocab-meaning">word, reason, study</div><div class="vocab-examples">logic, dialogue, biology</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">MONO</div><div class="vocab-meaning">one, single</div><div class="vocab-examples">monotone, monopoly, monologue</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">POLY</div><div class="vocab-meaning">many</div><div class="vocab-examples">polygon, polyglot, polymorphic</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">PORT</div><div class="vocab-meaning">carry</div><div class="vocab-examples">transport, portable, import</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">RUPT</div><div class="vocab-meaning">break</div><div class="vocab-examples">interrupt, rupture, disrupt</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">SCRIB / SCRIP</div><div class="vocab-meaning">write</div><div class="vocab-examples">scripture, describe, inscription</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">SPEC / SPECT</div><div class="vocab-meaning">see, look</div><div class="vocab-examples">spectator, inspect, spectrum</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">STRUCT</div><div class="vocab-meaning">build</div><div class="vocab-examples">construct, structure, instruct</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">TERRA</div><div class="vocab-meaning">earth, land</div><div class="vocab-examples">terrain, territory, Mediterranean</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">VICT / VINC</div><div class="vocab-meaning">conquer</div><div class="vocab-examples">victory, invincible, conviction</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">VOC / VOK</div><div class="vocab-meaning">call, voice</div><div class="vocab-examples">vocal, invoke, vocabulary</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">VERT / VERS</div><div class="vocab-meaning">turn</div><div class="vocab-examples">convert, revert, diversify</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">AUDI</div><div class="vocab-meaning">hear</div><div class="vocab-examples">audible, audience, auditorium</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">DICT</div><div class="vocab-meaning">say, speak</div><div class="vocab-examples">diction, predict, contradict</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">DUC / DUCT</div><div class="vocab-meaning">lead</div><div class="vocab-examples">conduct, deduce, induction</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">FER</div><div class="vocab-meaning">carry, bear</div><div class="vocab-examples">transfer, infer, conifer</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">FRACT / FRAG</div><div class="vocab-meaning">break</div><div class="vocab-examples">fracture, fragment, infraction</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">MIT / MIS</div><div class="vocab-meaning">send</div><div class="vocab-examples">transmit, mission, emit</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">MORT</div><div class="vocab-meaning">death</div><div class="vocab-examples">mortal, immortal, mortify</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">PED / POD</div><div class="vocab-meaning">foot</div><div class="vocab-examples">pedal, pedestrian, podium</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">PHON</div><div class="vocab-meaning">sound</div><div class="vocab-examples">phonics, symphony, microphone</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">PRIM / PRIME</div><div class="vocab-meaning">first</div><div class="vocab-examples">primary, primitive, primal</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">SENS / SENT</div><div class="vocab-meaning">feel, sense</div><div class="vocab-examples">sensitive, sentiment, sensation</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">SOL</div><div class="vocab-meaning">sun / alone</div><div class="vocab-examples">solar, solitary, solo</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">TEMPOR</div><div class="vocab-meaning">time</div><div class="vocab-examples">temporary, contemporary, tempo</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">TEN / TAIN</div><div class="vocab-meaning">hold</div><div class="vocab-examples">retain, contain, tenacious</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">TRAC / TRACT</div><div class="vocab-meaning">pull, drag</div><div class="vocab-examples">tractor, attract, extract</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">TRANS</div><div class="vocab-meaning">across, through</div><div class="vocab-examples">transport, transparent, transcend</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">OMNI</div><div class="vocab-meaning">all</div><div class="vocab-examples">omnipotent, omniscient, omnivore</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">BREV</div><div class="vocab-meaning">short</div><div class="vocab-examples">abbreviate, brevity, brief</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">CEDE / CEED</div><div class="vocab-meaning">go, yield</div><div class="vocab-examples">proceed, recede, exceed</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">CLAR</div><div class="vocab-meaning">clear</div><div class="vocab-examples">clarity, clarify, declare</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">FLECT / FLEX</div><div class="vocab-meaning">bend</div><div class="vocab-examples">reflect, flexible, inflection</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">GRAD / GRESS</div><div class="vocab-meaning">step, go</div><div class="vocab-examples">progress, gradual, transgress</div></div>
-        <div class="vocab-card fade-up"><div class="vocab-root">LUMEN / LUC</div><div class="vocab-meaning">light</div><div class="vocab-examples">luminous, lucid, translucent</div></div>
       </div>
 
-      <div style="margin-top:28px;background:rgba(13,31,60,0.5);border:1px solid var(--border2);border-radius:10px;padding:20px;">
-        <h3 style="font-family:Georgia,serif;color:var(--gold);font-size:1rem;margin-bottom:10px;">Common Prefixes &amp; Suffixes</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;">
-          <div style="font-size:13px;color:var(--dim);"><strong style="color:var(--white);">anti-</strong> against (anticlimactic)</div>
-          <div style="font-size:13px;color:var(--dim);"><strong style="color:var(--white);">circum-</strong> around (circumvent)</div>
-          <div style="font-size:13px;color:var(--dim);"><strong style="color:var(--white);">contra-</strong> against (contradict)</div>
-          <div style="font-size:13px;color:var(--dim);"><strong style="color:var(--white);">de-</strong> reverse/remove (deflate)</div>
-          <div style="font-size:13px;color:var(--dim);"><strong style="color:var(--white);">dis-</strong> not, opposite (disorder)</div>
-          <div style="font-size:13px;color:var(--dim);"><strong style="color:var(--white);">inter-</strong> between (interact)</div>
-          <div style="font-size:13px;color:var(--dim);"><strong style="color:var(--white);">intra-</strong> within (intramural)</div>
-          <div style="font-size:13px;color:var(--dim);"><strong style="color:var(--white);">mis-</strong> wrong (misinterpret)</div>
-          <div style="font-size:13px;color:var(--dim);"><strong style="color:var(--white);">-ous/-ious</strong> full of (joyous)</div>
-          <div style="font-size:13px;color:var(--dim);"><strong style="color:var(--white);">-tion/-sion</strong> act of (tension)</div>
-          <div style="font-size:13px;color:var(--dim);"><strong style="color:var(--white);">-ible/-able</strong> capable of (capable)</div>
-          <div style="font-size:13px;color:var(--dim);"><strong style="color:var(--white);">-ify/-ize</strong> make/become (simplify)</div>
+      <div style="margin-top:28px;background:rgba(13,31,60,0.5);border:1px solid var(--border2);border-radius:10px;padding:22px;">
+        <h3 style="font-family:Georgia,serif;color:var(--gold);font-size:1rem;margin-bottom:14px;">Priority Order by Composite</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;">
+          <div>
+            <div style="font-size:12px;font-weight:700;color:var(--white);margin-bottom:6px;letter-spacing:0.05em;text-transform:uppercase;">Pilot Track</div>
+            <div style="font-size:13px;color:var(--dim);line-height:1.7;">
+              1. Math Knowledge (Pilot composite)<br>
+              2. Table Reading (Pilot composite)<br>
+              3. Instrument Comprehension (Pilot composite)<br>
+              4. Aviation Information (Pilot composite)<br>
+              5. Arithmetic Reasoning (Quantitative)<br>
+              6. Verbal + Reading (Verbal composite)
+            </div>
+          </div>
+          <div>
+            <div style="font-size:12px;font-weight:700;color:var(--white);margin-bottom:6px;letter-spacing:0.05em;text-transform:uppercase;">Time per Question Reference</div>
+            <div style="font-size:13px;color:var(--dim);line-height:1.7;">
+              Block Counting: 9 s &nbsp;|&nbsp; Table Reading: 10 s<br>
+              Word Knowledge: 12 s &nbsp;|&nbsp; Instrument: 12 s<br>
+              Aviation: 24 s &nbsp;|&nbsp; Physical Sci: 30 s<br>
+              Math Knowledge: 53 s &nbsp;|&nbsp; Arithmetic: 70 s<br>
+              Reading Comp: 91 s
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- AVIATION REFERENCE -->
-  <div class="section">
+  <!-- NEWSLETTER SIGNUP (BEEHIIV) -->
+  <div class="section cheat-section no-print" style="background:rgba(13,31,60,0.2);">
     <div class="section-inner">
-      <span class="section-tag">Aviation Reference</span>
-      <h2 class="sec-title fade-up">Aviation Information &amp; Instrument Comprehension</h2>
-      <p class="sec-sub fade-up">This section covers the content tested in Aviation Information (subtest 12) and provides context for Instrument Comprehension (subtest 10).</p>
-      <div class="avi-grid">
-
-        <div class="avi-card fade-up">
-          <h3>Four Forces of Flight</h3>
-          <ul class="avi-list">
-            <li><strong>Lift</strong> — acts upward, perpendicular to wing; generated by Bernoulli effect and angle of attack</li>
-            <li><strong>Weight</strong> — acts downward; gravity pulling aircraft toward earth</li>
-            <li><strong>Thrust</strong> — acts forward; produced by engine/propeller</li>
-            <li><strong>Drag</strong> — acts rearward; opposes forward motion</li>
-            <li>Straight, level flight: Lift = Weight, Thrust = Drag</li>
-            <li>Climbing: Thrust &gt; Drag, Lift &gt; Weight</li>
-          </ul>
-        </div>
-
-        <div class="avi-card fade-up">
-          <h3>Flight Control Surfaces</h3>
-          <ul class="avi-list">
-            <li><strong>Ailerons</strong> — on trailing edge of wings; control roll (bank)</li>
-            <li><strong>Elevator</strong> — on tail horizontal stabilizer; controls pitch (nose up/down)</li>
-            <li><strong>Rudder</strong> — on tail vertical stabilizer; controls yaw (nose left/right)</li>
-            <li><strong>Flaps</strong> — increase lift and drag for takeoff/landing</li>
-            <li><strong>Spoilers</strong> — reduce lift, increase drag</li>
-            <li><strong>Trim tabs</strong> — reduce pilot control pressure</li>
-          </ul>
-        </div>
-
-        <div class="avi-card fade-up">
-          <h3>Axes of Rotation</h3>
-          <ul class="avi-list">
-            <li><strong>Longitudinal axis</strong> — nose to tail; roll motion; ailerons</li>
-            <li><strong>Lateral axis</strong> — wingtip to wingtip; pitch motion; elevator</li>
-            <li><strong>Vertical axis</strong> — top to bottom; yaw motion; rudder</li>
-            <li>Coordinated turn: aileron + rudder together</li>
-            <li>Adverse yaw: aileron input alone causes unwanted yaw opposite bank</li>
-          </ul>
-        </div>
-
-        <div class="avi-card fade-up">
-          <h3>Airport Runway Markings</h3>
-          <ul class="avi-list">
-            <li>Runway numbers = magnetic heading ÷ 10 (rounded)</li>
-            <li>Runway 18 = heading 180&#176; (south)</li>
-            <li>Runway 27 = heading 270&#176; (west)</li>
-            <li>Parallel runways: L (left), R (right), C (center)</li>
-            <li>Threshold markings: white stripes at runway end</li>
-            <li>Taxiways: yellow centerline; hold-short markings = double dashed lines</li>
-          </ul>
-        </div>
-
-        <div class="avi-card fade-up">
-          <h3>Instrument Comprehension Guide</h3>
-          <ul class="avi-list">
-            <li><strong>Artificial Horizon</strong>: horizon bar shows sky/ground relationship</li>
-            <li>Bar tilted right = aircraft in left bank (right wing high)</li>
-            <li>Bar tilted left = aircraft in right bank (left wing high)</li>
-            <li>Bar above center = nose pitched down</li>
-            <li>Bar below center = nose pitched up</li>
-            <li><strong>Compass</strong>: 0&#176;/360&#176;=N, 90&#176;=E, 180&#176;=S, 270&#176;=W</li>
-          </ul>
-        </div>
-
-        <div class="avi-card fade-up">
-          <h3>Weather &amp; Atmosphere</h3>
-          <ul class="avi-list">
-            <li>Standard atmosphere: 15&#176;C / 59&#176;F at sea level, pressure 29.92 inHg</li>
-            <li>Temperature decreases ~2&#176;C per 1,000 ft gain (standard lapse rate)</li>
-            <li>Clouds: Cumulus (vertical), Stratus (horizontal), Cirrus (high-altitude, icy)</li>
-            <li>Cumulonimbus: thunderstorm clouds — avoid flight through</li>
-            <li>VFR: Visual Flight Rules — weather allows visual navigation</li>
-            <li>IFR: Instrument Flight Rules — navigate by instruments only</li>
-          </ul>
-        </div>
-
-        <div class="avi-card fade-up">
-          <h3>Aerodynamics Basics</h3>
-          <ul class="avi-list">
-            <li><strong>Bernoulli's Principle</strong>: faster airflow = lower pressure</li>
-            <li>Wing camber (curved shape) creates faster airflow over top = lift</li>
-            <li><strong>Angle of Attack</strong>: angle between wing chord and relative wind</li>
-            <li><strong>Stall</strong>: exceeds critical angle of attack; lift collapses</li>
-            <li>Recovery from stall: reduce angle of attack (push nose down)</li>
-            <li>Glide ratio: horizontal distance per unit of altitude lost</li>
-          </ul>
-        </div>
-
-        <div class="avi-card fade-up">
-          <h3>Compass Headings — Quick Reference</h3>
-          <ul class="avi-list">
-            <li>N = 0&#176; / 360&#176;</li>
-            <li>NE = 45&#176;</li>
-            <li>E = 90&#176;</li>
-            <li>SE = 135&#176;</li>
-            <li>S = 180&#176;</li>
-            <li>SW = 225&#176;</li>
-            <li>W = 270&#176;</li>
-            <li>NW = 315&#176;</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- STUDY STRATEGY -->
-  <div class="section" style="background:rgba(13,31,60,0.2);">
-    <div class="section-inner">
-      <span class="section-tag">Strategy</span>
-      <h2 class="sec-title fade-up">High-Level Study Strategy</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;">
-        <div class="formula-card fade-up">
-          <h3>Priority Order for Pilot Track</h3>
-          <table class="formula-table">
-            <tr><td>Priority 1 (Pilot composite)</td><td>Math Knowledge, Table Reading, Instrument Comprehension, Aviation Information</td></tr>
-            <tr><td>Priority 2 (Quantitative)</td><td>Arithmetic Reasoning</td></tr>
-            <tr><td>Priority 3 (Verbal)</td><td>Verbal Analogies, Word Knowledge, Reading Comprehension</td></tr>
-            <tr><td>Priority 4 (Academic Aptitude)</td><td>Physical Science</td></tr>
-            <tr><td>Remaining</td><td>Situational Judgment, Self-Description Inventory, Block Counting</td></tr>
-          </table>
-        </div>
-        <div class="formula-card fade-up">
-          <h3>Time-Per-Question Reference</h3>
-          <table class="formula-table">
-            <tr><td>Verbal Analogies</td><td>19 sec/question</td></tr>
-            <tr><td>Arithmetic Reasoning</td><td>70 sec/question</td></tr>
-            <tr><td>Word Knowledge</td><td>12 sec/question</td></tr>
-            <tr><td>Math Knowledge</td><td>53 sec/question</td></tr>
-            <tr><td>Reading Comprehension</td><td>91 sec/question</td></tr>
-            <tr><td>Situational Judgment</td><td>42 sec/question</td></tr>
-            <tr><td>Physical Science</td><td>30 sec/question</td></tr>
-            <tr><td>Table Reading</td><td>10 sec/question</td></tr>
-            <tr><td>Instrument Comprehension</td><td>12 sec/question</td></tr>
-            <tr><td>Block Counting</td><td>9 sec/question</td></tr>
-            <tr><td>Aviation Information</td><td>24 sec/question</td></tr>
-          </table>
-        </div>
+      <div class="email-block fade-up">
+        <h3>Get Weekly AFOQT Tips from Dr. Preston</h3>
+        <p>Join the FissionLab newsletter for weekly study strategies, practice problems, score breakdowns, and officer prep insights — free. Subscribers get early access to new practice tests.</p>
+        <form class="email-inline-form" onsubmit="subscribeNewsletter(event, this)">
+          <input type="email" placeholder="your@email.com" required autocomplete="email">
+          <button type="submit">Subscribe Free &rarr;</button>
+        </form>
+        <p style="font-size:12px;color:rgba(240,235,224,0.3);">No spam. Unsubscribe any time. Delivered via Beehiiv.</p>
       </div>
     </div>
   </div>
 
   <!-- BOOK RECOMMENDATIONS -->
-  <div class="section">
+  <div class="section cheat-section">
     <div class="section-inner">
       <span class="section-tag">Recommended Books</span>
-      <h2 class="sec-title fade-up">Top AFOQT Prep Books</h2>
-      <p class="sec-sub fade-up">Dr. Preston's personal picks. These are the books that actually reflect test format and question style. Amazon links use the fissionlab-20 affiliate tag.</p>
+      <h2 class="sec-title fade-up">Top 5 AFOQT Prep Books</h2>
+      <p class="sec-sub fade-up">Dr. Preston's personal picks. These books reflect actual test format and question style. Amazon links use affiliate tag fissionlab-20.</p>
       <div class="book-grid">
         <a href="https://www.amazon.com/dp/0768941733?tag=fissionlab-20" target="_blank" rel="noopener sponsored" class="book-card fade-up">
           <span class="book-tag">Top Pick — Comprehensive</span>
@@ -733,24 +999,24 @@ h2.sec-title{font-family:Georgia,serif;font-size:clamp(20px,2.8vw,32px);color:va
           <span class="book-buy">View on Amazon</span>
         </a>
         <a href="https://www.amazon.com/dp/1438011768?tag=fissionlab-20" target="_blank" rel="noopener sponsored" class="book-card fade-up">
-          <span class="book-tag">Best for Extra Practice Tests</span>
+          <span class="book-tag">Best Extra Practice Tests</span>
           <div class="book-title">Barron's Military Flight Aptitude Tests</div>
           <div class="book-author">Terry L. Duran</div>
-          <div class="book-desc">Solid additional full-length practice tests and aviation knowledge review. Use after Peterson's for extra reps under timed conditions.</div>
+          <div class="book-desc">Solid additional full-length practice tests and aviation knowledge review. Best used after Peterson's for extra timed reps.</div>
           <span class="book-buy">View on Amazon</span>
         </a>
         <a href="https://www.amazon.com/dp/1609714792?tag=fissionlab-20" target="_blank" rel="noopener sponsored" class="book-card fade-up">
-          <span class="book-tag">Best Flash Card Style</span>
+          <span class="book-tag">Best Structured Review</span>
           <div class="book-title">AFOQT Secrets Study Guide</div>
           <div class="book-author">Mometrix</div>
-          <div class="book-desc">Dense review material with emphasis on test-taking strategies. Good for candidates who need structured, bite-sized review sessions.</div>
+          <div class="book-desc">Dense review with emphasis on test-taking strategies. Good for candidates who need structured, bite-sized review sessions.</div>
           <span class="book-buy">View on Amazon</span>
         </a>
         <a href="https://www.amazon.com/dp/0470598239?tag=fissionlab-20" target="_blank" rel="noopener sponsored" class="book-card fade-up">
           <span class="book-tag">Best for Officer Basics</span>
           <div class="book-title">Officer Candidate Tests For Dummies</div>
           <div class="book-author">For Dummies / Wiley</div>
-          <div class="book-desc">Accessible reference that covers AFOQT alongside other officer candidate tests. Good for situational judgment and leadership sections.</div>
+          <div class="book-desc">Accessible reference covering AFOQT alongside other officer tests. Strong for Situational Judgment and leadership sections.</div>
           <span class="book-buy">View on Amazon</span>
         </a>
       </div>
@@ -758,25 +1024,14 @@ h2.sec-title{font-family:Georgia,serif;font-size:clamp(20px,2.8vw,32px);color:va
     </div>
   </div>
 
-  <!-- EMAIL CAPTURE -->
-  <div class="section" style="background:rgba(13,31,60,0.2);">
-    <div class="section-inner">
-      <div class="email-block fade-up">
-        <h3>Get Weekly AFOQT Tips from Dr. Preston</h3>
-        <p>Join the FissionLab newsletter for weekly study strategies, practice problems, score breakdowns, and officer prep insights — free.</p>
-        <a href="https://www.beehiiv.com/?via=preston-dicks" target="_blank" rel="noopener sponsored" class="btn-primary">Subscribe Free via Beehiiv</a>
-        <p style="margin-top:12px;font-size:12px;color:rgba(240,235,224,0.3);">No spam. Unsubscribe any time. This is a referral link — we earn a small commission if you sign up for a paid Beehiiv plan.</p>
-      </div>
-    </div>
-  </div>
 </main>
 
-<div class="beehiiv-bar">
+<div class="beehiiv-bar no-print">
   <p>Free weekly AFOQT study tips, score strategies, and resource drops from Dr. Preston PhD, USAF Captain.</p>
-  <a href="https://www.beehiiv.com/?via=preston-dicks" target="_blank" rel="noopener sponsored">Subscribe to the FissionLab Newsletter</a>
+  <a href="https://prestons-newsletter-5f43a7.beehiiv.com/subscribe?utm_source=fissionlab-cheatsheet" target="_blank" rel="noopener">Subscribe to the FissionLab Newsletter</a>
 </div>
 
-<footer>
+<footer class="no-print">
   <div class="footer-links">
     <a href="/">Home</a>
     <a href="/community/">Community</a>
@@ -786,19 +1041,151 @@ h2.sec-title{font-family:Georgia,serif;font-size:clamp(20px,2.8vw,32px);color:va
     <a href="/community/forum/">Forum</a>
     <a href="mailto:preston.j.dicks@gmail.com">Contact</a>
   </div>
-  <p>&#169; 2026 FissionLab &#183; AFOQT Study Community</p>
+  <p>&copy; 2026 FissionLab &middot; AFOQT Study Community</p>
   <p style="font-size:11px;color:rgba(240,235,224,0.3);margin-top:10px;padding:8px 20px;border:1px solid rgba(201,168,76,0.08);border-radius:4px;display:inline-block;">
-    <strong style="color:rgba(201,168,76,0.6);">Affiliate Disclosure:</strong> This page contains Amazon affiliate links (fissionlab-20) and a Beehiiv referral link.
+    <strong style="color:rgba(201,168,76,0.6);">Affiliate Disclosure:</strong> This page contains Amazon affiliate links (fissionlab-20) and a Beehiiv newsletter link.
     We may earn a small commission at no cost to you.
-    <a href="/affiliate-disclosure/" style="color:rgba(201,168,76,0.45);">Full disclosure &#8594;</a>
+    <a href="/affiliate-disclosure/" style="color:rgba(201,168,76,0.45);">Full disclosure &rarr;</a>
   </p>
 </footer>
 
+</div><!-- end #cheat-content -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
 <script>
-window.addEventListener('load',function(){var canvas=document.getElementById('particle-canvas');var isMobile=window.innerWidth<768;try{var t=canvas.getContext('webgl')||canvas.getContext('experimental-webgl');if(!t)throw new Error();}catch(e){document.body.classList.add('no-webgl');canvas.style.display='none';return;}if(typeof THREE==='undefined'){document.body.classList.add('no-webgl');canvas.style.display='none';return;}var renderer=new THREE.WebGLRenderer({canvas:canvas,antialias:false,alpha:true});renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));renderer.setSize(window.innerWidth,window.innerHeight);renderer.setClearColor(0x000000,0);var scene=new THREE.Scene();var camera=new THREE.PerspectiveCamera(60,window.innerWidth/window.innerHeight,0.1,1000);camera.position.z=80;var count=isMobile?1200:3000;var positions=new Float32Array(count*3);var colors=new Float32Array(count*3);var goldColor=new THREE.Color(0xc9a84c);var blueColor=new THREE.Color(0x2a4a7a);for(var i=0;i<count;i++){var phi=Math.acos(2*Math.random()-1);var theta=2*Math.PI*Math.random();var r=20+Math.random()*60;positions[i*3]=r*Math.sin(phi)*Math.cos(theta);positions[i*3+1]=r*Math.sin(phi)*Math.sin(theta);positions[i*3+2]=r*Math.cos(phi);var c=Math.random()<0.30?goldColor:blueColor;colors[i*3]=c.r;colors[i*3+1]=c.g;colors[i*3+2]=c.b;}var geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.BufferAttribute(positions,3));geometry.setAttribute('color',new THREE.BufferAttribute(colors,3));var material=new THREE.PointsMaterial({size:0.5,vertexColors:true,transparent:true,opacity:0.8,sizeAttenuation:true});var particles=new THREE.Points(geometry,material);scene.add(particles);var mouseX=0,mouseY=0,scrollY=0;if(!isMobile){document.addEventListener('mousemove',function(e){mouseX=(e.clientX/window.innerWidth-0.5)*2;mouseY=(e.clientY/window.innerHeight-0.5)*2;});}window.addEventListener('scroll',function(){scrollY=window.scrollY;});window.addEventListener('resize',function(){isMobile=window.innerWidth<768;camera.aspect=window.innerWidth/window.innerHeight;camera.updateProjectionMatrix();renderer.setSize(window.innerWidth,window.innerHeight);});var clock=new THREE.Clock();function animate(){requestAnimationFrame(animate);var t=clock.getElapsedTime();var speed=isMobile?0.5:1.0;particles.rotation.y=t*0.08*speed;particles.rotation.x=t*0.04*speed;if(!isMobile){particles.rotation.y+=mouseX*0.04;particles.rotation.x+=mouseY*0.04;}particles.position.y=-scrollY*0.015;var breathe=1+Math.sin(t*0.5)*0.015;particles.scale.setScalar(breathe);renderer.render(scene,camera);}animate();});
-var revealObserver=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target);}});},{threshold:0.12});
-document.querySelectorAll('.fade-up').forEach(function(el){revealObserver.observe(el);});
+/* ===== GATE LOGIC ===== */
+function unlockCheatSheet(e) {
+  e.preventDefault();
+  var email = document.getElementById('gate-email').value;
+  // Submit to Beehiiv
+  var form = new FormData();
+  form.append('email', email);
+  form.append('referring_pub_id', 'prestons-newsletter-5f43a7');
+  form.append('utm_source', 'fissionlab-cheatsheet-gate');
+  fetch('https://prestons-newsletter-5f43a7.beehiiv.com/subscribe', {method: 'POST', body: form, mode: 'no-cors'}).catch(function() {});
+  // Unlock
+  localStorage.setItem('cheatsheet_unlocked', '1');
+  document.getElementById('email-gate').style.display = 'none';
+  document.getElementById('cheat-content').style.display = 'block';
+}
+
+function skipGate() {
+  localStorage.setItem('cheatsheet_unlocked', '1');
+  document.getElementById('email-gate').style.display = 'none';
+  document.getElementById('cheat-content').style.display = 'block';
+}
+
+// Inline newsletter form (inside cheat content)
+function subscribeNewsletter(e, formEl) {
+  e.preventDefault();
+  var emailInput = formEl.querySelector('input[type="email"]');
+  var email = emailInput.value;
+  var form = new FormData();
+  form.append('email', email);
+  form.append('referring_pub_id', 'prestons-newsletter-5f43a7');
+  form.append('utm_source', 'fissionlab-cheatsheet');
+  fetch('https://prestons-newsletter-5f43a7.beehiiv.com/subscribe', {method: 'POST', body: form, mode: 'no-cors'}).catch(function() {});
+  formEl.innerHTML = '<p style="color:var(--gold);font-weight:600;">You\'re in! Check your inbox for a confirmation email.</p>';
+}
+
+// Check on load — if already unlocked, skip gate immediately
+if (localStorage.getItem('cheatsheet_unlocked')) {
+  document.addEventListener('DOMContentLoaded', function() {
+    var gate = document.getElementById('email-gate');
+    var content = document.getElementById('cheat-content');
+    if (gate) gate.style.display = 'none';
+    if (content) content.style.display = 'block';
+  });
+}
+
+/* ===== PARTICLE CANVAS ===== */
+window.addEventListener('load', function() {
+  var canvas = document.getElementById('particle-canvas');
+  var isMobile = window.innerWidth < 768;
+  try {
+    var t = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    if (!t) throw new Error();
+  } catch(e) {
+    document.body.classList.add('no-webgl');
+    canvas.style.display = 'none';
+    return;
+  }
+  if (typeof THREE === 'undefined') {
+    document.body.classList.add('no-webgl');
+    canvas.style.display = 'none';
+    return;
+  }
+  var renderer = new THREE.WebGLRenderer({canvas: canvas, antialias: false, alpha: true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setClearColor(0x000000, 0);
+  var scene = new THREE.Scene();
+  var camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+  camera.position.z = 80;
+  var count = isMobile ? 1200 : 3000;
+  var positions = new Float32Array(count * 3);
+  var colors = new Float32Array(count * 3);
+  var goldColor = new THREE.Color(0xc9a84c);
+  var blueColor = new THREE.Color(0x2a4a7a);
+  for (var i = 0; i < count; i++) {
+    var phi = Math.acos(2 * Math.random() - 1);
+    var theta = 2 * Math.PI * Math.random();
+    var r = 20 + Math.random() * 60;
+    positions[i*3] = r * Math.sin(phi) * Math.cos(theta);
+    positions[i*3+1] = r * Math.sin(phi) * Math.sin(theta);
+    positions[i*3+2] = r * Math.cos(phi);
+    var c = Math.random() < 0.30 ? goldColor : blueColor;
+    colors[i*3] = c.r; colors[i*3+1] = c.g; colors[i*3+2] = c.b;
+  }
+  var geometry = new THREE.BufferGeometry();
+  geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+  var material = new THREE.PointsMaterial({size: 0.5, vertexColors: true, transparent: true, opacity: 0.8, sizeAttenuation: true});
+  var particles = new THREE.Points(geometry, material);
+  scene.add(particles);
+  var mouseX = 0, mouseY = 0, scrollY = 0;
+  if (!isMobile) {
+    document.addEventListener('mousemove', function(e) {
+      mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+      mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+    });
+  }
+  window.addEventListener('scroll', function() { scrollY = window.scrollY; });
+  window.addEventListener('resize', function() {
+    isMobile = window.innerWidth < 768;
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  });
+  var clock = new THREE.Clock();
+  function animate() {
+    requestAnimationFrame(animate);
+    var elapsed = clock.getElapsedTime();
+    var speed = isMobile ? 0.5 : 1.0;
+    particles.rotation.y = elapsed * 0.08 * speed;
+    particles.rotation.x = elapsed * 0.04 * speed;
+    if (!isMobile) {
+      particles.rotation.y += mouseX * 0.04;
+      particles.rotation.x += mouseY * 0.04;
+    }
+    particles.position.y = -scrollY * 0.015;
+    var breathe = 1 + Math.sin(elapsed * 0.5) * 0.015;
+    particles.scale.setScalar(breathe);
+    renderer.render(scene, camera);
+  }
+  animate();
+});
+
+/* ===== FADE-UP OBSERVER ===== */
+var revealObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, {threshold: 0.10});
+document.querySelectorAll('.fade-up').forEach(function(el) { revealObserver.observe(el); });
 </script>
 </body>
 </html>
