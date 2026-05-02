@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AFOQT Study Forum — Live on Discord | FissionLab Community</title>
+<meta name="description" content="The FissionLab AFOQT study forum lives on Discord — join free for real-time discussion on all 12 AFOQT subtests, score sharing, study partners, and weekly Q&amp;A with Dr. Preston.">
+<meta property="og:title" content="AFOQT Study Forum — FissionLab Community Discord">
+<meta property="og:url" content="https://fissionlab.net/community/forum/">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{--navy:#0a1628;--navy2:#0d1f3c;--gold:#c9a84c;--gold2:#e8c97a;--white:#ffffff;--cream:#f0ebe0;--dim:rgba(240,235,224,0.82);--border:rgba(201,168,76,0.15);--border2:rgba(201,168,76,0.08);}
+body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--navy);color:var(--cream);overflow-x:hidden;font-size:16px;line-height:1.75;}
+nav{position:sticky;top:0;z-index:200;background:rgba(10,22,40,0.97);border-bottom:1px solid var(--border);height:64px;padding:0 8vw;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--white);font-size:1.05rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;}
+.nav-atom-core{color:var(--gold);font-size:16px;}
+.nav-logo-text span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{font-size:0.78rem;font-weight:500;color:rgba(240,235,224,0.72);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--white)}
+.nav-cta{background:var(--gold)!important;color:var(--navy)!important;padding:8px 20px!important;border-radius:6px;font-weight:700!important;}
+.nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;color:var(--cream);}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--cream);margin:5px 0;}
+.nav-overlay{display:none;position:fixed;inset:0;z-index:199;background:rgba(10,22,40,0.97);flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;}
+.nav-overlay.open{display:flex}
+.nav-overlay a{font-size:1.5rem;font-weight:600;color:var(--cream);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;}
+.nav-overlay a:hover{color:var(--gold)}
+.nav-overlay-close{position:absolute;top:24px;right:8vw;background:none;border:none;cursor:pointer;color:var(--cream);font-size:2rem;}
+.btn-discord{display:inline-block;background:#5865f2;color:#fff;padding:16px 40px;border-radius:8px;font-weight:700;font-size:1rem;text-decoration:none;transition:background 0.2s,transform 0.15s;}
+.btn-discord:hover{background:#4752c4;transform:translateY(-2px)}
+footer{background:#060f1c;border-top:1px solid rgba(201,168,76,0.1);padding:48px 8vw;text-align:center;font-size:13px;color:rgba(240,235,224,0.35);}
+footer a{color:rgba(201,168,76,0.7);text-decoration:none;}footer a:hover{color:var(--gold)}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:24px;margin-bottom:20px;}
+.footer-links a{font-size:12px;letter-spacing:0.05em;text-transform:uppercase;}
+.hero{padding:100px 8vw 64px;max-width:900px;margin:0 auto;text-align:center;}
+.hero-tag{display:inline-block;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+h1{font-family:Georgia,serif;font-size:clamp(32px,5vw,58px);font-weight:700;color:var(--white);line-height:1.1;margin-bottom:18px;}
+h1 em{color:var(--gold);font-style:normal}
+.hero-sub{font-size:clamp(15px,1.7vw,18px);color:var(--dim);max-width:580px;margin:0 auto 36px;}
+.discord-embed{background:rgba(88,101,242,0.08);border:2px solid rgba(88,101,242,0.35);border-radius:14px;padding:48px 40px;max-width:680px;margin:0 auto 72px;text-align:center;}
+.discord-embed h2{font-family:Georgia,serif;font-size:1.6rem;color:var(--white);margin-bottom:10px;}
+.discord-embed p{color:var(--dim);margin-bottom:28px;font-size:15px;}
+.discord-logo{font-size:3.5rem;margin-bottom:16px;display:block;}
+.section{padding:60px 8vw;}
+.section-inner{max-width:1000px;margin:0 auto;}
+.section-tag{display:block;font-size:10px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+h2.sec-title{font-family:Georgia,serif;font-size:clamp(22px,3vw,34px);color:var(--white);margin-bottom:28px;}
+.channel-group{margin-bottom:36px;}
+.channel-group-header{font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(201,168,76,0.6);padding:8px 0;border-bottom:1px solid rgba(201,168,76,0.1);margin-bottom:12px;}
+.channel-row{display:flex;align-items:center;justify-content:space-between;background:rgba(13,31,60,0.5);border:1px solid var(--border2);border-radius:8px;padding:14px 18px;margin-bottom:8px;gap:12px;}
+.channel-row:hover{border-color:rgba(88,101,242,0.3);}
+.channel-name{font-size:14px;color:var(--white);display:flex;align-items:center;gap:10px;}
+.channel-hash{color:rgba(240,235,224,0.3);font-size:16px;}
+.channel-desc{font-size:12px;color:var(--dim);}
+.channel-join{font-size:12px;color:#5865f2;text-decoration:none;font-weight:600;white-space:nowrap;}
+.channel-join:hover{color:#7289da;text-decoration:underline;}
+.beehiiv-bar{background:rgba(201,168,76,0.05);border-top:1px solid rgba(201,168,76,0.1);padding:32px 8vw;text-align:center;}
+.beehiiv-bar p{font-size:14px;color:var(--dim);margin-bottom:14px;}
+.beehiiv-bar a{display:inline-block;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.35);color:var(--gold);padding:10px 28px;border-radius:6px;text-decoration:none;font-size:14px;font-weight:600;transition:background 0.2s;}
+.beehiiv-bar a:hover{background:rgba(201,168,76,0.22);}
+@media(max-width:768px){.nav-links{display:none}.nav-hamburger{display:block}.hero{padding:70px 6vw 48px;}.section{padding:48px 6vw;}.channel-row{flex-direction:column;align-items:flex-start;gap:6px;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <span class="nav-atom-core">⚛</span>
+    <span class="nav-logo-text">FISSION<span>LAB</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="/#services">Tutoring</a>
+    <a href="/community/">Community</a>
+    <a href="/community/resources/">Resources</a>
+    <a href="/community/forum/" class="active">Forum</a>
+    <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" class="nav-cta">Book Free Intro</a>
+  </div>
+  <button class="nav-hamburger" onclick="document.getElementById('nov').classList.add('open')" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-overlay" id="nov">
+  <button class="nav-overlay-close" onclick="document.getElementById('nov').classList.remove('open')" aria-label="Close">✕</button>
+  <a href="/">Home</a>
+  <a href="/community/">Community</a>
+  <a href="/community/resources/">Resources</a>
+  <a href="/community/forum/">Forum</a>
+  <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" style="color:var(--gold)">Book Free Intro →</a>
+</div>
+
+<main>
+  <div class="hero">
+    <span class="hero-tag">Study Forum</span>
+    <h1>The Forum Is<br><em>Live on Discord</em></h1>
+    <p class="hero-sub">Real-time discussion is better than static threads. Join the Discord to post questions, share scores, and get answers — organized by subtest.</p>
+    <div class="discord-embed">
+      <span class="discord-logo">🎮</span>
+      <h2>AFOQT Study Community</h2>
+      <p>Active channels for every subtest, daily practice questions, weekly live Q&amp;A with Dr. Preston, and a community of candidates working toward the same goal.</p>
+      <a href="[DISCORD_INVITE_LINK]" target="_blank" rel="noopener" class="btn-discord">Join the Discord Server — Free →</a>
+      <p style="font-size:12px;color:rgba(240,235,224,0.35);margin-top:14px;">No fees. No ads. Just community-driven AFOQT prep.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-inner">
+      <span class="section-tag">Server Channels</span>
+      <h2 class="sec-title">Where to Post What</h2>
+
+      <div class="channel-group">
+        <div class="channel-group-header">📋 INFORMATION</div>
+        <div class="channel-row">
+          <div><div class="channel-name"><span class="channel-hash">#</span> welcome</div><div class="channel-desc">Rules, intro, how to use the server</div></div>
+          <a href="[DISCORD_INVITE_LINK]" target="_blank" class="channel-join">Join →</a>
+        </div>
+        <div class="channel-row">
+          <div><div class="channel-name"><span class="channel-hash">#</span> announcements</div><div class="channel-desc">Test prep updates, office hours schedule, new resources</div></div>
+          <a href="[DISCORD_INVITE_LINK]" target="_blank" class="channel-join">Join →</a>
+        </div>
+        <div class="channel-row">
+          <div><div class="channel-name"><span class="channel-hash">#</span> resources</div><div class="channel-desc">Curated links to fissionlab.net/community/resources/</div></div>
+          <a href="[DISCORD_INVITE_LINK]" target="_blank" class="channel-join">Join →</a>
+        </div>
+      </div>
+
+      <div class="channel-group">
+        <div class="channel-group-header">📚 STUDY ROOMS</div>
+        <div class="channel-row">
+          <div><div class="channel-name"><span class="channel-hash">#</span> general-afoqt</div><div class="channel-desc">General questions, test day experiences, general prep</div></div>
+          <a href="[DISCORD_INVITE_LINK]" target="_blank" class="channel-join">Join →</a>
+        </div>
+        <div class="channel-row">
+          <div><div class="channel-name"><span class="channel-hash">#</span> math-knowledge</div><div class="channel-desc">Arithmetic Reasoning + Math Knowledge — show your work</div></div>
+          <a href="[DISCORD_INVITE_LINK]" target="_blank" class="channel-join">Join →</a>
+        </div>
+        <div class="channel-row">
+          <div><div class="channel-name"><span class="channel-hash">#</span> verbal</div><div class="channel-desc">Verbal Analogies, Word Knowledge, Reading Comprehension</div></div>
+          <a href="[DISCORD_INVITE_LINK]" target="_blank" class="channel-join">Join →</a>
+        </div>
+        <div class="channel-row">
+          <div><div class="channel-name"><span class="channel-hash">#</span> aviation-instruments</div><div class="channel-desc">Aviation Information + Instrument Comprehension deep dives</div></div>
+          <a href="[DISCORD_INVITE_LINK]" target="_blank" class="channel-join">Join →</a>
+        </div>
+        <div class="channel-row">
+          <div><div class="channel-name"><span class="channel-hash">#</span> physical-science</div><div class="channel-desc">Physics, chemistry, and science subtest questions</div></div>
+          <a href="[DISCORD_INVITE_LINK]" target="_blank" class="channel-join">Join →</a>
+        </div>
+        <div class="channel-row">
+          <div><div class="channel-name"><span class="channel-hash">#</span> reading-comprehension</div><div class="channel-desc">Passage analysis strategies and timed practice</div></div>
+          <a href="[DISCORD_INVITE_LINK]" target="_blank" class="channel-join">Join →</a>
+        </div>
+        <div class="channel-row">
+          <div><div class="channel-name"><span class="channel-hash">#</span> study-schedules</div><div class="channel-desc">Share your study plan and get feedback</div></div>
+          <a href="[DISCORD_INVITE_LINK]" target="_blank" class="channel-join">Join →</a>
+        </div>
+      </div>
+
+      <div class="channel-group">
+        <div class="channel-group-header">📝 PRACTICE</div>
+        <div class="channel-row">
+          <div><div class="channel-name"><span class="channel-hash">#</span> daily-question</div><div class="channel-desc">One AFOQT-style question posted every day</div></div>
+          <a href="[DISCORD_INVITE_LINK]" target="_blank" class="channel-join">Join →</a>
+        </div>
+        <div class="channel-row">
+          <div><div class="channel-name"><span class="channel-hash">#</span> score-reports</div><div class="channel-desc">Post your practice scores, get honest feedback</div></div>
+          <a href="[DISCORD_INVITE_LINK]" target="_blank" class="channel-join">Join →</a>
+        </div>
+        <div class="channel-row">
+          <div><div class="channel-name"><span class="channel-hash">#</span> study-partners</div><div class="channel-desc">Find accountability partners with similar test dates</div></div>
+          <a href="[DISCORD_INVITE_LINK]" target="_blank" class="channel-join">Join →</a>
+        </div>
+      </div>
+
+      <div class="channel-group">
+        <div class="channel-group-header">🎓 DR. PRESTON</div>
+        <div class="channel-row">
+          <div><div class="channel-name"><span class="channel-hash">#</span> office-hours</div><div class="channel-desc">Weekly live Q&amp;A — schedule posted here each week</div></div>
+          <a href="[DISCORD_INVITE_LINK]" target="_blank" class="channel-join">Join →</a>
+        </div>
+        <div class="channel-row">
+          <div><div class="channel-name"><span class="channel-hash">#</span> book-a-session</div><div class="channel-desc">Pinned Calendly link for 1:1 tutoring with Dr. Preston</div></div>
+          <a href="[DISCORD_INVITE_LINK]" target="_blank" class="channel-join">Join →</a>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:48px;">
+        <a href="[DISCORD_INVITE_LINK]" target="_blank" rel="noopener" class="btn-discord">Join the Community →</a>
+        <p style="font-size:13px;color:var(--dim);margin-top:16px;">Already a member? Open Discord and head to your study channel.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="beehiiv-bar">
+  <p>Get AFOQT tips and community updates delivered weekly — free newsletter from Dr. Preston.</p>
+  <a href="https://www.beehiiv.com/?via=preston-dicks" target="_blank" rel="noopener sponsored">Subscribe to the FissionLab Newsletter →</a>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/community/">Community</a>
+    <a href="/community/resources/">Resources</a>
+    <a href="/community/practice/">Practice</a>
+    <a href="/community/forum/">Forum</a>
+    <a href="/community/about/">About</a>
+    <a href="mailto:preston.j.dicks@gmail.com">Contact</a>
+  </div>
+  <p>© 2026 FissionLab · AFOQT Study Community</p>
+  <p style="font-size:11px;color:rgba(240,235,224,0.3);margin-top:10px;padding:8px 20px;border:1px solid rgba(201,168,76,0.08);border-radius:4px;display:inline-block;">
+    <strong style="color:rgba(201,168,76,0.6);">Affiliate Disclosure:</strong> This site contains affiliate links. We may earn a commission at no cost to you.
+    <a href="/affiliate-disclosure/" style="color:rgba(201,168,76,0.45);">Full disclosure →</a>
+  </p>
+</footer>
+
+</body>
+</html>
