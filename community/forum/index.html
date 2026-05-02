@@ -7,6 +7,10 @@
 <meta name="description" content="The FissionLab AFOQT study forum lives on Discord — join free for real-time discussion on all 12 AFOQT subtests, score sharing, study partners, and weekly Q&amp;A with Dr. Preston.">
 <meta property="og:title" content="AFOQT Study Forum — FissionLab Community Discord">
 <meta property="og:url" content="https://fissionlab.net/community/forum/">
+<meta name="google-adsense-account" content="ca-pub-3289071681648577">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3289071681648577" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','GA_MEASUREMENT_ID');</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -195,6 +199,9 @@ h2.sec-title{font-family:Georgia,serif;font-size:clamp(22px,3vw,34px);color:var(
         </div>
       </div>
 
+      <ins class="adsbygoogle" style="display:block;text-align:center;margin:24px 0;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-3289071681648577" data-ad-slot="auto"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
       <div style="text-align:center;margin-top:48px;">
         <a href="https://discord.gg/rkzrxET7" target="_blank" rel="noopener" class="btn-discord">Join the Community →</a>
         <p style="font-size:13px;color:var(--dim);margin-top:16px;">Already a member? Open Discord and head to your study channel.</p>
@@ -203,10 +210,22 @@ h2.sec-title{font-family:Georgia,serif;font-size:clamp(22px,3vw,34px);color:var(
   </div>
 </main>
 
-<div class="beehiiv-bar">
-  <p>Get AFOQT tips and community updates delivered weekly — free newsletter from Dr. Preston.</p>
-  <a href="https://www.beehiiv.com/?via=preston-dicks" target="_blank" rel="noopener sponsored">Subscribe to the FissionLab Newsletter →</a>
-</div>
+<section style="padding:48px 8vw;background:rgba(10,22,40,0.8);">
+  <div style="max-width:640px;margin:0 auto;">
+    <div style="background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.3);border-radius:8px;padding:28px;text-align:center;">
+      <p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#c9a84c;margin-bottom:8px;">FREE WEEKLY NEWSLETTER</p>
+      <h3 style="font-family:Georgia,serif;font-size:22px;color:white;margin-bottom:8px;">Nuclear Engineer Explains</h3>
+      <p style="font-size:14px;color:rgba(245,240,232,0.75);margin-bottom:20px;">AFOQT tips, study strategies, and military career insights — every week, free.</p>
+      <form action="https://prestons-newsletter-5f43a7.beehiiv.com/subscribe" method="POST" target="_blank" style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+        <input type="email" name="email" placeholder="your@email.com" required style="padding:12px 16px;border-radius:6px;border:1px solid rgba(201,168,76,0.3);background:rgba(255,255,255,0.05);color:white;font-size:14px;min-width:240px;">
+        <input type="hidden" name="referring_pub_id" value="prestons-newsletter-5f43a7">
+        <input type="hidden" name="utm_source" value="fissionlab-forum">
+        <button type="submit" style="padding:12px 24px;background:#c9a84c;color:#0a1628;border:none;border-radius:6px;font-weight:700;font-size:14px;cursor:pointer;">Subscribe Free &rarr;</button>
+      </form>
+      <p style="font-size:11px;color:rgba(245,240,232,0.4);margin-top:12px;">No spam. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="footer-links">
@@ -225,6 +244,29 @@ h2.sec-title{font-family:Georgia,serif;font-size:clamp(22px,3vw,34px);color:var(
   </p>
 </footer>
 
+<div id="exit-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:9999;align-items:center;justify-content:center;">
+  <div style="background:#0d1f3c;border:1px solid rgba(201,168,76,0.4);border-radius:12px;padding:40px;max-width:480px;width:90%;text-align:center;position:relative;">
+    <button onclick="document.getElementById('exit-modal').style.display='none';localStorage.setItem('exit_dismissed','1');" style="position:absolute;top:12px;right:16px;background:none;border:none;color:rgba(245,240,232,0.5);font-size:20px;cursor:pointer;">&#x2715;</button>
+    <p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#c9a84c;margin-bottom:12px;">WAIT — FREE GIFT</p>
+    <h3 style="font-family:Georgia,serif;font-size:24px;color:white;margin-bottom:12px;">Grab the Free AFOQT Cheat Sheet</h3>
+    <p style="font-size:14px;color:rgba(245,240,232,0.7);margin-bottom:20px;">All 12 subtests. Math formulas. 100 vocab roots. Print-ready.</p>
+    <a href="/community/downloads/afoqt-cheat-sheet.html" onclick="document.getElementById('exit-modal').style.display='none';" style="display:inline-block;background:#c9a84c;color:#0a1628;padding:12px 28px;border-radius:6px;font-weight:700;font-size:15px;text-decoration:none;margin-bottom:12px;">Get Free Cheat Sheet &rarr;</a>
+    <p><a href="#" onclick="document.getElementById('exit-modal').style.display='none';localStorage.setItem('exit_dismissed','1');return false;" style="font-size:12px;color:rgba(245,240,232,0.4);">No thanks</a></p>
+  </div>
+</div>
+<div id="bottom-bar" style="position:fixed;bottom:0;left:0;right:0;background:#0d1f3c;border-top:1px solid rgba(201,168,76,0.3);padding:12px 24px;display:flex;justify-content:space-between;align-items:center;z-index:999;transform:translateY(100%);transition:transform 0.4s;">
+  <span style="color:rgba(245,240,232,0.8);font-size:13px;">&#x1F4DA; AFOQT Study Community by Dr. Preston PhD</span>
+  <div style="display:flex;gap:12px;">
+    <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" rel="noopener" style="color:#c9a84c;font-size:13px;font-weight:600;text-decoration:none;">Book Session</a>
+    <a href="/community/downloads/afoqt-cheat-sheet.html" style="background:#c9a84c;color:#0a1628;padding:6px 14px;border-radius:4px;font-size:13px;font-weight:700;text-decoration:none;">Free Cheat Sheet</a>
+  </div>
+</div>
+<script>
+var _exitShown=false;
+document.addEventListener('mouseleave',function(e){if(e.clientY<10&&!_exitShown&&!localStorage.getItem('exit_dismissed')){_exitShown=true;document.getElementById('exit-modal').style.display='flex';}});
+setTimeout(function(){document.getElementById('bottom-bar').style.transform='translateY(0)';},30000);
+function trackAffiliate(p,i){if(typeof gtag!=='undefined'){gtag('event','affiliate_click',{program:p,item:i});}}
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
 <script>
 window.addEventListener('load',function(){

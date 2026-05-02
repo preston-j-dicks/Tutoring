@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physics & Nuclear Engineering Bookshelf — Recommended by Dr. Preston PhD | FissionLab</title>
+<meta name="description" content="Dr. Preston's personal bookshelf: the exact physics, nuclear engineering, and machine learning texts used in Berkeley undergrad and AFIT PhD work. Every recommendation is field-tested.">
+<meta property="og:title" content="Dr. Preston's Physics & Nuclear Engineering Bookshelf — FissionLab">
+<meta property="og:description" content="Field-tested book recommendations from a Berkeley-trained physicist and nuclear engineering PhD — quantum mechanics, E&M, reactor theory, radiation detection, ML, and more.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fissionlab.net/community/bookshelf/">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{--navy:#0a1628;--navy2:#0d1f3c;--gold:#c9a84c;--gold2:#e8c97a;--white:#ffffff;--cream:#f0ebe0;--dim:rgba(240,235,224,0.82);--border:rgba(201,168,76,0.15);--border2:rgba(201,168,76,0.08);}
+body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--navy);color:var(--cream);overflow-x:hidden;font-size:16px;line-height:1.75;}
+nav{position:sticky;top:0;z-index:200;background:rgba(10,22,40,0.97);border-bottom:1px solid var(--border);height:64px;padding:0 8vw;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--white);font-size:1.05rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;}
+.nav-atom-core{color:var(--gold);font-size:16px;margin-right:2px;}
+.nav-logo-text span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{font-size:0.78rem;font-weight:500;color:rgba(240,235,224,0.72);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--white)}
+.nav-cta{background:var(--gold)!important;color:var(--navy)!important;padding:8px 20px!important;border-radius:6px;font-weight:700!important;}
+.nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;color:var(--cream);}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--cream);margin:5px 0;}
+.nav-overlay{display:none;position:fixed;inset:0;z-index:199;background:rgba(10,22,40,0.97);flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;}
+.nav-overlay.open{display:flex}
+.nav-overlay a{font-size:1.5rem;font-weight:600;color:var(--cream);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;}
+.nav-overlay a:hover{color:var(--gold)}
+.nav-overlay-close{position:absolute;top:24px;right:8vw;background:none;border:none;cursor:pointer;color:var(--cream);font-size:2rem;line-height:1;}
+footer{background:#060f1c;border-top:1px solid rgba(201,168,76,0.1);padding:48px 8vw;text-align:center;font-size:13px;color:rgba(240,235,224,0.35);}
+footer a{color:rgba(201,168,76,0.7);text-decoration:none;}footer a:hover{color:var(--gold)}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:24px;margin-bottom:20px;}
+.footer-links a{font-size:12px;letter-spacing:0.05em;text-transform:uppercase;}
+/* Disclosure banner */
+.disclosure{background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:8px;padding:14px 20px;font-size:13px;color:rgba(240,235,224,0.7);text-align:center;max-width:900px;margin:24px auto 0;}
+.disclosure strong{color:var(--gold);}
+/* Hero */
+.hero{padding:100px 8vw 60px;max-width:1100px;margin:0 auto;}
+.hero-tag{display:inline-block;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
+.hero h1{font-family:Georgia,serif;font-size:clamp(32px,5vw,60px);font-weight:700;color:var(--white);line-height:1.1;margin-bottom:20px;}
+.hero h1 em{color:var(--gold);font-style:normal}
+.hero-sub{font-size:clamp(15px,1.7vw,18px);color:var(--dim);max-width:600px;margin-bottom:12px;}
+/* Subject sections */
+.subject-section{padding:60px 8vw 0;}
+.subject-inner{max-width:1100px;margin:0 auto;}
+.subject-tag{display:block;font-size:10px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.subject-title{font-family:Georgia,serif;font-size:clamp(22px,3vw,34px);color:var(--white);margin-bottom:8px;}
+.subject-desc{font-size:14px;color:var(--dim);max-width:620px;margin-bottom:36px;}
+/* Book grid */
+.book-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;margin-bottom:60px;}
+.book-card{background:rgba(13,31,60,0.75);border:1px solid var(--border2);border-radius:12px;padding:24px;display:flex;flex-direction:column;transition:border-color 0.2s,transform 0.2s;}
+.book-card:hover{border-color:rgba(201,168,76,0.35);transform:translateY(-3px);}
+.book-cover{width:80px;height:110px;object-fit:cover;border-radius:4px;margin-bottom:16px;background:rgba(201,168,76,0.08);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:2rem;}
+.book-cover-img{width:80px;height:110px;object-fit:cover;border-radius:4px;margin-bottom:16px;}
+.book-title{font-family:Georgia,serif;font-size:1rem;color:var(--white);margin-bottom:4px;line-height:1.3;}
+.book-author{font-size:12px;color:rgba(240,235,224,0.45);margin-bottom:12px;letter-spacing:0.02em;}
+.book-review{font-size:13.5px;color:var(--dim);line-height:1.65;margin-bottom:14px;flex:1;}
+.book-audience{display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.06em;color:var(--gold);background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.2);border-radius:4px;padding:3px 10px;margin-bottom:16px;}
+.book-link{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:10px 16px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;letter-spacing:0.02em;transition:background 0.2s;}
+.book-link:hover{background:var(--gold2);}
+/* CTA bar */
+.cta-bar{background:rgba(201,168,76,0.05);border-top:1px solid rgba(201,168,76,0.1);border-bottom:1px solid rgba(201,168,76,0.1);padding:40px 8vw;text-align:center;margin:20px 0;}
+.cta-bar h2{font-family:Georgia,serif;font-size:1.6rem;color:var(--white);margin-bottom:10px;}
+.cta-bar p{color:var(--dim);font-size:15px;max-width:500px;margin:0 auto 24px;}
+.btn-primary{display:inline-block;background:var(--gold);color:var(--navy);padding:14px 32px;border-radius:6px;font-weight:700;font-size:0.95rem;text-decoration:none;letter-spacing:0.03em;transition:background 0.2s,transform 0.15s;}
+.btn-primary:hover{background:var(--gold2);transform:translateY(-2px)}
+@media(max-width:768px){.nav-links{display:none}.nav-hamburger{display:block}.hero{padding:80px 6vw 40px}.subject-section{padding:40px 6vw 0}.book-grid{grid-template-columns:1fr}}
+</style>
+<meta name="google-adsense-account" content="ca-pub-3289071681648577">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3289071681648577" crossorigin="anonymous"></script>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID');
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <span class="nav-atom-core">⚛</span>
+    <span class="nav-logo-text">FISSION<span>LAB</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="/#services">Tutoring</a>
+    <a href="/community/">Community</a>
+    <a href="/community/resources/">Resources</a>
+    <a href="/community/bookshelf/" class="active">Bookshelf</a>
+    <a href="/blog/">Blog</a>
+    <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" class="nav-cta">Book Free Intro</a>
+  </div>
+  <button class="nav-hamburger" onclick="document.getElementById('nov').classList.add('open')" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-overlay" id="nov">
+  <button class="nav-overlay-close" onclick="document.getElementById('nov').classList.remove('open')" aria-label="Close">✕</button>
+  <a href="/">Home</a>
+  <a href="/#services">Tutoring</a>
+  <a href="/community/">Community</a>
+  <a href="/community/resources/">Resources</a>
+  <a href="/community/bookshelf/" style="color:var(--gold)">Bookshelf</a>
+  <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" style="color:var(--gold)">Book Free Intro →</a>
+</div>
+
+<main>
+
+<div style="padding:0 8vw;">
+  <div class="disclosure">
+    <strong>Affiliate Disclosure:</strong> This page contains Amazon affiliate links. If you purchase through them, FissionLab earns a small commission at no cost to you. Every book here is one I've personally used — no sponsored placements, no filler.
+    <a href="/affiliate-disclosure/" style="color:rgba(201,168,76,0.7);margin-left:6px;">Full disclosure →</a>
+  </div>
+</div>
+
+<div class="hero">
+  <span class="hero-tag">Field-Tested · Personal Shelf · No Filler</span>
+  <h1>Dr. Preston's<br><em>Physics &amp; Engineering Bookshelf</em></h1>
+  <p class="hero-sub">These are the exact texts I worked through — from Berkeley undergrad to nuclear engineering PhD. Not marketing picks. The ones that actually built my understanding.</p>
+  <p style="font-size:13px;color:rgba(240,235,224,0.4);margin-top:8px;">26 books across 6 subjects · Grouped by field · Every link goes to Amazon</p>
+</div>
+
+<!-- ── QUANTUM MECHANICS ─────────────────────────────────────── -->
+<div class="subject-section" id="qm">
+  <div class="subject-inner">
+    <span class="subject-tag">Subject 01</span>
+    <h2 class="subject-title">Quantum Mechanics</h2>
+    <p class="subject-desc">The books I used going from zero QM at Berkeley through graduate-level applications. Griffiths first, always — then Bransden when you need the full machinery.</p>
+    <div class="book-grid">
+
+      <div class="book-card">
+        <div class="book-cover">📘</div>
+        <div class="book-title">Introduction to Quantum Mechanics</div>
+        <div class="book-author">David J. Griffiths &amp; Darrell F. Schroeter · 3rd ed.</div>
+        <p class="book-review">The clearest QM textbook written in English. Griffiths has a gift for building intuition before formalism — I returned to this book every time a derivation in a paper stopped making sense. The 2018 edition adds a strong chapter on entanglement. If you're doing a physics degree or AFOQT physics prep, this is book one.</p>
+        <span class="book-audience">Best for: Physics undergrads · AFOQT Physical Science · Early grad students</span>
+        <a href="https://www.amazon.com/dp/1107189638?tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">📗</div>
+        <div class="book-title">Quantum Mechanics</div>
+        <div class="book-author">B.H. Bransden &amp; C.J. Joachain · 2nd ed.</div>
+        <p class="book-review">Where Griffiths builds intuition, Bransden gives you the full formal scaffolding. I used this at AFIT when the research problems required rigorous treatment of scattering theory and nuclear matrix elements. Denser than Griffiths but thorough — graduate-level QM done properly.</p>
+        <span class="book-audience">Best for: Graduate physics students · Nuclear engineering PhDs</span>
+        <a href="https://www.amazon.com/s?k=Bransden+Joachain+Quantum+Mechanics&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">📙</div>
+        <div class="book-title">A Modern Approach to Quantum Mechanics</div>
+        <div class="book-author">John S. Townsend · 2nd ed.</div>
+        <p class="book-review">Townsend starts from spin-1/2 systems rather than wave mechanics — a genuinely different pedagogical angle that snapped certain things into focus for me that Griffiths left fuzzy. Recommended as a second pass through undergraduate QM, especially if you're planning graduate work.</p>
+        <span class="book-audience">Best for: Advanced undergrads · Physics grad students wanting a second view</span>
+        <a href="https://www.amazon.com/s?k=Townsend+Modern+Approach+Quantum+Mechanics&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">📕</div>
+        <div class="book-title">An Introduction to Quantum Physics</div>
+        <div class="book-author">A.P. French &amp; E.F. Taylor · MIT Introductory Physics Series</div>
+        <p class="book-review">The MIT series book for QM — pedagogically brilliant, historically motivated, and full of worked problems that build genuine physical intuition. I read this before Griffiths and it made the whole subject click. The experiments-first approach is especially valuable for anyone with a laboratory background.</p>
+        <span class="book-audience">Best for: First exposure to QM · Strong high school physics students · STEM undergrads</span>
+        <a href="https://www.amazon.com/s?k=French+Taylor+Introduction+Quantum+Physics+MIT&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ── ELECTROMAGNETISM ─────────────────────────────────────── -->
+<div class="subject-section" id="em">
+  <div class="subject-inner">
+    <span class="subject-tag">Subject 02</span>
+    <h2 class="subject-title">Electromagnetism</h2>
+    <p class="subject-desc">My E&M progression went Purcell → Griffiths → Balanis. Each book opens a different layer of the same physics.</p>
+    <div class="book-grid">
+
+      <div class="book-card">
+        <div class="book-cover">⚡</div>
+        <div class="book-title">Electricity and Magnetism</div>
+        <div class="book-author">Edward M. Purcell &amp; David J. Morin · 3rd ed.</div>
+        <p class="book-review">Purcell's classic, updated by Morin with SI units and a wealth of new problems. The physical reasoning in this book is unmatched — Purcell derives magnetism from special relativity in a way that permanently changes how you think about fields. Essential for anyone who wants to understand E&amp;M rather than just solve it.</p>
+        <span class="book-audience">Best for: Physics undergrads · Students who want deep conceptual grounding</span>
+        <a href="https://www.amazon.com/s?k=Purcell+Morin+Electricity+Magnetism+Cambridge&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">⚡</div>
+        <div class="book-title">Introduction to Electrodynamics</div>
+        <div class="book-author">David J. Griffiths · 4th ed.</div>
+        <p class="book-review">The standard undergraduate E&M textbook for a reason — Griffiths writes with extraordinary clarity and every chapter builds directly on the last. I used the 4th edition for Berkeley coursework and kept it on my desk throughout grad school as a reference. The problem sets alone are worth the price of admission.</p>
+        <span class="book-audience">Best for: Undergrad E&M courses · AFOQT Physical Science · Engineering physics</span>
+        <a href="https://www.amazon.com/dp/013805326X?tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">📡</div>
+        <div class="book-title">Advanced Engineering Electromagnetics</div>
+        <div class="book-author">Constantine A. Balanis · 2nd ed.</div>
+        <p class="book-review">The graduate-level EM text for engineers — radiation, waveguides, antennas, and scattering treated with full mathematical rigor. This was required reading for the applied electromagnetics component of my PhD work. Heavy going, but if you need to understand how EM energy propagates through matter, Balanis is the reference.</p>
+        <span class="book-audience">Best for: ECE/nuclear engineering grad students · RF and antenna engineers</span>
+        <a href="https://www.amazon.com/s?k=Balanis+Advanced+Engineering+Electromagnetics&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ── NUCLEAR ENGINEERING ─────────────────────────────────── -->
+<div class="subject-section" id="nuclear">
+  <div class="subject-inner">
+    <span class="subject-tag">Subject 03</span>
+    <h2 class="subject-title">Nuclear Engineering &amp; Physics</h2>
+    <p class="subject-desc">The core technical stack for nuclear engineering. Krane for the physics foundation; Knoll for detection; Duderstadt for reactor theory. These are the texts my PhD cohort lived in.</p>
+    <div class="book-grid">
+
+      <div class="book-card">
+        <div class="book-cover">☢️</div>
+        <div class="book-title">Introductory Nuclear Physics</div>
+        <div class="book-author">Kenneth S. Krane</div>
+        <p class="book-review">The definitive undergraduate nuclear physics text — radioactive decay, nuclear reactions, fission, and detector physics all treated clearly with solid problem sets. I used Krane at Berkeley and again in my first semester at AFIT. It bridges the gap between quantum mechanics and practical nuclear engineering better than anything else at this level.</p>
+        <span class="book-audience">Best for: Physics undergrads · Nuclear engineering students entering grad school</span>
+        <a href="https://www.amazon.com/s?k=Krane+Introductory+Nuclear+Physics&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">🔬</div>
+        <div class="book-title">Radiation Detection and Measurement</div>
+        <div class="book-author">Glenn F. Knoll · 4th ed.</div>
+        <p class="book-review">If you work in nuclear engineering, you will use Knoll. It is the complete treatment of how radiation interacts with matter and how detectors work — from gas-filled counters to scintillators to semiconductor devices. My PhD research involved gadolinium cross-section measurements and this book was open on my bench continuously throughout that work.</p>
+        <span class="book-audience">Best for: Nuclear engineering grad students · Health physicists · Experimental nuclear physicists</span>
+        <a href="https://www.amazon.com/s?k=Knoll+Radiation+Detection+Measurement&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">⚛️</div>
+        <div class="book-title">Nuclear Reactor Analysis</div>
+        <div class="book-author">James J. Duderstadt &amp; Louis J. Hamilton</div>
+        <p class="book-review">The graduate-level reactor theory text. Diffusion theory, neutron transport, criticality calculations, and reactor kinetics — all derived from first principles with enough rigor to build real intuition. Dense but rewarding. If you're doing any computational neutronics work, this is the foundation you need before touching a code like MCNP.</p>
+        <span class="book-audience">Best for: Nuclear engineering grad students · Reactor physicists · Nonproliferation analysts</span>
+        <a href="https://www.amazon.com/s?k=Duderstadt+Hamilton+Nuclear+Reactor+Analysis&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">🧪</div>
+        <div class="book-title">Atoms, Radiation, and Radiation Protection</div>
+        <div class="book-author">James E. Turner · 3rd ed.</div>
+        <p class="book-review">The clearest health physics textbook I've encountered — Turner builds from atomic structure through interaction physics to dosimetry with exceptional pedagogical care. This was my primary reference for the radiation interaction physics component of my coursework and is approachable enough for motivated undergrads preparing for grad school.</p>
+        <span class="book-audience">Best for: Health physics students · Nuclear engineering undergrads · Medical physics</span>
+        <a href="https://www.amazon.com/s?k=Turner+Atoms+Radiation+Protection&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">⚗️</div>
+        <div class="book-title">Radiochemistry and Nuclear Chemistry</div>
+        <div class="book-author">Choppin, Liljenzin &amp; Rydberg · 3rd ed.</div>
+        <p class="book-review">The standard graduate text for nuclear chemistry and radiochemistry — covers nuclide production, separation techniques, isotope tracers, and reactor chemistry. Indispensable for anyone working in the fuel cycle, waste management, or isotope production space. My go-to when the chemistry questions in my research crossed into nuclear territory.</p>
+        <span class="book-audience">Best for: Radiochemistry grad students · Nuclear fuel cycle engineers · Nonproliferation researchers</span>
+        <a href="https://www.amazon.com/s?k=Choppin+Liljenzin+Rydberg+Radiochemistry&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">🏭</div>
+        <div class="book-title">Nuclear Energy: Principles, Practices, and Prospects</div>
+        <div class="book-author">David Bodansky · 2nd ed.</div>
+        <p class="book-review">A rigorous but accessible survey of nuclear power from physics through policy — reactor types, waste management, proliferation risk, and economics all treated honestly. I used this text when teaching and found it invaluable for students who needed the full picture without the textbook weight of Duderstadt. Strong on context that pure engineering texts ignore.</p>
+        <span class="book-audience">Best for: Policy-focused nuclear engineers · Energy analysts · Technically-minded non-specialists</span>
+        <a href="https://www.amazon.com/s?k=Bodansky+Nuclear+Energy+Principles+Practices&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ── MATH METHODS ─────────────────────────────────────────── -->
+<div class="subject-section" id="math">
+  <div class="subject-inner">
+    <span class="subject-tag">Subject 04</span>
+    <h2 class="subject-title">Mathematics for Physics &amp; Engineering</h2>
+    <p class="subject-desc">Every physicist needs a strong mathematical toolkit. These are the references that actually built mine.</p>
+    <div class="book-grid">
+
+      <div class="book-card">
+        <div class="book-cover">📐</div>
+        <div class="book-title">Mathematical Methods for Physicists</div>
+        <div class="book-author">Arfken, Weber &amp; Harris · 7th ed.</div>
+        <p class="book-review">The encyclopedic reference for mathematical physics — Green's functions, complex analysis, special functions, group theory, and everything in between. I used individual chapters as primary references throughout my PhD when a derivation required a mathematical technique I hadn't seen before. Dense, but the depth is the point. Worth having on the shelf throughout your career.</p>
+        <span class="book-audience">Best for: Physics PhD students · Applied mathematicians · Graduate engineers who need rigorous methods</span>
+        <a href="https://www.amazon.com/s?k=Arfken+Weber+Harris+Mathematical+Methods+Physicists+7th&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">📐</div>
+        <div class="book-title">Advanced Engineering Mathematics</div>
+        <div class="book-author">Erwin Kreyszig · 10th ed.</div>
+        <p class="book-review">The engineering mathematics bible — ODEs, PDEs, linear algebra, complex analysis, numerical methods, and probability all in one volume. I kept a copy at Berkeley and a second at AFIT. Clear explanations, exhaustive problem sets, and a sensible organization make this the book to reach for when you need to refresh a technique fast.</p>
+        <span class="book-audience">Best for: Engineering undergrads and grad students · AFOQT Math Knowledge prep · Any technical field</span>
+        <a href="https://www.amazon.com/s?k=Kreyszig+Advanced+Engineering+Mathematics+10th&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">∫</div>
+        <div class="book-title">Calculus: Early Transcendentals</div>
+        <div class="book-author">James Stewart · 8th ed.</div>
+        <p class="book-review">The most widely adopted calculus textbook in the US for good reason — clear structure, excellent visual explanations, and enough practice problems to build genuine fluency. I used this throughout Berkeley. If you are preparing for calculus-heavy standardized tests or returning to technical coursework after a gap, Stewart is your starting point.</p>
+        <span class="book-audience">Best for: AFOQT Arithmetic/Math prep · Physics undergrads · Anyone rebuilding math foundations</span>
+        <a href="https://www.amazon.com/s?k=Stewart+Calculus+Early+Transcendentals+8th&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ── MACHINE LEARNING ─────────────────────────────────────── -->
+<div class="subject-section" id="ml">
+  <div class="subject-inner">
+    <span class="subject-tag">Subject 05</span>
+    <h2 class="subject-title">Machine Learning &amp; Data Science</h2>
+    <p class="subject-desc">My PhD dissertation applied deep learning to nuclear sensor fusion problems. These are the ML texts I used to build that capability from scratch.</p>
+    <div class="book-grid">
+
+      <div class="book-card">
+        <div class="book-cover">🤖</div>
+        <div class="book-title">Hands-On Machine Learning with Scikit-Learn, Keras &amp; TensorFlow</div>
+        <div class="book-author">Aurélien Géron · 3rd ed.</div>
+        <p class="book-review">The best practical ML book available. Géron teaches by building — every concept is immediately demonstrated in working code, and the progression from classical ML through deep learning through deployment is the clearest I've seen in any single volume. I assigned chapters from this during lab meetings. The 3rd edition added transformers and diffusion models.</p>
+        <span class="book-audience">Best for: Anyone entering ML · Physics/engineering PhDs adding ML skills · Applied researchers</span>
+        <a href="https://www.amazon.com/s?k=Geron+Hands+On+Machine+Learning+Scikit+Learn+Keras+TensorFlow+3rd&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">🧠</div>
+        <div class="book-title">Deep Learning with Python</div>
+        <div class="book-author">François Chollet · 2nd ed.</div>
+        <p class="book-review">Chollet wrote Keras — and this book reflects that depth of understanding. Where Géron is comprehensive, Chollet is precise: you understand not just how to use the API but why the architecture decisions were made. The second edition adds transformers and best practices that weren't in the 2017 original. I used both editions in succession.</p>
+        <span class="book-audience">Best for: Deep learning practitioners · Researchers working with neural networks · Engineers moving from ML to DL</span>
+        <a href="https://www.amazon.com/s?k=Chollet+Deep+Learning+Python+2nd&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">📊</div>
+        <div class="book-title">Data-Driven Science and Engineering</div>
+        <div class="book-author">Steven L. Brunton &amp; J. Nathan Kutz</div>
+        <p class="book-review">This book is specifically for scientists and engineers who want to understand machine learning from first principles rather than treating it as a black box. Brunton bridges dynamical systems, SVD, sparse regression, neural networks, and control — the kind of ML that actually makes sense in physics research. Exceptional for someone with a technical background approaching ML seriously.</p>
+        <span class="book-audience">Best for: Physics/engineering researchers · Dynamical systems practitioners · Data science PhDs</span>
+        <a href="https://www.amazon.com/s?k=Brunton+Kutz+Data-Driven+Science+Engineering&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">📈</div>
+        <div class="book-title">Introduction to Statistical Learning</div>
+        <div class="book-author">James, Witten, Hastie &amp; Tibshirani · 2nd ed.</div>
+        <p class="book-review">The accessible gateway to statistical learning — linear models through SVMs, trees, and unsupervised methods, all with R and Python code. I used this when I needed to move quickly through classical ML and understand what the deep learning methods were replacing. Free PDF from the authors makes it a no-brainer as a starting reference.</p>
+        <span class="book-audience">Best for: Grad students entering ML · Statisticians · Any researcher who needs ML theory without the heavy math</span>
+        <a href="https://www.amazon.com/s?k=Introduction+Statistical+Learning+James+Witten+Hastie&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">➗</div>
+        <div class="book-title">Mathematics for Machine Learning</div>
+        <div class="book-author">Deisenroth, Faisal &amp; Ong</div>
+        <p class="book-review">The mathematical foundation that most ML courses skip — linear algebra, multivariate calculus, probability, and optimization all built from scratch with ML applications as motivation throughout. I used this to fill gaps from physics-track math courses when the research moved into probabilistic graphical models. Free PDF available from the authors.</p>
+        <span class="book-audience">Best for: Anyone who wants to understand ML math rigorously · Physics students pivoting to ML research</span>
+        <a href="https://www.amazon.com/s?k=Deisenroth+Faisal+Ong+Mathematics+Machine+Learning&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ── THERMAL & STAT PHYSICS ───────────────────────────────── -->
+<div class="subject-section" id="thermal">
+  <div class="subject-inner">
+    <span class="subject-tag">Subject 06</span>
+    <h2 class="subject-title">Thermal &amp; Statistical Physics</h2>
+    <p class="subject-desc">Often the most underestimated subject in a physics curriculum — and essential for nuclear engineering, where thermodynamics and statistical mechanics appear constantly.</p>
+    <div class="book-grid">
+
+      <div class="book-card">
+        <div class="book-cover">🌡️</div>
+        <div class="book-title">Fundamentals of Statistical and Thermal Physics</div>
+        <div class="book-author">Frederick Reif</div>
+        <p class="book-review">Reif treats thermal and statistical physics as a unified subject — which is the right way to teach it — and does so with exceptional rigor. Every result is derived from first principles rather than asserted. Berkeley used this text and the derivations genuinely improved my intuition for reactor thermodynamics later in my career. The problem sets are hard and that's the point.</p>
+        <span class="book-audience">Best for: Physics undergrads in thermal/stat mech · Nuclear engineering students · Anyone who found thermo confusing elsewhere</span>
+        <a href="https://www.amazon.com/s?k=Reif+Fundamentals+Statistical+Thermal+Physics&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">🌡️</div>
+        <div class="book-title">Concepts in Thermal Physics</div>
+        <div class="book-author">Stephen J. Blundell &amp; Katherine M. Blundell · 2nd ed.</div>
+        <p class="book-review">More approachable than Reif while covering the same ground — the Blundell text is excellent for self-study and as a complement to a more formal treatment. The applications sections (cosmology, astrophysics, biological systems) make the physics feel alive rather than abstract. I used this as a second pass through material that Reif had made dense.</p>
+        <span class="book-audience">Best for: Physics undergrads who want a readable thermal text · Self-study · Interdisciplinary science students</span>
+        <a href="https://www.amazon.com/s?k=Blundell+Concepts+Thermal+Physics+2nd&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ── CTA ─────────────────────────────────────────────────── -->
+<div class="cta-bar">
+  <h2>Want help choosing where to start?</h2>
+  <p>Book a free intro session and I'll tell you exactly which book to open first for your specific goals and timeline.</p>
+  <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" class="btn-primary">Book a Free 1:1 Intro with Dr. Preston →</a>
+</div>
+
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/community/">Community</a>
+    <a href="/community/resources/">Resources</a>
+    <a href="/community/bookshelf/">Bookshelf</a>
+    <a href="/community/practice/">Practice</a>
+    <a href="/blog/">Blog</a>
+    <a href="mailto:preston.j.dicks@gmail.com">Contact</a>
+  </div>
+  <p>© 2026 FissionLab · Physics &amp; Nuclear Engineering Resources</p>
+  <p style="font-size:11px;color:rgba(240,235,224,0.3);margin-top:10px;padding:8px 20px;border:1px solid rgba(201,168,76,0.08);border-radius:4px;display:inline-block;">
+    <strong style="color:rgba(201,168,76,0.6);">Affiliate Disclosure:</strong> This site contains Amazon affiliate links. We may earn a commission at no cost to you.
+    <a href="/affiliate-disclosure/" style="color:rgba(201,168,76,0.45);">Full disclosure →</a>
+  </p>
+</footer>
+
+<script>
+document.querySelectorAll('.nav-overlay a').forEach(a=>{a.addEventListener('click',()=>{document.getElementById('nov').classList.remove('open')})});
+</script>
+</body>
+</html>
