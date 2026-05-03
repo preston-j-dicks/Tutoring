@@ -5,6 +5,9 @@ Run to get product URLs saved to gumroad_products.json.
 import os
 import json
 import requests
+from dotenv import load_dotenv
+
+load_dotenv()
 
 GUMROAD_TOKEN = os.getenv('GUMROAD_ACCESS_TOKEN')
 BASE = 'https://api.gumroad.com/v2'
