@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AFOQT Adaptive Intelligence App — FissionLab by Dr. Preston PhD</title>
+<meta name="description" content="The AFOQT prep app that learns how YOU think. Adaptive AI drills, progress tracking, and weakness targeting. Free tier + premium access for tutoring students.">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K285VK64MP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-K285VK64MP');
+</script>
+<meta name="google-adsense-account" content="ca-pub-3289071681648577">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3289071681648577" crossorigin="anonymous"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{--navy:#0a1628;--navy2:#0d1f3c;--gold:#c9a84c;--gold2:#e8c97a;--white:#ffffff;--cream:#f0ebe0;--dim:rgba(240,235,224,0.82);--border:rgba(201,168,76,0.15);--border2:rgba(201,168,76,0.08);}
+body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--navy);color:var(--cream);overflow-x:hidden;font-size:16px;line-height:1.75;padding-top:64px}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:64px;padding:0 8vw;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--white);font-size:1.05rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;}
+.nav-atom-core{color:var(--gold);font-size:16px;}
+.nav-logo-text span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{font-size:0.78rem;font-weight:500;color:rgba(240,235,224,0.72);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--gold)!important;color:var(--navy)!important;padding:8px 20px!important;border-radius:6px;font-weight:700!important;}
+.nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;color:var(--cream);}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--cream);margin:5px 0;}
+.nav-overlay{display:none;position:fixed;inset:0;z-index:199;background:rgba(10,22,40,0.97);flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;}
+.nav-overlay.open{display:flex}
+.nav-overlay a{font-size:1.5rem;font-weight:600;color:var(--cream);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;}
+.nav-overlay a:hover{color:var(--gold)}
+.nav-overlay-close{position:absolute;top:24px;right:8vw;background:none;border:none;cursor:pointer;color:var(--cream);font-size:2rem;line-height:1;}
+footer{background:#060f1c;border-top:1px solid rgba(201,168,76,0.1);padding:48px 8vw;text-align:center;font-size:13px;color:rgba(240,235,224,0.35);}
+footer a{color:rgba(201,168,76,0.7);text-decoration:none;}footer a:hover{color:var(--gold)}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:24px;margin-bottom:20px;}
+.footer-links a{font-size:12px;letter-spacing:0.05em;text-transform:uppercase;}
+/* Hero */
+.hero{padding:80px 8vw 60px;max-width:1100px;margin:0 auto;text-align:center;}
+.badge{display:inline-block;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);border-radius:4px;padding:4px 12px;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
+.hero h1{font-family:Georgia,serif;font-size:clamp(32px,5vw,58px);font-weight:700;color:var(--white);line-height:1.1;margin-bottom:16px;}
+.hero h1 em{color:var(--gold);font-style:normal}
+.hero-sub{font-size:clamp(15px,1.7vw,19px);color:var(--dim);max-width:620px;margin:0 auto 40px;}
+/* How it works */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:900px;margin:0 auto 80px;padding:0 8vw;}
+.step{background:rgba(13,31,60,0.75);border:1px solid var(--border2);border-radius:12px;padding:32px 24px;text-align:center;}
+.step-num{width:40px;height:40px;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--gold);font-size:1.1rem;margin:0 auto 16px;}
+.step h3{font-family:Georgia,serif;font-size:1.1rem;color:var(--white);margin-bottom:10px;}
+.step p{font-size:14px;color:var(--dim);}
+/* Pricing */
+.pricing-section{background:rgba(13,31,60,0.4);padding:64px 8vw;}
+.pricing-section h2{font-family:Georgia,serif;font-size:clamp(26px,3.5vw,40px);color:var(--white);text-align:center;margin-bottom:48px;}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:900px;margin:0 auto 40px;}
+.price-card{background:rgba(13,31,60,0.75);border:1px solid var(--border2);border-radius:12px;padding:32px 24px;display:flex;flex-direction:column;gap:12px;}
+.price-card.featured{border-color:rgba(201,168,76,0.5);box-shadow:0 0 30px rgba(201,168,76,0.08);}
+.price-tier{font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);}
+.price-amount{font-family:Georgia,serif;font-size:2.2rem;color:var(--white);font-weight:700;}
+.price-amount span{font-size:14px;color:var(--dim);font-family:inherit;}
+.price-features{list-style:none;display:flex;flex-direction:column;gap:8px;flex:1;}
+.price-features li{font-size:14px;color:var(--dim);padding-left:20px;position:relative;}
+.price-features li::before{content:'✓';position:absolute;left:0;color:var(--gold);}
+.btn-primary{display:inline-block;background:var(--gold);color:var(--navy);padding:14px 32px;border-radius:6px;font-weight:700;font-size:0.95rem;text-decoration:none;letter-spacing:0.03em;transition:background 0.2s,transform 0.15s;text-align:center;}
+.btn-primary:hover{background:var(--gold2);transform:translateY(-2px)}
+.btn-ghost{display:inline-block;background:transparent;color:var(--white);padding:14px 32px;border-radius:6px;font-weight:600;font-size:0.95rem;text-decoration:none;letter-spacing:0.03em;border:2px solid rgba(201,168,76,0.6);transition:border-color 0.2s,color 0.2s;text-align:center;}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+/* Included with tutoring */
+.included-bar{background:rgba(201,168,76,0.06);border-top:1px solid rgba(201,168,76,0.15);border-bottom:1px solid rgba(201,168,76,0.15);padding:40px 8vw;text-align:center;}
+.included-bar h3{font-family:Georgia,serif;font-size:1.5rem;color:var(--white);margin-bottom:10px;}
+.included-bar p{color:var(--dim);font-size:15px;max-width:520px;margin:0 auto 24px;}
+/* Token verify */
+.verify-section{padding:64px 8vw;max-width:700px;margin:0 auto;}
+.verify-section h2{font-family:Georgia,serif;font-size:1.6rem;color:var(--white);margin-bottom:10px;}
+.verify-section p{color:var(--dim);font-size:15px;margin-bottom:24px;}
+.verify-input{display:flex;gap:12px;flex-wrap:wrap;}
+.verify-input input{flex:1;min-width:200px;padding:12px 16px;background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.3);border-radius:6px;color:var(--white);font-size:15px;font-family:monospace;letter-spacing:0.05em;}
+.verify-input input::placeholder{color:rgba(240,235,224,0.3);}
+/* App frame */
+.app-section{padding:0 8vw 64px;}
+.app-frame-wrap{border:2px solid rgba(201,168,76,0.3);border-radius:12px;overflow:hidden;max-width:1000px;margin:0 auto;}
+.app-frame-header{background:#0d1f3c;padding:12px 20px;border-bottom:1px solid rgba(201,168,76,0.2);display:flex;align-items:center;justify-content:space-between;}
+.app-frame-header span{color:var(--gold);font-weight:700;font-size:14px;}
+.paywall-overlay{position:relative;}
+.paywall-screen{display:none;position:absolute;inset:0;background:rgba(10,22,40,0.92);backdrop-filter:blur(4px);z-index:10;align-items:center;justify-content:center;flex-direction:column;gap:16px;text-align:center;padding:32px;}
+@media(max-width:768px){.nav-links{display:none}.nav-hamburger{display:block}.steps,.pricing-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo"><span class="nav-atom-core">⚛</span><span class="nav-logo-text">Fission<span>Lab</span></span></a>
+  <div class="nav-links">
+    <a href="/community/">Community</a>
+    <a href="/community/resources/">Resources</a>
+    <a href="/community/bookshelf/">Bookshelf</a>
+    <a href="mailto:Dr_PrestonD@proton.me">Contact</a>
+    <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" class="nav-cta">Book Free Intro</a>
+  </div>
+  <button class="nav-hamburger" onclick="document.querySelector('.nav-overlay').classList.add('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-overlay">
+  <button class="nav-overlay-close" onclick="document.querySelector('.nav-overlay').classList.remove('open')">&#x2715;</button>
+  <a href="/community/" onclick="document.querySelector('.nav-overlay').classList.remove('open')">Community</a>
+  <a href="/community/resources/" onclick="document.querySelector('.nav-overlay').classList.remove('open')">Resources</a>
+  <a href="/community/bookshelf/" onclick="document.querySelector('.nav-overlay').classList.remove('open')">Bookshelf</a>
+  <a href="mailto:Dr_PrestonD@proton.me" onclick="document.querySelector('.nav-overlay').classList.remove('open')">Contact</a>
+  <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" class="btn-primary" onclick="document.querySelector('.nav-overlay').classList.remove('open')">Book Free Intro</a>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="badge">AI-Powered AFOQT Prep</div>
+  <h1>AFOQT Adaptive<br>Intelligence <em>App</em></h1>
+  <p class="hero-sub">The prep tool that learns how YOU think. Powered by Dr. Preston's PhD-level AFOQT expertise.</p>
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+    <a href="https://dr-p-afoqt-app.hf.space" target="_blank" rel="noopener" class="btn-primary" onclick="gtag('event','app_cta_click',{location:'hero',tier:'free'})">Try Free (10/day) &rarr;</a>
+    <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" rel="noopener" class="btn-ghost">Book Session &mdash; App Included Free</a>
+  </div>
+</section>
+
+<!-- How it works -->
+<div style="padding:0 0 20px;">
+  <div style="text-align:center;margin-bottom:40px;padding:0 8vw;">
+    <span style="font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);">How It Works</span>
+    <h2 style="font-family:Georgia,serif;font-size:clamp(24px,3vw,36px);color:var(--white);margin-top:12px;">Three steps to a higher AFOQT score</h2>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h3>Take a Diagnostic</h3>
+      <p>The app identifies your weakest subtests across all 12 AFOQT sections in under 30 minutes.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h3>Receive Adaptive Drills</h3>
+      <p>Questions target your specific gaps — harder where you're weak, easier where you need confidence.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h3>Track Your Progress</h3>
+      <p>See your improvement by subtest over time. Know exactly where to focus each study session.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Pricing -->
+<section class="pricing-section">
+  <h2>Simple, Honest Pricing</h2>
+  <div class="pricing-grid">
+    <div class="price-card">
+      <div class="price-tier">Free Tier</div>
+      <div class="price-amount">$0</div>
+      <ul class="price-features">
+        <li>10 questions per day</li>
+        <li>Basic scoring</li>
+        <li>No account needed</li>
+        <li>All 12 subtests</li>
+      </ul>
+      <a href="https://dr-p-afoqt-app.hf.space" target="_blank" rel="noopener" class="btn-ghost" onclick="gtag('event','app_cta_click',{location:'pricing',tier:'free'})">Try Free &rarr;</a>
+    </div>
+    <div class="price-card featured">
+      <div class="price-tier">Monthly</div>
+      <div class="price-amount">$9.99<span>/mo</span></div>
+      <ul class="price-features">
+        <li>Unlimited questions</li>
+        <li>Weakness AI targeting</li>
+        <li>Progress analytics</li>
+        <li>Study schedule generator</li>
+        <li>All 12 subtests</li>
+      </ul>
+      <a href="https://buy.stripe.com/aFabIU7lcgIa1xU4Bc1Fe00" target="_blank" rel="noopener" class="btn-primary" onclick="gtag('event','app_cta_click',{location:'pricing',tier:'monthly'})">Get Monthly Access &rarr;</a>
+    </div>
+    <div class="price-card">
+      <div class="price-tier">Annual — Save 33%</div>
+      <div class="price-amount">$79.99<span>/yr</span></div>
+      <ul class="price-features">
+        <li>Everything in Monthly</li>
+        <li>Priority support</li>
+        <li>Early access to new features</li>
+        <li>Best value for full prep</li>
+      </ul>
+      <a href="https://buy.stripe.com/aFabIU7lcgIa1xU4Bc1Fe00" target="_blank" rel="noopener" class="btn-primary" onclick="gtag('event','app_cta_click',{location:'pricing',tier:'annual'})">Get Annual Access &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- Included with tutoring -->
+<div class="included-bar">
+  <div style="display:inline-block;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);border-radius:4px;padding:3px 10px;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;">Best Value</div>
+  <h3>OR GET IT FREE WITH TUTORING</h3>
+  <p>Become a Dr. Preston tutoring student and get FULL app access included at no extra charge.</p>
+  <p style="font-size:13px;color:rgba(245,240,232,0.6);margin-bottom:20px;">Get a personalized study schedule built around your test date and available hours. Book a session and receive a custom plan in your first meeting.</p>
+  <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" rel="noopener" class="btn-primary" onclick="gtag('event','book_session_click',{location:'app_page_included'})">Book a Session &mdash; App Access Included &rarr;</a>
+</div>
+
+<!-- Token Verification -->
+<section class="verify-section">
+  <h2>Already a Student?</h2>
+  <p>Enter your student token to unlock full app access. Check your welcome email for the format <code style="color:var(--gold);background:rgba(201,168,76,0.08);padding:2px 6px;border-radius:3px;">FLAB-XXXX-XXXX-XXXX</code>.</p>
+  <div class="verify-input">
+    <input type="text" id="token-input" placeholder="FLAB-XXXX-XXXX-XXXX" maxlength="19">
+    <button onclick="verifyToken()" class="btn-primary" style="white-space:nowrap;">Verify Access &rarr;</button>
+  </div>
+  <p id="verify-msg" style="font-size:13px;margin-top:12px;display:none;"></p>
+</section>
+
+<!-- App iframe -->
+<section class="app-section">
+  <div class="app-frame-wrap">
+    <div class="app-frame-header">
+      <span id="app-free-label">AFOQT App &mdash; Free Preview (10 questions/day)</span>
+      <span style="font-size:12px;color:rgba(240,235,224,0.4);">Powered by HuggingFace Spaces</span>
+    </div>
+    <div class="paywall-overlay" id="paywall-overlay">
+      <iframe src="https://dr-p-afoqt-app.hf.space" width="100%" height="700px" style="border:none;display:block;" title="AFOQT Adaptive Intelligence App" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter widget -->
+<div style="padding:48px 8vw;background:rgba(13,31,60,0.4);text-align:center;">
+  <div class="newsletter-widget" style="max-width:520px;margin:0 auto;">
+    <h3 style="font-family:Georgia,serif;font-size:1.4rem;color:var(--white);margin-bottom:8px;">Free Weekly AFOQT Tips</h3>
+    <p style="font-size:14px;color:var(--dim);margin-bottom:20px;">Join <span id="sub-count">500+</span> students getting Dr. Preston's weekly insights</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <input type="email" id="nl-email" placeholder="your@email.com" style="flex:1;min-width:200px;padding:12px;border-radius:6px;border:1px solid rgba(201,168,76,0.3);background:rgba(255,255,255,0.05);color:white;">
+      <button onclick="subscribeNewsletter()" id="nl-btn" style="padding:12px 20px;background:#c9a84c;color:#0a1628;border:none;border-radius:6px;font-weight:700;cursor:pointer;white-space:nowrap;">Subscribe Free &rarr;</button>
+    </div>
+    <p id="nl-msg" style="font-size:12px;margin-top:8px;display:none;"></p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/community/">Community</a>
+    <a href="/community/resources/">Resources</a>
+    <a href="/community/bookshelf/">Bookshelf</a>
+    <a href="/affiliate-disclosure/">Disclosures</a>
+    <a href="mailto:Dr_PrestonD@proton.me">Contact</a>
+  </div>
+  <p>&copy; 2025 FissionLab &mdash; Dr. Preston, PhD &mdash; USAF Captain</p>
+  <p style="margin-top:8px;font-size:11px;color:rgba(240,235,224,0.2);">FissionLab is a participant in the Amazon Services LLC Associates Program. As an Amazon Associate we earn from qualifying purchases.</p>
+</footer>
+
+<script>
+const KNOWN_TOKENS = ['FLAB-X9OR-COW0-QAPS','FLAB-8FR0-D3Z1-XZUN','FLAB-CU8L-8YPJ-E0L5','FLAB-ECG5-UIAY-QQYX','FLAB-9TH4-QRTQ-GUKU'];
+
+function showMsg(text, type) {
+  const msg = document.getElementById('verify-msg');
+  msg.textContent = text;
+  msg.style.color = type === 'success' ? '#4ca878' : '#e74c3c';
+  msg.style.display = 'block';
+}
+
+async function verifyToken() {
+  const token = document.getElementById('token-input').value.trim().toUpperCase();
+  if (!token.match(/^FLAB-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}$/)) {
+    showMsg('Invalid format. Token looks like FLAB-XXXX-XXXX-XXXX', 'error'); return;
+  }
+  try {
+    const res = await fetch('https://web-production-202b9.up.railway.app/api/verify-token',
+      {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({token})});
+    const d = await res.json();
+    if (d.valid) { grantAccess(); return; }
+  } catch(e) {
+    if (KNOWN_TOKENS.includes(token)) { grantAccess(); return; }
+  }
+  showMsg('Token not found. Contact Dr. Preston at Dr_PrestonD@proton.me', 'error');
+}
+
+function grantAccess() {
+  localStorage.setItem('fl_access', 'full');
+  document.getElementById('app-free-label').textContent = 'AFOQT App — Full Access (Student)';
+  showMsg('Full access granted! Welcome, student.', 'success');
+  gtag('event', 'token_verified', {});
+}
+
+if (localStorage.getItem('fl_access') === 'full') { grantAccess(); }
+
+async function subscribeNewsletter() {
+  const email = document.getElementById('nl-email').value.trim();
+  const btn = document.getElementById('nl-btn');
+  const msg = document.getElementById('nl-msg');
+  if (!email) return;
+  btn.textContent = 'Subscribing...'; btn.disabled = true;
+  try {
+    const res = await fetch('https://web-production-202b9.up.railway.app/api/subscribe', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({email, source: 'app-page'})
+    });
+    const data = await res.json();
+    msg.textContent = '✓ You\'re subscribed! Check your inbox.';
+    msg.style.color = '#4ca878'; msg.style.display = 'block';
+    btn.textContent = 'Subscribed ✓';
+    gtag('event','newsletter_subscribe',{source:'app-page'});
+  } catch(e) {
+    window.open('https://prestons-newsletter-5f43a7.beehiiv.com/subscribe?email=' + encodeURIComponent(email), '_blank');
+    msg.textContent = 'Opening subscription page...'; msg.style.display = 'block';
+  }
+}
+
+fetch('https://web-production-202b9.up.railway.app/api/subscriber-count')
+  .then(r => r.json()).then(d => { if (d.count) document.getElementById('sub-count').textContent = d.count + '+'; }).catch(() => {});
+</script>
+</body>
+</html>
