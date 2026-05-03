@@ -4,7 +4,9 @@ Save the output URLs to .env as STRIPE_APP_MONTHLY_LINK and STRIPE_APP_ANNUAL_LI
 """
 import stripe
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
 stripe.api_key = os.getenv('STRIPE_SECRET_KEY')
 
 
