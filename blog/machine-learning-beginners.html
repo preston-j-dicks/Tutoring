@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Machine Learning from Scratch: A PhD Researcher's Beginner Guide | FissionLab by Dr. Preston PhD</title>
+<meta name="description" content="A PhD researcher's beginner guide to machine learning — what ML is, supervised vs unsupervised learning, linear regression, and neural networks — with Python pseudocode.">
+<link rel="canonical" href="https://fissionlab.net/blog/machine-learning-beginners.html">
+<meta property="og:title" content="Machine Learning from Scratch: A PhD Researcher's Beginner Guide">
+<meta property="og:description" content="A PhD researcher's beginner guide to machine learning — what ML is, supervised vs unsupervised learning, linear regression, and neural networks — with Python pseudocode.">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Machine Learning from Scratch: A PhD Researcher's Beginner Guide","author":{"@type":"Person","name":"Dr. Preston","url":"https://fissionlab.net"},"publisher":{"@type":"Organization","name":"FissionLab"},"datePublished":"2026-05-03","url":"https://fissionlab.net/blog/machine-learning-beginners.html"}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K285VK64MP"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K285VK64MP');</script>
+<meta name="google-adsense-account" content="ca-pub-3289071681648577">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3289071681648577" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0a1628;--navy2:#0d1f3c;--gold:#c9a84c;--gold2:#e8c97a;--white:#ffffff;--cream:#f0ebe0;--dim:rgba(240,235,224,0.82);--border:rgba(201,168,76,0.15);}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--navy);color:var(--cream);font-size:16px;line-height:1.8;}
+.post-hero{padding:120px 2rem 60px;max-width:800px;margin:0 auto;text-align:center;}
+.post-tag{font-size:0.72rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:block;}
+.post-hero h1{font-family:'DM Serif Display',serif;font-size:clamp(28px,5vw,52px);color:#fff;line-height:1.15;margin-bottom:20px;}
+.post-meta{font-size:13px;color:rgba(240,235,224,0.5);}
+.post-body{max-width:740px;margin:0 auto;padding:48px 2rem 80px;}
+.post-body h2{font-family:'DM Serif Display',serif;font-size:clamp(22px,3vw,32px);color:var(--white);margin:48px 0 16px;}
+.post-body h3{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--gold);margin:32px 0 12px;}
+.post-body p{color:var(--dim);margin-bottom:20px;}
+.post-body ul,.post-body ol{color:var(--dim);padding-left:24px;margin-bottom:20px;}
+.post-body li{margin-bottom:8px;}
+.post-body strong{color:var(--white);}
+.callout{background:rgba(201,168,76,0.06);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:20px 24px;margin:32px 0;}
+.callout p{margin:0;color:var(--dim);}
+.book-rec{background:rgba(13,31,60,0.75);border:1px solid rgba(201,168,76,0.15);border-radius:10px;padding:20px 24px;margin:24px 0;display:flex;gap:16px;align-items:flex-start;}
+.book-rec-info h4{font-family:'DM Serif Display',serif;color:var(--white);margin-bottom:4px;}
+.book-rec-info p{font-size:13px;color:var(--dim);margin-bottom:10px;}
+.book-rec-info a{color:var(--gold);font-size:13px;font-weight:600;text-decoration:none;}
+.code-block{background:rgba(13,31,60,0.8);border:1px solid rgba(201,168,76,0.12);border-radius:8px;padding:20px 24px;margin:24px 0;font-family:monospace;font-size:0.85rem;color:#a8d4a8;line-height:1.7;overflow-x:auto;}
+.code-block .comment{color:rgba(240,235,224,0.4);}
+.formula-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px;}
+.formula-table th{background:rgba(201,168,76,0.12);color:var(--gold);font-weight:600;padding:10px 14px;text-align:left;border-bottom:1px solid var(--border);}
+.formula-table td{padding:10px 14px;border-bottom:1px solid rgba(201,168,76,0.07);color:var(--dim);}
+.formula-table tr:last-child td{border-bottom:none;}
+.cta-box{background:linear-gradient(135deg,rgba(13,31,60,0.9),rgba(10,22,40,0.9));border:1px solid rgba(201,168,76,0.25);border-radius:12px;padding:40px;text-align:center;margin:48px 0;}
+.cta-box h3{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--white);margin-bottom:12px;}
+.cta-box p{color:var(--dim);margin-bottom:24px;}
+.btn-primary{display:inline-block;background:var(--gold);color:var(--navy);padding:14px 32px;border-radius:6px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:background 0.2s;}
+.btn-primary:hover{background:var(--gold2);}
+footer{background:#060f1c;border-top:1px solid rgba(201,168,76,0.1);padding:32px 2rem;text-align:center;font-size:13px;color:rgba(240,235,224,0.35);}
+footer a{color:rgba(201,168,76,0.7);text-decoration:none;}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:20px;margin-bottom:14px;}
+.footer-links a{font-size:11px;letter-spacing:0.05em;text-transform:uppercase;}
+</style>
+</head>
+<body>
+<div id="nav-root"></div><script src="../nav-component.js"></script>
+
+<article>
+<div class="post-hero">
+  <span class="post-tag">MACHINE LEARNING &middot; BEGINNERS</span>
+  <h1>Machine Learning from Scratch: A PhD Researcher's Beginner Guide</h1>
+  <p class="post-meta">By Dr. Preston &mdash; PhD Nuclear Engineering, AFIT &middot; USAF AI Engineer, DTRA &middot; May 3, 2026</p>
+</div>
+
+<div class="post-body">
+
+<p>I work as an AI engineer at the Defense Threat Reduction Agency. Before that I spent years doing physics simulations and data analysis in nuclear engineering. When people ask me how to get started with machine learning, they usually expect me to recommend a massive online course or point them to a textbook. My actual advice is different: start by understanding what ML is doing mathematically, build intuition with small examples, and only then reach for the big frameworks.</p>
+
+<p>This guide is for people who have zero or near-zero ML background. We will cover the conceptual landscape, then go deep on the two most important ideas &mdash; linear regression and neural networks &mdash; with enough mathematical detail to understand what is actually happening. Python pseudocode is included throughout so you can see how concepts translate to code.</p>
+
+<div class="callout">
+  <p><strong>Prerequisites:</strong> High school algebra and some comfort with functions. Calculus helps but is not required to follow this guide. The section on neural networks uses derivatives conceptually &mdash; if you understand that a derivative measures slope, you will follow the gradient descent explanation.</p>
+</div>
+
+<h2>What Machine Learning Actually Is</h2>
+
+<p>Here is the honest definition: machine learning is the process of fitting a mathematical function to data. That function can be simple (a line) or extraordinarily complex (a deep neural network with billions of parameters), but the core idea is the same. You have inputs, you have desired outputs, and you want a function that maps inputs to outputs in a way that generalizes to data you have not seen yet.</p>
+
+<p>Traditional programming is explicit: you write rules. If the input is X, do Y. Machine learning is implicit: you show the algorithm examples and let it infer the rules. This works extremely well for problems where the rules are too complex to write explicitly &mdash; recognizing faces, translating language, predicting protein structures.</p>
+
+<h3>The Three Questions Every ML Project Must Answer</h3>
+<ol>
+  <li><strong>What is the model?</strong> What mathematical structure will learn from the data? (Linear model, decision tree, neural network, etc.)</li>
+  <li><strong>What is the loss function?</strong> How do we measure how wrong the model's predictions are?</li>
+  <li><strong>What is the optimizer?</strong> How do we adjust the model's parameters to reduce the loss?</li>
+</ol>
+
+<p>Almost every ML paper you will ever read answers these three questions. Once you recognize the pattern, reading the literature becomes much easier.</p>
+
+<h2>Supervised vs. Unsupervised Learning</h2>
+
+<p>The most important distinction in ML is between supervised and unsupervised learning. The difference comes down to whether your training data includes labels.</p>
+
+<table class="formula-table">
+  <tr><th>Type</th><th>Data</th><th>Goal</th><th>Examples</th></tr>
+  <tr><td><strong>Supervised</strong></td><td>Inputs + labels</td><td>Learn input&rarr;output mapping</td><td>Image classification, spam detection, price prediction</td></tr>
+  <tr><td><strong>Unsupervised</strong></td><td>Inputs only</td><td>Find structure in data</td><td>Clustering, dimensionality reduction, anomaly detection</td></tr>
+  <tr><td><strong>Reinforcement</strong></td><td>States + rewards</td><td>Learn policy through trial and error</td><td>Game playing, robotics, autonomous systems</td></tr>
+</table>
+
+<p>For beginners, supervised learning is the right place to start because the feedback signal (the label) makes training concrete and measurable. Most practical ML applications are supervised.</p>
+
+<h2>Linear Regression: The Foundation</h2>
+
+<p>Linear regression is the simplest ML model. It assumes the relationship between input x and output y is linear: y = w &middot; x + b, where w is the weight (slope) and b is the bias (intercept). These two parameters are what the model learns from data.</p>
+
+<h3>The Loss Function</h3>
+<p>For regression, the standard loss is mean squared error (MSE). Given n training examples with true outputs y<sub>i</sub> and predicted outputs &ycirc;<sub>i</sub>:</p>
+
+<div class="code-block">
+<span class="comment"># Mean Squared Error loss function</span>
+MSE = (1/n) * sum((y_true[i] - y_pred[i])**2 for i in range(n))
+</div>
+
+<p>MSE penalizes large errors heavily (because of the square) and is zero only when every prediction is perfect. The goal of training is to find w and b that minimize MSE over the training data.</p>
+
+<h3>Gradient Descent</h3>
+<p>Gradient descent is the optimizer. The intuition: imagine you are standing on a hilly landscape and you want to walk to the lowest point. At each step, look around, find the direction of steepest downhill, and take a small step that way. In ML, the "landscape" is the loss function over all possible parameter values, and the gradient (the multivariable derivative) tells us which direction is "uphill." We move in the opposite direction.</p>
+
+<div class="code-block">
+<span class="comment"># Gradient descent update rule</span>
+<span class="comment"># learning_rate (alpha) controls step size</span>
+w = w - learning_rate * d_loss_d_w
+b = b - learning_rate * d_loss_d_b
+
+<span class="comment"># For linear regression, the gradients are:</span>
+d_loss_d_w = (-2/n) * sum(x[i] * (y[i] - (w*x[i] + b)) for i in range(n))
+d_loss_d_b = (-2/n) * sum(y[i] - (w*x[i] + b) for i in range(n))
+</div>
+
+<p>We repeat this update many times (many epochs) until the loss stops decreasing meaningfully. The learning rate is a hyperparameter you choose &mdash; too large and the optimizer overshoots and diverges; too small and training takes forever. Choosing a good learning rate is one of the most important practical skills in ML.</p>
+
+<div class="callout">
+  <p><strong>Key insight:</strong> Everything in deep learning, including transformer models with hundreds of billions of parameters, uses gradient descent at its core. The specific flavor varies (Adam, SGD with momentum, RMSProp), but the fundamental idea &mdash; compute gradients, take small steps downhill &mdash; is identical to what you see here.</p>
+</div>
+
+<h2>Classification and Logistic Regression</h2>
+
+<p>When the output is a category rather than a number (spam vs. not spam, cat vs. dog), we use classification. Logistic regression is the simplest classifier. It takes the linear model output and squashes it through the sigmoid function to produce a probability between 0 and 1.</p>
+
+<div class="code-block">
+<span class="comment"># Sigmoid function</span>
+import math
+def sigmoid(z):
+    return 1 / (1 + math.exp(-z))
+
+<span class="comment"># Prediction: probability that input belongs to class 1</span>
+z = w * x + b
+probability = sigmoid(z)
+
+<span class="comment"># Binary cross-entropy loss (for classification)</span>
+<span class="comment"># Better than MSE for probability outputs</span>
+loss = -y * log(probability) - (1 - y) * log(1 - probability)
+</div>
+
+<p>The binary cross-entropy loss penalizes confident wrong answers very heavily, which is the right behavior for classification. If the model says 99% probability and it is wrong, that is much worse than saying 60% probability and being wrong.</p>
+
+<h2>Neural Networks: Stacking Linear Models</h2>
+
+<p>A neural network is a sequence of linear transformations with nonlinear activation functions applied between them. That is it. The power comes from depth &mdash; stacking many layers allows the network to represent extraordinarily complex functions.</p>
+
+<h3>A Single Neuron</h3>
+<p>One neuron takes a vector of inputs x, computes a weighted sum plus bias, then applies an activation function f:</p>
+
+<div class="code-block">
+<span class="comment"># Single neuron computation</span>
+def neuron(x, weights, bias, activation):
+    z = sum(w * xi for w, xi in zip(weights, x)) + bias
+    return activation(z)
+
+<span class="comment"># Common activation functions:</span>
+relu = lambda z: max(0, z)          <span class="comment"># ReLU: most common in hidden layers</span>
+sigmoid = lambda z: 1/(1+exp(-z))  <span class="comment"># Sigmoid: output layer (binary)</span>
+tanh = lambda z: tanh(z)           <span class="comment"># Tanh: output range (-1, 1)</span>
+</div>
+
+<p>Without nonlinear activation functions, stacking layers would be mathematically equivalent to a single linear model. The activation functions are what give neural networks their ability to approximate any continuous function (the Universal Approximation Theorem).</p>
+
+<h3>Feedforward Network Architecture</h3>
+<p>A standard feedforward network has three types of layers. The input layer receives raw data. Hidden layers learn intermediate representations. The output layer produces the final prediction. Each layer is a collection of neurons, all receiving outputs from the previous layer.</p>
+
+<div class="code-block">
+<span class="comment"># Pseudocode for a simple 2-layer network (1 hidden layer)</span>
+def forward_pass(x, W1, b1, W2, b2):
+    <span class="comment"># Layer 1: 3 inputs -> 4 hidden neurons</span>
+    z1 = matrix_multiply(W1, x) + b1   <span class="comment"># shape: (4,)</span>
+    a1 = relu(z1)                      <span class="comment"># activation</span>
+
+    <span class="comment"># Layer 2: 4 hidden -> 1 output</span>
+    z2 = matrix_multiply(W2, a1) + b2  <span class="comment"># shape: (1,)</span>
+    output = sigmoid(z2)               <span class="comment"># probability</span>
+    return output
+</div>
+
+<h3>Backpropagation</h3>
+<p>Training a neural network means adjusting all weights and biases to minimize the loss. We still use gradient descent, but computing the gradients for each parameter requires the chain rule from calculus, applied layer by layer from the output backward through the network. This process is called backpropagation. You almost never implement it by hand &mdash; frameworks like PyTorch and TensorFlow handle it automatically through automatic differentiation &mdash; but understanding what it is doing conceptually is essential for debugging and designing networks.</p>
+
+<h2>Overfitting and the Bias-Variance Tradeoff</h2>
+
+<p>The most important concept in practical ML is the distinction between training performance and generalization performance. A model that memorizes training examples but fails on new data is useless. This is called overfitting.</p>
+
+<ul>
+  <li><strong>Underfitting (high bias):</strong> The model is too simple to capture the true pattern. A linear model on data with a quadratic relationship will underfit.</li>
+  <li><strong>Overfitting (high variance):</strong> The model is too complex and memorizes noise in the training data rather than learning the underlying pattern.</li>
+  <li><strong>The goal:</strong> Find the sweet spot where the model is complex enough to capture the pattern but not so complex that it memorizes noise.</li>
+</ul>
+
+<p>The primary tools for combating overfitting are regularization (adding a penalty term to the loss that discourages large weights), dropout (randomly disabling neurons during training), early stopping (stopping training before the validation loss starts increasing), and more data (always the best solution when available).</p>
+
+<div class="callout">
+  <p><strong>Practical rule:</strong> Always split your data into at least two sets: training data (used to fit the model) and validation data (used to evaluate generalization). Never touch test data until you have finalized your model design. If you evaluate on test data repeatedly, you will unconsciously overfit to it through your design choices.</p>
+</div>
+
+<h2>Recommended Books</h2>
+
+<div class="book-rec">
+  <div class="book-rec-info">
+    <h4>Hands-On Machine Learning with Scikit-Learn, Keras &amp; TensorFlow &mdash; Aur&eacute;lien G&eacute;ron</h4>
+    <p>The best practical ML book available. G&eacute;ron walks through every major algorithm with clear intuition, real datasets, and complete code examples. The first half covers classical ML (regression, classification, SVMs, trees); the second half covers deep learning. If you read one ML book, make it this one. Updated editions keep pace with the field.</p>
+    <a href="https://www.amazon.com/dp/1098125975?tag=fissionlab-20" target="_blank" rel="noopener">View on Amazon (affiliate link) &rarr;</a>
+  </div>
+</div>
+
+<div class="book-rec">
+  <div class="book-rec-info">
+    <h4>Deep Learning &mdash; Goodfellow, Bengio &amp; Courville</h4>
+    <p>The canonical deep learning textbook, freely available online and also available in print. More mathematical than G&eacute;ron, covering the theoretical foundations of neural networks, regularization, optimization, and specialized architectures. Read G&eacute;ron first for practical intuition, then use Goodfellow et al. as your theoretical reference. The sections on gradient descent, regularization, and optimization are particularly strong.</p>
+    <a href="https://www.amazon.com/dp/0262035618?tag=fissionlab-20" target="_blank" rel="noopener">View on Amazon (affiliate link) &rarr;</a>
+  </div>
+</div>
+
+<div class="cta-box">
+  <h3>Want to Learn ML With Expert Guidance?</h3>
+  <p>I offer one-on-one tutoring in machine learning and AI, from Python basics through neural network theory. My background as a USAF AI engineer means I focus on practical skills and real-world applications, not academic fluff.</p>
+  <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" class="btn-primary">Book Free 30-Min Intro &rarr;</a>
+</div>
+
+<div class="cta-box" style="background:rgba(201,168,76,0.05);border-color:rgba(201,168,76,0.2);">
+  <h3>Get Weekly AI and ML Insights</h3>
+  <p>Join 500+ readers for Dr. Preston's weekly breakdown of ML concepts, career tips, and learning resources.</p>
+  <a href="https://prestons-newsletter-5f43a7.beehiiv.com/subscribe" target="_blank" class="btn-primary" style="background:transparent;color:var(--gold);border:2px solid var(--gold);">Subscribe Free &rarr;</a>
+</div>
+
+</div>
+</article>
+
+<footer>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/community/">Community</a><a href="/community/resources/">Resources</a>
+    <a href="/blog/">Blog</a><a href="/community/products/">Products</a>
+    <a href="mailto:Dr_PrestonD@proton.me">Contact</a>
+    <a href="/affiliate-disclosure/">Disclosures</a>
+  </div>
+  <p>&copy; 2026 FissionLab &middot; Dr. Preston PhD &middot; All sessions via Zoom</p>
+  <p style="margin-top:6px;font-size:11px;color:rgba(240,235,224,0.3)">Amazon links use affiliate tag fissionlab-20. <a href="/affiliate-disclosure/" style="color:rgba(201,168,76,0.5)">Affiliate disclosure.</a></p>
+</footer>
+</body>
+</html>

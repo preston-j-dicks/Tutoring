@@ -13,6 +13,7 @@
   gtag('js', new Date());
   gtag('config', 'G-K285VK64MP');
 </script>
+<link rel="canonical" href="https://fissionlab.net/community/app/">
 <meta name="google-adsense-account" content="ca-pub-3289071681648577">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3289071681648577" crossorigin="anonymous"></script>
 <style>
@@ -89,19 +90,9 @@ footer a{color:rgba(201,168,76,0.7);text-decoration:none;}footer a:hover{color:v
 </style>
 </head>
 <body>
-<nav>
-  <a href="/" class="nav-logo"><span class="nav-atom-core">⚛</span><span class="nav-logo-text">Fission<span>Lab</span></span></a>
-  <div class="nav-links">
-    <a href="/community/">Community</a>
-    <a href="/community/resources/">Resources</a>
-    <a href="/community/bookshelf/">Bookshelf</a>
-    <a href="mailto:Dr_PrestonD@proton.me">Contact</a>
-    <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" class="nav-cta">Book Free Intro</a>
-  </div>
-  <button class="nav-hamburger" onclick="document.querySelector('.nav-overlay').classList.add('open')" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+<div id="nav-root"></div>
+<script src="../../nav-component.js"></script>
+
 <div class="nav-overlay">
   <button class="nav-overlay-close" onclick="document.querySelector('.nav-overlay').classList.remove('open')">&#x2715;</button>
   <a href="/community/" onclick="document.querySelector('.nav-overlay').classList.remove('open')">Community</a>

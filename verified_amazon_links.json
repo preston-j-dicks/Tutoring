@@ -1,0 +1,34 @@
+{
+  "books": [
+    {
+      "title": "Peterson's Master Military Flight Aptitude Tests",
+      "asin": "0768944716",
+      "url": "https://www.amazon.com/dp/0768944716?tag=fissionlab-20",
+      "verified": true
+    },
+    {
+      "title": "Trivium AFOQT Study Guide 2024-2025",
+      "asin": "1637981066",
+      "url": "https://www.amazon.com/dp/1637981066?tag=fissionlab-20",
+      "verified": true
+    },
+    {
+      "title": "Barron's Military Flight Aptitude Tests",
+      "asin": "1506264573",
+      "url": "https://www.amazon.com/dp/1506264573?tag=fissionlab-20",
+      "verified": true
+    },
+    {
+      "title": "Mometrix AFOQT Secrets Study Guide",
+      "asin": "1516701909",
+      "url": "https://www.amazon.com/dp/1516701909?tag=fissionlab-20",
+      "verified": true
+    },
+    {
+      "title": "Officer Candidate Tests For Dummies",
+      "asin": "1119550823",
+      "url": "https://www.amazon.com/dp/1119550823?tag=fissionlab-20",
+      "verified": true
+    }
+  ]
+}

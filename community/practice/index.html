@@ -7,6 +7,7 @@
 <meta name="description" content="60 original AFOQT-style practice questions across all 12 subtests — Verbal Analogies, Math, Aviation, Instrument Comprehension, and more. Interactive quiz with instant feedback.">
 <meta property="og:title" content="Free AFOQT Practice Quiz (60) — FissionLab">
 <meta property="og:url" content="https://fissionlab.net/community/practice/">
+<link rel="canonical" href="https://fissionlab.net/community/practice/">
 <meta name="google-adsense-account" content="ca-pub-3289071681648577">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3289071681648577" crossorigin="anonymous"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K285VK64MP"></script>
@@ -169,25 +170,12 @@ table.rtable td{padding:7px 16px;border:1px solid rgba(255,255,255,0.06);text-al
 </style>
 </head>
 <body>
+<div id="nav-root"></div>
+<script src="../../nav-component.js"></script>
 
 <canvas id="particle-canvas"></canvas>
 
-<nav>
-  <a href="/" class="nav-logo">
-    <span class="nav-atom-core">&#9883;</span>
-    <span class="nav-logo-text">FISSION<span>LAB</span></span>
-  </a>
-  <div class="nav-links">
-    <a href="/#services">Tutoring</a>
-    <a href="/community/">Community</a>
-    <a href="/community/resources/">Resources</a>
-    <a href="/community/practice/" class="active">Practice</a>
-    <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" class="nav-cta">Book Free Intro</a>
-  </div>
-  <button class="nav-hamburger" onclick="document.getElementById('nov').classList.add('open')" aria-label="Open menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+
 <div class="nav-overlay" id="nov">
   <button class="nav-overlay-close" onclick="document.getElementById('nov').classList.remove('open')" aria-label="Close">&#x2715;</button>
   <a href="/">Home</a>
@@ -522,7 +510,7 @@ const SUBTESTS = [
   },
   {
     id: 10, name: 'Instrument Comprehension', meta: '25 Q on actual test · 5 min',
-    note: 'On the real test, you interpret actual instrument dial images. These questions use descriptions instead. Use <a href="https://www.amazon.com/dp/076894113X?tag=fissionlab-20" target="_blank" rel="noopener sponsored" style="color:var(--gold)" onclick="trackAffiliate(\'amazon\',\'petersons\')">Peterson\'s book</a> for image-based practice.',
+    note: 'On the real test, you interpret actual instrument dial images. These questions use descriptions instead. Use <a href="https://www.amazon.com/dp/0768944716?tag=fissionlab-20" target="_blank" rel="noopener sponsored" style="color:var(--gold)" onclick="trackAffiliate(\'amazon\',\'petersons\')">Peterson\'s book</a> for image-based practice.',
     passage: null, table: null,
     isLikert: false,
     questions: [
@@ -545,7 +533,7 @@ const SUBTESTS = [
   },
   {
     id: 11, name: 'Block Counting', meta: '30 Q on actual test · 4.5 min',
-    note: 'Real AFOQT block counting uses 3D rendered figures. These questions use descriptions. For image-based practice, use <a href="https://www.amazon.com/dp/1637985436?tag=fissionlab-20" target="_blank" rel="noopener sponsored" style="color:var(--gold)" onclick="trackAffiliate(\'amazon\',\'trivium\')">Trivium\'s guide</a>.',
+    note: 'Real AFOQT block counting uses 3D rendered figures. These questions use descriptions. For image-based practice, use <a href="https://www.amazon.com/dp/1637981066?tag=fissionlab-20" target="_blank" rel="noopener sponsored" style="color:var(--gold)" onclick="trackAffiliate(\'amazon\',\'trivium\')">Trivium\'s guide</a>.',
     passage: null, table: null,
     isLikert: false,
     questions: [
@@ -822,9 +810,9 @@ function renderEnd(){
           '<p>Dr. Preston\'s recommended resources for full-length practice with actual AFOQT-format questions and instrument images.</p>'+
         '</div>'+
         '<div class="book-strip-links">'+
-          '<a href="https://www.amazon.com/dp/076894113X?tag=fissionlab-20" target="_blank" rel="noopener sponsored" class="book-link" onclick="trackAffiliate(\'amazon\',\'petersons\')">Peterson\'s &#x2192;</a>'+
-          '<a href="https://www.amazon.com/dp/1637985436?tag=fissionlab-20" target="_blank" rel="noopener sponsored" class="book-link" onclick="trackAffiliate(\'amazon\',\'trivium\')">Trivium &#x2192;</a>'+
-          '<a href="https://www.amazon.com/dp/1438005695?tag=fissionlab-20" target="_blank" rel="noopener sponsored" class="book-link" onclick="trackAffiliate(\'amazon\',\'barrons\')">Barron\'s &#x2192;</a>'+
+          '<a href="https://www.amazon.com/dp/0768944716?tag=fissionlab-20" target="_blank" rel="noopener sponsored" class="book-link" onclick="trackAffiliate(\'amazon\',\'petersons\')">Peterson\'s &#x2192;</a>'+
+          '<a href="https://www.amazon.com/dp/1637981066?tag=fissionlab-20" target="_blank" rel="noopener sponsored" class="book-link" onclick="trackAffiliate(\'amazon\',\'trivium\')">Trivium &#x2192;</a>'+
+          '<a href="https://www.amazon.com/dp/1506264573?tag=fissionlab-20" target="_blank" rel="noopener sponsored" class="book-link" onclick="trackAffiliate(\'amazon\',\'barrons\')">Barron\'s &#x2192;</a>'+
         '</div>'+
       '</div>'+
       '<p style="font-size:11px;color:rgba(240,235,224,0.25);margin-top:-8px;">Amazon links use the fissionlab-20 affiliate tag.</p>'+

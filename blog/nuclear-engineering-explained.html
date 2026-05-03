@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuclear Engineering Explained: From Atoms to Applications | FissionLab by Dr. Preston PhD</title>
+<meta name="description" content="A PhD nuclear engineer's accessible guide to nuclear engineering — fission physics, reactor types, control systems, radiation, fuel cycles, SMRs, fusion, and career paths.">
+<link rel="canonical" href="https://fissionlab.net/blog/nuclear-engineering-explained.html">
+<meta property="og:title" content="Nuclear Engineering Explained: From Atoms to Applications">
+<meta property="og:description" content="A PhD nuclear engineer's accessible guide to nuclear engineering — fission physics, reactor types, control systems, radiation, fuel cycles, SMRs, fusion, and career paths.">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Nuclear Engineering Explained: From Atoms to Applications","author":{"@type":"Person","name":"Dr. Preston","url":"https://fissionlab.net"},"publisher":{"@type":"Organization","name":"FissionLab"},"datePublished":"2026-05-03","url":"https://fissionlab.net/blog/nuclear-engineering-explained.html"}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K285VK64MP"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K285VK64MP');</script>
+<meta name="google-adsense-account" content="ca-pub-3289071681648577">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3289071681648577" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0a1628;--navy2:#0d1f3c;--gold:#c9a84c;--gold2:#e8c97a;--white:#ffffff;--cream:#f0ebe0;--dim:rgba(240,235,224,0.82);--border:rgba(201,168,76,0.15);}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--navy);color:var(--cream);font-size:16px;line-height:1.8;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,22,40,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:#fff;font-size:1rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;}
+.nav-links{display:flex;gap:1.5rem;align-items:center;}
+.nav-links a{font-size:0.78rem;font-weight:500;color:rgba(240,235,224,0.72);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--gold)!important;color:var(--navy)!important;padding:8px 20px!important;border-radius:6px;font-weight:700!important;}
+.post-hero{padding:120px 2rem 60px;max-width:800px;margin:0 auto;text-align:center;}
+.post-tag{font-size:0.72rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:block;}
+.post-hero h1{font-family:'DM Serif Display',serif;font-size:clamp(28px,5vw,52px);color:#fff;line-height:1.15;margin-bottom:20px;}
+.post-meta{font-size:13px;color:rgba(240,235,224,0.5);}
+.post-body{max-width:740px;margin:0 auto;padding:48px 2rem 80px;}
+.post-body h2{font-family:'DM Serif Display',serif;font-size:clamp(22px,3vw,32px);color:var(--white);margin:48px 0 16px;}
+.post-body h3{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--gold);margin:32px 0 12px;}
+.post-body p{color:var(--dim);margin-bottom:20px;}
+.post-body ul,.post-body ol{color:var(--dim);padding-left:24px;margin-bottom:20px;}
+.post-body li{margin-bottom:8px;}
+.post-body strong{color:var(--white);}
+.callout{background:rgba(201,168,76,0.06);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:20px 24px;margin:32px 0;}
+.callout p{margin:0;color:var(--dim);}
+.reactor-card{background:rgba(13,31,60,0.75);border:1px solid rgba(201,168,76,0.15);border-radius:10px;padding:20px 24px;margin:20px 0;}
+.reactor-card h4{font-family:'DM Serif Display',serif;color:var(--white);margin-bottom:4px;}
+.reactor-card .tag{font-size:11px;color:var(--gold);font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:10px;display:block;}
+.reactor-card p{font-size:14px;color:var(--dim);margin:0;}
+.ref-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px;}
+.ref-table th{background:rgba(201,168,76,0.12);color:var(--gold);font-weight:600;padding:10px 14px;text-align:left;border-bottom:1px solid var(--border);}
+.ref-table td{padding:10px 14px;border-bottom:1px solid rgba(201,168,76,0.07);color:var(--dim);}
+.ref-table tr:last-child td{border-bottom:none;}
+.ref-table strong{color:var(--white);}
+.cta-box{background:linear-gradient(135deg,rgba(13,31,60,0.9),rgba(10,22,40,0.9));border:1px solid rgba(201,168,76,0.25);border-radius:12px;padding:40px;text-align:center;margin:48px 0;}
+.cta-box h3{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--white);margin-bottom:12px;}
+.cta-box p{color:var(--dim);margin-bottom:24px;}
+.btn-primary{display:inline-block;background:var(--gold);color:var(--navy);padding:14px 32px;border-radius:6px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:background 0.2s;}
+.btn-primary:hover{background:var(--gold2);}
+footer{background:#060f1c;border-top:1px solid rgba(201,168,76,0.1);padding:32px 2rem;text-align:center;font-size:13px;color:rgba(240,235,224,0.35);}
+footer a{color:rgba(201,168,76,0.7);text-decoration:none;}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:20px;margin-bottom:14px;}
+.footer-links a{font-size:11px;letter-spacing:0.05em;text-transform:uppercase;}
+@media(max-width:600px){.nav-links{display:none}}
+</style>
+</head>
+<body>
+<div id="nav-root"></div>
+<script src="../nav-component.js"></script>
+
+<article>
+<div class="post-hero">
+  <span class="post-tag">Nuclear Engineering</span>
+  <h1>Nuclear Engineering Explained: From Atoms to Applications</h1>
+  <p class="post-meta">By Dr. Preston &mdash; PhD Nuclear Engineering &middot; USAF Captain &middot; May 3, 2026</p>
+</div>
+
+<div class="post-body">
+
+<p>Nuclear engineering is one of the most technically demanding and socially consequential fields in modern science. It sits at the intersection of quantum mechanics, thermodynamics, fluid dynamics, materials science, and control systems theory. It powers submarines, aircraft carriers, and one-fifth of the electricity in the United States. It enables cancer diagnosis and treatment through medical imaging and radiation therapy. It is the field I chose, and it is the field I research every day as a PhD nuclear engineer and USAF officer at AFIT.</p>
+
+<p>This guide explains nuclear engineering from first principles &mdash; what nuclear engineers actually study, how reactors actually work, and where the field is going. No hand-waving, no oversimplification, but also no unnecessary jargon.</p>
+
+<h2>The Atom and Nuclear Forces</h2>
+
+<p>Every atom consists of a nucleus surrounded by electrons. The nucleus contains protons (positively charged) and neutrons (electrically neutral), bound together by the strong nuclear force &mdash; one of the four fundamental forces of nature. The strong force is extremely powerful but acts only over very short distances (on the order of femtometers, or 10&#8315;&sup1;&sup5; meters).</p>
+
+<p>The number of protons defines the element (hydrogen has 1, uranium has 92). The number of neutrons determines the isotope. Uranium-235 and Uranium-238 are both uranium, but they differ by three neutrons. That difference in neutron count produces dramatically different nuclear behavior: U-235 fissions readily when struck by a slow (thermal) neutron; U-238 does not.</p>
+
+<p>The binding energy of a nucleus is the energy required to disassemble it into its constituent protons and neutrons. This is not a trivial quantity &mdash; it is the source of all nuclear energy. When a heavy nucleus fissions or when two light nuclei fuse, the products have lower total mass than the reactants. That mass difference appears as energy according to Einstein's famous relation: E = mc&sup2;. The speed of light squared (c&sup2; = 9 &times; 10&sup1;&sup6; m&sup2;/s&sup2;) is enormous, which means even a tiny mass difference produces a tremendous amount of energy.</p>
+
+<h2>Fission Chain Reaction Mechanics</h2>
+
+<p>Nuclear fission occurs when a fissile nucleus (U-235, Pu-239) absorbs a neutron and splits into two smaller fission product nuclei, releasing energy and typically two to three additional neutrons. Those neutrons can then cause additional fissions &mdash; this is the chain reaction.</p>
+
+<h3>The Neutron Multiplication Factor (k-effective)</h3>
+
+<p>The criticality of a reactor is described by the effective neutron multiplication factor, k-effective (k&#7497;&#7497;). It represents the ratio of neutrons in one generation to neutrons in the previous generation:</p>
+
+<ul>
+  <li><strong>k&#7497;&#7497; &lt; 1 (subcritical):</strong> the chain reaction is dying out. Neutron population decreases.</li>
+  <li><strong>k&#7497;&#7497; = 1 (critical):</strong> each fission produces exactly one neutron that causes another fission. Power is steady-state.</li>
+  <li><strong>k&#7497;&#7497; &gt; 1 (supercritical):</strong> neutron population is growing. Power is increasing.</li>
+</ul>
+
+<p>Nuclear engineers spend significant effort computing and controlling k&#7497;&#7497;. In a power reactor, normal operation is at exactly critical (k&#7497;&#7497; = 1). Starting up the reactor involves briefly going supercritical to increase power to the desired level, then returning to critical to sustain it.</p>
+
+<div class="callout">
+  <p><strong>A common misconception:</strong> A nuclear power reactor cannot "explode like a nuclear bomb." Power reactors use low-enriched uranium (typically 3-5% U-235). Weapons-grade material is enriched to over 90%. The reactor geometry and fuel composition make a prompt supercritical nuclear explosion physically impossible in a power reactor design.</p>
+</div>
+
+<h2>Reactor Types</h2>
+
+<h3>Pressurized Water Reactor (PWR)</h3>
+<div class="reactor-card">
+  <h4>Pressurized Water Reactor (PWR)</h4>
+  <span class="tag">Most Common Worldwide &mdash; ~70% of operating reactors</span>
+  <p>Water is used as both moderator and coolant. The primary coolant loop is pressurized to ~155 bar, keeping water liquid at ~315&deg;C. Heat is transferred to a secondary loop through steam generators. Steam from the secondary loop drives the turbine. The primary and secondary loops never mix, which provides a barrier against radioactive contamination of the steam side. US Navy submarines and aircraft carriers use PWR designs.</p>
+</div>
+
+<h3>Boiling Water Reactor (BWR)</h3>
+<div class="reactor-card">
+  <h4>Boiling Water Reactor (BWR)</h4>
+  <span class="tag">Second Most Common &mdash; ~20% of operating reactors</span>
+  <p>Water boils directly in the reactor vessel, and the resulting steam drives the turbine directly. Simpler than a PWR (no steam generators or secondary loop), but the turbine handles slightly radioactive steam. Pressure is lower than a PWR (~75 bar). BWRs have natural circulation characteristics that can provide passive safety features.</p>
+</div>
+
+<h3>CANDU Reactor</h3>
+<div class="reactor-card">
+  <h4>CANDU (Canadian Deuterium Uranium) Reactor</h4>
+  <span class="tag">Used Primarily in Canada and Select Countries</span>
+  <p>Uses heavy water (D&#8322;O) as moderator and coolant. The key advantage: CANDU reactors can use natural uranium fuel (0.7% U-235) without enrichment, because heavy water is a far better moderator than ordinary water (it absorbs fewer neutrons). CANDU reactors can also be refueled online without shutdown, improving capacity factors.</p>
+</div>
+
+<h3>Molten Salt Reactor (MSR)</h3>
+<div class="reactor-card">
+  <h4>Molten Salt Reactor (MSR)</h4>
+  <span class="tag">Advanced Reactor Concept &mdash; Active Development</span>
+  <p>Fuel is dissolved in a molten fluoride or chloride salt coolant, rather than solid fuel rods. Key advantages: fuel cannot melt down (it is already liquid), strong negative temperature coefficients provide inherent safety, and the design allows continuous online processing to remove fission products. Companies like Terrapower and Terrestrial Energy are developing MSR concepts for commercial deployment.</p>
+</div>
+
+<h2>Reactor Control Mechanisms</h2>
+
+<p>Three primary mechanisms control the neutron population (and therefore the power level) in a reactor:</p>
+
+<h3>Control Rods</h3>
+<p>Control rods are composed of neutron-absorbing materials &mdash; most commonly boron, hafnium, or silver-indium-cadmium alloys. Inserting rods absorbs neutrons and decreases k&#7497;&#7497;, reducing or stopping the chain reaction. Withdrawing rods increases k&#7497;&#7497;. SCRAM (emergency shutdown) fully inserts all control rods simultaneously.</p>
+
+<h3>Soluble Boron (Chemical Shim)</h3>
+<p>In PWRs, boric acid is dissolved in the primary coolant. Boron is a strong neutron absorber. The boron concentration is adjusted slowly to compensate for long-term reactivity changes (fuel burnup, xenon buildup, temperature changes). This is called chemical shimming and complements control rod positioning for precise power control.</p>
+
+<h3>Doppler Broadening (Inherent Safety)</h3>
+<p>As fuel temperature increases, the resonance absorption peaks in U-238 broaden (Doppler broadening). This causes more neutrons to be absorbed by U-238 before they reach thermal energies and fission U-235. The net effect: power increase causes fuel temperature increase, which causes more absorption, which reduces k&#7497;&#7497; and brings power back down. This is a strongly negative fuel temperature coefficient &mdash; it is inherent, passive safety that requires no operator action or active system.</p>
+
+<h2>Radiation Types and Shielding</h2>
+
+<table class="ref-table">
+  <tr><th>Type</th><th>Composition</th><th>Penetration</th><th>Primary Hazard</th><th>Shielding</th></tr>
+  <tr><td><strong>Alpha (&alpha;)</strong></td><td>Helium nucleus (2p + 2n)</td><td>Stopped by paper or skin</td><td>Internal exposure (inhalation/ingestion)</td><td>Paper; skin</td></tr>
+  <tr><td><strong>Beta (&beta;&minus;)</strong></td><td>Electron</td><td>Centimeters in tissue</td><td>Skin burns; internal exposure</td><td>Plastic; aluminum; water</td></tr>
+  <tr><td><strong>Gamma (&gamma;)</strong></td><td>High-energy photon</td><td>Meters in air; centimeters in tissue</td><td>Whole-body external dose</td><td>Lead; concrete; dense materials</td></tr>
+  <tr><td><strong>Neutron</strong></td><td>Neutral particle</td><td>Meters; highly penetrating</td><td>Activation of materials; deep dose</td><td>Hydrogen-rich materials (water, polyethylene); boron</td></tr>
+</table>
+
+<h2>The Nuclear Fuel Cycle</h2>
+
+<p>The nuclear fuel cycle encompasses everything that happens to uranium from mining to disposal. The front end includes uranium mining, milling (yellowcake production), conversion, enrichment (increasing U-235 concentration), and fuel fabrication. The back end, after the fuel is used in a reactor, includes interim storage of spent fuel, potential reprocessing (separating usable U and Pu from fission products), and ultimate disposal in a geological repository.</p>
+
+<p>The US currently operates a once-through fuel cycle: spent fuel is stored, not reprocessed. France reprocesses spent fuel extensively, recovering plutonium for use in mixed oxide (MOX) fuel. The long-term geological repository question remains one of the most politically challenging aspects of nuclear power in the United States.</p>
+
+<h2>The Future of Nuclear: SMRs and Fusion</h2>
+
+<h3>Small Modular Reactors (SMRs)</h3>
+<p>SMRs are defined as reactors with electrical output below 300 MWe (compared to 1,000+ MWe for conventional large reactors). They are designed for factory fabrication and modular deployment, which offers potential cost and schedule advantages over custom-built large plants. Leading designs include NuScale Power (the first SMR to receive NRC design approval in the US), Rolls-Royce SMR, and X-energy's pebble bed high-temperature gas reactor (HTGR). The Air Force is actively evaluating SMRs for remote base power and energy resilience.</p>
+
+<h3>Fusion</h3>
+<p>Nuclear fusion &mdash; the process that powers the Sun &mdash; combines light nuclei (typically deuterium and tritium, isotopes of hydrogen) to form helium, releasing enormous energy. Unlike fission, fusion produces no long-lived radioactive waste and uses fuel derived from water (deuterium) and lithium (tritium production). The challenge is confinement: fusion requires temperatures of 100 million degrees Celsius, far hotter than the Sun's core. Magnetic confinement (tokamaks like ITER) and inertial confinement (laser-driven, like NIF) are the two leading approaches. In December 2022, NIF achieved ignition for the first time &mdash; producing more fusion energy than the laser energy delivered to the target. Commercial fusion remains decades away but is progressing faster than it has in any previous period.</p>
+
+<h2>Career Paths in Nuclear Engineering</h2>
+
+<ul>
+  <li><strong>Reactor design:</strong> Working at national labs (INL, ORNL, ANL), commercial vendors (Westinghouse, GE Hitachi), or advanced reactor startups on reactor physics, thermal-hydraulics, and core design.</li>
+  <li><strong>Nuclear Navy:</strong> Navy nuclear officers operate and maintain nuclear propulsion plants aboard submarines and aircraft carriers. The Naval Reactors program is one of the most rigorous and well-funded nuclear training pipelines in the world.</li>
+  <li><strong>Radiation protection and health physics:</strong> Monitoring, controlling, and mitigating radiation exposure in industrial, medical, and research settings.</li>
+  <li><strong>Medical physics:</strong> Designing and operating radiation therapy equipment, PET scanners, SPECT scanners, and other nuclear medicine applications.</li>
+  <li><strong>Nuclear security and nonproliferation:</strong> National security work at labs like Los Alamos, Lawrence Livermore, and Sandia, focused on detecting and preventing proliferation of nuclear materials and weapons.</li>
+  <li><strong>Academic research:</strong> University and national lab positions focused on advancing nuclear science. My current path &mdash; research at AFIT combining nuclear engineering with machine learning for defense applications.</li>
+</ul>
+
+<div class="callout">
+  <p><strong>My path:</strong> I earned my PhD from the Air Force Institute of Technology (AFIT) with a focus on computational nuclear engineering and machine learning applications to reactor physics. Serving as both a USAF officer and a nuclear engineer researcher is unusual &mdash; the combination opens doors in nuclear security, directed energy, and national laboratory partnerships that would not exist otherwise. If you are considering a military path and have STEM interests, the combination is worth serious consideration.</p>
+</div>
+
+<p>If you are studying for the AFOQT Physical Science subtest, visit <a href="/blog/afoqt-physical-science-review.html" style="color:var(--gold)">the Physical Science review guide</a> for the nuclear basics you need. And feel free to reach out directly at <a href="mailto:Dr_PrestonD@proton.me" style="color:var(--gold)">Dr_PrestonD@proton.me</a> with questions about nuclear engineering, AFIT, or the USAF path.</p>
+
+<!-- CTA: Book session -->
+<div class="cta-box">
+  <h3>Ready to Score Higher?</h3>
+  <p>Book a free intro call. I'll review your current scores, identify your exact weak spots, and give you a personalized study plan before we even start.</p>
+  <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" class="btn-primary">Book Free 30-Min Intro &rarr;</a>
+</div>
+
+<!-- CTA: Newsletter -->
+<div class="cta-box" style="background:rgba(201,168,76,0.05);border-color:rgba(201,168,76,0.2);">
+  <h3>Get Weekly Insights</h3>
+  <p>Join 500+ students and engineers receiving weekly insights on nuclear engineering, ML, and AFOQT prep from Dr. Preston.</p>
+  <a href="https://prestons-newsletter-5f43a7.beehiiv.com/subscribe" target="_blank" class="btn-primary" style="background:transparent;color:var(--gold);border:2px solid var(--gold);">Subscribe Free &rarr;</a>
+</div>
+
+</div>
+</article>
+
+<footer>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/community/">Community</a><a href="/community/resources/">Resources</a>
+    <a href="/blog/">Blog</a><a href="/community/products/">Products</a>
+    <a href="mailto:Dr_PrestonD@proton.me">Contact</a>
+    <a href="/affiliate-disclosure/">Disclosures</a>
+  </div>
+  <p>&copy; 2026 FissionLab &middot; Dr. Preston PhD &middot; All sessions via Zoom</p>
+  <p style="margin-top:6px;font-size:11px;color:rgba(240,235,224,0.3)">Amazon links use affiliate tag fissionlab-20. <a href="/affiliate-disclosure/" style="color:rgba(201,168,76,0.5)">Affiliate disclosure.</a></p>
+</footer>
+</body>
+</html>

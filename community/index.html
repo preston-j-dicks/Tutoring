@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free AFOQT Study Community — FissionLab by Dr. Preston PhD</title>
-<meta name="description" content="Join the free AFOQT Study Community on FissionLab.net — expert resources, active Discord, weekly live Q&amp;A sessions, and 60 practice questions. Led by Dr. Preston, PhD Nuclear Engineering, USAF Captain.">
+<title>FissionLab Study Community — Expert Tutoring in AFOQT, Physics, AI/ML, SAT/ACT &amp; Math</title>
+<meta name="description" content="FissionLab Study Community — expert tutoring in AFOQT, Physics, AI/ML, SAT/ACT, and Mathematics from Dr. Preston, PhD Nuclear Engineer and USAF Captain.">
 <meta property="og:title" content="Free AFOQT Study Community — FissionLab">
 <meta property="og:description" content="Expert AFOQT prep, free resources, and a live Discord community led by Dr. Preston PhD, USAF Captain.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://fissionlab.net/community/">
+<link rel="canonical" href="https://fissionlab.net/community/">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -83,6 +84,15 @@ footer a:hover{color:var(--gold)}
 .beehiiv-bar p{font-size:14px;color:var(--dim);margin-bottom:14px;}
 .beehiiv-bar a{display:inline-block;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.35);color:var(--gold);padding:10px 28px;border-radius:6px;text-decoration:none;font-size:14px;font-weight:600;transition:background 0.2s;}
 .beehiiv-bar a:hover{background:rgba(201,168,76,0.22);}
+.creds-bar{display:flex;flex-wrap:wrap;gap:10px 20px;justify-content:center;margin-bottom:48px;}
+.cred-pill{background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);border-radius:20px;padding:5px 14px;font-size:12px;color:rgba(240,235,224,0.8);letter-spacing:0.04em;}
+.subject-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-bottom:72px;}
+.subject-card{background:rgba(13,31,60,0.75);border-radius:12px;padding:28px 24px;text-decoration:none;color:inherit;display:block;transition:transform 0.2s,border-color 0.2s;}
+.subject-card:hover{transform:translateY(-4px);}
+.sc-icon{font-size:2.4rem;margin-bottom:12px;display:block;}
+.sc-name{font-family:Georgia,serif;font-size:1.15rem;color:var(--white);margin-bottom:8px;font-weight:700;}
+.sc-desc{font-size:13.5px;color:var(--dim);margin-bottom:16px;line-height:1.6;}
+.sc-link{font-size:12px;font-weight:600;letter-spacing:0.04em;}
 @media(max-width:768px){.nav-links{display:none}.nav-hamburger{display:block}.hero{padding:80px 6vw 60px;}.section{padding:60px 6vw;}}
 </style>
 <meta name="google-adsense-account" content="ca-pub-3289071681648577">
@@ -91,25 +101,11 @@ footer a:hover{color:var(--gold)}
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K285VK64MP');</script>
 </head>
 <body>
+<div id="nav-root"></div>
+<script src="../nav-component.js"></script>
 <canvas id="particle-canvas"></canvas>
 
-<nav>
-  <a href="/" class="nav-logo">
-    <span class="nav-atom-core">⚛</span>
-    <span class="nav-logo-text">FISSION<span>LAB</span></span>
-  </a>
-  <div class="nav-links">
-    <a href="/#services">Tutoring</a>
-    <a href="/community/" class="active">Community</a>
-    <a href="/community/resources/">Resources</a>
-    <a href="/community/bookshelf/">Bookshelf</a>
-    <a href="/blog/">Blog</a>
-    <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" class="nav-cta">Book Free Intro</a>
-  </div>
-  <button class="nav-hamburger" onclick="document.getElementById('nov').classList.add('open')" aria-label="Open menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+
 <div class="nav-overlay" id="nov">
   <button class="nav-overlay-close" onclick="document.getElementById('nov').classList.remove('open')" aria-label="Close">✕</button>
   <a href="/">Home</a>
@@ -122,12 +118,51 @@ footer a:hover{color:var(--gold)}
 
 <main>
   <div class="hero" style="padding-top:100px">
-    <span class="hero-tag anim-1">Free · Expert-Led · Active Community</span>
-    <h1 class="anim-2">AFOQT Study Community<br><em>Free, by Dr. Preston PhD</em></h1>
-    <p class="hero-sub anim-3">Join fellow Air Force officer candidates studying together — expert resources, live Q&amp;A sessions, and a real Discord community led by a PhD Nuclear Engineer and USAF Captain.</p>
+    <span class="hero-tag anim-1">Free · Expert-Led · Multi-Subject · Active Community</span>
+    <h1 class="anim-2">FissionLab Study Community —<br><em>Expert Tutoring Across Five Disciplines</em></h1>
+    <p class="hero-sub anim-3">PhD-level tutoring from a Nuclear Engineer, Berkeley physicist, and USAF Captain. Choose your subject and dive in.</p>
+    <div class="creds-bar anim-3">
+      <span class="cred-pill">PhD Nuclear Engineering, AFIT</span>
+      <span class="cred-pill">B.A. Physics, UC Berkeley</span>
+      <span class="cred-pill">USAF Captain</span>
+      <span class="cred-pill">Research at LLNL, LBNL, DTRA</span>
+    </div>
     <div class="hero-btns anim-4">
       <a href="https://discord.gg/rkzrxET7" target="_blank" rel="noopener" class="btn-discord">Join the Discord Community →</a>
       <a href="/community/resources/" class="btn-ghost">Browse Free Resources</a>
+    </div>
+
+    <div class="subject-grid">
+      <a href="/community/resources/" class="subject-card" style="border:2px solid #c9a84c;">
+        <span class="sc-icon">⚛️</span>
+        <div class="sc-name">AFOQT Prep</div>
+        <div class="sc-desc">Military officer qualifying test — all 12 subtests, adaptive practice, student tokens</div>
+        <span class="sc-link" style="color:#c9a84c;">Explore Resources →</span>
+      </a>
+      <a href="/community/physics/" class="subject-card" style="border:2px solid #4a90d9;">
+        <span class="sc-icon">🔭</span>
+        <div class="sc-name">Physics</div>
+        <div class="sc-desc">From classical mechanics to quantum — Berkeley-level depth for college and beyond</div>
+        <span class="sc-link" style="color:#4a90d9;">Explore Resources →</span>
+      </a>
+      <a href="/community/ai-ml/" class="subject-card" style="border:2px solid #8b5cf6;">
+        <span class="sc-icon">🤖</span>
+        <div class="sc-name">AI / ML / DL</div>
+        <div class="sc-desc">Neural networks, transformers, LLMs — taught by a practitioner who built models at DTRA</div>
+        <span class="sc-link" style="color:#8b5cf6;">Explore Resources →</span>
+      </a>
+      <a href="/community/sat-act/" class="subject-card" style="border:2px solid #22c55e;">
+        <span class="sc-icon">📝</span>
+        <div class="sc-name">SAT / ACT</div>
+        <div class="sc-desc">Strategic test prep from a PhD engineer who understands how standardized tests are designed</div>
+        <span class="sc-link" style="color:#22c55e;">Explore Resources →</span>
+      </a>
+      <a href="/community/mathematics/" class="subject-card" style="border:2px solid #14b8a6;">
+        <span class="sc-icon">📐</span>
+        <div class="sc-name">Mathematics</div>
+        <div class="sc-desc">Calculus, linear algebra, differential equations — real math for real applications</div>
+        <span class="sc-link" style="color:#14b8a6;">Explore Resources →</span>
+      </a>
     </div>
     <div class="discord-block">
       <h2>🎯 Your Free AFOQT Discord</h2>
@@ -135,6 +170,12 @@ footer a:hover{color:var(--gold)}
       <a href="https://discord.gg/rkzrxET7" target="_blank" rel="noopener" class="btn-discord">Join the Discord Server — It's Free</a>
       <p style="font-size:12px;color:rgba(240,235,224,0.35);margin-top:16px;">No payment required. No upsells. Just community.</p>
     </div>
+    <div style="background:rgba(13,31,60,0.75);border:1px solid rgba(201,168,76,0.15);border-radius:12px;padding:24px;margin-top:20px;">
+  <span style="display:inline-block;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);border-radius:4px;padding:2px 10px;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#c9a84c;margin-bottom:12px;">COMMUNITY</span>
+  <h4 style="font-family:Georgia,serif;font-size:1.1rem;color:white;margin-bottom:8px;">Skool Study Community</h4>
+  <p style="font-size:14px;color:rgba(240,235,224,0.82);margin-bottom:16px;">Join the FissionLab community on Skool — structured learning, accountability partners, and Dr. Preston's resources in one place.</p>
+  <a href="https://www.skool.com/signup?ref=bf2cfffdff8f401cb6158104a21b85e1" target="_blank" rel="noopener" onclick="gtag('event','affiliate_click',{affiliate:'skool',item:'community-card'})" style="color:#c9a84c;font-weight:600;text-decoration:none;font-size:14px;">Join on Skool &rarr;</a>
+</div>
     <div class="sponsor-slot" style="border:1px solid rgba(201,168,76,0.3);border-radius:8px;padding:20px;text-align:center;margin:24px 0;">
   <p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#c9a84c;margin-bottom:8px;">PARTNER WITH FISSIONLAB</p>
   <p style="font-size:14px;color:rgba(245,240,232,0.75);margin-bottom:12px;">Reach 500+ active military test prep students monthly</p>
@@ -267,7 +308,7 @@ footer a:hover{color:var(--gold)}
     <a href="/community/about/">About</a>
     <a href="mailto:Dr_PrestonD@proton.me">Contact</a>
   </div>
-  <p>© 2026 FissionLab · AFOQT Study Community · Free for all students</p>
+  <p>© 2026 FissionLab · Study Community · AFOQT · Physics · AI/ML · SAT/ACT · Mathematics</p>
   <p style="font-size:11px;color:rgba(240,235,224,0.3);margin-top:10px;padding:8px 20px;border:1px solid rgba(201,168,76,0.08);border-radius:4px;display:inline-block;">
     <strong style="color:rgba(201,168,76,0.6);">Affiliate Disclosure:</strong> This site contains affiliate links. We may earn a commission at no cost to you.
     <a href="/affiliate-disclosure/" style="color:rgba(201,168,76,0.45);">Full disclosure →</a>

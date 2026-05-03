@@ -1,13 +1,6 @@
-#!/usr/bin/env python3
-"""
-FissionLab Discord Server Setup — Upgraded
-Builds the full study-server structure: roles, categories, text + voice channels, pinned messages.
-
-Usage:
-    pip install discord.py python-dotenv
-    Set DISCORD_BOT_TOKEN and DISCORD_GUILD_ID in .env
-    python discord_setup.py
-"""
+# Run: python discord_setup.py
+# Safe to re-run — checks for existing channels before creating
+# Requires: DISCORD_BOT_TOKEN and DISCORD_GUILD_ID in .env
 
 import asyncio
 import os
@@ -50,20 +43,24 @@ TIER_ROLES = [
 ]
 
 ACHIEVEMENT_ROLES = [
-    {"name": "Test Passed",      "color": 0xF1C40F},
-    {"name": "Study Streak 30",  "color": 0xE67E22},
-    {"name": "Study Streak 7",   "color": 0x2ECC71},
-    {"name": "100 Questions",    "color": 0x3498DB},
-    {"name": "Helper",           "color": 0x9B59B6},
-    {"name": "OG Member",        "color": 0xC9A84C},
+    {"name": "Test Passed",     "color": 0xF1C40F},
+    {"name": "Study Streak 30", "color": 0xE67E22},
+    {"name": "Study Streak 7",  "color": 0x2ECC71},
+    {"name": "100 Questions",   "color": 0x3498DB},
+    {"name": "Helper",          "color": 0x9B59B6},
+    {"name": "OG Member",       "color": 0xC9A84C},
 ]
 
+# Reaction-role subjects — emoji mapped in PINNED_MESSAGES["choose-your-roles"]
 SUBJECT_ROLES = [
-    {"name": "All Subtests",       "color": 0xC9A84C},
-    {"name": "Physical Science Focus", "color": 0xE67E22},
-    {"name": "Aviation Focus",     "color": 0x87CEEB},
-    {"name": "Verbal Focus",       "color": 0xFF69B4},
-    {"name": "Math Focus",         "color": 0xF1C40F},
+    {"name": "AFOQT Prep",             "color": 0xE74C3C},
+    {"name": "Physics Student",         "color": 0x3498DB},
+    {"name": "AI/ML Student",           "color": 0x9B59B6},
+    {"name": "SAT/ACT Prep",           "color": 0x2ECC71},
+    {"name": "Math Student",            "color": 0xF1C40F},
+    {"name": "All Subjects",            "color": 0xC9A84C},
+    {"name": "Daily Challenge Alerts",  "color": 0xE67E22},
+    {"name": "Office Hours Reminders",  "color": 0x6BA3D6},
 ]
 
 ALL_ROLES = STAFF_ROLES + TIER_ROLES + ACHIEVEMENT_ROLES + SUBJECT_ROLES
@@ -75,36 +72,45 @@ ALL_ROLES = STAFF_ROLES + TIER_ROLES + ACHIEVEMENT_ROLES + SUBJECT_ROLES
 CATEGORIES = [
     {
         "name": "🚀 START HERE",
-        "text": ["welcome", "announcements", "changelog", "choose-your-roles"],
+        "text": ["welcome", "announcements", "changelog", "choose-your-roles", "introductions"],
         "dr_only_send": ["announcements", "changelog"],
         "readonly": ["announcements", "changelog"],
     },
     {
-        "name": "🎯 ONBOARDING",
-        "text": ["introductions", "test-dates", "goals", "study-plans"],
-    },
-    {
-        "name": "📚 AFOQT SUBTESTS",
+        "name": "⚛️ AFOQT PREP",
         "text": [
-            "math-knowledge", "verbal", "reading-comp", "physical-science",
-            "aviation-info", "instrument-comp", "block-counting", "situational-judgment",
+            "afoqt-general", "math-knowledge", "verbal-analogies", "reading-comp",
+            "physical-science", "aviation-instruments", "block-counting",
+            "afoqt-practice-questions", "afoqt-score-reports", "afoqt-study-schedules",
         ],
     },
     {
-        "name": "📝 PRACTICE",
+        "name": "🔭 PHYSICS",
         "text": [
-            "daily-question", "practice-problems", "score-reports",
-            "answer-explanations", "full-practice-tests",
+            "physics-general", "classical-mechanics", "electromagnetism",
+            "thermodynamics", "quantum-modern", "physics-problem-solving", "physics-resources",
         ],
     },
     {
-        "name": "📖 RESOURCES",
+        "name": "🤖 AI / ML / DEEP LEARNING",
         "text": [
-            "pinned-resources", "book-recommendations", "youtube-videos",
-            "study-techniques", "websites-and-apps", "share-your-notes",
+            "ai-ml-general", "math-for-ml", "classical-ml", "deep-learning-neural-nets",
+            "llms-transformers", "ml-projects-showcase", "ml-resources-papers",
         ],
-        "dr_only_send": ["pinned-resources"],
-        "readonly": ["pinned-resources"],
+    },
+    {
+        "name": "📝 SAT / ACT",
+        "text": [
+            "sat-act-general", "sat-math", "sat-reading-writing",
+            "act-specific", "test-strategy", "sat-score-reports",
+        ],
+    },
+    {
+        "name": "📐 MATHEMATICS",
+        "text": [
+            "math-general", "calculus", "linear-algebra", "differential-equations",
+            "probability-statistics", "discrete-math", "math-problem-solving",
+        ],
     },
     {
         "name": "⏱️ STUDY ROOMS",
@@ -113,15 +119,17 @@ CATEGORIES = [
             "📚 Study Room 2",
             "🔇 Silent Study",
             "⏱️ Pomodoro Room",
-            "🎯 Test Prep Sprint",
-            "🎙️ Office Hours",
+            "🔭 Physics Lab",
+            "🤖 AI/ML Workshop",
+            "📝 SAT Sprint",
+            "🎙️ Office Hours (Dr. Preston)",
         ],
     },
     {
         "name": "🏆 COMMUNITY",
         "text": [
             "leaderboard", "wins-and-milestones", "accountability",
-            "study-buddy-finder", "motivation",
+            "study-buddy-finder", "motivation", "daily-challenge",
         ],
     },
     {
@@ -131,11 +139,11 @@ CATEGORIES = [
     {
         "name": "🎓 DR. PRESTON",
         "text": [
-            "ask-dr-preston", "office-hours-info", "book-a-session",
-            "student-success", "tutoring-resources",
+            "ask-dr-preston", "office-hours-schedule", "book-a-session",
+            "student-success-stories", "exclusive-student-resources",
         ],
-        "dr_only_send": ["office-hours-info", "book-a-session"],
-        "readonly": ["office-hours-info", "book-a-session", "tutoring-resources"],
+        "dr_only_send": ["office-hours-schedule", "book-a-session", "exclusive-student-resources"],
+        "readonly": ["office-hours-schedule", "book-a-session", "exclusive-student-resources"],
     },
 ]
 
@@ -145,73 +153,52 @@ CATEGORIES = [
 
 PINNED_MESSAGES = {
     "welcome": f"""\
-Welcome to FissionLab — the AFOQT Study Community
+Welcome to FissionLab — the Multi-Subject Study Community
 Run by Dr. Preston | PhD Nuclear Engineering | USAF Captain
+
+We cover: AFOQT Prep | Physics | AI/ML | SAT/ACT | Mathematics
 
 NEW HERE? Do these 5 things:
 1. Read the rules (pinned below)
-2. Go to #choose-your-roles and pick your focus subjects
-3. Introduce yourself in #introductions (test date + weak subtest)
-4. Pin your test date in #test-dates
-5. Jump into today's question in #daily-question
+2. Go to #choose-your-roles and pick your subjects
+3. Introduce yourself in #introductions (what you're studying + your goal)
+4. Find your subject channels and say hello
+5. Jump into #daily-challenge for today's problem
 
 HOW TO RANK UP:
 Chat, help others, and show up daily — MEE6 tracks your XP automatically.
-Recruit → Private → Corporal → Sergeant → Lieutenant → Captain → Colonel → General
+Recruit -> Private -> Corporal -> Sergeant -> Lieutenant -> Captain -> Colonel -> General
 
 RULES:
 1. Be respectful — everyone here is working toward the same goal
-2. Keep questions in the right channel (math in #math-knowledge, etc.)
+2. Keep questions in the right channel (physics in #physics-general, etc.)
 3. No spam, no unsolicited DMs, no self-promotion without permission
-4. Share your scores and schedules — accountability is the point
+4. Share your progress and schedules — accountability is the point
 5. Do not post actual AFOQT questions from a test you took
 
 FREE RESOURCES: {SITE}/community/
-BOOK A SESSION: {SITE} (Calendly)
+BOOK A SESSION: {CALENDLY}
 DISCORD: {DISCORD_INVITE}""",
 
-    "choose-your-roles": f"""\
-React to get your subject focus role:
+    "choose-your-roles": """\
+React to get your subject role:
 
-🔢 = Math Focus
-📖 = Verbal Focus
-✈️ = Aviation Focus
-🔬 = Physical Science Focus
-🎯 = All Subtests
+⚛️  = @AFOQT Prep
+🔭  = @Physics Student
+🤖  = @AI/ML Student
+📝  = @SAT/ACT Prep
+📐  = @Math Student
+🎯  = @All Subjects
+🔔  = @Daily Challenge Alerts
+📅  = @Office Hours Reminders
 
-React to 🔔 for daily question notifications
-React to 📅 for office hours reminders
-
-(Use Carl-bot reaction roles — instructions in #changelog)""",
-
-    "pinned-resources": f"""\
-FREE AFOQT RESOURCES FROM DR. PRESTON
-
-Full subtest breakdown + study tips:
-{SITE}/community/resources/
-
-60 free practice questions:
-{SITE}/community/practice/
-
-Recommended books (Amazon affiliate):
-{SITE}/community/resources/#books
-
-Book a 1:1 session with Dr. Preston:
-{CALENDLY}
-
-Weekly newsletter + study tips:
-https://www.beehiiv.com/?via=preston-dicks
-
-Best YouTube AFOQT resources:
-- Search: "AFOQT [subtest name] tips" on YouTube
-- Pilot's Path channel (aviation + instruments)
-- Military Flight Aptitude Test prep playlists""",
+(Configure with Carl-bot reaction roles — instructions in #changelog)""",
 
     "book-a-session": f"""\
 Work 1:1 with Dr. Preston
 
 PhD Nuclear Engineering · USAF Captain · 6+ years active duty
-Commissioned at 19 · Trained by the best military educators
+Subjects: AFOQT | Physics | AI/ML | SAT/ACT | Mathematics
 
 PACKAGES:
 Single session — $70/hr
@@ -220,24 +207,8 @@ Single session — $70/hr
 
 BOOK NOW: {CALENDLY}
 
-Results from 1:1 students in #student-success""",
-
-    "daily-question": """\
-DAILY QUESTION — Day 1
-
-MATH KNOWLEDGE
-If 3x + 7 = 22, what is the value of 2x?
-
-A) 5
-B) 10
-C) 15
-D) 20
-
-React with your answer: A / B / C / D
-
-Answer revealed tomorrow. More practice in #practice-problems.""",
+Results from 1:1 students in #student-success-stories""",
 }
-
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -247,7 +218,6 @@ def _p(msg):
     """Print with flush, stripping non-ASCII for Windows terminal safety."""
     safe = msg.encode('ascii', errors='replace').decode('ascii')
     print(safe, flush=True)
-
 
 # ---------------------------------------------------------------------------
 # Bot
@@ -298,11 +268,10 @@ class SetupBot(discord.Client):
         _p(f"  Invite:   {DISCORD_INVITE}")
         _p(f"  Calendly: {CALENDLY}")
         _p("\nNEXT STEPS:")
-        _p("  1. Configure MEE6 XP level roles — see MEE6_SETUP.md")
-        _p("  2. Configure Carl-bot reaction roles in #choose-your-roles — see MEE6_SETUP.md")
+        _p("  1. Configure MEE6 XP level roles")
+        _p("  2. Configure Carl-bot reaction roles in #choose-your-roles")
         _p("  3. Assign yourself @Dr. Preston in Server Settings -> Members")
         _p("\nRUN COMPLETE")
-        _p(f"Live site: {SITE}/community/")
 
     async def _create_roles(self, guild):
         _p("\n[1/4] Creating roles...")
@@ -357,7 +326,9 @@ class SetupBot(discord.Client):
                     ow[everyone] = PermissionOverwrite(send_messages=False, read_messages=True)
                     if dr_role:
                         ow[dr_role] = PermissionOverwrite(send_messages=True, read_messages=True)
-                ch = await guild.create_text_channel(ch_name, category=cat, overwrites=ow, reason="FissionLab setup")
+                ch = await guild.create_text_channel(
+                    ch_name, category=cat, overwrites=ow, reason="FissionLab setup"
+                )
                 existing_text[ch_name] = ch
                 _p(f"    created text: #{ch_name}")
 
@@ -409,7 +380,7 @@ class SetupBot(discord.Client):
 def main():
     if not TOKEN:
         _p("No DISCORD_BOT_TOKEN found in .env")
-        _p("See DISCORD_SETUP_INSTRUCTIONS.md for setup steps.")
+        _p("Add DISCORD_BOT_TOKEN=<your token> to .env and re-run.")
         sys.exit(1)
 
     guild_id = int(GUILD_ID) if GUILD_ID else None

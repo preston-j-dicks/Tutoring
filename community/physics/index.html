@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physics Tutoring — From Mechanics to Modern Physics | FissionLab by Dr. Preston PhD</title>
+<meta name="description" content="Expert physics tutoring from a PhD nuclear engineer with a Berkeley physics BA. Classical mechanics, E&M, thermodynamics, quantum mechanics, nuclear physics — all levels covered.">
+<meta name="keywords" content="physics tutor online, college physics help, calculus-based physics, quantum mechanics tutor, nuclear physics tutor, physics PhD tutor, Berkeley physics, thermodynamics help">
+<meta property="og:title" content="Physics Tutoring — From Mechanics to Modern Physics | FissionLab">
+<meta property="og:description" content="Expert physics tutoring from a PhD nuclear engineer with a Berkeley physics BA. Classical mechanics, E&M, thermodynamics, quantum mechanics, nuclear physics — all levels covered.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fissionlab.net/community/physics/">
+<link rel="canonical" href="https://fissionlab.net/community/physics/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Physics Tutoring — From Mechanics to Modern Physics",
+  "description": "Expert one-on-one physics tutoring covering classical mechanics, electromagnetism, thermodynamics, quantum mechanics, nuclear physics, and modern physics. Taught by Dr. Preston, PhD Nuclear Engineering.",
+  "provider": {
+    "@type": "Person",
+    "name": "Dr. Preston",
+    "jobTitle": "PhD Nuclear Engineer, Physics Tutor",
+    "alumniOf": [
+      {"@type": "CollegeOrUniversity", "name": "University of California, Berkeley"},
+      {"@type": "CollegeOrUniversity", "name": "Air Force Institute of Technology (AFIT)"}
+    ],
+    "url": "https://fissionlab.net"
+  },
+  "educationalLevel": "undergraduate, graduate, AP",
+  "subject": "Physics",
+  "url": "https://fissionlab.net/community/physics/",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://calendly.com/preston-j-dicks/introductory-meeting",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free introductory session"
+  }
+}
+</script>
+
+<meta name="google-adsense-account" content="ca-pub-3289071681648577">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3289071681648577" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K285VK64MP"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K285VK64MP');</script>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --navy:#0a1628;
+  --navy2:#0d1f3c;
+  --gold:#c9a84c;
+  --gold2:#e8c97a;
+  --white:#ffffff;
+  --cream:#f0ebe0;
+  --dim:rgba(240,235,224,0.82);
+  --border:rgba(201,168,76,0.15);
+  --border2:rgba(201,168,76,0.08);
+}
+body{
+  font-family:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  background:var(--navy);
+  color:var(--cream);
+  overflow-x:hidden;
+  font-size:16px;
+  line-height:1.75;
+}
+h1,h2,h3,h4,.serif{font-family:'DM Serif Display',Georgia,serif;}
+
+/* Canvas background */
+#particle-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;}
+body.no-webgl{background:radial-gradient(ellipse at 20% 50%,#0d1f3c 0%,#0a1628 70%);}
+main,section,header,footer,.hero,.creds-bar,.subject-section,.books-section,.discord-section,.book-cta,.beehiiv-bar,.bottom-cta{position:relative;z-index:1}
+
+/* Animations */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{opacity:0;transform:translateY(22px);transition:opacity 0.7s ease,transform 0.7s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+.anim-1{animation:fadeUp 0.8s 0.2s ease both}
+.anim-2{animation:fadeUp 0.8s 0.4s ease both}
+.anim-3{animation:fadeUp 0.8s 0.6s ease both}
+.anim-4{animation:fadeUp 0.8s 0.8s ease both}
+
+/* Buttons */
+.btn-primary{display:inline-block;background:var(--gold);color:var(--navy);padding:14px 32px;border-radius:6px;font-weight:700;font-size:0.95rem;text-decoration:none;letter-spacing:0.03em;transition:background 0.2s,transform 0.15s;border:2px solid var(--gold);}
+.btn-primary:hover{background:var(--gold2);border-color:var(--gold2);transform:translateY(-2px)}
+.btn-ghost{display:inline-block;background:transparent;color:var(--white);padding:14px 32px;border-radius:6px;font-weight:600;font-size:0.95rem;text-decoration:none;letter-spacing:0.03em;border:2px solid rgba(201,168,76,0.6);transition:border-color 0.2s,color 0.2s,transform 0.15s;}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+
+/* Hero */
+.hero{padding:110px 8vw 72px;max-width:1100px;margin:0 auto;}
+.hero-badge{display:inline-block;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);background:rgba(201,168,76,0.10);border:1px solid rgba(201,168,76,0.35);border-radius:4px;padding:4px 14px;margin-bottom:24px;}
+.hero h1{font-size:clamp(34px,5.5vw,68px);font-weight:400;color:var(--white);line-height:1.1;margin-bottom:24px;}
+.hero h1 em{color:var(--gold);font-style:italic;}
+.hero-sub{font-size:clamp(15px,1.8vw,18px);color:var(--dim);max-width:580px;margin-bottom:40px;}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;}
+
+/* Credentials bar */
+.creds-bar{background:rgba(13,31,60,0.8);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:18px 8vw;text-align:center;}
+.creds-bar p{font-size:13px;letter-spacing:0.04em;color:rgba(240,235,224,0.65);}
+.creds-bar strong{color:var(--gold);}
+
+/* Section shared */
+.subject-section{padding:72px 8vw;}
+.subject-section:nth-child(even){background:rgba(13,31,60,0.4);}
+.section-inner{max-width:1080px;margin:0 auto;}
+.section-tag{display:block;font-size:10px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.section-title{font-size:clamp(26px,3.5vw,42px);color:var(--white);margin-bottom:14px;line-height:1.15;}
+.section-desc{font-size:15px;color:var(--dim);max-width:680px;margin-bottom:36px;line-height:1.7;}
+
+/* Subject content grid */
+.content-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:36px;}
+.content-card{background:rgba(13,31,60,0.65);border:1px solid var(--border2);border-radius:10px;padding:28px;}
+.content-card h4{font-size:0.9rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.content-card ul{list-style:none;padding:0;}
+.content-card ul li{font-size:14px;color:var(--dim);padding:5px 0 5px 18px;position:relative;border-bottom:1px solid rgba(201,168,76,0.04);}
+.content-card ul li:last-child{border-bottom:none;}
+.content-card ul li::before{content:"›";position:absolute;left:0;color:var(--gold);font-weight:700;}
+.mistakes-card{background:rgba(180,60,60,0.07);border:1px solid rgba(220,80,80,0.18);border-radius:10px;padding:28px;}
+.mistakes-card h4{font-size:0.9rem;letter-spacing:0.12em;text-transform:uppercase;color:#e08080;margin-bottom:16px;}
+.mistakes-card ul li::before{color:#e08080;}
+
+/* Practice problems */
+.problems-title{font-size:0.9rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+.problem{background:rgba(13,31,60,0.5);border:1px solid var(--border2);border-radius:8px;padding:22px 24px;margin-bottom:16px;}
+.problem-num{font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(201,168,76,0.6);margin-bottom:8px;}
+.problem p{font-size:14px;color:var(--dim);margin-bottom:12px;line-height:1.65;}
+.problem-answer{display:none;background:rgba(201,168,76,0.06);border-left:3px solid var(--gold);padding:12px 16px;border-radius:0 6px 6px 0;margin-top:8px;font-size:13.5px;color:var(--cream);}
+.problem-answer strong{color:var(--gold);}
+.show-ans-btn{font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);background:none;border:1px solid rgba(201,168,76,0.35);border-radius:4px;padding:5px 14px;cursor:pointer;transition:background 0.2s;}
+.show-ans-btn:hover{background:rgba(201,168,76,0.10);}
+
+/* AdSense placeholder */
+.adsense-slot{margin:0 8vw;padding:24px 0;}
+.adsense-slot ins{display:block;text-align:center;}
+
+/* Books section */
+.books-section{padding:72px 8vw;background:rgba(6,15,28,0.6);}
+.book-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:24px;margin-top:32px;}
+.book-card{background:rgba(13,31,60,0.75);border:1px solid var(--border2);border-radius:12px;padding:24px;display:flex;flex-direction:column;transition:border-color 0.2s,transform 0.2s;}
+.book-card:hover{border-color:rgba(201,168,76,0.35);transform:translateY(-3px);}
+.book-icon{font-size:2.4rem;margin-bottom:14px;}
+.book-title{font-family:'DM Serif Display',Georgia,serif;font-size:1rem;color:var(--white);margin-bottom:4px;line-height:1.3;}
+.book-author{font-size:12px;color:rgba(240,235,224,0.45);margin-bottom:12px;}
+.book-note{font-size:13px;color:var(--dim);line-height:1.6;flex:1;margin-bottom:16px;}
+.book-link{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:10px 16px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;transition:background 0.2s;}
+.book-link:hover{background:var(--gold2);}
+
+/* Discord CTA */
+.discord-section{padding:72px 8vw;text-align:center;}
+.discord-block{background:rgba(88,101,242,0.08);border:2px solid rgba(88,101,242,0.3);border-radius:14px;padding:52px 40px;max-width:640px;margin:0 auto;}
+.discord-block h2{font-size:clamp(22px,3vw,34px);color:var(--white);margin-bottom:14px;}
+.discord-block p{color:var(--dim);font-size:15px;max-width:480px;margin:0 auto 28px;}
+.btn-discord{display:inline-block;background:#5865f2;color:#fff;padding:16px 40px;border-radius:8px;font-weight:700;font-size:1rem;text-decoration:none;transition:background 0.2s,transform 0.15s;font-family:'DM Sans',sans-serif;}
+.btn-discord:hover{background:#4752c4;transform:translateY(-2px)}
+
+/* Bottom CTA */
+.bottom-cta{padding:80px 8vw;text-align:center;background:rgba(201,168,76,0.04);border-top:1px solid var(--border);}
+.bottom-cta h2{font-size:clamp(26px,4vw,44px);color:var(--white);margin-bottom:16px;}
+.bottom-cta p{color:var(--dim);font-size:16px;max-width:540px;margin:0 auto 32px;}
+
+/* Newsletter bar */
+.beehiiv-bar{background:rgba(13,31,60,0.8);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:48px 8vw;text-align:center;}
+.beehiiv-bar h3{font-size:1.4rem;color:var(--white);margin-bottom:8px;}
+.beehiiv-bar p{font-size:14px;color:var(--dim);margin-bottom:20px;}
+.beehiiv-bar form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.beehiiv-bar input[type="email"]{padding:12px 16px;border-radius:6px;border:1px solid rgba(201,168,76,0.3);background:rgba(255,255,255,0.05);color:var(--white);font-size:14px;min-width:240px;font-family:'DM Sans',sans-serif;}
+.beehiiv-bar button{padding:12px 24px;background:var(--gold);color:var(--navy);border:none;border-radius:6px;font-weight:700;font-size:14px;cursor:pointer;font-family:'DM Sans',sans-serif;}
+
+/* Footer */
+footer{background:#060f1c;border-top:1px solid rgba(201,168,76,0.1);padding:48px 8vw;text-align:center;font-size:13px;color:rgba(240,235,224,0.35);}
+footer a{color:rgba(201,168,76,0.7);text-decoration:none;}
+footer a:hover{color:var(--gold)}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:24px;margin-bottom:20px;}
+.footer-links a{font-size:12px;letter-spacing:0.05em;text-transform:uppercase;}
+.affiliate-note{background:rgba(201,168,76,0.04);border:1px solid rgba(201,168,76,0.08);border-radius:4px;padding:10px 20px;display:inline-block;margin-top:14px;font-size:11px;}
+.affiliate-note a{color:rgba(201,168,76,0.5);}
+
+/* Math formula display */
+.formula{font-family:'Courier New',monospace;background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.15);border-radius:4px;padding:2px 8px;font-size:13px;color:var(--gold2);}
+
+@media(max-width:900px){
+  .content-grid{grid-template-columns:1fr;}
+  .hero{padding:80px 6vw 60px;}
+  .subject-section{padding:52px 6vw;}
+  .books-section,.discord-section,.bottom-cta,.beehiiv-bar{padding-left:6vw;padding-right:6vw;}
+  .adsense-slot{margin:0 6vw;}
+  .discord-block{padding:36px 24px;}
+}
+</style>
+</head>
+<body>
+
+<div id="nav-root"></div>
+<script src="../../nav-component.js"></script>
+
+<canvas id="particle-canvas"></canvas>
+
+<main>
+
+<!-- ===================== HERO ===================== -->
+<div class="hero">
+  <span class="hero-badge anim-1">PHYSICS &middot; BERKELEY-LEVEL DEPTH</span>
+  <h1 class="anim-2">Physics Tutoring &mdash;<br><em>From Mechanics to Modern Physics</em></h1>
+  <p class="hero-sub anim-3">Taught by a PhD physicist who studied at UC Berkeley and AFIT. One-on-one sessions or self-guided community resources.</p>
+  <div class="hero-btns anim-4">
+    <a href="#subjects" class="btn-primary">Explore Resources</a>
+    <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" rel="noopener" class="btn-ghost">Book Free Intro &rarr;</a>
+  </div>
+</div>
+
+<!-- ===================== CREDENTIALS BAR ===================== -->
+<div class="creds-bar">
+  <p><strong>B.A. Physics, UC Berkeley</strong> &nbsp;&middot;&nbsp; <strong>PhD Nuclear Engineering, AFIT</strong> &nbsp;&middot;&nbsp; <strong>USAF Captain</strong> &nbsp;&middot;&nbsp; Prior research at <strong>LLNL</strong> and <strong>LBNL</strong></p>
+</div>
+
+<!-- ===================== SUBJECT SECTIONS ===================== -->
+<div id="subjects">
+
+<!-- ===== 1. CLASSICAL MECHANICS ===== -->
+<section class="subject-section">
+  <div class="section-inner">
+    <span class="section-tag">Subject 01</span>
+    <h2 class="section-title fade-up">Classical Mechanics</h2>
+    <p class="section-desc fade-up">The bedrock of physics. Classical mechanics governs everything from projectiles to planetary orbits, and mastering it is essential before advancing to any specialized field. The math is tractable but the conceptual traps are real.</p>
+
+    <div class="content-grid fade-up">
+      <div class="content-card">
+        <h4>Key Concepts</h4>
+        <ul>
+          <li>Newton's three laws and their vector formulations</li>
+          <li>Kinematics: displacement, velocity, acceleration in 1D, 2D, and 3D</li>
+          <li>Work-energy theorem and conservation of mechanical energy</li>
+          <li>Conservation of linear momentum and impulse</li>
+          <li>Circular motion: centripetal acceleration and net force</li>
+          <li>Rotational dynamics: torque, moment of inertia, angular momentum</li>
+          <li>Simple harmonic motion: period, amplitude, phase</li>
+          <li>Gravitation and orbital mechanics</li>
+        </ul>
+      </div>
+      <div class="content-card mistakes-card">
+        <h4>Common Student Mistakes</h4>
+        <ul>
+          <li>Sign errors in vector decomposition — always define your coordinate system first</li>
+          <li>Forgetting the normal force component on inclined planes (N = mg cos&theta;, not mg)</li>
+          <li>Treating centripetal force as a separate "real" force rather than the net inward force</li>
+          <li>Confusing centripetal and centrifugal frames without specifying the reference frame</li>
+          <li>Using energy methods when momentum is conserved (inelastic collisions)</li>
+          <li>Mixing up rotational inertia values for different geometries</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fade-up">
+      <div class="problems-title">Practice Problems</div>
+
+      <div class="problem">
+        <div class="problem-num">Problem 1 &mdash; Kinematics + Projectile Motion</div>
+        <p>A ball is launched from ground level at 30&deg; above horizontal with an initial speed of 24 m/s. Ignoring air resistance, find: (a) the time of flight, (b) the horizontal range, and (c) the maximum height reached. Use g = 9.8 m/s&sup2;.</p>
+        <button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="problem-answer">
+          <strong>Solution:</strong><br>
+          Decompose: v<sub>x</sub> = 24 cos 30&deg; &approx; 20.78 m/s; v<sub>y0</sub> = 24 sin 30&deg; = 12 m/s.<br>
+          (a) Time of flight: set y = 0, so t = 2v<sub>y0</sub>/g = 2(12)/9.8 &approx; <strong>2.45 s</strong>.<br>
+          (b) Range: R = v<sub>x</sub> &times; t = 20.78 &times; 2.45 &approx; <strong>50.9 m</strong>.<br>
+          (c) Max height: H = v<sub>y0</sub>&sup2; / (2g) = 144/19.6 &approx; <strong>7.35 m</strong>.
+        </div>
+      </div>
+
+      <div class="problem">
+        <div class="problem-num">Problem 2 &mdash; Work-Energy Theorem</div>
+        <p>A 5 kg block slides from rest down a frictionless incline of angle 37&deg; and travels a distance of 8 m along the surface. (a) What is the work done by gravity? (b) What is the block's speed at the bottom? (c) If instead &mu;<sub>k</sub> = 0.25, what speed does it reach?</p>
+        <button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="problem-answer">
+          <strong>Solution:</strong><br>
+          Height dropped: h = 8 sin 37&deg; &approx; 4.81 m.<br>
+          (a) W<sub>grav</sub> = mgh = 5 &times; 9.8 &times; 4.81 &approx; <strong>235.7 J</strong>.<br>
+          (b) Frictionless: &frac12;mv&sup2; = 235.7 J &rarr; v = &radic;(2 &times; 235.7/5) &approx; <strong>9.70 m/s</strong>.<br>
+          (c) With friction: W<sub>friction</sub> = &mu;<sub>k</sub> N &times; d = 0.25 &times; 5 &times; 9.8 &times; cos 37&deg; &times; 8 &approx; 78.4 J (negative work). Net W = 235.7 &minus; 78.4 = 157.3 J &rarr; v = &radic;(2 &times; 157.3/5) &approx; <strong>7.93 m/s</strong>.
+        </div>
+      </div>
+
+      <div class="problem">
+        <div class="problem-num">Problem 3 &mdash; Rotational Dynamics</div>
+        <p>A solid cylinder of mass 3 kg and radius 0.4 m is free to rotate about its central axis. A rope wound around it is pulled with a constant force of 12 N. Starting from rest, what is the angular velocity after 5 seconds? (Moment of inertia of solid cylinder: I = &frac12;mR&sup2;)</p>
+        <button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="problem-answer">
+          <strong>Solution:</strong><br>
+          I = &frac12; &times; 3 &times; (0.4)&sup2; = 0.24 kg&middot;m&sup2;.<br>
+          Torque: &tau; = F &times; R = 12 &times; 0.4 = 4.8 N&middot;m.<br>
+          Angular acceleration: &alpha; = &tau;/I = 4.8/0.24 = 20 rad/s&sup2;.<br>
+          After 5 s: &omega; = &alpha;t = 20 &times; 5 = <strong>100 rad/s</strong>.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AdSense -->
+<div class="adsense-slot">
+  <ins class="adsbygoogle" style="display:block;text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-3289071681648577" data-ad-slot="auto"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- ===== 2. ELECTROMAGNETISM ===== -->
+<section class="subject-section">
+  <div class="section-inner">
+    <span class="section-tag">Subject 02</span>
+    <h2 class="section-title fade-up">Electromagnetism</h2>
+    <p class="section-desc fade-up">From Coulomb's force law to Maxwell's unification of electricity and magnetism — E&amp;M is where calculus and physics converge. Understanding the field picture, not just the formulas, is what separates real mastery from surface-level familiarity.</p>
+
+    <div class="content-grid fade-up">
+      <div class="content-card">
+        <h4>Key Concepts</h4>
+        <ul>
+          <li>Coulomb's law and the superposition principle for discrete charges</li>
+          <li>Electric field and electric potential; their relationship <span class="formula">E = &minus;&nabla;V</span></li>
+          <li>Gauss's law: <span class="formula">&oint; E&middot;dA = Q<sub>enc</sub>/&epsilon;<sub>0</sub></span></li>
+          <li>Capacitors: energy stored, capacitance, dielectrics</li>
+          <li>Ohm's law, resistivity, Kirchhoff's current and voltage laws</li>
+          <li>Magnetic force on moving charges: <span class="formula">F = qv &times; B</span></li>
+          <li>Faraday's law of induction and Lenz's law</li>
+          <li>Maxwell's equations — the complete description of classical E&amp;M</li>
+        </ul>
+      </div>
+      <div class="content-card mistakes-card">
+        <h4>Common Student Mistakes</h4>
+        <ul>
+          <li>Getting B field direction wrong — always apply the right-hand rule carefully to the current element, not the field point</li>
+          <li>Treating electric potential as a vector (it is a scalar)</li>
+          <li>Sign errors in circuit analysis — establish a consistent loop traversal direction first</li>
+          <li>Confusing electric flux with electric field magnitude</li>
+          <li>Forgetting that induced EMF opposes the change in flux (Lenz's law direction)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fade-up">
+      <div class="problems-title">Practice Problems</div>
+
+      <div class="problem">
+        <div class="problem-num">Problem 1 &mdash; Gauss's Law</div>
+        <p>A solid conducting sphere of radius R = 0.10 m carries a total charge Q = +4.0 &mu;C. Find the magnitude of the electric field (a) at r = 0.05 m (inside), (b) at r = 0.10 m (surface), and (c) at r = 0.30 m (outside).</p>
+        <button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="problem-answer">
+          <strong>Solution:</strong><br>
+          (a) Inside a conductor, <strong>E = 0 N/C</strong>. All free charge resides on the surface.<br>
+          (b) At the surface: E = kQ/R&sup2; = (8.99&times;10&sup9;)(4.0&times;10&minus;&sup6;)/(0.10)&sup2; &approx; <strong>3.60 &times; 10&sup6; N/C</strong> (radially outward).<br>
+          (c) Outside: E = kQ/r&sup2; = (8.99&times;10&sup9;)(4.0&times;10&minus;&sup6;)/(0.30)&sup2; &approx; <strong>4.00 &times; 10&sup5; N/C</strong>.
+        </div>
+      </div>
+
+      <div class="problem">
+        <div class="problem-num">Problem 2 &mdash; Kirchhoff's Laws</div>
+        <p>A circuit has a 12 V battery and three resistors: R<sub>1</sub> = 4 &Omega; in series with a parallel combination of R<sub>2</sub> = 6 &Omega; and R<sub>3</sub> = 12 &Omega;. Find: (a) the equivalent resistance, (b) the total current from the battery, (c) the voltage across the parallel combination.</p>
+        <button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="problem-answer">
+          <strong>Solution:</strong><br>
+          (a) Parallel: R<sub>23</sub> = (6 &times; 12)/(6 + 12) = 72/18 = 4 &Omega;. Total: R<sub>eq</sub> = 4 + 4 = <strong>8 &Omega;</strong>.<br>
+          (b) I<sub>total</sub> = V/R<sub>eq</sub> = 12/8 = <strong>1.5 A</strong>.<br>
+          (c) V<sub>parallel</sub> = I &times; R<sub>23</sub> = 1.5 &times; 4 = <strong>6 V</strong>.
+        </div>
+      </div>
+
+      <div class="problem">
+        <div class="problem-num">Problem 3 &mdash; Faraday's Law</div>
+        <p>A circular loop of radius 0.15 m lies in a uniform magnetic field that decreases from B<sub>0</sub> = 0.80 T to 0 T over exactly 0.40 s. The loop has resistance R = 2.5 &Omega;. Calculate (a) the induced EMF and (b) the induced current magnitude.</p>
+        <button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="problem-answer">
+          <strong>Solution:</strong><br>
+          Area: A = &pi;r&sup2; = &pi;(0.15)&sup2; &approx; 0.0707 m&sup2;.<br>
+          Change in flux: &Delta;&Phi; = A &times; &Delta;B = 0.0707 &times; (0 &minus; 0.80) = &minus;0.0566 Wb.<br>
+          (a) |EMF| = |&Delta;&Phi;/&Delta;t| = 0.0566/0.40 &approx; <strong>0.141 V</strong>.<br>
+          (b) I = EMF/R = 0.141/2.5 &approx; <strong>0.057 A</strong>. By Lenz's law, the current opposes the decreasing flux, flowing to maintain B in the original direction.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AdSense -->
+<div class="adsense-slot">
+  <ins class="adsbygoogle" style="display:block;text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-3289071681648577" data-ad-slot="auto"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- ===== 3. THERMODYNAMICS ===== -->
+<section class="subject-section">
+  <div class="section-inner">
+    <span class="section-tag">Subject 03</span>
+    <h2 class="section-title fade-up">Thermodynamics</h2>
+    <p class="section-desc fade-up">Thermodynamics governs energy conversion, heat engines, and the statistical behavior of matter. The four laws are deceptively simple; the real work is in applying them correctly to processes where the sign conventions can make or break your answer.</p>
+
+    <div class="content-grid fade-up">
+      <div class="content-card">
+        <h4>Key Concepts</h4>
+        <ul>
+          <li>Zeroth law: thermal equilibrium and temperature</li>
+          <li>First law: <span class="formula">&Delta;U = Q &minus; W</span> (internal energy, heat, work)</li>
+          <li>Second law: entropy never decreases in an isolated system</li>
+          <li>Third law: absolute zero is unattainable</li>
+          <li>Ideal gas law: <span class="formula">PV = nRT</span></li>
+          <li>Process types: isothermal, adiabatic, isobaric, isochoric</li>
+          <li>Carnot efficiency: <span class="formula">&eta; = 1 &minus; T<sub>C</sub>/T<sub>H</sub></span></li>
+          <li>Entropy and the statistical interpretation of the second law</li>
+        </ul>
+      </div>
+      <div class="content-card mistakes-card">
+        <h4>Common Student Mistakes</h4>
+        <ul>
+          <li>Sign convention errors: physics convention is W = work done <em>by</em> the gas; chemistry sometimes flips this</li>
+          <li>Not distinguishing between isothermal (T constant, use PV = nRT) and adiabatic (no heat exchange, use PV<sup>&gamma;</sup> = const) processes</li>
+          <li>Using Celsius instead of Kelvin in absolute temperature calculations</li>
+          <li>Confusing heat capacity at constant pressure C<sub>p</sub> with C<sub>v</sub></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fade-up">
+      <div class="problems-title">Practice Problems</div>
+
+      <div class="problem">
+        <div class="problem-num">Problem 1 &mdash; First Law Application</div>
+        <p>An ideal gas expands isothermally at T = 300 K. During the process, the gas absorbs Q = 500 J of heat. (a) What is the change in internal energy? (b) How much work does the gas do on its surroundings?</p>
+        <button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="problem-answer">
+          <strong>Solution:</strong><br>
+          (a) For an ideal gas at constant temperature, internal energy depends only on T. Since T is constant, <strong>&Delta;U = 0 J</strong>.<br>
+          (b) First law: &Delta;U = Q &minus; W &rarr; 0 = 500 &minus; W &rarr; <strong>W = 500 J</strong>. All absorbed heat converts directly to work in an isothermal expansion of an ideal gas.
+        </div>
+      </div>
+
+      <div class="problem">
+        <div class="problem-num">Problem 2 &mdash; Carnot Efficiency</div>
+        <p>A Carnot heat engine operates between a hot reservoir at 600 K and a cold reservoir at 300 K. If the engine absorbs Q<sub>H</sub> = 800 J per cycle, find: (a) the Carnot efficiency, (b) the net work output per cycle, and (c) the heat rejected to the cold reservoir.</p>
+        <button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="problem-answer">
+          <strong>Solution:</strong><br>
+          (a) &eta;<sub>Carnot</sub> = 1 &minus; T<sub>C</sub>/T<sub>H</sub> = 1 &minus; 300/600 = <strong>50%</strong>.<br>
+          (b) W = &eta; &times; Q<sub>H</sub> = 0.50 &times; 800 = <strong>400 J</strong>.<br>
+          (c) Q<sub>C</sub> = Q<sub>H</sub> &minus; W = 800 &minus; 400 = <strong>400 J</strong> rejected.
+        </div>
+      </div>
+
+      <div class="problem">
+        <div class="problem-num">Problem 3 &mdash; Ideal Gas Process</div>
+        <p>2.0 moles of ideal monatomic gas (&gamma; = 5/3) at initial state P<sub>1</sub> = 2.0 atm, V<sub>1</sub> = 10 L undergoes an adiabatic expansion to V<sub>2</sub> = 20 L. Find the final pressure P<sub>2</sub>. (1 atm = 101,325 Pa)</p>
+        <button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="problem-answer">
+          <strong>Solution:</strong><br>
+          Adiabatic relation: P<sub>1</sub>V<sub>1</sub><sup>&gamma;</sup> = P<sub>2</sub>V<sub>2</sub><sup>&gamma;</sup>.<br>
+          P<sub>2</sub> = P<sub>1</sub>(V<sub>1</sub>/V<sub>2</sub>)<sup>&gamma;</sup> = 2.0 &times; (10/20)<sup>5/3</sup> = 2.0 &times; (0.5)<sup>1.667</sup>.<br>
+          (0.5)<sup>5/3</sup> = e<sup>(5/3)ln(0.5)</sup> = e<sup>&minus;1.155</sup> &approx; 0.315.<br>
+          P<sub>2</sub> &approx; 2.0 &times; 0.315 &approx; <strong>0.63 atm</strong>. The gas cools as it expands adiabatically.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AdSense -->
+<div class="adsense-slot">
+  <ins class="adsbygoogle" style="display:block;text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-3289071681648577" data-ad-slot="auto"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- ===== 4. QUANTUM MECHANICS ===== -->
+<section class="subject-section">
+  <div class="section-inner">
+    <span class="section-tag">Subject 04</span>
+    <h2 class="section-title fade-up">Quantum Mechanics</h2>
+    <p class="section-desc fade-up">Quantum mechanics is the most accurate physical theory ever developed, describing matter and light at the atomic scale with extraordinary precision. The mathematics requires letting go of classical intuitions — particles do not have definite positions and momenta simultaneously, and that is not a limitation of measurement, it is fundamental to nature.</p>
+
+    <div class="content-grid fade-up">
+      <div class="content-card">
+        <h4>Key Concepts</h4>
+        <ul>
+          <li>Wave-particle duality: de Broglie relation <span class="formula">&lambda; = h/p</span></li>
+          <li>The Schr&ouml;dinger equation: time-dependent and time-independent forms</li>
+          <li>Heisenberg uncertainty principle: <span class="formula">&Delta;x &Delta;p &ge; &hbar;/2</span></li>
+          <li>Energy quantization: particle in a box, harmonic oscillator</li>
+          <li>Wave function normalization and probability interpretation</li>
+          <li>Hydrogen atom: quantum numbers n, l, m<sub>l</sub>, m<sub>s</sub></li>
+          <li>Electron spin and the Pauli exclusion principle</li>
+          <li>Operators, eigenvalues, and expectation values</li>
+        </ul>
+      </div>
+      <div class="content-card mistakes-card">
+        <h4>Common Student Mistakes</h4>
+        <ul>
+          <li>Treating quantum states as having definite values before measurement — the wave function describes a superposition, not ignorance</li>
+          <li>Forgetting normalization when computing probabilities: <span class="formula">&int;|&psi;|&sup2;dx = 1</span> must hold</li>
+          <li>Confusing the n quantum number energy levels with orbital shapes (l determines shape)</li>
+          <li>Applying classical momentum in regions where V &gt; E (tunneling is possible quantum mechanically)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fade-up">
+      <div class="problems-title">Practice Problems</div>
+
+      <div class="problem">
+        <div class="problem-num">Problem 1 &mdash; Particle in a Box</div>
+        <p>An electron is confined to a one-dimensional box of length L = 0.50 nm. Calculate the ground state energy E<sub>1</sub> and the first excited state energy E<sub>2</sub>. Express your answers in eV. (m<sub>e</sub> = 9.11 &times; 10<sup>&minus;31</sup> kg, &hbar; = 1.055 &times; 10<sup>&minus;34</sup> J&middot;s, 1 eV = 1.602 &times; 10<sup>&minus;19</sup> J)</p>
+        <button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="problem-answer">
+          <strong>Solution:</strong><br>
+          E<sub>n</sub> = n&sup2;&pi;&sup2;&hbar;&sup2;/(2m<sub>e</sub>L&sup2;).<br>
+          E<sub>1</sub> = &pi;&sup2;(1.055&times;10<sup>&minus;34</sup>)&sup2; / [2 &times; 9.11&times;10<sup>&minus;31</sup> &times; (0.50&times;10<sup>&minus;9</sup>)&sup2;]<br>
+          &approx; 2.41 &times; 10<sup>&minus;19</sup> J &approx; <strong>1.51 eV</strong>.<br>
+          E<sub>2</sub> = 4 &times; E<sub>1</sub> &approx; <strong>6.02 eV</strong>. The n&sup2; scaling of energy levels is a signature of confinement.
+        </div>
+      </div>
+
+      <div class="problem">
+        <div class="problem-num">Problem 2 &mdash; Uncertainty Principle</div>
+        <p>An electron is localized in a region &Delta;x = 0.10 nm. What is the minimum uncertainty in its momentum, and what kinetic energy does this imply? Express KE in eV.</p>
+        <button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="problem-answer">
+          <strong>Solution:</strong><br>
+          &Delta;p<sub>min</sub> = &hbar;/(2&Delta;x) = (1.055&times;10<sup>&minus;34</sup>)/(2 &times; 0.10&times;10<sup>&minus;9</sup>) = <strong>5.28 &times; 10<sup>&minus;25</sup> kg&middot;m/s</strong>.<br>
+          KE<sub>min</sub> = (&Delta;p)&sup2;/(2m<sub>e</sub>) = (5.28&times;10<sup>&minus;25</sup>)&sup2; / (2 &times; 9.11&times;10<sup>&minus;31</sup>)<br>
+          &approx; 1.53 &times; 10<sup>&minus;19</sup> J &approx; <strong>0.95 eV</strong>. This zero-point kinetic energy is why electrons cannot be at rest inside atoms.
+        </div>
+      </div>
+
+      <div class="problem">
+        <div class="problem-num">Problem 3 &mdash; de Broglie Wavelength</div>
+        <p>A neutron moves with kinetic energy KE = 0.025 eV (thermal neutron energy). Calculate its de Broglie wavelength. Compare this to the typical atomic spacing of ~0.2 nm. (m<sub>n</sub> = 1.675 &times; 10<sup>&minus;27</sup> kg)</p>
+        <button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="problem-answer">
+          <strong>Solution:</strong><br>
+          KE = 0.025 &times; 1.602&times;10<sup>&minus;19</sup> = 4.0 &times; 10<sup>&minus;21</sup> J.<br>
+          p = &radic;(2m<sub>n</sub> &times; KE) = &radic;(2 &times; 1.675&times;10<sup>&minus;27</sup> &times; 4.0&times;10<sup>&minus;21</sup>) = 3.66 &times; 10<sup>&minus;24</sup> kg&middot;m/s.<br>
+          &lambda; = h/p = 6.626&times;10<sup>&minus;34</sup> / 3.66&times;10<sup>&minus;24</sup> &approx; <strong>1.81 &times; 10<sup>&minus;10</sup> m = 0.181 nm</strong>.<br>
+          This is comparable to interatomic spacing — which is exactly why thermal neutrons produce diffraction patterns in crystals (neutron crystallography).
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AdSense -->
+<div class="adsense-slot">
+  <ins class="adsbygoogle" style="display:block;text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-3289071681648577" data-ad-slot="auto"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- ===== 5. NUCLEAR PHYSICS ===== -->
+<section class="subject-section">
+  <div class="section-inner">
+    <span class="section-tag">Subject 05</span>
+    <h2 class="section-title fade-up">Nuclear Physics</h2>
+    <p class="section-desc fade-up">Nuclear physics addresses the structure of atomic nuclei, the forces that bind protons and neutrons together, and the reactions — fission, fusion, and decay — that release enormous amounts of energy. This is the subject area where Dr. Preston's research expertise is deepest, having studied it at Berkeley, AFIT, LLNL, and LBNL.</p>
+
+    <div class="content-grid fade-up">
+      <div class="content-card">
+        <h4>Key Concepts</h4>
+        <ul>
+          <li>Nuclear binding energy and the mass defect: <span class="formula">BE = (&Delta;m)c&sup2;</span></li>
+          <li>Semi-empirical mass formula (liquid drop model)</li>
+          <li>Types of radioactive decay: alpha, beta, gamma</li>
+          <li>Radioactive decay law: <span class="formula">N(t) = N<sub>0</sub>e<sup>&minus;&lambda;t</sup></span></li>
+          <li>Half-life: <span class="formula">t<sub>1/2</sub> = ln(2)/&lambda;</span></li>
+          <li>Q-value: energy released in a nuclear reaction</li>
+          <li>Nuclear fission: chain reactions, criticality, multiplication factor k</li>
+          <li>Nuclear fusion: Coulomb barrier, stellar nucleosynthesis</li>
+        </ul>
+      </div>
+      <div class="content-card mistakes-card">
+        <h4>Common Student Mistakes</h4>
+        <ul>
+          <li>Mass defect direction: the bound nucleus is less massive than its constituents, not more — that missing mass is the binding energy</li>
+          <li>Incorrect decay chain notation: always check that both mass number A and atomic number Z balance on both sides</li>
+          <li>Confusing activity (decays per second) with number of nuclei N — activity A = &lambda;N, not N itself</li>
+          <li>Using mass in kg instead of atomic mass units (u) when calculating Q-values; 1 u = 931.5 MeV/c&sup2;</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fade-up">
+      <div class="problems-title">Practice Problems</div>
+
+      <div class="problem">
+        <div class="problem-num">Problem 1 &mdash; Radioactive Decay & Half-Life</div>
+        <p>A sample initially contains 8.0 &times; 10<sup>12</sup> atoms of &sup1;&sup3;&sup7;Cs, which has a half-life of 30.1 years. (a) What is the decay constant &lambda;? (b) How many atoms remain after 90.3 years? (c) What is the initial activity in Bq?</p>
+        <button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="problem-answer">
+          <strong>Solution:</strong><br>
+          (a) &lambda; = ln(2)/t<sub>1/2</sub> = 0.693/(30.1 yr &times; 3.156&times;10<sup>7</sup> s/yr) = <strong>7.29 &times; 10<sup>&minus;10</sup> s<sup>&minus;1</sup></strong>.<br>
+          (b) 90.3 years = 3 &times; t<sub>1/2</sub>, so N = N<sub>0</sub>/2&sup3; = 8.0&times;10<sup>12</sup>/8 = <strong>1.0 &times; 10<sup>12</sup> atoms</strong>.<br>
+          (c) Activity A<sub>0</sub> = &lambda;N<sub>0</sub> = 7.29&times;10<sup>&minus;10</sup> &times; 8.0&times;10<sup>12</sup> &approx; <strong>5,830 Bq</strong>.
+        </div>
+      </div>
+
+      <div class="problem">
+        <div class="problem-num">Problem 2 &mdash; Q-Value Calculation</div>
+        <p>Calculate the Q-value for the alpha decay: <sup>238</sup>U &rarr; <sup>234</sup>Th + <sup>4</sup>He. Atomic masses: M(<sup>238</sup>U) = 238.050788 u, M(<sup>234</sup>Th) = 234.043601 u, M(<sup>4</sup>He) = 4.002602 u. (1 u = 931.5 MeV/c&sup2;)</p>
+        <button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="problem-answer">
+          <strong>Solution:</strong><br>
+          &Delta;m = M<sub>parent</sub> &minus; (M<sub>Th</sub> + M<sub>He</sub>)<br>
+          = 238.050788 &minus; (234.043601 + 4.002602)<br>
+          = 238.050788 &minus; 238.046203 = 0.004585 u.<br>
+          Q = &Delta;m &times; 931.5 MeV/u = 0.004585 &times; 931.5 &approx; <strong>4.27 MeV</strong>.<br>
+          This energy appears primarily as kinetic energy of the alpha particle, which is why uranium alpha particles carry ~4.2 MeV.
+        </div>
+      </div>
+
+      <div class="problem">
+        <div class="problem-num">Problem 3 &mdash; Nuclear Binding Energy</div>
+        <p>Calculate the binding energy per nucleon for <sup>4</sup>He (the alpha particle). Proton mass: 1.007276 u, neutron mass: 1.008665 u, <sup>4</sup>He nuclear mass: 4.001506 u. (1 u = 931.5 MeV/c&sup2;)</p>
+        <button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="problem-answer">
+          <strong>Solution:</strong><br>
+          <sup>4</sup>He has Z=2 protons and N=2 neutrons.<br>
+          Mass of free nucleons: 2(1.007276) + 2(1.008665) = 2.014552 + 2.017330 = 4.031882 u.<br>
+          Mass defect: &Delta;m = 4.031882 &minus; 4.001506 = 0.030376 u.<br>
+          Total BE = 0.030376 &times; 931.5 = 28.3 MeV.<br>
+          BE per nucleon = 28.3/4 = <strong>7.07 MeV/nucleon</strong>. This is one of the highest BE/A values for light nuclei, explaining the stability of alpha particles and their prevalence in radioactive decay.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AdSense -->
+<div class="adsense-slot">
+  <ins class="adsbygoogle" style="display:block;text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-3289071681648577" data-ad-slot="auto"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- ===== 6. MODERN PHYSICS ===== -->
+<section class="subject-section">
+  <div class="section-inner">
+    <span class="section-tag">Subject 06</span>
+    <h2 class="section-title fade-up">Modern Physics</h2>
+    <p class="section-desc fade-up">Modern physics encompasses the revolutionary discoveries of the early twentieth century: special relativity, which redefined space and time, and the quantum hypothesis, which revealed the discrete nature of energy and light. These are not abstract ideas — they underpin GPS satellites, nuclear reactors, lasers, and semiconductor devices.</p>
+
+    <div class="content-grid fade-up">
+      <div class="content-card">
+        <h4>Key Concepts</h4>
+        <ul>
+          <li>Special relativity postulates: constant speed of light, equivalence of inertial frames</li>
+          <li>Lorentz factor: <span class="formula">&gamma; = 1/&radic;(1 &minus; v&sup2;/c&sup2;)</span></li>
+          <li>Time dilation: <span class="formula">&Delta;t = &gamma;&Delta;t<sub>0</sub></span></li>
+          <li>Length contraction: <span class="formula">L = L<sub>0</sub>/&gamma;</span></li>
+          <li>Mass-energy equivalence: <span class="formula">E = &gamma;mc&sup2;</span>, rest energy E<sub>0</sub> = mc&sup2;</li>
+          <li>Photoelectric effect: photon energy E = hf, work function &phi;</li>
+          <li>Compton scattering: photon wavelength shift upon scattering from electrons</li>
+          <li>Bohr model of hydrogen and its limitations</li>
+        </ul>
+      </div>
+      <div class="content-card mistakes-card">
+        <h4>Common Student Mistakes</h4>
+        <ul>
+          <li>Confusing rest mass m with relativistic mass &gamma;m — modern physics uses invariant rest mass; the term "relativistic mass" is largely deprecated</li>
+          <li>Lorentz factor direction: &gamma; &ge; 1 always, moving clocks run slow, moving lengths contract</li>
+          <li>Applying non-relativistic KE = &frac12;mv&sup2; at speeds v &gt; 0.1c — use KE = (&gamma; &minus; 1)mc&sup2;</li>
+          <li>Photoelectric effect: intensity does not increase photon energy — only frequency does</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fade-up">
+      <div class="problems-title">Practice Problems</div>
+
+      <div class="problem">
+        <div class="problem-num">Problem 1 &mdash; Special Relativity: Time Dilation</div>
+        <p>A muon moving at v = 0.98c is created in Earth's upper atmosphere 60 km above the surface. In its own rest frame, the muon's proper lifetime is 2.2 &mu;s. (a) What is the Lorentz factor &gamma;? (b) What is the muon's lifetime in the Earth frame? (c) Does the muon reach Earth's surface?</p>
+        <button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="problem-answer">
+          <strong>Solution:</strong><br>
+          (a) &gamma; = 1/&radic;(1 &minus; 0.98&sup2;) = 1/&radic;(0.0396) &approx; <strong>5.03</strong>.<br>
+          (b) &Delta;t = &gamma;&Delta;t<sub>0</sub> = 5.03 &times; 2.2 &mu;s &approx; <strong>11.1 &mu;s</strong>.<br>
+          (c) Distance traveled = v &times; &Delta;t = 0.98 &times; 3&times;10<sup>8</sup> m/s &times; 11.1&times;10<sup>&minus;6</sup> s &approx; 3.26 km. This is well short of 60 km, so the muon does not reach the surface from that altitude — but muons actually created around 10&ndash;15 km altitude do reach the ground. This is the classic experimental confirmation of time dilation.
+        </div>
+      </div>
+
+      <div class="problem">
+        <div class="problem-num">Problem 2 &mdash; Photoelectric Effect</div>
+        <p>Light of wavelength 220 nm strikes a metal surface with work function &phi; = 4.0 eV. (a) What is the photon energy in eV? (b) What is the maximum kinetic energy of the ejected electrons? (c) What is the stopping potential? (h = 6.626 &times; 10<sup>&minus;34</sup> J&middot;s, c = 3&times;10<sup>8</sup> m/s)</p>
+        <button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="problem-answer">
+          <strong>Solution:</strong><br>
+          (a) E<sub>photon</sub> = hc/&lambda; = (6.626&times;10<sup>&minus;34</sup> &times; 3&times;10<sup>8</sup>)/(220&times;10<sup>&minus;9</sup>) = 9.04&times;10<sup>&minus;19</sup> J &approx; <strong>5.64 eV</strong>.<br>
+          (b) KE<sub>max</sub> = E<sub>photon</sub> &minus; &phi; = 5.64 &minus; 4.0 = <strong>1.64 eV</strong>.<br>
+          (c) Stopping potential V<sub>s</sub> = KE<sub>max</sub>/e = <strong>1.64 V</strong>. Electrons with exactly this KE are stopped by the retarding potential.
+        </div>
+      </div>
+
+      <div class="problem">
+        <div class="problem-num">Problem 3 &mdash; Relativistic Energy</div>
+        <p>A proton (rest mass energy 938.3 MeV) is accelerated to kinetic energy KE = 2000 MeV in a particle accelerator. (a) What is its total energy? (b) What is its Lorentz factor &gamma;? (c) What fraction of the speed of light does it travel at?</p>
+        <button class="show-ans-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="problem-answer">
+          <strong>Solution:</strong><br>
+          (a) E<sub>total</sub> = KE + m<sub>p</sub>c&sup2; = 2000 + 938.3 = <strong>2938.3 MeV</strong>.<br>
+          (b) &gamma; = E<sub>total</sub>/(m<sub>p</sub>c&sup2;) = 2938.3/938.3 &approx; <strong>3.13</strong>.<br>
+          (c) &gamma; = 1/&radic;(1&minus;v&sup2;/c&sup2;) &rarr; v/c = &radic;(1 &minus; 1/&gamma;&sup2;) = &radic;(1 &minus; 1/9.80) = &radic;(0.8980) &approx; <strong>0.948c</strong>. At this energy the proton travels at 94.8% of the speed of light — a regime where non-relativistic approximations completely fail.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div><!-- end #subjects -->
+
+<!-- AdSense -->
+<div class="adsense-slot">
+  <ins class="adsbygoogle" style="display:block;text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-3289071681648577" data-ad-slot="auto"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- ===================== TEXTBOOKS ===================== -->
+<section class="books-section">
+  <div class="section-inner">
+    <span class="section-tag">Recommended Texts</span>
+    <h2 class="section-title fade-up">Textbooks Dr. Preston Recommends</h2>
+    <p class="section-desc fade-up">These are the actual textbooks used in serious undergraduate and graduate physics programs. Every title below has been field-tested in courses, research environments, or both.</p>
+
+    <div class="book-grid">
+      <div class="book-card fade-up">
+        <div class="book-icon">&#128218;</div>
+        <div class="book-title">University Physics</div>
+        <div class="book-author">Young &amp; Freedman</div>
+        <div class="book-note">The gold standard for calculus-based intro physics. Clear derivations, comprehensive problem sets, and strong conceptual grounding. Used at Berkeley and most major universities.</div>
+        <a href="https://www.amazon.com/s?k=University+Physics+Young+Freedman&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link" onclick="gtag('event','affiliate_click',{affiliate:'amazon',item:'young-freedman'})">View on Amazon &rarr;</a>
+      </div>
+      <div class="book-card fade-up">
+        <div class="book-icon">&#128214;</div>
+        <div class="book-title">Fundamentals of Physics</div>
+        <div class="book-author">Halliday, Resnick &amp; Walker</div>
+        <div class="book-note">Rigorous and comprehensive. The "HRW" is the other top choice for calculus-based physics. Especially strong on E&amp;M and modern physics coverage.</div>
+        <a href="https://www.amazon.com/s?k=Fundamentals+Physics+Halliday+Resnick&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link" onclick="gtag('event','affiliate_click',{affiliate:'amazon',item:'halliday-resnick'})">View on Amazon &rarr;</a>
+      </div>
+      <div class="book-card fade-up">
+        <div class="book-icon">&#9889;</div>
+        <div class="book-title">Introduction to Electrodynamics</div>
+        <div class="book-author">David J. Griffiths</div>
+        <div class="book-note">The definitive upper-division E&amp;M text. Griffiths is beloved for its physical intuition and clear writing. Required reading for anyone serious about electromagnetism or graduate school.</div>
+        <a href="https://www.amazon.com/dp/1108420419?tag=fissionlab-20" target="_blank" rel="noopener" class="book-link" onclick="gtag('event','affiliate_click',{affiliate:'amazon',item:'griffiths-em'})">View on Amazon &rarr;</a>
+      </div>
+      <div class="book-card fade-up">
+        <div class="book-icon">&#128161;</div>
+        <div class="book-title">The Feynman Lectures on Physics</div>
+        <div class="book-author">Feynman, Leighton &amp; Sands</div>
+        <div class="book-note">Not a problem-solving textbook — a masterclass in physical insight. Every physicist should read these. Feynman's explanations of quantum mechanics remain unmatched for building genuine understanding.</div>
+        <a href="https://www.amazon.com/s?k=Feynman+Lectures+Physics&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link" onclick="gtag('event','affiliate_click',{affiliate:'amazon',item:'feynman-lectures'})">View on Amazon &rarr;</a>
+      </div>
+    </div>
+    <p style="font-size:12px;color:rgba(240,235,224,0.35);margin-top:16px;text-align:center;"><em>Affiliate disclosure: links above use the fissionlab-20 Amazon affiliate tag. Purchases support this free resource at no additional cost to you.</em></p>
+  </div>
+</section>
+
+<!-- ===================== DISCORD CTA ===================== -->
+<section class="discord-section">
+  <div class="discord-block fade-up">
+    <h2>Join the Physics Community</h2>
+    <p>Ask questions, share problems, and study alongside others working through the same material. Dr. Preston hosts weekly live Q&amp;A sessions on Discord.</p>
+    <a href="https://discord.gg/rkzrxET7" target="_blank" rel="noopener" class="btn-discord">Join the Discord Server &rarr;</a>
+    <p style="font-size:12px;color:rgba(240,235,224,0.35);margin-top:16px;">Free to join. No signup fees.</p>
+  </div>
+</section>
+
+<!-- ===================== BOOK SESSION ===================== -->
+<section class="bottom-cta">
+  <span class="section-tag">One-on-One Tutoring</span>
+  <h2 class="fade-up">Ready to Work Through Physics Directly with Dr. Preston?</h2>
+  <p class="fade-up">Whether you are preparing for your first physics course, working through upper-division E&amp;M, or studying for graduate qualifying exams, Dr. Preston builds sessions around your exact material and pace.</p>
+  <div class="fade-up" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+    <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" rel="noopener" class="btn-primary">Book a Free Intro Session</a>
+    <a href="https://discord.gg/rkzrxET7" target="_blank" rel="noopener" class="btn-ghost">Join the Community</a>
+  </div>
+</section>
+
+<!-- ===================== NEWSLETTER ===================== -->
+<section class="beehiiv-bar">
+  <span class="section-tag" style="display:block;margin-bottom:10px;">Free Weekly Newsletter</span>
+  <h3>Physics Insights from a Nuclear Engineer</h3>
+  <p>Problem walkthroughs, concept explanations, study strategies, and research insights — delivered weekly by Dr. Preston.</p>
+  <form action="https://prestons-newsletter-5f43a7.beehiiv.com/subscribe" method="POST" target="_blank">
+    <input type="email" name="email" placeholder="your@email.com" required>
+    <input type="hidden" name="referring_pub_id" value="prestons-newsletter-5f43a7">
+    <input type="hidden" name="utm_source" value="fissionlab-physics">
+    <button type="submit">Subscribe Free &rarr;</button>
+  </form>
+  <p style="font-size:11px;color:rgba(240,235,224,0.35);margin-top:12px;">No spam. Unsubscribe anytime.</p>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/community/">Community</a>
+    <a href="/community/resources/">Resources</a>
+    <a href="/blog/">Blog</a>
+    <a href="/community/products/">Products</a>
+    <a href="mailto:Dr_PrestonD@proton.me">Contact</a>
+    <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
+  </div>
+  <p>&copy; 2026 FissionLab &middot; Dr. Preston PhD &middot; All sessions via Zoom</p>
+  <div class="affiliate-note">
+    <strong style="color:rgba(201,168,76,0.6);">Affiliate Disclosure:</strong> This page contains Amazon affiliate links (tag: fissionlab-20). We earn a small commission on qualifying purchases at no cost to you. <a href="/affiliate-disclosure/">Full disclosure &rarr;</a>
+  </div>
+</footer>
+
+<!-- ===================== THREE.JS PARTICLE CANVAS ===================== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+<script>
+window.addEventListener('load', function () {
+  var canvas = document.getElementById('particle-canvas');
+  var isMobile = window.innerWidth < 768;
+  try {
+    var testCtx = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    if (!testCtx) throw new Error();
+  } catch (e) {
+    document.body.classList.add('no-webgl');
+    canvas.style.display = 'none';
+    return;
+  }
+  if (typeof THREE === 'undefined') {
+    document.body.classList.add('no-webgl');
+    canvas.style.display = 'none';
+    return;
+  }
+
+  var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: false, alpha: true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setClearColor(0x000000, 0);
+
+  var scene = new THREE.Scene();
+  var camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+  camera.position.z = 80;
+
+  var count = isMobile ? 100 : 200;
+  var positions = new Float32Array(count * 3);
+  var colors = new Float32Array(count * 3);
+  var blueColor = new THREE.Color(0x4a90d9);
+  var goldColor = new THREE.Color(0xc9a84c);
+
+  for (var i = 0; i < count; i++) {
+    var phi = Math.acos(2 * Math.random() - 1);
+    var theta = 2 * Math.PI * Math.random();
+    var r = 20 + Math.random() * 60;
+    positions[i * 3]     = r * Math.sin(phi) * Math.cos(theta);
+    positions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+    positions[i * 3 + 2] = r * Math.cos(phi);
+    var c = Math.random() < 0.20 ? goldColor : blueColor;
+    colors[i * 3]     = c.r;
+    colors[i * 3 + 1] = c.g;
+    colors[i * 3 + 2] = c.b;
+  }
+
+  var geometry = new THREE.BufferGeometry();
+  geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+  var material = new THREE.PointsMaterial({ size: 0.55, vertexColors: true, transparent: true, opacity: 0.75, sizeAttenuation: true });
+  var particles = new THREE.Points(geometry, material);
+  scene.add(particles);
+
+  var mouseX = 0, mouseY = 0, scrollY = 0;
+  if (!isMobile) {
+    document.addEventListener('mousemove', function (e) {
+      mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+      mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+    });
+  }
+  window.addEventListener('scroll', function () { scrollY = window.scrollY; });
+  window.addEventListener('resize', function () {
+    isMobile = window.innerWidth < 768;
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  });
+
+  var clock = new THREE.Clock();
+  function animate() {
+    requestAnimationFrame(animate);
+    var t = clock.getElapsedTime();
+    particles.rotation.y = t * 0.07;
+    particles.rotation.x = t * 0.035;
+    if (!isMobile) {
+      particles.rotation.y += mouseX * 0.03;
+      particles.rotation.x += mouseY * 0.03;
+    }
+    particles.position.y = -scrollY * 0.012;
+    renderer.render(scene, camera);
+  }
+  animate();
+});
+
+// Scroll reveal
+var revealObserver = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.10 });
+document.querySelectorAll('.fade-up').forEach(function (el) { revealObserver.observe(el); });
+
+// Toggle answer reveal
+function toggleAnswer(btn) {
+  var answer = btn.nextElementSibling;
+  if (answer.style.display === 'block') {
+    answer.style.display = 'none';
+    btn.textContent = 'Show Answer';
+  } else {
+    answer.style.display = 'block';
+    btn.textContent = 'Hide Answer';
+  }
+}
+</script>
+
+</body>
+</html>

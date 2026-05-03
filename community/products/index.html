@@ -1,0 +1,628 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AFOQT Products — App, Study Guides, Tutoring | FissionLab by Dr. Preston PhD</title>
+<meta name="description" content="Every AFOQT prep product in one place — the AI-powered adaptive app, digital study guides, 1-on-1 tutoring packages, and free community access. Built by a PhD Nuclear Engineer and USAF officer.">
+<meta property="og:title" content="AFOQT Products — FissionLab by Dr. Preston PhD">
+<meta property="og:description" content="App, study guides, practice packs, and 1-on-1 coaching — all built by a PhD Nuclear Engineer and USAF officer.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fissionlab.net/community/products/">
+<link rel="canonical" href="https://fissionlab.net/community/products/">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K285VK64MP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-K285VK64MP');
+</script>
+<meta name="google-adsense-account" content="ca-pub-3289071681648577">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3289071681648577" crossorigin="anonymous"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --navy:#0a1628;
+  --navy2:#0d1f3c;
+  --gold:#c9a84c;
+  --gold2:#e8c97a;
+  --white:#ffffff;
+  --cream:#f0ebe0;
+  --dim:rgba(240,235,224,0.82);
+  --border:rgba(201,168,76,0.15);
+  --border2:rgba(201,168,76,0.08);
+}
+#particle-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;}
+body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--navy);color:var(--cream);overflow-x:hidden;font-size:16px;line-height:1.75;padding-top:64px;}
+main,section,header,footer,.nav-wrap,.hero,.page-hero{position:relative;z-index:1;}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:64px;padding:0 8vw;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--white);font-size:1.05rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;}
+.nav-atom-core{color:var(--gold);font-size:16px;margin-right:2px;}
+.nav-logo-text span{color:var(--gold);}
+.nav-links{display:flex;gap:1.6rem;align-items:center;}
+.nav-links a{font-size:0.75rem;font-weight:500;color:rgba(240,235,224,0.72);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover{color:var(--white);}
+.nav-links a.active{color:var(--gold);border-bottom:2px solid var(--gold);padding-bottom:2px;}
+.nav-cta{background:var(--gold)!important;color:var(--navy)!important;padding:8px 18px!important;border-radius:6px;font-weight:700!important;border-bottom:none!important;}
+.nav-cta:hover{background:var(--gold2)!important;}
+.nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;color:var(--cream);}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--cream);margin:5px 0;}
+.nav-overlay{display:none;position:fixed;inset:0;z-index:199;background:rgba(10,22,40,0.97);flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;}
+.nav-overlay.open{display:flex;}
+.nav-overlay a{font-size:1.4rem;font-weight:600;color:var(--cream);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;}
+.nav-overlay a:hover{color:var(--gold);}
+.nav-overlay a.active{color:var(--gold);}
+.nav-overlay-close{position:absolute;top:24px;right:8vw;background:none;border:none;cursor:pointer;color:var(--cream);font-size:2rem;line-height:1;}
+
+/* ── BUTTONS ── */
+.btn-primary{display:inline-block;background:var(--gold);color:var(--navy);padding:14px 32px;border-radius:6px;font-weight:700;font-size:0.95rem;text-decoration:none;letter-spacing:0.03em;transition:background 0.2s,transform 0.15s;text-align:center;border:2px solid var(--gold);cursor:pointer;}
+.btn-primary:hover{background:var(--gold2);border-color:var(--gold2);transform:translateY(-2px);}
+.btn-ghost{display:inline-block;background:transparent;color:var(--white);padding:14px 32px;border-radius:6px;font-weight:600;font-size:0.95rem;text-decoration:none;letter-spacing:0.03em;border:2px solid rgba(201,168,76,0.6);transition:border-color 0.2s,color 0.2s,transform 0.15s;text-align:center;}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
+.btn-discord{display:inline-block;background:#5865f2;color:#fff;padding:14px 32px;border-radius:6px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:background 0.2s,transform 0.15s;text-align:center;}
+.btn-discord:hover{background:#4752c4;transform:translateY(-2px);}
+
+/* ── FOOTER ── */
+footer{background:#060f1c;border-top:1px solid rgba(201,168,76,0.1);padding:48px 8vw;text-align:center;font-size:13px;color:rgba(240,235,224,0.35);position:relative;z-index:1;}
+footer a{color:rgba(201,168,76,0.7);text-decoration:none;}
+footer a:hover{color:var(--gold);}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:24px;margin-bottom:20px;}
+.footer-links a{font-size:12px;letter-spacing:0.05em;text-transform:uppercase;}
+
+/* ── HERO ── */
+.hero{padding:100px 8vw 72px;max-width:1100px;margin:0 auto;text-align:center;}
+.badge{display:inline-block;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.4);border-radius:4px;padding:4px 14px;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:22px;}
+.hero h1{font-family:Georgia,serif;font-size:clamp(32px,5vw,62px);font-weight:700;color:var(--white);line-height:1.1;margin-bottom:18px;}
+.hero h1 em{color:var(--gold);font-style:normal;}
+.hero-sub{font-size:clamp(15px,1.7vw,19px);color:var(--dim);max-width:640px;margin:0 auto 40px;}
+.hero-pills{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.hero-pill{background:rgba(13,31,60,0.75);border:1px solid var(--border2);border-radius:40px;padding:8px 18px;font-size:13px;color:var(--dim);}
+
+/* ── SECTION SHARED ── */
+.page-section{padding:72px 8vw;}
+.section-inner{max-width:1100px;margin:0 auto;}
+.section-tag{display:block;font-size:10px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+.section-h2{font-family:Georgia,serif;font-size:clamp(26px,3.5vw,42px);color:var(--white);margin-bottom:16px;}
+.section-sub{font-size:1rem;color:var(--dim);max-width:580px;margin-bottom:48px;}
+
+/* ── CARDS ── */
+.card{background:rgba(13,31,60,0.75);border:1px solid var(--border2);border-radius:12px;padding:32px 28px;display:flex;flex-direction:column;gap:14px;transition:border-color 0.2s,transform 0.2s;}
+.card:hover{border-color:rgba(201,168,76,0.3);transform:translateY(-3px);}
+.card.featured{border-color:rgba(201,168,76,0.5);box-shadow:0 0 32px rgba(201,168,76,0.07);}
+
+/* ── APP SECTION ── */
+.app-section{background:rgba(13,31,60,0.35);border-top:1px solid var(--border2);border-bottom:1px solid var(--border2);}
+.app-desc{font-size:1rem;color:var(--dim);max-width:640px;margin-bottom:48px;}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:920px;margin-bottom:40px;}
+.price-tier{font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);}
+.price-amount{font-family:Georgia,serif;font-size:2.4rem;color:var(--white);font-weight:700;line-height:1;}
+.price-amount span{font-size:14px;color:var(--dim);font-family:inherit;}
+.price-features{list-style:none;display:flex;flex-direction:column;gap:8px;flex:1;}
+.price-features li{font-size:14px;color:var(--dim);padding-left:22px;position:relative;}
+.price-features li::before{content:'✓';position:absolute;left:0;color:var(--gold);}
+
+/* tutoring included bar */
+.included-bar{background:rgba(201,168,76,0.05);border:1px solid rgba(201,168,76,0.18);border-radius:10px;padding:32px 36px;text-align:center;max-width:680px;margin:0 auto 40px;}
+.included-bar h3{font-family:Georgia,serif;font-size:1.25rem;color:var(--white);margin-bottom:8px;}
+.included-bar p{color:var(--dim);font-size:14px;margin-bottom:20px;}
+
+/* token verify */
+.verify-box{background:rgba(13,31,60,0.6);border:1px solid var(--border2);border-radius:10px;padding:28px 32px;max-width:560px;margin:0 auto 0;}
+.verify-box h3{font-family:Georgia,serif;font-size:1.1rem;color:var(--white);margin-bottom:8px;}
+.verify-box p{color:var(--dim);font-size:14px;margin-bottom:18px;}
+.verify-input{display:flex;gap:10px;flex-wrap:wrap;}
+.verify-input input{flex:1;min-width:190px;padding:11px 14px;background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.3);border-radius:6px;color:var(--white);font-size:14px;font-family:monospace;letter-spacing:0.06em;}
+.verify-input input::placeholder{color:rgba(240,235,224,0.3);}
+
+/* ── GUIDES SECTION ── */
+.guides-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-bottom:28px;}
+.guide-card{background:rgba(13,31,60,0.75);border:1px solid var(--border2);border-radius:12px;padding:28px 24px;display:flex;flex-direction:column;gap:12px;transition:border-color 0.2s,transform 0.2s;}
+.guide-card:hover{border-color:rgba(201,168,76,0.35);transform:translateY(-3px);}
+.guide-price-badge{display:inline-block;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);border-radius:4px;padding:3px 10px;font-size:12px;font-weight:700;color:var(--gold);letter-spacing:0.05em;width:fit-content;}
+.guide-title{font-family:Georgia,serif;font-size:1rem;color:var(--white);line-height:1.35;}
+.guide-desc{font-size:13.5px;color:var(--dim);flex:1;line-height:1.6;}
+.guide-buy{display:inline-block;background:var(--gold);color:var(--navy);padding:10px 22px;border-radius:6px;font-weight:700;font-size:0.88rem;text-decoration:none;transition:background 0.2s;text-align:center;}
+.guide-buy:hover{background:var(--gold2);}
+.store-link{text-align:center;margin-top:8px;}
+.store-link a{color:var(--gold);font-size:14px;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);}
+.store-link a:hover{color:var(--gold2);}
+
+/* ── TUTORING SECTION ── */
+.tutoring-section{background:rgba(13,31,60,0.25);border-top:1px solid var(--border2);border-bottom:1px solid var(--border2);}
+.tutoring-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
+.tut-card{background:rgba(13,31,60,0.75);border:1px solid var(--border2);border-radius:12px;padding:32px 26px;display:flex;flex-direction:column;gap:12px;transition:border-color 0.2s,transform 0.2s;}
+.tut-card:hover{border-color:rgba(201,168,76,0.35);transform:translateY(-3px);}
+.tut-card.featured{border-color:rgba(201,168,76,0.5);box-shadow:0 0 32px rgba(201,168,76,0.07);}
+.tut-label{font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);}
+.tut-price{font-family:Georgia,serif;font-size:2rem;color:var(--white);font-weight:700;}
+.tut-save{font-size:12px;color:#4ca878;font-weight:600;}
+.tut-desc{font-size:14px;color:var(--dim);flex:1;}
+
+/* ── COMMUNITY SECTION ── */
+.community-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;}
+.community-card{border-radius:14px;padding:40px 36px;display:flex;flex-direction:column;gap:14px;}
+.community-card.discord{background:rgba(88,101,242,0.08);border:2px solid rgba(88,101,242,0.3);}
+.community-card.skool{background:rgba(201,168,76,0.05);border:2px solid rgba(201,168,76,0.2);}
+.community-card h3{font-family:Georgia,serif;font-size:1.3rem;color:var(--white);}
+.community-card .free-badge{display:inline-block;background:rgba(76,168,120,0.15);border:1px solid rgba(76,168,120,0.4);border-radius:4px;padding:3px 10px;font-size:11px;font-weight:700;color:#4ca878;letter-spacing:0.1em;width:fit-content;}
+.community-card p{font-size:14px;color:var(--dim);}
+.community-card ul{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.community-card ul li{font-size:14px;color:var(--dim);padding-left:18px;position:relative;}
+.community-card ul li::before{content:'→';position:absolute;left:0;color:var(--gold);font-size:12px;}
+
+/* ── NEWSLETTER ── */
+.newsletter-section{background:rgba(13,31,60,0.4);border-top:1px solid var(--border2);}
+.newsletter-inner{max-width:540px;margin:0 auto;text-align:center;}
+.newsletter-inner h2{font-family:Georgia,serif;font-size:1.5rem;color:var(--white);margin-bottom:8px;}
+.newsletter-inner p{font-size:14px;color:var(--dim);margin-bottom:22px;}
+.nl-form{display:flex;gap:10px;flex-wrap:wrap;}
+.nl-form input{flex:1;min-width:200px;padding:12px 14px;border-radius:6px;border:1px solid rgba(201,168,76,0.3);background:rgba(255,255,255,0.05);color:var(--white);font-size:15px;}
+.nl-form input::placeholder{color:rgba(240,235,224,0.35);}
+.nl-form button{padding:12px 22px;background:var(--gold);color:var(--navy);border:none;border-radius:6px;font-weight:700;cursor:pointer;white-space:nowrap;font-size:0.9rem;transition:background 0.2s;}
+.nl-form button:hover{background:var(--gold2);}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity 0.65s ease,transform 0.65s ease;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+
+@media(max-width:820px){
+  .nav-links{display:none;}
+  .nav-hamburger{display:block;}
+  .pricing-grid,.guides-grid,.tutoring-grid,.community-grid{grid-template-columns:1fr;}
+  .hero{padding:80px 6vw 56px;}
+  .page-section{padding:56px 6vw;}
+  .included-bar{padding:28px 20px;}
+  .community-card{padding:28px 22px;}
+}
+</style>
+</head>
+<body>
+<div id="nav-root"></div>
+<script src="../../nav-component.js"></script>
+<canvas id="particle-canvas"></canvas>
+
+
+
+
+<!-- ══════════════════════════════════════════════
+     SECTION 1: HERO
+══════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="badge">AFOQT PREP COMPLETE TOOLKIT</div>
+  <h1>Everything You Need to<br><em>Ace the AFOQT</em></h1>
+  <p class="hero-sub">App, study guides, practice packs, and 1-on-1 coaching &mdash; all built by a PhD Nuclear Engineer and USAF officer.</p>
+  <div class="hero-pills">
+    <span class="hero-pill">&#9679; AI-Powered Adaptive App</span>
+    <span class="hero-pill">&#9679; Digital Study Guides</span>
+    <span class="hero-pill">&#9679; 1:1 Tutoring</span>
+    <span class="hero-pill">&#9679; Free Community</span>
+  </div>
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:36px;">
+    <a href="#app" class="btn-primary">Browse Products &darr;</a>
+    <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" rel="noopener" class="btn-ghost" onclick="gtag('event','hero_cta_click',{cta:'book_intro'});">Book Free Intro &rarr;</a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 2: AFOQT APP
+══════════════════════════════════════════════ -->
+<section id="app" class="page-section app-section">
+  <div class="section-inner">
+    <div class="badge">AI-POWERED</div>
+    <h2 class="section-h2" style="margin-top:12px;">AFOQT Adaptive Intelligence App</h2>
+    <p class="app-desc">The only prep app that identifies exactly which question types slow you down &mdash; then drills you on those until they become strengths. Built on Dr. Preston&rsquo;s PhD-level expertise across all 12 AFOQT subtests.</p>
+
+    <!-- Pricing Cards -->
+    <div class="pricing-grid">
+      <!-- Free -->
+      <div class="card fade-up">
+        <div class="price-tier">Free Tier</div>
+        <div class="price-amount">$0</div>
+        <ul class="price-features">
+          <li>10 questions per day</li>
+          <li>All 12 AFOQT subtests</li>
+          <li>Basic scoring &amp; feedback</li>
+          <li>No account required</li>
+        </ul>
+        <a href="https://dr-p-afoqt-app.hf.space" target="_blank" rel="noopener" class="btn-ghost" onclick="gtag('event','app_cta_click',{location:'products_pricing',tier:'free'});">Try Free App &rarr;</a>
+      </div>
+
+      <!-- Monthly — featured -->
+      <div class="card featured fade-up">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <div class="price-tier">Monthly</div>
+          <div class="badge" style="margin:0;font-size:10px;">MOST POPULAR</div>
+        </div>
+        <div class="price-amount">$9.99<span>&nbsp;/mo</span></div>
+        <ul class="price-features">
+          <li>Unlimited questions</li>
+          <li>AI weakness targeting</li>
+          <li>Progress analytics dashboard</li>
+          <li>Study schedule generator</li>
+          <li>All 12 AFOQT subtests</li>
+        </ul>
+        <a href="https://buy.stripe.com/5kQfZadJAbnQ5OagjU1Fe09" target="_blank" rel="noopener" class="btn-primary" onclick="gtag('event','app_cta_click',{location:'products_pricing',tier:'monthly'});">Get Monthly Access &rarr;</a>
+      </div>
+
+      <!-- Annual -->
+      <div class="card fade-up">
+        <div class="price-tier">Annual &mdash; Save 33%</div>
+        <div class="price-amount">$79.99<span>&nbsp;/yr</span></div>
+        <ul class="price-features">
+          <li>Everything in Monthly</li>
+          <li>Priority support from Dr. Preston</li>
+          <li>Early access to new features</li>
+          <li>Best value for full prep cycle</li>
+        </ul>
+        <a href="https://buy.stripe.com/7sY14g20SeA2ccy9Vw1Fe0a" target="_blank" rel="noopener" class="btn-primary" onclick="gtag('event','app_cta_click',{location:'products_pricing',tier:'annual'});">Get Annual Access &rarr;</a>
+      </div>
+    </div>
+
+    <!-- OR GET IT FREE bar -->
+    <div class="included-bar fade-up">
+      <div class="badge" style="margin-bottom:12px;">BEST VALUE</div>
+      <h3>OR GET IT FREE WITH TUTORING</h3>
+      <p>Become a Dr. Preston tutoring student and receive <strong style="color:var(--white);">full app access included</strong> at no extra charge &mdash; plus a personalized study plan built around your test date.</p>
+      <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" rel="noopener" class="btn-primary" onclick="gtag('event','book_session_click',{location:'app_included_bar'});">Book a Session &mdash; App Included Free &rarr;</a>
+    </div>
+
+    <!-- Token Verification -->
+    <div class="verify-box fade-up">
+      <h3>Already a Student? Unlock Full Access</h3>
+      <p>Enter your student token from your welcome email. Format: <code style="color:var(--gold);background:rgba(201,168,76,0.08);padding:2px 6px;border-radius:3px;font-size:13px;">FLAB-XXXX-XXXX-XXXX</code></p>
+      <div class="verify-input">
+        <input type="text" id="token-input" placeholder="FLAB-XXXX-XXXX-XXXX" maxlength="19" autocomplete="off" spellcheck="false">
+        <button onclick="verifyToken()" class="btn-primary" style="white-space:nowrap;padding:11px 22px;font-size:0.88rem;">Verify Access &rarr;</button>
+      </div>
+      <p id="verify-msg" style="font-size:13px;margin-top:10px;display:none;"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 3: DIGITAL STUDY GUIDES
+══════════════════════════════════════════════ -->
+<section id="guides" class="page-section">
+  <div class="section-inner">
+    <span class="section-tag">Digital Downloads</span>
+    <h2 class="section-h2">Digital Study Guides</h2>
+    <p class="section-sub">Concise, field-tested references built from Dr. Preston&rsquo;s own AFOQT prep and PhD coursework. Instant download via Gumroad.</p>
+
+    <div class="guides-grid">
+
+      <!-- Physical Science Cheat Sheet -->
+      <div class="guide-card fade-up">
+        <div class="guide-price-badge">$12</div>
+        <div class="guide-title">AFOQT Physical Science Cheat Sheet</div>
+        <p class="guide-desc">Every formula, constant, and concept you need for the Physical Science subtest &mdash; organized for rapid review the night before your exam.</p>
+        <a href="https://prestonj.gumroad.com/l/afoqt-science-cheatsheet" target="_blank" rel="noopener" class="guide-buy" onclick="gtag('event','affiliate_click',{affiliate:'gumroad',product:'science-cheatsheet',value:12});">Buy Now &rarr;</a>
+      </div>
+
+      <!-- Math Formula Quick Reference -->
+      <div class="guide-card fade-up">
+        <div class="guide-price-badge">$9</div>
+        <div class="guide-title">AFOQT Math Formula Quick Reference</div>
+        <p class="guide-desc">Arithmetic operations, algebra, geometry, and table reading formulas distilled to one printable quick-reference guide. Saves hours of note-taking.</p>
+        <a href="https://prestonj.gumroad.com/l/afoqt-math-cheatsheet" target="_blank" rel="noopener" class="guide-buy" onclick="gtag('event','affiliate_click',{affiliate:'gumroad',product:'math-cheatsheet',value:9});">Buy Now &rarr;</a>
+      </div>
+
+      <!-- 100 Hard Practice Questions -->
+      <div class="guide-card fade-up">
+        <div class="guide-price-badge">$7</div>
+        <div class="guide-title">100 Hard AFOQT Practice Questions</div>
+        <p class="guide-desc">The questions real test-takers get wrong. Each problem includes a worked solution and the concept tested &mdash; so you learn, not just drill.</p>
+        <a href="https://prestonj.gumroad.com/l/afoqt-100-hard-questions" target="_blank" rel="noopener" class="guide-buy" onclick="gtag('event','affiliate_click',{affiliate:'gumroad',product:'100-hard-questions',value:7});">Buy Now &rarr;</a>
+      </div>
+
+      <!-- 30-Day Study Plan -->
+      <div class="guide-card fade-up">
+        <div class="guide-price-badge">$14</div>
+        <div class="guide-title">AFOQT 30-Day Study Plan Template</div>
+        <p class="guide-desc">A fully structured, day-by-day study calendar with subtest focus, daily time targets, and review checkpoints. Works with any schedule.</p>
+        <a href="https://prestonj.gumroad.com/l/afoqt-30day-plan" target="_blank" rel="noopener" class="guide-buy" onclick="gtag('event','affiliate_click',{affiliate:'gumroad',product:'30day-plan',value:14});">Buy Now &rarr;</a>
+      </div>
+
+    </div>
+
+    <div class="store-link">
+      Browse full store &rarr; <a href="https://prestonj.gumroad.com" target="_blank" rel="noopener" onclick="gtag('event','affiliate_click',{affiliate:'gumroad',product:'store'});">prestonj.gumroad.com</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 4: 1:1 TUTORING PACKAGES
+══════════════════════════════════════════════ -->
+<section id="tutoring" class="page-section tutoring-section">
+  <div class="section-inner">
+    <span class="section-tag">Private Instruction</span>
+    <h2 class="section-h2">1:1 Tutoring with Dr. Preston</h2>
+    <p class="section-sub">Work directly with a PhD Nuclear Engineer and USAF officer who has helped students raise AFOQT scores by 20&ndash;40+ points. Full app access included with every package.</p>
+
+    <div class="tutoring-grid">
+
+      <!-- Single Session -->
+      <div class="tut-card fade-up">
+        <div class="tut-label">Single Session</div>
+        <div class="tut-price">$70<span style="font-size:1rem;color:var(--dim);font-family:inherit;">/hr</span></div>
+        <div class="tut-desc">A focused 60-minute session on the subtest of your choice. Great for a quick weak-spot fix or a trial session before committing to a package.</div>
+        <ul class="price-features">
+          <li>60 minutes, 1-on-1</li>
+          <li>Choose any AFOQT subtest</li>
+          <li>App access included</li>
+          <li>Session notes provided</li>
+        </ul>
+        <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" rel="noopener" class="btn-ghost" onclick="gtag('event','tutoring_cta_click',{package:'single',value:70});">Book a Session &rarr;</a>
+      </div>
+
+      <!-- 5-Session Pack — featured -->
+      <div class="tut-card featured fade-up">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+          <div class="tut-label">5-Session Pack</div>
+          <div class="badge" style="margin:0;font-size:10px;">POPULAR</div>
+        </div>
+        <div class="tut-price">$325</div>
+        <div class="tut-save">Save $25 vs. individual rate</div>
+        <div class="tut-desc">Five focused sessions with structured progress between each meeting. Dr. Preston builds a session plan around your test date and weakest subtests.</div>
+        <ul class="price-features">
+          <li>5 &times; 60-minute sessions</li>
+          <li>Custom session roadmap</li>
+          <li>Full app access included</li>
+          <li>Homework &amp; review materials</li>
+          <li>Priority scheduling</li>
+        </ul>
+        <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" rel="noopener" class="btn-primary" onclick="gtag('event','tutoring_cta_click',{package:'5-session',value:325});">Book 5-Session Pack &rarr;</a>
+      </div>
+
+      <!-- 10-Session Pack -->
+      <div class="tut-card fade-up">
+        <div class="tut-label">10-Session Pack</div>
+        <div class="tut-price">$600</div>
+        <div class="tut-save">Save $100 vs. individual rate</div>
+        <div class="tut-desc">The complete prep experience. Full-spectrum AFOQT coverage with 10 structured sessions and ongoing accountability between meetings.</div>
+        <ul class="price-features">
+          <li>10 &times; 60-minute sessions</li>
+          <li>All 12 subtest coverage</li>
+          <li>Full app access included</li>
+          <li>Weekly progress check-ins</li>
+          <li>Priority scheduling</li>
+          <li>Score guarantee discussion</li>
+        </ul>
+        <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" rel="noopener" class="btn-primary" onclick="gtag('event','tutoring_cta_click',{package:'10-session',value:600});">Book 10-Session Pack &rarr;</a>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:36px;">
+      <p style="font-size:14px;color:var(--dim);max-width:540px;margin:0 auto 20px;">Not sure which package is right for you? Start with a <strong style="color:var(--white);">free 15-minute intro call</strong> &mdash; no commitment required.</p>
+      <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" rel="noopener" class="btn-ghost" onclick="gtag('event','book_session_click',{location:'tutoring_footer'});">Book Free Intro Call &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 5: COMMUNITY
+══════════════════════════════════════════════ -->
+<section id="community" class="page-section">
+  <div class="section-inner">
+    <span class="section-tag">Community Access</span>
+    <h2 class="section-h2">Community Access</h2>
+    <p class="section-sub">Study alongside other AFOQT candidates and get direct access to Dr. Preston outside of sessions.</p>
+
+    <div class="community-grid">
+
+      <!-- Discord -->
+      <div class="community-card discord fade-up">
+        <div class="free-badge">FREE</div>
+        <h3>Discord Study Group</h3>
+        <p>Active prep community with live Q&amp;A, daily discussion, and Dr. Preston&rsquo;s study tips dropped directly in the server.</p>
+        <ul>
+          <li>Active #afoqt-prep channel</li>
+          <li>Live Q&amp;A sessions</li>
+          <li>Peer study accountability</li>
+          <li>Resource drops from Dr. Preston</li>
+        </ul>
+        <a href="https://discord.gg/rkzrxET7" target="_blank" rel="noopener" class="btn-discord" onclick="gtag('event','community_cta_click',{platform:'discord'});">Join Discord Free &rarr;</a>
+      </div>
+
+      <!-- Skool -->
+      <div class="community-card skool fade-up">
+        <div class="badge" style="margin:0;">STRUCTURED LEARNING</div>
+        <h3>Skool Community</h3>
+        <p>A structured learning environment with courses, accountability groups, and Dr. Preston&rsquo;s full resource library in one place.</p>
+        <ul>
+          <li>Structured AFOQT course modules</li>
+          <li>Accountability challenges</li>
+          <li>Dr. Preston&rsquo;s full resource library</li>
+          <li>Leaderboard &amp; gamified progress</li>
+        </ul>
+        <a href="https://www.skool.com/signup?ref=bf2cfffdff8f401cb6158104a21b85e1" target="_blank" rel="noopener" class="btn-primary" onclick="gtag('event','affiliate_click',{affiliate:'skool'});">Join Skool Community &rarr;</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 6: NEWSLETTER
+══════════════════════════════════════════════ -->
+<section class="page-section newsletter-section">
+  <div class="section-inner">
+    <div class="newsletter-inner">
+      <h2>Free Weekly AFOQT Tips</h2>
+      <p>Join <span id="sub-count">500+</span> students getting Dr. Preston&rsquo;s weekly study insights, score strategies, and exclusive prep resources.</p>
+      <div class="nl-form">
+        <input type="email" id="nl-email" placeholder="your@email.com" autocomplete="email">
+        <button onclick="subscribeNewsletter()" id="nl-btn">Subscribe Free &rarr;</button>
+      </div>
+      <p id="nl-msg" style="font-size:12px;margin-top:10px;display:none;"></p>
+      <p style="font-size:11px;color:rgba(240,235,224,0.3);margin-top:12px;">No spam. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-links">
+    <a href="../../">Home</a>
+    <a href="../../community/">Community</a>
+    <a href="../../community/resources/">Resources</a>
+    <a href="../../blog/">Blog</a>
+    <a href="../../affiliate-disclosure/">Disclosures</a>
+    <a href="mailto:Dr_PrestonD@proton.me">Contact</a>
+  </div>
+  <p>&copy; 2026 FissionLab &mdash; Dr. Preston, PhD &mdash; USAF Officer</p>
+  <p style="margin-top:8px;font-size:11px;color:rgba(240,235,224,0.2);">FissionLab is a participant in the Amazon Services LLC Associates Program (tag: fissionlab-20). As an Amazon Associate we earn from qualifying purchases. Gumroad and Skool links may earn affiliate commissions at no additional cost to you. See our <a href="../../affiliate-disclosure/">Affiliate Disclosure</a>.</p>
+</footer>
+
+<!-- THREE.js particle canvas -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+  var canvas = document.getElementById('particle-canvas');
+  if (!canvas) return;
+  var renderer, scene, camera, particles, clock;
+  try {
+    renderer = new THREE.WebGLRenderer({canvas: canvas, alpha: true, antialias: false});
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    scene = new THREE.Scene();
+    camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 50;
+    clock = new THREE.Clock();
+
+    var COUNT = 280;
+    var geo = new THREE.BufferGeometry();
+    var pos = new Float32Array(COUNT * 3);
+    var vel = new Float32Array(COUNT * 3);
+    for (var i = 0; i < COUNT; i++) {
+      pos[i*3]   = (Math.random() - 0.5) * 180;
+      pos[i*3+1] = (Math.random() - 0.5) * 100;
+      pos[i*3+2] = (Math.random() - 0.5) * 60;
+      vel[i*3]   = (Math.random() - 0.5) * 0.018;
+      vel[i*3+1] = (Math.random() - 0.5) * 0.010;
+      vel[i*3+2] = 0;
+    }
+    geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+    var mat = new THREE.PointsMaterial({color: 0xc9a84c, size: 0.55, transparent: true, opacity: 0.38, sizeAttenuation: true});
+    particles = new THREE.Points(geo, mat);
+    scene.add(particles);
+
+    function animate() {
+      requestAnimationFrame(animate);
+      var dt = clock.getDelta();
+      var posArr = particles.geometry.attributes.position.array;
+      for (var j = 0; j < COUNT; j++) {
+        posArr[j*3]   += vel[j*3];
+        posArr[j*3+1] += vel[j*3+1];
+        if (posArr[j*3]   >  90) posArr[j*3]   = -90;
+        if (posArr[j*3]   < -90) posArr[j*3]   =  90;
+        if (posArr[j*3+1] >  50) posArr[j*3+1] = -50;
+        if (posArr[j*3+1] < -50) posArr[j*3+1] =  50;
+      }
+      particles.geometry.attributes.position.needsUpdate = true;
+      particles.rotation.y += 0.00015;
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    window.addEventListener('resize', function(){
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  } catch(e) {
+    if (canvas) canvas.style.display = 'none';
+  }
+})();
+</script>
+
+<script>
+/* ── Token verification ── */
+var KNOWN_TOKENS = ['FLAB-X9OR-COW0-QAPS','FLAB-8FR0-D3Z1-XZUN','FLAB-CU8L-8YPJ-E0L5','FLAB-ECG5-UIAY-QQYX','FLAB-9TH4-QRTQ-GUKU'];
+
+function showVerifyMsg(text, type) {
+  var msg = document.getElementById('verify-msg');
+  msg.textContent = text;
+  msg.style.color = type === 'success' ? '#4ca878' : '#e74c3c';
+  msg.style.display = 'block';
+}
+
+async function verifyToken() {
+  var token = document.getElementById('token-input').value.trim().toUpperCase();
+  if (!token.match(/^FLAB-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}$/)) {
+    showVerifyMsg('Invalid format. Token looks like FLAB-XXXX-XXXX-XXXX', 'error'); return;
+  }
+  try {
+    var res = await fetch('https://web-production-202b9.up.railway.app/api/verify-token',
+      {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({token: token})});
+    var d = await res.json();
+    if (d.valid) { grantAccess(); return; }
+  } catch(e) {
+    if (KNOWN_TOKENS.includes(token)) { grantAccess(); return; }
+  }
+  if (KNOWN_TOKENS.includes(token)) { grantAccess(); return; }
+  showVerifyMsg('Token not found. Contact Dr. Preston at Dr_PrestonD@proton.me', 'error');
+}
+
+function grantAccess() {
+  localStorage.setItem('fl_access', 'full');
+  showVerifyMsg('Full access granted! Welcome, student. Head to the App page to begin.', 'success');
+  gtag('event', 'token_verified', {location: 'products_page'});
+}
+
+if (localStorage.getItem('fl_access') === 'full') {
+  var msg = document.getElementById('verify-msg');
+  if (msg) { msg.textContent = 'Full access active. Welcome back!'; msg.style.color = '#4ca878'; msg.style.display = 'block'; }
+}
+
+/* ── Newsletter ── */
+async function subscribeNewsletter() {
+  var email = document.getElementById('nl-email').value.trim();
+  var btn = document.getElementById('nl-btn');
+  var msg = document.getElementById('nl-msg');
+  if (!email) return;
+  btn.textContent = 'Subscribing...'; btn.disabled = true;
+  try {
+    var res = await fetch('https://web-production-202b9.up.railway.app/api/subscribe', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({email: email, source: 'products-page'})
+    });
+    var data = await res.json();
+    msg.textContent = 'You\'re subscribed! Check your inbox.';
+    msg.style.color = '#4ca878'; msg.style.display = 'block';
+    btn.textContent = 'Subscribed';
+    gtag('event','newsletter_subscribe',{source:'products-page'});
+  } catch(e) {
+    window.open('https://prestons-newsletter-5f43a7.beehiiv.com/subscribe?email=' + encodeURIComponent(email), '_blank');
+    msg.textContent = 'Opening subscription page...'; msg.style.display = 'block';
+    btn.textContent = 'Subscribe Free →'; btn.disabled = false;
+  }
+}
+
+/* ── Subscriber count ── */
+fetch('https://web-production-202b9.up.railway.app/api/subscriber-count')
+  .then(function(r){ return r.json(); })
+  .then(function(d){ if (d.count) document.getElementById('sub-count').textContent = d.count + '+'; })
+  .catch(function(){});
+
+/* ── Scroll fade-up ── */
+(function(){
+  var els = document.querySelectorAll('.fade-up');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(function(el){ el.classList.add('visible'); }); return;
+  }
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, {threshold: 0.12});
+  els.forEach(function(el){ obs.observe(el); });
+})();
+</script>
+</body>
+</html>

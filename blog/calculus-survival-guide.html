@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculus Survival Guide: Everything You Need From Limits to Integration | FissionLab by Dr. Preston PhD</title>
+<meta name="description" content="A PhD physicist's complete calculus survival guide — limits, derivatives, integrals, and real-world applications — with original worked examples and step-by-step reasoning.">
+<link rel="canonical" href="https://fissionlab.net/blog/calculus-survival-guide.html">
+<meta property="og:title" content="Calculus Survival Guide: Everything You Need From Limits to Integration">
+<meta property="og:description" content="A PhD physicist's complete calculus survival guide — limits, derivatives, integrals, and real-world applications — with original worked examples and step-by-step reasoning.">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Calculus Survival Guide: Everything You Need From Limits to Integration","author":{"@type":"Person","name":"Dr. Preston","url":"https://fissionlab.net"},"publisher":{"@type":"Organization","name":"FissionLab"},"datePublished":"2026-05-03","url":"https://fissionlab.net/blog/calculus-survival-guide.html"}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K285VK64MP"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K285VK64MP');</script>
+<meta name="google-adsense-account" content="ca-pub-3289071681648577">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3289071681648577" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0a1628;--navy2:#0d1f3c;--gold:#c9a84c;--gold2:#e8c97a;--white:#ffffff;--cream:#f0ebe0;--dim:rgba(240,235,224,0.82);--border:rgba(201,168,76,0.15);}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--navy);color:var(--cream);font-size:16px;line-height:1.8;}
+.post-hero{padding:120px 2rem 60px;max-width:800px;margin:0 auto;text-align:center;}
+.post-tag{font-size:0.72rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:block;}
+.post-hero h1{font-family:'DM Serif Display',serif;font-size:clamp(28px,5vw,52px);color:#fff;line-height:1.15;margin-bottom:20px;}
+.post-meta{font-size:13px;color:rgba(240,235,224,0.5);}
+.post-body{max-width:740px;margin:0 auto;padding:48px 2rem 80px;}
+.post-body h2{font-family:'DM Serif Display',serif;font-size:clamp(22px,3vw,32px);color:var(--white);margin:48px 0 16px;}
+.post-body h3{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--gold);margin:32px 0 12px;}
+.post-body p{color:var(--dim);margin-bottom:20px;}
+.post-body ul,.post-body ol{color:var(--dim);padding-left:24px;margin-bottom:20px;}
+.post-body li{margin-bottom:8px;}
+.post-body strong{color:var(--white);}
+.callout{background:rgba(201,168,76,0.06);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:20px 24px;margin:32px 0;}
+.callout p{margin:0;color:var(--dim);}
+.book-rec{background:rgba(13,31,60,0.75);border:1px solid rgba(201,168,76,0.15);border-radius:10px;padding:20px 24px;margin:24px 0;display:flex;gap:16px;align-items:flex-start;}
+.book-rec-info h4{font-family:'DM Serif Display',serif;color:var(--white);margin-bottom:4px;}
+.book-rec-info p{font-size:13px;color:var(--dim);margin-bottom:10px;}
+.book-rec-info a{color:var(--gold);font-size:13px;font-weight:600;text-decoration:none;}
+.formula-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px;}
+.formula-table th{background:rgba(201,168,76,0.12);color:var(--gold);font-weight:600;padding:10px 14px;text-align:left;border-bottom:1px solid var(--border);}
+.formula-table td{padding:10px 14px;border-bottom:1px solid rgba(201,168,76,0.07);color:var(--dim);}
+.formula-table tr:last-child td{border-bottom:none;}
+.formula-table code{font-family:monospace;color:var(--white);background:rgba(255,255,255,0.06);padding:2px 6px;border-radius:3px;}
+.worked-example{background:rgba(13,31,60,0.6);border:1px solid rgba(201,168,76,0.12);border-radius:10px;padding:24px;margin:28px 0;}
+.worked-example h4{font-family:'DM Serif Display',serif;color:var(--gold2);margin-bottom:12px;font-size:1rem;}
+.worked-example p{color:var(--dim);margin-bottom:10px;}
+.worked-example p:last-child{margin-bottom:0;}
+.cta-box{background:linear-gradient(135deg,rgba(13,31,60,0.9),rgba(10,22,40,0.9));border:1px solid rgba(201,168,76,0.25);border-radius:12px;padding:40px;text-align:center;margin:48px 0;}
+.cta-box h3{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--white);margin-bottom:12px;}
+.cta-box p{color:var(--dim);margin-bottom:24px;}
+.btn-primary{display:inline-block;background:var(--gold);color:var(--navy);padding:14px 32px;border-radius:6px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:background 0.2s;}
+.btn-primary:hover{background:var(--gold2);}
+footer{background:#060f1c;border-top:1px solid rgba(201,168,76,0.1);padding:32px 2rem;text-align:center;font-size:13px;color:rgba(240,235,224,0.35);}
+footer a{color:rgba(201,168,76,0.7);text-decoration:none;}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:20px;margin-bottom:14px;}
+.footer-links a{font-size:11px;letter-spacing:0.05em;text-transform:uppercase;}
+</style>
+</head>
+<body>
+<div id="nav-root"></div><script src="../nav-component.js"></script>
+
+<article>
+<div class="post-hero">
+  <span class="post-tag">MATHEMATICS &middot; CALCULUS</span>
+  <h1>Calculus Survival Guide: Everything You Need From Limits to Integration</h1>
+  <p class="post-meta">By Dr. Preston &mdash; PhD Nuclear Engineering, AFIT &middot; B.A. Physics, UC Berkeley &middot; May 3, 2026</p>
+</div>
+
+<div class="post-body">
+
+<p>Calculus has a reputation for being the hardest course in the standard math curriculum. That reputation is half-deserved. The concepts behind calculus &mdash; limits, derivatives, and integrals &mdash; are genuinely deep ideas that took mathematicians centuries to formalize. But the computational techniques are learnable by anyone who takes the time to understand the underlying logic rather than just memorizing procedures.</p>
+
+<p>I use calculus every day in nuclear engineering. Neutron transport equations, radioactive decay modeling, heat transfer in reactor cores &mdash; all of it runs on calculus. Before that, I studied physics at UC Berkeley where calculus was not a hurdle to clear but a language to learn. This guide will teach you that language, from the first definition of a limit through integration by parts.</p>
+
+<div class="callout">
+  <p><strong>What this guide covers:</strong> Limits and continuity, derivatives and differentiation rules, applications of derivatives, definite and indefinite integrals, and the Fundamental Theorem of Calculus. Each section builds on the previous one. Work through it in order if you are new to calculus; use the section headers to jump to specific topics if you are reviewing.</p>
+</div>
+
+<h2>Limits: The Foundation of Calculus</h2>
+
+<p>Everything in calculus is built on the concept of a limit. A limit asks: what value does a function approach as the input approaches some value? The notation lim<sub>x&rarr;a</sub> f(x) = L means that as x gets arbitrarily close to a (but does not necessarily equal a), f(x) gets arbitrarily close to L.</p>
+
+<p>This distinction matters. The limit of f(x) as x approaches a is about the behavior of f near a, not at a. The function might not even be defined at a. That subtlety is what allows calculus to handle rates of change (derivatives) and accumulated areas (integrals) rigorously.</p>
+
+<h3>Computing Limits</h3>
+<p>For most continuous functions, you compute limits by direct substitution: lim<sub>x&rarr;a</sub> f(x) = f(a). When direct substitution gives 0/0 (an indeterminate form), you need additional techniques.</p>
+
+<table class="formula-table">
+  <tr><th>Technique</th><th>When to Use</th><th>Example</th></tr>
+  <tr><td>Direct substitution</td><td>Function is continuous at a</td><td>lim<sub>x&rarr;3</sub> (x&sup2; + 1) = 10</td></tr>
+  <tr><td>Factor and cancel</td><td>0/0 form, polynomial numerator/denominator</td><td>lim<sub>x&rarr;2</sub> (x&sup2;&minus;4)/(x&minus;2) = lim (x+2) = 4</td></tr>
+  <tr><td>L'H&ocirc;pital's Rule</td><td>0/0 or &infin;/&infin; form</td><td>lim<sub>x&rarr;0</sub> sin(x)/x = 1</td></tr>
+  <tr><td>Rationalize</td><td>Square roots in 0/0 form</td><td>Multiply by conjugate</td></tr>
+</table>
+
+<h3>One-Sided Limits and Continuity</h3>
+<p>A function is continuous at x = a if three conditions hold: f(a) is defined, lim<sub>x&rarr;a</sub> f(x) exists, and lim<sub>x&rarr;a</sub> f(x) = f(a). Geometrically, a continuous function is one you can draw without lifting your pen. Calculus requires continuity in most of its theorems, so recognizing discontinuities (removable holes, jump discontinuities, vertical asymptotes) is a prerequisite to applying those theorems correctly.</p>
+
+<h2>Derivatives: The Rate of Change</h2>
+
+<p>The derivative of a function f at a point x measures the instantaneous rate of change of f at that point. Geometrically, it is the slope of the tangent line to the graph of f at x. The formal definition uses the limit of a difference quotient:</p>
+
+<p style="text-align:center;font-family:monospace;color:var(--white);background:rgba(13,31,60,0.6);padding:16px;border-radius:6px;margin:20px 0;">f'(x) = lim<sub>h&rarr;0</sub> [f(x+h) &minus; f(x)] / h</p>
+
+<p>You will rarely compute derivatives from this definition once you learn the differentiation rules. But understanding where the rules come from is essential for knowing when they apply and when they fail.</p>
+
+<h3>Core Differentiation Rules</h3>
+
+<table class="formula-table">
+  <tr><th>Rule</th><th>Formula</th><th>Example</th></tr>
+  <tr><td>Power rule</td><td><code>d/dx [x&#8319;] = nx&#8319;&#8315;&#185;</code></td><td>d/dx [x&sup3;] = 3x&sup2;</td></tr>
+  <tr><td>Constant rule</td><td><code>d/dx [c] = 0</code></td><td>d/dx [7] = 0</td></tr>
+  <tr><td>Sum/difference rule</td><td><code>d/dx [f &plusmn; g] = f' &plusmn; g'</code></td><td>Differentiate term by term</td></tr>
+  <tr><td>Product rule</td><td><code>d/dx [fg] = f'g + fg'</code></td><td>d/dx [x&sup2;sin x] = 2x sin x + x&sup2; cos x</td></tr>
+  <tr><td>Quotient rule</td><td><code>d/dx [f/g] = (f'g &minus; fg') / g&sup2;</code></td><td>"Low d-high minus high d-low, over low squared"</td></tr>
+  <tr><td>Chain rule</td><td><code>d/dx [f(g(x))] = f'(g(x)) &middot; g'(x)</code></td><td>d/dx [sin(x&sup2;)] = cos(x&sup2;) &middot; 2x</td></tr>
+</table>
+
+<h3>Derivatives of Common Functions</h3>
+
+<table class="formula-table">
+  <tr><th>Function</th><th>Derivative</th></tr>
+  <tr><td><code>sin x</code></td><td><code>cos x</code></td></tr>
+  <tr><td><code>cos x</code></td><td><code>&minus;sin x</code></td></tr>
+  <tr><td><code>e&#x2093;</code></td><td><code>e&#x2093;</code></td></tr>
+  <tr><td><code>ln x</code></td><td><code>1/x</code></td></tr>
+  <tr><td><code>tan x</code></td><td><code>sec&sup2; x</code></td></tr>
+  <tr><td><code>a&#x2093;</code></td><td><code>a&#x2093; ln a</code></td></tr>
+</table>
+
+<div class="worked-example">
+  <h4>Worked Example 1 &mdash; Chain Rule in Depth</h4>
+  <p><strong>Problem:</strong> Find the derivative of f(x) = e<sup>3x&sup2;</sup></p>
+  <p><strong>Identify the composition:</strong> Outer function is e<sup>u</sup>, inner function is u = 3x&sup2;</p>
+  <p><strong>Apply chain rule:</strong> f'(x) = e<sup>3x&sup2;</sup> &middot; d/dx[3x&sup2;] = e<sup>3x&sup2;</sup> &middot; 6x</p>
+  <p><strong>Answer:</strong> f'(x) = 6xe<sup>3x&sup2;</sup></p>
+</div>
+
+<h2>Applications of Derivatives</h2>
+
+<p>Derivatives earn their keep in applications. The two most important applications in calculus I are finding extrema (maximum and minimum values) and analyzing function behavior.</p>
+
+<h3>Critical Points and the First Derivative Test</h3>
+<p>A critical point occurs where f'(x) = 0 or f'(x) is undefined. At a critical point, the function might have a local maximum, a local minimum, or neither (a saddle point). The first derivative test: if f' changes from positive to negative at a critical point, there is a local maximum. If f' changes from negative to positive, there is a local minimum. If f' does not change sign, it is neither.</p>
+
+<h3>Concavity and the Second Derivative Test</h3>
+<p>The second derivative f''(x) measures the rate of change of the rate of change. If f''(x) &gt; 0, the function is concave up (curves like a cup). If f''(x) &lt; 0, the function is concave down (curves like an arch). At a critical point, if f''(x) &gt; 0 there is a local minimum; if f''(x) &lt; 0 there is a local maximum; if f''(x) = 0 the test is inconclusive.</p>
+
+<div class="worked-example">
+  <h4>Worked Example 2 &mdash; Optimization</h4>
+  <p><strong>Problem:</strong> A farmer has 120 meters of fence to enclose a rectangular field against a straight river (no fence needed on the river side). Find the dimensions that maximize area.</p>
+  <p><strong>Setup:</strong> Let x = width perpendicular to river, y = length parallel to river. Constraint: 2x + y = 120, so y = 120 &minus; 2x. Area: A = xy = x(120 &minus; 2x) = 120x &minus; 2x&sup2;</p>
+  <p><strong>Maximize:</strong> dA/dx = 120 &minus; 4x = 0 &rarr; x = 30 m</p>
+  <p><strong>Verify it's a maximum:</strong> d&sup2;A/dx&sup2; = &minus;4 &lt; 0 (concave down, confirmed maximum)</p>
+  <p><strong>Answer:</strong> x = 30 m, y = 120 &minus; 60 = 60 m. Maximum area = 30 &times; 60 = <strong>1800 m&sup2;</strong></p>
+</div>
+
+<h2>Integration: Accumulation and Area</h2>
+
+<p>Integration is the inverse of differentiation, and also the tool for computing accumulated quantities. The definite integral of f from a to b represents the net signed area between the curve y = f(x) and the x-axis over the interval [a, b].</p>
+
+<h3>The Fundamental Theorem of Calculus</h3>
+<p>The Fundamental Theorem connects derivatives and integrals. It has two parts. Part 1: if F is an antiderivative of f, then &int;<sub>a</sub><sup>b</sup> f(x) dx = F(b) &minus; F(a). Part 2: d/dx [&int;<sub>a</sub><sup>x</sup> f(t) dt] = f(x). In plain terms: differentiation and integration are inverse operations, in the same sense that multiplication and division are inverse operations.</p>
+
+<h3>Basic Integration Rules</h3>
+
+<table class="formula-table">
+  <tr><th>Function</th><th>Antiderivative</th></tr>
+  <tr><td><code>x&#8319; (n &ne; &minus;1)</code></td><td><code>x&#8319;&#8314;&#185;/(n+1) + C</code></td></tr>
+  <tr><td><code>1/x</code></td><td><code>ln|x| + C</code></td></tr>
+  <tr><td><code>e&#x2093;</code></td><td><code>e&#x2093; + C</code></td></tr>
+  <tr><td><code>sin x</code></td><td><code>&minus;cos x + C</code></td></tr>
+  <tr><td><code>cos x</code></td><td><code>sin x + C</code></td></tr>
+  <tr><td><code>sec&sup2; x</code></td><td><code>tan x + C</code></td></tr>
+</table>
+
+<h3>u-Substitution</h3>
+<p>u-Substitution is the integration analog of the chain rule. If the integrand contains a function and its derivative (or a scalar multiple of its derivative), let u = the inner function. Rewrite everything in terms of u, integrate, then substitute back.</p>
+
+<div class="worked-example">
+  <h4>Worked Example 3 &mdash; u-Substitution</h4>
+  <p><strong>Problem:</strong> Evaluate &int; 2x cos(x&sup2;) dx</p>
+  <p><strong>Let u = x&sup2;.</strong> Then du/dx = 2x, so du = 2x dx. The integral becomes:</p>
+  <p>&int; cos(u) du = sin(u) + C = <strong>sin(x&sup2;) + C</strong></p>
+  <p>Verify by differentiating: d/dx[sin(x&sup2;)] = cos(x&sup2;) &middot; 2x. Correct.</p>
+</div>
+
+<h3>Integration by Parts</h3>
+<p>Integration by parts handles products where u-substitution fails. The formula: &int; u dv = uv &minus; &int; v du. The mnemonic for choosing u is LIATE &mdash; Logarithm, Inverse trig, Algebraic (polynomial), Trigonometric, Exponential. Choose u to be the function that comes first in that list.</p>
+
+<div class="worked-example">
+  <h4>Worked Example 4 &mdash; Integration by Parts</h4>
+  <p><strong>Problem:</strong> Evaluate &int; x e<sup>x</sup> dx</p>
+  <p><strong>Choose:</strong> u = x (algebraic, listed first in LIATE), dv = e<sup>x</sup> dx</p>
+  <p><strong>Then:</strong> du = dx, v = e<sup>x</sup></p>
+  <p><strong>Apply formula:</strong> &int; x e<sup>x</sup> dx = x e<sup>x</sup> &minus; &int; e<sup>x</sup> dx = x e<sup>x</sup> &minus; e<sup>x</sup> + C = <strong>e<sup>x</sup>(x &minus; 1) + C</strong></p>
+</div>
+
+<div class="callout">
+  <p><strong>From nuclear engineering practice:</strong> I use integration constantly to compute neutron flux distributions, radioactive decay integrals, and heat generation rates. Every real physics problem involves integration. Students who treat calculus as an abstract hurdle to clear are missing the point &mdash; it is the quantitative language of the physical world. Learning it deeply, not just procedurally, pays dividends across every STEM discipline.</p>
+</div>
+
+<h2>Recommended Textbooks</h2>
+
+<div class="book-rec">
+  <div class="book-rec-info">
+    <h4>Calculus: Early Transcendentals &mdash; James Stewart</h4>
+    <p>The most widely used calculus textbook in the United States, and for good reason. Stewart's exposition is clear, the examples are well-chosen, and the problem sets are excellent with a good range from routine to challenging. The "Early Transcendentals" edition introduces exponential and logarithmic functions early, which makes applications more natural. If your university uses Stewart, work every assigned problem and then some from the sections that give you trouble.</p>
+    <a href="https://www.amazon.com/dp/1337613924?tag=fissionlab-20" target="_blank" rel="noopener">View on Amazon (affiliate link) &rarr;</a>
+  </div>
+</div>
+
+<div class="book-rec">
+  <div class="book-rec-info">
+    <h4>Linear Algebra Done Right &mdash; Sheldon Axler</h4>
+    <p>Not a calculus book, but the natural next step after calculus for students heading into STEM. Understanding linear algebra is the single biggest multiplier for advanced mathematics, physics, and machine learning. Axler's approach is unusually clean, avoiding the determinant-first treatment that confuses most students. After you have solid calculus, this book will open every door in higher mathematics.</p>
+    <a href="https://www.amazon.com/dp/3031410254?tag=fissionlab-20" target="_blank" rel="noopener">View on Amazon (affiliate link) &rarr;</a>
+  </div>
+</div>
+
+<div class="cta-box">
+  <h3>Struggling With Calculus? Let's Fix That.</h3>
+  <p>I tutor calculus at all levels, from Calc I survival through multivariable and differential equations. Book a free intro call and leave with a clear understanding of exactly where your gaps are.</p>
+  <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" class="btn-primary">Book Free 30-Min Intro &rarr;</a>
+</div>
+
+<div class="cta-box" style="background:rgba(201,168,76,0.05);border-color:rgba(201,168,76,0.2);">
+  <h3>Weekly Math and Science Insights</h3>
+  <p>Join 500+ students receiving Dr. Preston's weekly tips on calculus, physics, and STEM study strategy.</p>
+  <a href="https://prestons-newsletter-5f43a7.beehiiv.com/subscribe" target="_blank" class="btn-primary" style="background:transparent;color:var(--gold);border:2px solid var(--gold);">Subscribe Free &rarr;</a>
+</div>
+
+</div>
+</article>
+
+<footer>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/community/">Community</a><a href="/community/resources/">Resources</a>
+    <a href="/blog/">Blog</a><a href="/community/products/">Products</a>
+    <a href="mailto:Dr_PrestonD@proton.me">Contact</a>
+    <a href="/affiliate-disclosure/">Disclosures</a>
+  </div>
+  <p>&copy; 2026 FissionLab &middot; Dr. Preston PhD &middot; All sessions via Zoom</p>
+  <p style="margin-top:6px;font-size:11px;color:rgba(240,235,224,0.3)">Amazon links use affiliate tag fissionlab-20. <a href="/affiliate-disclosure/" style="color:rgba(201,168,76,0.5)">Affiliate disclosure.</a></p>
+</footer>
+</body>
+</html>

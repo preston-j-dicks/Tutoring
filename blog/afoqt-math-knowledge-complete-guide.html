@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AFOQT Math Knowledge: The Complete Study Guide (From a PhD Engineer) | FissionLab by Dr. Preston PhD</title>
+<meta name="description" content="A PhD nuclear engineer's complete breakdown of every AFOQT Math Knowledge topic — algebra, geometry, arithmetic, number theory — with formulas, strategies, and practice tips.">
+<link rel="canonical" href="https://fissionlab.net/blog/afoqt-math-knowledge-complete-guide.html">
+<meta property="og:title" content="AFOQT Math Knowledge: The Complete Study Guide (From a PhD Engineer)">
+<meta property="og:description" content="A PhD nuclear engineer's complete breakdown of every AFOQT Math Knowledge topic — algebra, geometry, arithmetic, number theory — with formulas, strategies, and practice tips.">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AFOQT Math Knowledge: The Complete Study Guide (From a PhD Engineer)","author":{"@type":"Person","name":"Dr. Preston","url":"https://fissionlab.net"},"publisher":{"@type":"Organization","name":"FissionLab"},"datePublished":"2026-05-03","url":"https://fissionlab.net/blog/afoqt-math-knowledge-complete-guide.html"}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K285VK64MP"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K285VK64MP');</script>
+<meta name="google-adsense-account" content="ca-pub-3289071681648577">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3289071681648577" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0a1628;--navy2:#0d1f3c;--gold:#c9a84c;--gold2:#e8c97a;--white:#ffffff;--cream:#f0ebe0;--dim:rgba(240,235,224,0.82);--border:rgba(201,168,76,0.15);}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--navy);color:var(--cream);font-size:16px;line-height:1.8;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,22,40,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:#fff;font-size:1rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;}
+.nav-links{display:flex;gap:1.5rem;align-items:center;}
+.nav-links a{font-size:0.78rem;font-weight:500;color:rgba(240,235,224,0.72);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--gold)!important;color:var(--navy)!important;padding:8px 20px!important;border-radius:6px;font-weight:700!important;}
+.post-hero{padding:120px 2rem 60px;max-width:800px;margin:0 auto;text-align:center;}
+.post-tag{font-size:0.72rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:block;}
+.post-hero h1{font-family:'DM Serif Display',serif;font-size:clamp(28px,5vw,52px);color:#fff;line-height:1.15;margin-bottom:20px;}
+.post-meta{font-size:13px;color:rgba(240,235,224,0.5);}
+.post-body{max-width:740px;margin:0 auto;padding:48px 2rem 80px;}
+.post-body h2{font-family:'DM Serif Display',serif;font-size:clamp(22px,3vw,32px);color:var(--white);margin:48px 0 16px;}
+.post-body h3{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--gold);margin:32px 0 12px;}
+.post-body p{color:var(--dim);margin-bottom:20px;}
+.post-body ul,.post-body ol{color:var(--dim);padding-left:24px;margin-bottom:20px;}
+.post-body li{margin-bottom:8px;}
+.post-body strong{color:var(--white);}
+.callout{background:rgba(201,168,76,0.06);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:20px 24px;margin:32px 0;}
+.callout p{margin:0;color:var(--dim);}
+.book-rec{background:rgba(13,31,60,0.75);border:1px solid rgba(201,168,76,0.15);border-radius:10px;padding:20px 24px;margin:24px 0;display:flex;gap:16px;align-items:flex-start;}
+.book-rec-info h4{font-family:'DM Serif Display',serif;color:var(--white);margin-bottom:4px;}
+.book-rec-info p{font-size:13px;color:var(--dim);margin-bottom:10px;}
+.book-rec-info a{color:var(--gold);font-size:13px;font-weight:600;text-decoration:none;}
+.formula-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px;}
+.formula-table th{background:rgba(201,168,76,0.12);color:var(--gold);font-weight:600;padding:10px 14px;text-align:left;border-bottom:1px solid var(--border);}
+.formula-table td{padding:10px 14px;border-bottom:1px solid rgba(201,168,76,0.07);color:var(--dim);}
+.formula-table tr:last-child td{border-bottom:none;}
+.formula-table code{font-family:monospace;color:var(--white);background:rgba(255,255,255,0.06);padding:2px 6px;border-radius:3px;}
+.cta-box{background:linear-gradient(135deg,rgba(13,31,60,0.9),rgba(10,22,40,0.9));border:1px solid rgba(201,168,76,0.25);border-radius:12px;padding:40px;text-align:center;margin:48px 0;}
+.cta-box h3{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--white);margin-bottom:12px;}
+.cta-box p{color:var(--dim);margin-bottom:24px;}
+.btn-primary{display:inline-block;background:var(--gold);color:var(--navy);padding:14px 32px;border-radius:6px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:background 0.2s;}
+.btn-primary:hover{background:var(--gold2);}
+footer{background:#060f1c;border-top:1px solid rgba(201,168,76,0.1);padding:32px 2rem;text-align:center;font-size:13px;color:rgba(240,235,224,0.35);}
+footer a{color:rgba(201,168,76,0.7);text-decoration:none;}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:20px;margin-bottom:14px;}
+.footer-links a{font-size:11px;letter-spacing:0.05em;text-transform:uppercase;}
+@media(max-width:600px){.nav-links{display:none}}
+</style>
+</head>
+<body>
+<div id="nav-root"></div>
+<script src="../nav-component.js"></script>
+
+<article>
+<div class="post-hero">
+  <span class="post-tag">AFOQT &middot; Math</span>
+  <h1>AFOQT Math Knowledge: The Complete Study Guide (From a PhD Engineer)</h1>
+  <p class="post-meta">By Dr. Preston &mdash; PhD Nuclear Engineering &middot; USAF Captain &middot; May 3, 2026</p>
+</div>
+
+<div class="post-body">
+
+<p>The AFOQT Math Knowledge subtest gives you 25 questions in 22 minutes. That is less than one minute per problem. Most students who struggle with this section do not struggle because the math is hard &mdash; they struggle because they spend too long on any single problem, or they never built a solid mental map of what is actually tested.</p>
+
+<p>I have a PhD in nuclear engineering. I use math every day in reactor design calculations. I also tutor officer candidates one-on-one, and I have watched hundreds of students take practice tests. The patterns are predictable. The weak spots are fixable. This guide covers everything that appears on Math Knowledge and gives you a system for studying it efficiently.</p>
+
+<div class="callout">
+  <p><strong>What this subtest tests:</strong> The Math Knowledge subtest measures your knowledge of high school mathematics &mdash; algebra, geometry, and basic number theory. It does not test calculus. It does not require a calculator. If you have a solid algebra and geometry foundation, a 75+ score is very achievable with three to four weeks of focused prep.</p>
+</div>
+
+<h2>Section 1: Arithmetic Foundations</h2>
+
+<p>Arithmetic questions show up directly and also underlie every other topic. Do not skip this section thinking it is too basic &mdash; the AFOQT routinely uses arithmetic to trip up students who rush.</p>
+
+<h3>Fractions, Decimals, and Percentages</h3>
+
+<p>You need fluency moving between these three representations. A percentage is just a fraction over 100. A decimal is a fraction over a power of 10. Practice converting quickly in your head.</p>
+
+<table class="formula-table">
+  <tr><th>Concept</th><th>Formula / Rule</th><th>Example</th></tr>
+  <tr><td>Percent to decimal</td><td><code>Divide by 100</code></td><td>35% = 0.35</td></tr>
+  <tr><td>Percent of a number</td><td><code>P% &times; N</code></td><td>15% of 80 = 0.15 &times; 80 = 12</td></tr>
+  <tr><td>Percent change</td><td><code>(New &minus; Old) / Old &times; 100</code></td><td>(90 &minus; 75) / 75 &times; 100 = 20%</td></tr>
+  <tr><td>Fraction division</td><td><code>a/b &divide; c/d = a/b &times; d/c</code></td><td>2/3 &divide; 4/5 = 10/12 = 5/6</td></tr>
+</table>
+
+<h3>Ratios and Proportions</h3>
+
+<p>The AFOQT loves ratio problems. They appear as direct ratio questions and also embedded in word problems. The key insight is that a ratio a:b means for every a of one thing there are b of another &mdash; not that the quantities themselves are a and b.</p>
+
+<p>If a ratio is 3:5 and the total is 40, the first quantity is (3/8) &times; 40 = 15 and the second is (5/8) &times; 40 = 25. Write that relationship down immediately when you see a ratio word problem.</p>
+
+<h3>Number Theory Essentials</h3>
+
+<ul>
+  <li><strong>Factors and multiples:</strong> Know how to find the LCM and GCF quickly using prime factorization.</li>
+  <li><strong>Prime numbers:</strong> Memorize primes through 50: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47.</li>
+  <li><strong>Divisibility rules:</strong> Divisible by 2 if even; by 3 if digit sum divisible by 3; by 5 if ends in 0 or 5; by 9 if digit sum divisible by 9.</li>
+  <li><strong>Order of operations:</strong> PEMDAS. The test will try to trick you with nested parentheses and negative signs.</li>
+</ul>
+
+<h2>Section 2: Algebra</h2>
+
+<p>Algebra is the highest-yield category on Math Knowledge. Expect roughly 40% of your questions to be algebraic in nature. These break down into four main areas.</p>
+
+<h3>Linear Equations and Systems</h3>
+
+<p>Solving for a single variable in one equation is the most fundamental skill. The key rule: whatever you do to one side, do to the other. For systems of two equations, substitution is usually faster than elimination for AFOQT problems because the numbers tend to be clean.</p>
+
+<table class="formula-table">
+  <tr><th>Type</th><th>Approach</th></tr>
+  <tr><td>One variable, one equation</td><td>Isolate the variable in three steps or fewer</td></tr>
+  <tr><td>Two variables, two equations</td><td>Solve one equation for x, substitute into the other</td></tr>
+  <tr><td>Inequality</td><td>Same as equation; flip the sign when multiplying/dividing by a negative</td></tr>
+</table>
+
+<h3>Quadratic Equations</h3>
+
+<p>You will see quadratics in two forms: factored form and the quadratic formula. The test rarely requires you to complete the square. Know how to factor quickly and recognize when to use the formula.</p>
+
+<p>The quadratic formula: for ax&sup2; + bx + c = 0, the solutions are x = [&minus;b &plusmn; &radic;(b&sup2; &minus; 4ac)] / 2a. The discriminant b&sup2; &minus; 4ac tells you how many real solutions exist: positive means two solutions, zero means one, negative means none.</p>
+
+<h3>Exponents and Radicals</h3>
+
+<p>This is where many students lose easy points. The rules are simple; the test makes them look complex by stacking them.</p>
+
+<table class="formula-table">
+  <tr><th>Rule</th><th>Formula</th></tr>
+  <tr><td>Product rule</td><td><code>x&sup2; &times; x&#179; = x&#8309;</code></td></tr>
+  <tr><td>Quotient rule</td><td><code>x&#8309; / x&sup2; = x&#179;</code></td></tr>
+  <tr><td>Power rule</td><td><code>(x&sup2;)&#179; = x&#8310;</code></td></tr>
+  <tr><td>Negative exponent</td><td><code>x&#8315;&#178; = 1/x&sup2;</code></td></tr>
+  <tr><td>Fractional exponent</td><td><code>x^(1/2) = &radic;x</code></td></tr>
+  <tr><td>Zero exponent</td><td><code>x&#8304; = 1 (x &ne; 0)</code></td></tr>
+</table>
+
+<h3>Logarithms</h3>
+
+<p>Logarithms appear occasionally. You do not need deep log intuition &mdash; you need to know the definition and three core rules.</p>
+
+<p>Definition: log&#8347;(x) = y means b&#696; = x. The most common bases on the test are 10 and e (natural log). Rules: log(xy) = log(x) + log(y); log(x/y) = log(x) &minus; log(y); log(x&#8319;) = n&middot;log(x). If you see log without a base, assume base 10.</p>
+
+<h2>Section 3: Geometry</h2>
+
+<p>Geometry questions test your knowledge of shapes, angles, and coordinate systems. Memorize the formulas in this section cold &mdash; they are always the same, and there is no excuse for losing points because you forgot the area of a trapezoid.</p>
+
+<h3>Area and Perimeter Formulas</h3>
+
+<table class="formula-table">
+  <tr><th>Shape</th><th>Area</th><th>Perimeter / Circumference</th></tr>
+  <tr><td>Rectangle</td><td><code>l &times; w</code></td><td><code>2(l + w)</code></td></tr>
+  <tr><td>Triangle</td><td><code>(1/2) &times; b &times; h</code></td><td>Sum of sides</td></tr>
+  <tr><td>Circle</td><td><code>&pi;r&sup2;</code></td><td><code>2&pi;r</code></td></tr>
+  <tr><td>Trapezoid</td><td><code>(1/2)(b&#8321; + b&#8322;)h</code></td><td>Sum of sides</td></tr>
+  <tr><td>Parallelogram</td><td><code>b &times; h</code></td><td><code>2(b + s)</code></td></tr>
+</table>
+
+<h3>Volume Formulas</h3>
+
+<table class="formula-table">
+  <tr><th>Shape</th><th>Volume</th></tr>
+  <tr><td>Rectangular prism</td><td><code>l &times; w &times; h</code></td></tr>
+  <tr><td>Cylinder</td><td><code>&pi;r&sup2;h</code></td></tr>
+  <tr><td>Cone</td><td><code>(1/3)&pi;r&sup2;h</code></td></tr>
+  <tr><td>Sphere</td><td><code>(4/3)&pi;r&#179;</code></td></tr>
+</table>
+
+<h3>Angle Rules</h3>
+
+<ul>
+  <li><strong>Supplementary angles</strong> sum to 180&deg;. <strong>Complementary angles</strong> sum to 90&deg;.</li>
+  <li><strong>Vertical angles</strong> are equal when two lines intersect.</li>
+  <li><strong>Parallel lines cut by a transversal:</strong> alternate interior angles are equal; co-interior angles are supplementary.</li>
+  <li><strong>Triangle interior angles</strong> always sum to 180&deg;.</li>
+  <li><strong>Exterior angle theorem:</strong> an exterior angle equals the sum of the two non-adjacent interior angles.</li>
+</ul>
+
+<h3>Pythagorean Theorem and Special Triangles</h3>
+
+<p>The Pythagorean theorem (a&sup2; + b&sup2; = c&sup2;) is tested constantly. Memorize the common Pythagorean triples: 3-4-5, 5-12-13, 8-15-17, and their multiples (6-8-10, 9-12-15, etc.). Also memorize the two special right triangles: the 45-45-90 triangle (sides in ratio 1:1:&radic;2) and the 30-60-90 triangle (sides in ratio 1:&radic;3:2).</p>
+
+<h3>Coordinate Geometry</h3>
+
+<p>Expect questions on slope, midpoint, and distance between two points.</p>
+
+<table class="formula-table">
+  <tr><th>Concept</th><th>Formula</th></tr>
+  <tr><td>Slope</td><td><code>m = (y&#8322; &minus; y&#8321;) / (x&#8322; &minus; x&#8321;)</code></td></tr>
+  <tr><td>Midpoint</td><td><code>((x&#8321;+x&#8322;)/2 , (y&#8321;+y&#8322;)/2)</code></td></tr>
+  <tr><td>Distance</td><td><code>&radic;[(x&#8322;&minus;x&#8321;)&sup2; + (y&#8322;&minus;y&#8321;)&sup2;]</code></td></tr>
+  <tr><td>Slope-intercept form</td><td><code>y = mx + b</code></td></tr>
+</table>
+
+<h2>Five Specific Practice Strategies</h2>
+
+<h3>Strategy 1: Timed Sprints, Not Marathon Sessions</h3>
+<p>Set a timer for 22 minutes and do exactly 25 questions. Score it. Review every wrong answer and every guess you got right. Do this three times per week. Do not study math for 90-minute sessions &mdash; fatigue kills retention and does not simulate test conditions.</p>
+
+<h3>Strategy 2: Formula Card Drills</h3>
+<p>Write every formula from this guide on an index card. Every morning, before you look at your phone, flip through 10 cards. After one week your formula recall will be automatic. This is the single highest-leverage habit I give my students on day one.</p>
+
+<h3>Strategy 3: Error Categorization</h3>
+<p>After every practice test, categorize each wrong answer as one of three types: (A) conceptual gap &mdash; you did not know the material; (B) careless error &mdash; you knew the material but made an arithmetic mistake; (C) time pressure &mdash; you guessed because you ran out of time. Each type has a different fix. Type A requires content study. Type B requires slowing down on computation. Type C requires pacing practice.</p>
+
+<h3>Strategy 4: Work Backwards from Answers</h3>
+<p>On multiple-choice tests, you can often plug the answer choices back into the problem. If the question asks for a value of x, substitute each answer choice and see which one satisfies the equation. This is especially fast for quadratics and inequalities where factoring takes longer than testing.</p>
+
+<h3>Strategy 5: Use the App for Adaptive Drilling</h3>
+<p>My AFOQT prep app at <a href="https://dr-p-afoqt-app.hf.space" target="_blank" style="color:var(--gold)">dr-p-afoqt-app.hf.space</a> tracks which topics you miss most frequently and serves more of those questions. Use it for 15 minutes daily between your full practice tests. Adaptive drilling is dramatically more efficient than re-reading content you already know.</p>
+
+<h2>Common Mistakes That Cost Points</h2>
+
+<ul>
+  <li><strong>Forgetting to flip the inequality sign</strong> when multiplying or dividing by a negative number. This is the single most common algebra error.</li>
+  <li><strong>Confusing radius and diameter</strong> in circle problems. Always re-read whether the problem gives you radius or diameter before plugging into a formula.</li>
+  <li><strong>Distributing incorrectly</strong> with negative signs: &minus;3(x &minus; 4) = &minus;3x + 12, not &minus;3x &minus; 12.</li>
+  <li><strong>Missing that a problem is a Pythagorean triple</strong> and doing the full square root computation instead of recognizing 5-12-13 immediately.</li>
+  <li><strong>Not reading the question stem</strong> carefully. The test regularly asks for the perimeter when the student calculates area, or asks for x&sup2; when the student solves for x.</li>
+</ul>
+
+<div class="callout">
+  <p><strong>From my tutoring sessions:</strong> The students who improve fastest on Math Knowledge are not the ones who study the most hours. They are the ones who review their errors most honestly and fix the specific gaps those errors reveal. An hour of targeted error review beats three hours of passive re-reading every time.</p>
+</div>
+
+<h2>Recommended Study Resources</h2>
+
+<div class="book-rec">
+  <div class="book-rec-info">
+    <h4>Peterson's Master the AFOQT</h4>
+    <p>The most comprehensive AFOQT prep book on the market. Covers all 12 subtests with full-length practice tests. The math section includes worked examples that show every step of the solution process. This is my primary recommendation for students starting from scratch.</p>
+    <a href="https://www.amazon.com/dp/0768944716?tag=fissionlab-20" target="_blank" rel="noopener">View on Amazon (affiliate link) &rarr;</a>
+  </div>
+</div>
+
+<div class="book-rec">
+  <div class="book-rec-info">
+    <h4>Trivium AFOQT Study Guide</h4>
+    <p>A leaner, more focused prep book that is excellent for students who already have a solid math foundation and want targeted review. The practice questions are well-calibrated to actual test difficulty, and the explanations are clear without being padded.</p>
+    <a href="https://www.amazon.com/dp/1637983417?tag=fissionlab-20" target="_blank" rel="noopener">View on Amazon (affiliate link) &rarr;</a>
+  </div>
+</div>
+
+<!-- CTA: Book session -->
+<div class="cta-box">
+  <h3>Ready to Score Higher?</h3>
+  <p>Book a free intro call. I'll review your current scores, identify your exact weak spots, and give you a personalized study plan before we even start.</p>
+  <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" class="btn-primary">Book Free 30-Min Intro &rarr;</a>
+</div>
+
+<!-- CTA: Newsletter -->
+<div class="cta-box" style="background:rgba(201,168,76,0.05);border-color:rgba(201,168,76,0.2);">
+  <h3>Get Weekly AFOQT Tips</h3>
+  <p>Join 500+ students receiving Dr. Preston's weekly study insights, practice problems, and score improvement strategies.</p>
+  <a href="https://prestons-newsletter-5f43a7.beehiiv.com/subscribe" target="_blank" class="btn-primary" style="background:transparent;color:var(--gold);border:2px solid var(--gold);">Subscribe Free &rarr;</a>
+</div>
+
+</div>
+</article>
+
+<footer>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/community/">Community</a><a href="/community/resources/">Resources</a>
+    <a href="/blog/">Blog</a><a href="/community/products/">Products</a>
+    <a href="mailto:Dr_PrestonD@proton.me">Contact</a>
+    <a href="/affiliate-disclosure/">Disclosures</a>
+  </div>
+  <p>&copy; 2026 FissionLab &middot; Dr. Preston PhD &middot; All sessions via Zoom</p>
+  <p style="margin-top:6px;font-size:11px;color:rgba(240,235,224,0.3)">Amazon links use affiliate tag fissionlab-20. <a href="/affiliate-disclosure/" style="color:rgba(201,168,76,0.5)">Affiliate disclosure.</a></p>
+</footer>
+</body>
+</html>

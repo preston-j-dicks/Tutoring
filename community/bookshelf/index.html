@@ -9,6 +9,7 @@
 <meta property="og:description" content="Field-tested book recommendations from a Berkeley-trained physicist and nuclear engineering PhD — quantum mechanics, E&M, reactor theory, radiation detection, ML, and more.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://fissionlab.net/community/bookshelf/">
+<link rel="canonical" href="https://fissionlab.net/community/bookshelf/">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -80,24 +81,10 @@ footer a{color:rgba(201,168,76,0.7);text-decoration:none;}footer a:hover{color:v
 </script>
 </head>
 <body>
+<div id="nav-root"></div>
+<script src="../../nav-component.js"></script>
 
-<nav>
-  <a href="/" class="nav-logo">
-    <span class="nav-atom-core">⚛</span>
-    <span class="nav-logo-text">FISSION<span>LAB</span></span>
-  </a>
-  <div class="nav-links">
-    <a href="/#services">Tutoring</a>
-    <a href="/community/">Community</a>
-    <a href="/community/resources/">Resources</a>
-    <a href="/community/bookshelf/" class="active">Bookshelf</a>
-    <a href="/blog/">Blog</a>
-    <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" class="nav-cta">Book Free Intro</a>
-  </div>
-  <button class="nav-hamburger" onclick="document.getElementById('nov').classList.add('open')" aria-label="Open menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+
 <div class="nav-overlay" id="nov">
   <button class="nav-overlay-close" onclick="document.getElementById('nov').classList.remove('open')" aria-label="Close">✕</button>
   <a href="/">Home</a>
@@ -397,6 +384,27 @@ footer a{color:rgba(201,168,76,0.7);text-decoration:none;}footer a:hover{color:v
         <p class="book-review">More approachable than Reif while covering the same ground — the Blundell text is excellent for self-study and as a complement to a more formal treatment. The applications sections (cosmology, astrophysics, biological systems) make the physics feel alive rather than abstract. I used this as a second pass through material that Reif had made dense.</p>
         <span class="book-audience">Best for: Physics undergrads who want a readable thermal text · Self-study · Interdisciplinary science students</span>
         <a href="https://www.amazon.com/s?k=Blundell+Concepts+Thermal+Physics+2nd&tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ── AI FOR EDUCATORS ───────────────────────────────────── -->
+<div class="subject-section" id="ai-educators">
+  <div class="subject-inner">
+    <span class="subject-tag">Bonus</span>
+    <h2 class="subject-title">AI Tools for Educators &amp; Students</h2>
+    <p class="subject-desc">Practical guides for using AI tools in teaching, studying, and professional development — from prompt engineering to workflow automation.</p>
+    <div class="book-grid">
+
+      <div class="book-card">
+        <div class="book-cover">🤖</div>
+        <div class="book-title">AI Prompts for Teachers: Ready-to-Use Communication</div>
+        <div class="book-author">Alex Morgan</div>
+        <p class="book-review">A practical, no-fluff collection of ready-to-use AI prompts for educators — covering lesson planning, student communication, assessment design, and administrative tasks. If you're a teacher or tutor who wants to save time and get more out of tools like ChatGPT and Claude, this book gives you a working toolkit without the learning curve. Useful for tutors, coaches, and anyone building educational content.</p>
+        <span class="book-audience">Best for: Teachers, tutors, and educators adopting AI tools · Anyone building study content with LLMs</span>
+        <a href="https://www.amazon.com/dp/B0GGV24PN3?tag=fissionlab-20" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
       </div>
 
     </div>

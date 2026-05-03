@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Classical Mechanics Explained: A PhD Physicist's Complete Guide | FissionLab by Dr. Preston PhD</title>
+<meta name="description" content="A PhD nuclear physicist's complete guide to classical mechanics — Newton's laws, kinematics, work-energy, momentum, and rotational motion — with original worked examples.">
+<link rel="canonical" href="https://fissionlab.net/blog/physics-mechanics-guide.html">
+<meta property="og:title" content="Classical Mechanics Explained: A PhD Physicist's Complete Guide">
+<meta property="og:description" content="A PhD nuclear physicist's complete guide to classical mechanics — Newton's laws, kinematics, work-energy, momentum, and rotational motion — with original worked examples.">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Classical Mechanics Explained: A PhD Physicist's Complete Guide","author":{"@type":"Person","name":"Dr. Preston","url":"https://fissionlab.net"},"publisher":{"@type":"Organization","name":"FissionLab"},"datePublished":"2026-05-03","url":"https://fissionlab.net/blog/physics-mechanics-guide.html"}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K285VK64MP"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K285VK64MP');</script>
+<meta name="google-adsense-account" content="ca-pub-3289071681648577">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3289071681648577" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0a1628;--navy2:#0d1f3c;--gold:#c9a84c;--gold2:#e8c97a;--white:#ffffff;--cream:#f0ebe0;--dim:rgba(240,235,224,0.82);--border:rgba(201,168,76,0.15);}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--navy);color:var(--cream);font-size:16px;line-height:1.8;}
+.post-hero{padding:120px 2rem 60px;max-width:800px;margin:0 auto;text-align:center;}
+.post-tag{font-size:0.72rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:block;}
+.post-hero h1{font-family:'DM Serif Display',serif;font-size:clamp(28px,5vw,52px);color:#fff;line-height:1.15;margin-bottom:20px;}
+.post-meta{font-size:13px;color:rgba(240,235,224,0.5);}
+.post-body{max-width:740px;margin:0 auto;padding:48px 2rem 80px;}
+.post-body h2{font-family:'DM Serif Display',serif;font-size:clamp(22px,3vw,32px);color:var(--white);margin:48px 0 16px;}
+.post-body h3{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--gold);margin:32px 0 12px;}
+.post-body p{color:var(--dim);margin-bottom:20px;}
+.post-body ul,.post-body ol{color:var(--dim);padding-left:24px;margin-bottom:20px;}
+.post-body li{margin-bottom:8px;}
+.post-body strong{color:var(--white);}
+.callout{background:rgba(201,168,76,0.06);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:20px 24px;margin:32px 0;}
+.callout p{margin:0;color:var(--dim);}
+.book-rec{background:rgba(13,31,60,0.75);border:1px solid rgba(201,168,76,0.15);border-radius:10px;padding:20px 24px;margin:24px 0;display:flex;gap:16px;align-items:flex-start;}
+.book-rec-info h4{font-family:'DM Serif Display',serif;color:var(--white);margin-bottom:4px;}
+.book-rec-info p{font-size:13px;color:var(--dim);margin-bottom:10px;}
+.book-rec-info a{color:var(--gold);font-size:13px;font-weight:600;text-decoration:none;}
+.formula-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px;}
+.formula-table th{background:rgba(201,168,76,0.12);color:var(--gold);font-weight:600;padding:10px 14px;text-align:left;border-bottom:1px solid var(--border);}
+.formula-table td{padding:10px 14px;border-bottom:1px solid rgba(201,168,76,0.07);color:var(--dim);}
+.formula-table tr:last-child td{border-bottom:none;}
+.formula-table code{font-family:monospace;color:var(--white);background:rgba(255,255,255,0.06);padding:2px 6px;border-radius:3px;}
+.worked-example{background:rgba(13,31,60,0.6);border:1px solid rgba(201,168,76,0.12);border-radius:10px;padding:24px;margin:28px 0;}
+.worked-example h4{font-family:'DM Serif Display',serif;color:var(--gold2);margin-bottom:12px;font-size:1rem;}
+.worked-example p{color:var(--dim);margin-bottom:10px;}
+.worked-example p:last-child{margin-bottom:0;}
+.cta-box{background:linear-gradient(135deg,rgba(13,31,60,0.9),rgba(10,22,40,0.9));border:1px solid rgba(201,168,76,0.25);border-radius:12px;padding:40px;text-align:center;margin:48px 0;}
+.cta-box h3{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--white);margin-bottom:12px;}
+.cta-box p{color:var(--dim);margin-bottom:24px;}
+.btn-primary{display:inline-block;background:var(--gold);color:var(--navy);padding:14px 32px;border-radius:6px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:background 0.2s;}
+.btn-primary:hover{background:var(--gold2);}
+footer{background:#060f1c;border-top:1px solid rgba(201,168,76,0.1);padding:32px 2rem;text-align:center;font-size:13px;color:rgba(240,235,224,0.35);}
+footer a{color:rgba(201,168,76,0.7);text-decoration:none;}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:20px;margin-bottom:14px;}
+.footer-links a{font-size:11px;letter-spacing:0.05em;text-transform:uppercase;}
+</style>
+</head>
+<body>
+<div id="nav-root"></div><script src="../nav-component.js"></script>
+
+<article>
+<div class="post-hero">
+  <span class="post-tag">PHYSICS &middot; MECHANICS</span>
+  <h1>Classical Mechanics Explained: A PhD Physicist's Complete Guide</h1>
+  <p class="post-meta">By Dr. Preston &mdash; PhD Nuclear Engineering, AFIT &middot; B.A. Physics, UC Berkeley &middot; May 3, 2026</p>
+</div>
+
+<div class="post-body">
+
+<p>Classical mechanics is the foundation beneath every branch of physics. Before you touch quantum mechanics, thermodynamics, or electrodynamics, you need to own Newton's three laws and the machinery that flows from them. I studied physics at UC Berkeley before earning my PhD in nuclear engineering at the Air Force Institute of Technology, and I can tell you: every advanced topic I have ever worked on &mdash; reactor neutronics, blast physics, orbital mechanics &mdash; traces its roots back to the ideas covered in this guide.</p>
+
+<p>This is not a watered-down overview. We will work through Newton's laws, kinematics in one and two dimensions, work and energy, linear and angular momentum, and rotational dynamics. Each section includes original worked examples with full solutions. By the end you will have a solid, usable command of classical mechanics.</p>
+
+<div class="callout">
+  <p><strong>Who this is for:</strong> Introductory physics students (calculus or algebra-based), AFOQT test-takers who need the Physics section, undergraduates reviewing for upper-division courses, and anyone who wants to finally feel confident with mechanics rather than just memorizing formulas.</p>
+</div>
+
+<h2>Newton's Three Laws: More Than Memorization</h2>
+
+<p>Most students can recite Newton's laws. Far fewer can apply them correctly under pressure. The difference is understanding what each law actually says about the physical world.</p>
+
+<h3>First Law: Inertia</h3>
+<p>An object at rest stays at rest, and an object in motion stays in motion at constant velocity, unless acted upon by a net external force. The key word is <strong>net</strong>. A book sitting on a table has gravity pulling it down and a normal force pushing it up. The net force is zero, so it does not accelerate &mdash; consistent with the first law.</p>
+
+<h3>Second Law: F = ma</h3>
+<p>The net force on an object equals its mass times its acceleration: <strong>F</strong><sub>net</sub> = m<strong>a</strong>. This is a vector equation. Force and acceleration point in the same direction. Mass is a scalar (always positive). The second law is the engine of Newtonian mechanics &mdash; almost every problem reduces to applying it correctly.</p>
+
+<h3>Third Law: Action-Reaction</h3>
+<p>For every force exerted by object A on object B, object B exerts an equal and opposite force on object A. These forces act on <em>different</em> objects, which is why they do not cancel. When you push off a wall, the wall pushes back on you with the same magnitude &mdash; that reaction force is what accelerates you away from the wall.</p>
+
+<div class="callout">
+  <p><strong>Common mistake:</strong> Students try to cancel action-reaction pairs within a single free-body diagram. You cannot. Action and reaction always act on different objects. Draw separate free-body diagrams for each object in the system.</p>
+</div>
+
+<h2>Kinematics: Describing Motion</h2>
+
+<p>Kinematics describes <em>how</em> objects move without asking <em>why</em>. The four kinematic equations for constant acceleration are the most-used equations in all of introductory physics. Derive them once from the definitions of velocity and acceleration so you understand where they come from, then memorize them.</p>
+
+<table class="formula-table">
+  <tr><th>Equation</th><th>Variables</th><th>Missing</th></tr>
+  <tr><td><code>v = v&#8320; + at</code></td><td>v, v&#8320;, a, t</td><td>x</td></tr>
+  <tr><td><code>x = v&#8320;t + &frac12;at&sup2;</code></td><td>x, v&#8320;, a, t</td><td>v</td></tr>
+  <tr><td><code>v&sup2; = v&#8320;&sup2; + 2ax</code></td><td>v, v&#8320;, a, x</td><td>t</td></tr>
+  <tr><td><code>x = &frac12;(v&#8320; + v)t</code></td><td>x, v&#8320;, v, t</td><td>a</td></tr>
+</table>
+
+<p>The strategy for every kinematics problem: identify what you know, identify what you want, pick the equation that contains both and excludes the variable you do not have. It is a pattern-matching exercise once you internalize the four equations.</p>
+
+<div class="worked-example">
+  <h4>Worked Example 1 &mdash; Braking Distance</h4>
+  <p><strong>Problem:</strong> A car traveling at 30 m/s brakes with a constant deceleration of 6 m/s&sup2;. How far does it travel before stopping?</p>
+  <p><strong>Known:</strong> v&#8320; = 30 m/s, a = &minus;6 m/s&sup2;, v = 0 (final, at rest)</p>
+  <p><strong>Want:</strong> x (displacement)</p>
+  <p><strong>Use:</strong> v&sup2; = v&#8320;&sup2; + 2ax (no t needed)</p>
+  <p><strong>Solution:</strong> 0 = (30)&sup2; + 2(&minus;6)x &rarr; 0 = 900 &minus; 12x &rarr; x = 75 m</p>
+  <p><strong>Answer:</strong> The car travels <strong>75 meters</strong> before stopping.</p>
+</div>
+
+<h3>Projectile Motion</h3>
+<p>Projectile motion is two-dimensional kinematics. The horizontal and vertical directions are independent. Horizontal: constant velocity (a<sub>x</sub> = 0). Vertical: constant acceleration due to gravity (a<sub>y</sub> = &minus;9.8 m/s&sup2; downward). Solve each direction separately, then combine.</p>
+
+<div class="worked-example">
+  <h4>Worked Example 2 &mdash; Projectile Range</h4>
+  <p><strong>Problem:</strong> A ball is launched at 20 m/s at an angle of 30&deg; above horizontal. Find the horizontal range (assume flat ground).</p>
+  <p><strong>Horizontal:</strong> v&#8320;x = 20cos(30&deg;) = 20(0.866) = 17.3 m/s</p>
+  <p><strong>Vertical:</strong> v&#8320;y = 20sin(30&deg;) = 20(0.5) = 10 m/s</p>
+  <p><strong>Time of flight:</strong> At landing, vertical displacement = 0. Using y = v&#8320;yt + &frac12;(&minus;9.8)t&sup2;: 0 = 10t &minus; 4.9t&sup2; &rarr; t(10 &minus; 4.9t) = 0 &rarr; t = 2.04 s</p>
+  <p><strong>Range:</strong> x = v&#8320;x &middot; t = 17.3 &times; 2.04 = <strong>35.3 m</strong></p>
+</div>
+
+<h2>Work, Energy, and Power</h2>
+
+<p>The work-energy theorem is one of the most powerful tools in mechanics because it converts a vector problem (forces and accelerations) into a scalar problem (energy bookkeeping). This makes many otherwise difficult problems straightforward.</p>
+
+<h3>Work</h3>
+<p>Work done by a constant force F on an object displaced by distance d is W = Fd cos&theta;, where &theta; is the angle between the force and the displacement. Work is positive when the force has a component along the motion, negative when it opposes the motion, and zero when the force is perpendicular to the motion.</p>
+
+<h3>Kinetic and Potential Energy</h3>
+<table class="formula-table">
+  <tr><th>Quantity</th><th>Formula</th><th>Units</th></tr>
+  <tr><td>Kinetic energy</td><td><code>KE = &frac12;mv&sup2;</code></td><td>Joules (J)</td></tr>
+  <tr><td>Gravitational PE</td><td><code>PE = mgh</code></td><td>Joules (J)</td></tr>
+  <tr><td>Spring PE</td><td><code>PE = &frac12;kx&sup2;</code></td><td>Joules (J)</td></tr>
+  <tr><td>Work-energy theorem</td><td><code>W<sub>net</sub> = &Delta;KE</code></td><td>Joules (J)</td></tr>
+  <tr><td>Power</td><td><code>P = W/t = Fv</code></td><td>Watts (W)</td></tr>
+</table>
+
+<div class="worked-example">
+  <h4>Worked Example 3 &mdash; Roller Coaster Drop</h4>
+  <p><strong>Problem:</strong> A 500 kg roller coaster car starts from rest at the top of a 40 m hill. Assuming no friction, what is its speed at the bottom?</p>
+  <p><strong>Approach:</strong> Use conservation of mechanical energy: PE<sub>top</sub> + KE<sub>top</sub> = PE<sub>bottom</sub> + KE<sub>bottom</sub></p>
+  <p>mgh + 0 = 0 + &frac12;mv&sup2;</p>
+  <p>v = &radic;(2gh) = &radic;(2 &times; 9.8 &times; 40) = &radic;784 = <strong>28 m/s</strong></p>
+  <p>Note: mass cancels entirely. The speed at the bottom depends only on the height dropped, not the mass of the car.</p>
+</div>
+
+<h2>Linear Momentum and Collisions</h2>
+
+<p>Momentum is mass times velocity: <strong>p</strong> = m<strong>v</strong>. The law of conservation of momentum states that in the absence of external forces, the total momentum of a system is constant. This law holds even when energy is not conserved (inelastic collisions).</p>
+
+<h3>Types of Collisions</h3>
+<ul>
+  <li><strong>Elastic:</strong> Both momentum and kinetic energy are conserved. Billiard ball collisions approximate this well.</li>
+  <li><strong>Perfectly inelastic:</strong> The objects stick together after colliding. Momentum is conserved; kinetic energy is not. This is the easiest type to solve: m&#8321;v&#8321; + m&#8322;v&#8322; = (m&#8321; + m&#8322;)v<sub>f</sub>.</li>
+  <li><strong>Partially inelastic:</strong> Objects separate but some kinetic energy is lost. Use momentum conservation; do not assume energy conservation.</li>
+</ul>
+
+<div class="worked-example">
+  <h4>Worked Example 4 &mdash; Ballistic Pendulum</h4>
+  <p><strong>Problem:</strong> A 0.01 kg bullet traveling at 400 m/s embeds in a 2 kg block at rest. Find the velocity of the block-bullet system immediately after impact.</p>
+  <p><strong>Conservation of momentum:</strong> m<sub>bullet</sub>v<sub>bullet</sub> + m<sub>block</sub>(0) = (m<sub>bullet</sub> + m<sub>block</sub>)v<sub>f</sub></p>
+  <p>0.01 &times; 400 = (0.01 + 2)v<sub>f</sub></p>
+  <p>4 = 2.01 v<sub>f</sub></p>
+  <p>v<sub>f</sub> = 4/2.01 = <strong>1.99 m/s</strong></p>
+</div>
+
+<h3>Impulse</h3>
+<p>Impulse J = F &middot; &Delta;t = &Delta;p. When a large force acts for a short time (like a bat hitting a ball), the change in momentum is the impulse. This is why airbags work &mdash; they increase the collision time, which reduces the peak force even though the total impulse (change in momentum) is the same.</p>
+
+<h2>Rotational Motion and Torque</h2>
+
+<p>Rotational mechanics is the angular analog of linear mechanics. Every linear quantity has a rotational counterpart. Understanding these parallels makes rotational physics much easier to learn.</p>
+
+<table class="formula-table">
+  <tr><th>Linear</th><th>Rotational</th><th>Relationship</th></tr>
+  <tr><td>Position x</td><td>Angle &theta;</td><td>x = r&theta;</td></tr>
+  <tr><td>Velocity v</td><td>Angular velocity &omega;</td><td>v = r&omega;</td></tr>
+  <tr><td>Acceleration a</td><td>Angular acceleration &alpha;</td><td>a = r&alpha;</td></tr>
+  <tr><td>Force F</td><td>Torque &tau;</td><td>&tau; = rF sin&theta;</td></tr>
+  <tr><td>Mass m</td><td>Moment of inertia I</td><td>I = &Sigma;mr&sup2;</td></tr>
+  <tr><td>F = ma</td><td>&tau; = I&alpha;</td><td>(Newton's 2nd, rotational)</td></tr>
+  <tr><td>p = mv</td><td>L = I&omega;</td><td>Angular momentum</td></tr>
+</table>
+
+<h3>Moment of Inertia</h3>
+<p>The moment of inertia I quantifies how mass is distributed relative to the rotation axis. The farther mass is from the axis, the larger I and the harder it is to change the object's rotation. Key values to memorize: solid sphere I = (2/5)mr&sup2;; hollow sphere I = (2/3)mr&sup2;; solid cylinder I = (1/2)mr&sup2;; thin rod about center I = (1/12)mL&sup2;.</p>
+
+<div class="worked-example">
+  <h4>Worked Example 5 &mdash; Spinning Figure Skater</h4>
+  <p><strong>Problem:</strong> A figure skater has moment of inertia 4 kg&middot;m&sup2; and spins at 2 rev/s. She pulls in her arms, reducing I to 1 kg&middot;m&sup2;. What is her new angular velocity?</p>
+  <p><strong>Conservation of angular momentum:</strong> L<sub>i</sub> = L<sub>f</sub> &rarr; I<sub>i</sub>&omega;<sub>i</sub> = I<sub>f</sub>&omega;<sub>f</sub></p>
+  <p>4 &times; 2 = 1 &times; &omega;<sub>f</sub></p>
+  <p>&omega;<sub>f</sub> = <strong>8 rev/s</strong></p>
+  <p>She spins four times faster &mdash; exactly what you observe when a skater pulls in their arms.</p>
+</div>
+
+<h2>Putting It All Together: Problem-Solving Framework</h2>
+
+<p>The single biggest difference between students who excel at mechanics and those who struggle is not raw mathematical ability. It is the discipline to follow a systematic problem-solving process every time.</p>
+
+<ol>
+  <li><strong>Draw the diagram.</strong> A free-body diagram for force problems, a sketch of the trajectory for kinematics, a system diagram for collisions. Never skip this step.</li>
+  <li><strong>Define a coordinate system.</strong> Choose positive directions deliberately. For projectile motion, positive-y upward is conventional. State your choice and stick to it.</li>
+  <li><strong>List knowns and unknowns.</strong> Write them out explicitly. This identifies which equation or principle to use.</li>
+  <li><strong>Apply the relevant principle.</strong> Newton's second law, energy conservation, momentum conservation, or a kinematic equation &mdash; pick the one appropriate for the problem.</li>
+  <li><strong>Solve algebraically, then substitute numbers.</strong> Keeping symbols as long as possible reduces arithmetic errors and shows your reasoning clearly.</li>
+  <li><strong>Check units and reasonableness.</strong> A speed of 10,000 m/s for a thrown ball should immediately signal an error. Sanity-check your answer.</li>
+</ol>
+
+<div class="callout">
+  <p><strong>From my tutoring practice:</strong> Students who draw the diagram and label their coordinate system before writing a single equation make far fewer sign errors. A five-second investment in setup prevents a ten-minute debugging session. Physics is not a race to write equations &mdash; it is a discipline of organized thinking.</p>
+</div>
+
+<h2>Recommended Textbooks</h2>
+
+<div class="book-rec">
+  <div class="book-rec-info">
+    <h4>University Physics &mdash; Young &amp; Freedman</h4>
+    <p>The gold-standard calculus-based introductory physics textbook. Exceptionally clear explanations, hundreds of worked examples, and rigorous problem sets. Used in essentially every serious undergraduate physics course in the United States. If you want one mechanics reference that will serve you from freshman physics through preparation for graduate work, this is it. The 15th edition includes excellent digital resources.</p>
+    <a href="https://www.amazon.com/dp/0135159698?tag=fissionlab-20" target="_blank" rel="noopener">View on Amazon (affiliate link) &rarr;</a>
+  </div>
+</div>
+
+<div class="book-rec">
+  <div class="book-rec-info">
+    <h4>Fundamentals of Physics &mdash; Halliday, Resnick &amp; Walker</h4>
+    <p>The other titan of introductory physics. Slightly more concise than Young &amp; Freedman, with a different selection of problems. Many students find the Halliday approach more direct for mechanics in particular. The extended edition covers everything from kinematics through modern physics. I recommend comparing a chapter from both books and choosing the exposition style that clicks better for you.</p>
+    <a href="https://www.amazon.com/dp/111823071X?tag=fissionlab-20" target="_blank" rel="noopener">View on Amazon (affiliate link) &rarr;</a>
+  </div>
+</div>
+
+<div class="cta-box">
+  <h3>Need Help With Physics?</h3>
+  <p>I tutor physics one-on-one over Zoom &mdash; from high school mechanics through upper-division undergraduate courses. Book a free intro call and let's build a plan specific to your goals.</p>
+  <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" class="btn-primary">Book Free 30-Min Intro &rarr;</a>
+</div>
+
+<div class="cta-box" style="background:rgba(201,168,76,0.05);border-color:rgba(201,168,76,0.2);">
+  <h3>Get Weekly Science and Study Tips</h3>
+  <p>Join 500+ students receiving Dr. Preston's weekly insights on physics, math, and test prep.</p>
+  <a href="https://prestons-newsletter-5f43a7.beehiiv.com/subscribe" target="_blank" class="btn-primary" style="background:transparent;color:var(--gold);border:2px solid var(--gold);">Subscribe Free &rarr;</a>
+</div>
+
+</div>
+</article>
+
+<footer>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/community/">Community</a><a href="/community/resources/">Resources</a>
+    <a href="/blog/">Blog</a><a href="/community/products/">Products</a>
+    <a href="mailto:Dr_PrestonD@proton.me">Contact</a>
+    <a href="/affiliate-disclosure/">Disclosures</a>
+  </div>
+  <p>&copy; 2026 FissionLab &middot; Dr. Preston PhD &middot; All sessions via Zoom</p>
+  <p style="margin-top:6px;font-size:11px;color:rgba(240,235,224,0.3)">Amazon links use affiliate tag fissionlab-20. <a href="/affiliate-disclosure/" style="color:rgba(201,168,76,0.5)">Affiliate disclosure.</a></p>
+</footer>
+</body>
+</html>
