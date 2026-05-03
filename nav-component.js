@@ -21,7 +21,7 @@
   var isRoot = (depth === 0 || path === '/' || path === '/index.html');
 
   var navLinks = [
-    { label: 'Tutoring',   href: isRoot ? '#services' : b + 'students.html',        key: 'tutoring' },
+    { label: 'Tutoring',   href: isRoot ? '#services' : b + 'index.html#services',   key: 'tutoring' },
     { label: 'Community',  href: b + 'community/',                                  key: 'community' },
     { label: 'Resources',  href: b + 'community/resources/',                        key: 'resources' },
     { label: 'Blog',       href: b + 'blog/',                                       key: 'blog' },
