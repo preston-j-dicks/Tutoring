@@ -135,7 +135,7 @@
     '.nav-dropdown{position:relative}' +
     '.nav-dropdown-label{cursor:pointer;display:flex;align-items:center;gap:4px;font-size:0.75rem;font-weight:500;color:rgba(240,235,224,0.72);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s;}' +
     '.nav-dropdown:hover .nav-dropdown-label{color:#fff}' +
-    '.nav-dropdown-panel{display:none;position:absolute;top:calc(100% + 8px);left:-12px;background:rgba(10,22,40,0.98);border:1px solid rgba(201,168,76,0.2);border-radius:8px;min-width:200px;padding:8px 0;z-index:300}' +
+    '.nav-dropdown-panel{display:none;position:absolute;top:100%;left:-12px;background:rgba(10,22,40,0.98);border:1px solid rgba(201,168,76,0.2);border-radius:8px;min-width:200px;padding:16px 0 8px;z-index:300}' +
     '.nav-dropdown:hover .nav-dropdown-panel,.nav-dropdown-panel:hover{display:block}' +
     '.nav-dropdown-panel a{display:flex;align-items:center;gap:8px;padding:10px 16px;font-size:0.78rem;color:rgba(240,235,224,0.82);text-decoration:none;letter-spacing:0.04em;transition:background 0.15s,color 0.15s}' +
     '.nav-dropdown-panel a:hover{background:rgba(201,168,76,0.08);color:#c9a84c}' +
