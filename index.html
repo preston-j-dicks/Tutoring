@@ -147,7 +147,7 @@ nav{
 
 /* ── HERO ────────────────────────────────────────────────────────────────── */
 .hero{
-  min-height:100vh;display:flex;align-items:center;
+  min-height:88vh;display:flex;align-items:center;
   padding:0 8vw;padding-top:64px;
 }
 .hero-inner{max-width:640px}
@@ -206,7 +206,7 @@ nav{
   backdrop-filter:blur(8px);
   border-top:1px solid rgba(201,168,76,0.2);
   border-bottom:1px solid rgba(201,168,76,0.2);
-  padding:40px 8vw;
+  padding:24px 8vw;
 }
 .stats-grid{
   display:grid;grid-template-columns:repeat(4,1fr);
@@ -240,18 +240,18 @@ nav{
 }
 .section-sub{
   font-size:1rem;color:var(--dim);
-  max-width:580px;line-height:1.75;margin-bottom:60px;
+  max-width:580px;line-height:1.75;margin-bottom:36px;
 }
 
 /* ── SERVICES ────────────────────────────────────────────────────────────── */
 #services{
-  padding:100px 8vw;
+  padding:72px 8vw;
   background:rgba(10,22,40,0.7);
 }
 .services-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:2px;margin-top:60px;
+  gap:2px;margin-top:36px;
 }
 .service-card{
   background:rgba(13,31,60,0.75);
@@ -292,7 +292,7 @@ nav{
 
 /* ── TESTIMONIALS ────────────────────────────────────────────────────────── */
 #testimonials{
-  padding:80px 8vw;
+  padding:56px 8vw;
   background:rgba(13,27,42,0.9);
 }
 .testi-grid{
@@ -329,7 +329,7 @@ nav{
 
 /* ── PACKAGES ────────────────────────────────────────────────────────────── */
 #packages{
-  padding:100px 8vw;
+  padding:72px 8vw;
   background:var(--navy2);
 }
 .packages-grid{
@@ -396,7 +396,7 @@ nav{
 
 /* ── HOW IT WORKS ────────────────────────────────────────────────────────── */
 #process{
-  padding:100px 8vw;
+  padding:64px 8vw;
   background:rgba(10,22,40,0.7);
 }
 .steps{
@@ -419,7 +419,7 @@ nav{
 
 /* ── PRODUCTS ────────────────────────────────────────────────────────────── */
 #products{
-  padding:100px 8vw;
+  padding:72px 8vw;
   background:#0d1f3c;
 }
 .products-grid{
@@ -488,7 +488,7 @@ nav{
 
 /* ── COURSES ─────────────────────────────────────────────────────────────── */
 #courses{
-  padding:80px 8vw;
+  padding:56px 8vw;
   background:rgba(10,22,40,0.8);
   text-align:center;
 }
@@ -520,12 +520,12 @@ nav{
 
 /* ── ABOUT ───────────────────────────────────────────────────────────────── */
 #about{
-  padding:100px 8vw;
+  padding:72px 8vw;
   background:var(--navy2);
 }
 .about-grid{
-  display:grid;grid-template-columns:380px 1fr;
-  gap:80px;align-items:center;margin-top:56px;
+  display:grid;grid-template-columns:300px 1fr;
+  gap:48px;align-items:start;margin-top:36px;
 }
 .about-photo-wrap{text-align:center}
 .about-photo{
@@ -566,7 +566,7 @@ nav{
 
 /* ── BOOKING ─────────────────────────────────────────────────────────────── */
 #booking{
-  padding:100px 8vw;
+  padding:72px 8vw;
   background:rgba(10,22,40,0.7);
 }
 .booking-wrap{
@@ -637,7 +637,7 @@ nav{
 
 /* ── BLOG ────────────────────────────────────────────────────────────────── */
 #blog{
-  padding:100px 8vw;
+  padding:72px 8vw;
   background:rgba(13,27,42,0.9);
 }
 .blog-grid{
@@ -679,7 +679,7 @@ nav{
 
 /* ── FAQ ─────────────────────────────────────────────────────────────────── */
 #faq{
-  padding:100px 8vw;
+  padding:72px 8vw;
   background:rgba(10,22,40,0.8);
 }
 .faq-list{max-width:720px;margin:48px auto 0}
@@ -847,61 +847,141 @@ footer a:hover{color:var(--gold)}
 }
 .exit-popup .spam-note{font-size:11px;color:rgba(240,235,224,0.3);margin-top:8px}
 
+/* ── SCROLL HINT ─────────────────────────────────────────────────────────── */
+.scroll-hint{
+  display:none;font-size:11px;color:rgba(201,168,76,0.55);
+  letter-spacing:0.12em;text-transform:uppercase;
+  margin-top:8px;text-align:right;
+}
+@media(max-width:768px){.scroll-hint{display:block}}
+
+/* ── MOBILE STICKY BOOK BAR ──────────────────────────────────────────────── */
+.mobile-book-bar{
+  display:none;
+  position:fixed;bottom:0;left:0;right:0;z-index:300;
+  background:var(--navy2);border-top:1px solid rgba(201,168,76,0.3);
+  padding:12px 20px;
+  box-shadow:0 -4px 20px rgba(0,0,0,0.4);
+}
+.mobile-book-bar a{
+  display:block;text-align:center;
+  background:var(--gold);color:var(--navy);
+  padding:13px;border-radius:8px;
+  font-weight:700;font-size:1rem;
+  text-decoration:none;letter-spacing:0.02em;
+}
+
 /* ── RESPONSIVE ──────────────────────────────────────────────────────────── */
 @media(max-width:768px){
-  nav{padding:0 24px}
+  nav{padding:0 20px}
   .nav-links{display:none}
   .nav-hamburger{display:block}
 
-  .hero{padding:0 24px;padding-top:80px;min-height:100vh}
-  .hero-scroll{left:24px}
+  .hero{padding:0 20px;padding-top:72px;min-height:72vh}
+  .hero h1{margin-bottom:16px}
+  .hero-sub{margin-bottom:28px}
+  .hero-scroll{display:none}
 
-  .stats-bar{padding:32px 24px}
-  .stats-grid{grid-template-columns:repeat(2,1fr);gap:24px}
+  .stats-bar{padding:16px 20px}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+  .stat-num{font-size:clamp(28px,7vw,40px)}
 
-  #services{padding:72px 24px}
-  .services-grid{gap:1px}
-  .service-card{padding:28px 20px}
+  #services{padding:40px 20px}
+  .services-grid{
+    display:flex;overflow-x:auto;gap:12px;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:12px;margin-top:24px;
+  }
+  .services-grid::-webkit-scrollbar{height:3px}
+  .services-grid::-webkit-scrollbar-thumb{background:rgba(201,168,76,0.3);border-radius:2px}
+  .service-card{
+    min-width:260px;flex-shrink:0;
+    scroll-snap-align:start;padding:24px 20px;
+  }
 
-  #testimonials{padding:64px 24px}
-  .testi-grid{grid-template-columns:1fr}
+  #testimonials{padding:40px 20px}
+  .testi-grid{
+    display:flex;overflow-x:auto;gap:16px;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:12px;margin-top:28px;
+  }
+  .testi-grid::-webkit-scrollbar{height:3px}
+  .testi-grid::-webkit-scrollbar-thumb{background:rgba(201,168,76,0.3);border-radius:2px}
+  .testi-card{min-width:280px;flex-shrink:0;scroll-snap-align:start}
 
-  #packages{padding:72px 24px}
-  .packages-grid{grid-template-columns:1fr}
+  #packages{padding:40px 20px}
+  .packages-grid{
+    display:flex;overflow-x:auto;gap:16px;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:12px;margin-top:28px;
+    align-items:start;
+  }
+  .packages-grid::-webkit-scrollbar{height:3px}
+  .packages-grid::-webkit-scrollbar-thumb{background:rgba(201,168,76,0.3);border-radius:2px}
+  .pkg-card{min-width:260px;flex-shrink:0;scroll-snap-align:start}
 
-  #process{padding:72px 24px}
-  .steps{grid-template-columns:1fr 1fr}
+  #process{padding:40px 20px}
+  .steps{grid-template-columns:1fr 1fr;gap:24px;margin-top:28px}
+  .step-num{font-size:clamp(44px,10vw,64px)}
 
-  #products{padding:72px 24px}
-  .products-grid{grid-template-columns:1fr 1fr}
+  #products{padding:40px 20px}
+  .products-grid{
+    display:flex;overflow-x:auto;gap:14px;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:12px;margin-top:28px;
+  }
+  .products-grid::-webkit-scrollbar{height:3px}
+  .products-grid::-webkit-scrollbar-thumb{background:rgba(201,168,76,0.3);border-radius:2px}
+  .product-card{min-width:230px;flex-shrink:0;scroll-snap-align:start}
 
-  #about{padding:72px 24px}
-  .about-grid{grid-template-columns:1fr;gap:40px}
+  #courses{padding:40px 20px}
+
+  #about{padding:40px 20px}
+  .about-grid{grid-template-columns:1fr;gap:24px}
   .about-photo-wrap{text-align:center}
-  .about-photo{max-width:240px}
+  .about-photo{max-width:200px;aspect-ratio:auto}
+  .about-bio p{font-size:15px}
+  .cred-list{margin:16px 0 24px}
 
-  #booking{padding:72px 24px}
-  .booking-wrap{grid-template-columns:1fr;gap:40px}
+  #booking{padding:40px 20px;padding-bottom:80px}
+  .booking-wrap{grid-template-columns:1fr;gap:28px}
   .form-row{grid-template-columns:1fr}
-  .booking-form{padding:24px}
+  .booking-form{padding:20px}
+  .booking-info h3{font-size:1.1rem}
 
-  #blog{padding:72px 24px}
-  .blog-grid{grid-template-columns:1fr}
+  #blog{padding:40px 20px}
+  .blog-grid{
+    display:flex;overflow-x:auto;gap:14px;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:12px;margin-top:28px;
+  }
+  .blog-grid::-webkit-scrollbar{height:3px}
+  .blog-grid::-webkit-scrollbar-thumb{background:rgba(201,168,76,0.3);border-radius:2px}
+  .blog-card{min-width:270px;flex-shrink:0;scroll-snap-align:start}
+  .blog-view-all{margin-top:20px}
 
-  #faq{padding:72px 24px}
+  #faq{padding:40px 20px}
+  .faq-list{margin-top:24px}
 
-  .cta-strip{padding:48px 24px;justify-content:center;text-align:center}
-  .cta-strip h2{max-width:100%}
+  .cta-strip{padding:36px 20px;justify-content:center;text-align:center}
+  .cta-strip h2{max-width:100%;font-size:clamp(20px,5vw,28px)}
 
-  #courses{padding:64px 24px}
+  .email-bar{padding:36px 20px}
+  footer{padding:28px 20px;padding-bottom:80px}
+  .footer-links{gap:12px}
 
-  .email-bar{padding:40px 24px}
-  footer{padding:32px 24px}
-  .footer-links{gap:16px}
+  .section-title{font-size:clamp(24px,6vw,38px)}
+
+  .mobile-book-bar{display:block}
 }
 @media(max-width:480px){
-  .products-grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}
+  .hero h1{font-size:clamp(34px,9vw,52px)}
 }
 </style>
 </head>
@@ -1047,6 +1127,7 @@ footer a:hover{color:var(--gold)}
       </div>
 
     </div>
+    <p class="scroll-hint">swipe for more →</p>
   </div>
 </section>
 
@@ -1098,6 +1179,7 @@ footer a:hover{color:var(--gold)}
       </div>
 
     </div>
+    <p class="scroll-hint">swipe for more →</p>
   </div>
 </section>
 
@@ -1157,6 +1239,7 @@ footer a:hover{color:var(--gold)}
       </div>
 
     </div>
+    <p class="scroll-hint">swipe for more →</p>
   </div>
 </section>
 
@@ -1264,6 +1347,7 @@ footer a:hover{color:var(--gold)}
       </div>
 
     </div>
+    <p class="scroll-hint">swipe for more →</p>
   </div>
 </section>
 
@@ -1454,6 +1538,7 @@ footer a:hover{color:var(--gold)}
 
     </div>
 
+    <p class="scroll-hint">swipe for more →</p>
     <div class="blog-view-all fade-up">
       <a href="blog/" class="btn-primary">View All Articles →</a>
     </div>
@@ -1530,6 +1615,11 @@ footer a:hover{color:var(--gold)}
   <p>© 2026 FissionLab · Expert Tutoring · All sessions via Zoom</p>
   <p style="font-size:12px;color:rgba(240,235,224,0.35);margin-top:8px">Some links on this site are affiliate links. <a href="/affiliate-disclosure/" style="color:rgba(201,168,76,0.5);text-decoration:none">See our affiliate disclosure for details.</a></p>
 </footer>
+
+<!-- MOBILE STICKY BOOK BAR -->
+<div class="mobile-book-bar">
+  <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank">Book Free Intro Call →</a>
+</div>
 
 <!-- EXIT POPUP -->
 <div class="exit-popup" id="exit-popup">
