@@ -1,45 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Core pages -->
-  <url><loc>https://fissionlab.net/</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://fissionlab.net/</loc><lastmod>2026-05-10</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://fissionlab.net/resources/</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://fissionlab.net/resources.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://fissionlab.net/affiliate-disclosure/</loc><lastmod>2026-05-03</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 
-  <!-- Blog -->
-  <url><loc>https://fissionlab.net/blog/</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fissionlab.net/blog/afoqt-study-guide-2026.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <!-- Blog index -->
+  <url><loc>https://fissionlab.net/blog/</loc><lastmod>2026-05-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- AFOQT blog posts -->
+  <url><loc>https://fissionlab.net/blog/afoqt-study-guide-2026.html</loc><lastmod>2026-05-10</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://fissionlab.net/blog/afoqt-verbal-analogies-tips.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://fissionlab.net/blog/afoqt-verbal-analogies-strategies.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://fissionlab.net/blog/afoqt-math-knowledge-complete-guide.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fissionlab.net/blog/afoqt-aviation-information-guide.html</loc><lastmod>2026-05-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fissionlab.net/blog/afoqt-instrument-comprehension-guide.html</loc><lastmod>2026-05-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fissionlab.net/blog/afoqt-physical-science-review.html</loc><lastmod>2026-05-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fissionlab.net/blog/how-to-study-for-afoqt-30-days.html</loc><lastmod>2026-05-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- AI / ML blog posts -->
   <url><loc>https://fissionlab.net/blog/ai-tools-physics-students.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://fissionlab.net/blog/how-to-use-chatgpt-study.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://fissionlab.net/blog/ai-tools-for-students-2026.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://fissionlab.net/blog/best-ai-tools-solopreneurs-2026.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://fissionlab.net/blog/ml-for-beginners.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://fissionlab.net/blog/physics-tutor-online.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <!-- Community hub -->
-  <url><loc>https://fissionlab.net/community/</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://fissionlab.net/community/resources/</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://fissionlab.net/community/bookshelf/</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fissionlab.net/community/practice/</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fissionlab.net/community/forum/</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://fissionlab.net/community/about/</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://fissionlab.net/community/app/</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://fissionlab.net/community/downloads/afoqt-cheat-sheet.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fissionlab.net/community/products/</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-
-  <!-- Subject hubs -->
-  <url><loc>https://fissionlab.net/community/physics/</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://fissionlab.net/community/ai-ml/</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://fissionlab.net/community/sat-act/</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://fissionlab.net/community/mathematics/</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-
-  <!-- Subject blog posts -->
-  <url><loc>https://fissionlab.net/blog/physics-mechanics-guide.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://fissionlab.net/blog/machine-learning-beginners.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fissionlab.net/blog/machine-learning-for-engineers.html</loc><lastmod>2026-05-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fissionlab.net/blog/ai-ml-career-path.html</loc><lastmod>2026-05-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Physics blog posts -->
+  <url><loc>https://fissionlab.net/blog/physics-tutor-online.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://fissionlab.net/blog/physics-mechanics-guide.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fissionlab.net/blog/nuclear-engineering-explained.html</loc><lastmod>2026-05-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Math / SAT blog posts -->
   <url><loc>https://fissionlab.net/blog/sat-math-strategies.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://fissionlab.net/blog/calculus-survival-guide.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fissionlab.net/blog/ai-ml-career-path.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Community hub -->
+  <url><loc>https://fissionlab.net/community/</loc><lastmod>2026-05-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://fissionlab.net/community/resources/</loc><lastmod>2026-05-10</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://fissionlab.net/community/bookshelf/</loc><lastmod>2026-05-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fissionlab.net/community/practice/</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fissionlab.net/community/forum/</loc><lastmod>2026-05-03</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://fissionlab.net/community/about/</loc><lastmod>2026-05-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://fissionlab.net/community/app/</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://fissionlab.net/community/downloads/afoqt-cheat-sheet.html</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fissionlab.net/community/products/</loc><lastmod>2026-05-10</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+
+  <!-- Subject hubs -->
+  <url><loc>https://fissionlab.net/community/physics/</loc><lastmod>2026-05-10</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://fissionlab.net/community/ai-ml/</loc><lastmod>2026-05-10</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://fissionlab.net/community/sat-act/</loc><lastmod>2026-05-10</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://fissionlab.net/community/mathematics/</loc><lastmod>2026-05-10</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
 </urlset>
