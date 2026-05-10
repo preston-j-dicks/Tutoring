@@ -1,4 +1,4 @@
-# FissionLab Discord — Bot Commands Reference
+﻿# FissionLab Discord — Bot Commands Reference
 
 ## MEE6 Commands (built-in)
 
@@ -71,4 +71,4 @@ For an automated Pomodoro timer bot, add **Pomofocus Bot** or **Study Bot** from
 | Practice questions | https://fissionlab.net/community/practice/ |
 | Newsletter | https://www.beehiiv.com/?via=preston-dicks |
 | Book a session | https://calendly.com/preston-j-dicks/introductory-meeting |
-| Discord invite | https://discord.gg/rkzrxET7 |
+| Discord invite | https://discord.gg/e9bXRtjW |

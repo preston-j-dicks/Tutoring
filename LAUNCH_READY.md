@@ -1,4 +1,4 @@
-# FissionLab Launch Checklist — 2026-05-03
+﻿# FissionLab Launch Checklist — 2026-05-03
 
 ## Before Sending Student Invites — Verify These URLs
 
@@ -77,7 +77,7 @@ Here's what's waiting for you:
 
 **Your student access** — your token is [TOKEN]. Enter it at fissionlab.net/community/app to unlock full app access. Keep this private.
 
-**Discord** — join the study group at https://discord.gg/rkzrxET7. This is where I post weekly tips, answer questions between sessions, and where students share practice scores and study strategies.
+**Discord** — join the study group at https://discord.gg/e9bXRtjW. This is where I post weekly tips, answer questions between sessions, and where students share practice scores and study strategies.
 
 **Next session** — book directly at https://calendly.com/preston-j-dicks/introductory-meeting. Bring your practice test results and I'll build you a personalized plan for the last push before your test.
 
@@ -106,7 +106,7 @@ PhD Nuclear Engineering · USAF Captain · FissionLab
 |----------|-----|
 | Student portal | https://web-production-202b9.up.railway.app |
 | AFOQT App | https://dr-p-afoqt-app.hf.space |
-| Discord | https://discord.gg/rkzrxET7 |
+| Discord | https://discord.gg/e9bXRtjW |
 | Calendly | https://calendly.com/preston-j-dicks/introductory-meeting |
 | Beehiiv | https://prestons-newsletter-5f43a7.beehiiv.com |
 | Gumroad store | https://prestonj.gumroad.com |

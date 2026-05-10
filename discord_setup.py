@@ -1,4 +1,4 @@
-# Run: python discord_setup.py
+﻿# Run: python discord_setup.py
 # Safe to re-run — checks for existing channels before creating
 # Requires: DISCORD_BOT_TOKEN and DISCORD_GUILD_ID in .env
 
@@ -19,7 +19,7 @@ TOKEN = os.getenv("DISCORD_BOT_TOKEN")
 GUILD_ID = os.getenv("DISCORD_GUILD_ID")
 CALENDLY = "https://calendly.com/preston-j-dicks/introductory-meeting"
 SITE = "https://fissionlab.net"
-DISCORD_INVITE = "https://discord.gg/rkzrxET7"
+DISCORD_INVITE = "https://discord.gg/e9bXRtjW"
 
 # ---------------------------------------------------------------------------
 # Roles
