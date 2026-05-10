@@ -230,7 +230,7 @@ with gr.Blocks(css=CSS, title="FissionLab Math Practice — Dr. Preston PhD") as
 
     gr.Markdown("# FissionLab Math Practice App — Dr. Preston PhD")
     gr.Markdown(
-        "<div class='authority'>Dr. Preston — PhD Nuclear Engineering AFIT · B.A. Physics UC Berkeley · USAF Captain · LLNL/LBNL</div>"
+        "<div class='authority'>Dr. Preston — PhD Nuclear Engineering · Physics Educator & AI/ML Instructor</div>"
     )
 
     with gr.Tabs():

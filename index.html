@@ -150,6 +150,7 @@ nav{
   min-height:88vh;display:flex;align-items:center;
   padding:0 8vw;padding-top:64px;
 }
+@media(max-width:480px){.hero{min-height:auto;padding:60px 20px 40px;}}
 .hero-inner{max-width:640px}
 .hero-tag{
   display:inline-block;
@@ -999,7 +1000,7 @@ footer a:hover{color:var(--gold)}
 <!-- HERO -->
 <header class="hero">
   <div class="hero-inner">
-    <span class="hero-tag anim-1">Nuclear Physicist · AI/ML Engineer · U.S. Air Force Officer</span>
+    <span class="hero-tag anim-1">Nuclear Physicist · AI/ML Engineer · PhD</span>
     <h1 class="anim-2">
       Precision tutoring.<br><em>Real expertise.</em>
     </h1>
@@ -1051,7 +1052,7 @@ footer a:hover{color:var(--gold)}
       <div class="service-card fade-up">
         <span class="svc-icon">✈️</span>
         <div class="svc-name">AFOQT Prep</div>
-        <p class="svc-desc">Comprehensive preparation for all 12 AFOQT subtests. Strategy, timing, and content mastery from an Air Force officer who navigated this process firsthand.</p>
+        <p class="svc-desc">Comprehensive preparation for all 12 AFOQT subtests. Strategy, timing, and content mastery from a PhD engineer who has studied the test inside and out.</p>
         <div class="svc-tags">
           <span class="svc-tag">Verbal Analogies</span>
           <span class="svc-tag">Math Knowledge</span>
@@ -1378,16 +1379,16 @@ footer a:hover{color:var(--gold)}
     <div class="about-grid">
 
       <div class="about-photo-wrap fade-up">
-        <img src="assets/dr-preston.jpg" alt="Dr. Preston" class="about-photo" loading="lazy">
+        <img src="assets/dr-preston.jpg" alt="Dr. Preston" class="about-photo" loading="lazy" width="800" height="450">
       </div>
 
       <div class="about-bio fade-up">
         <div class="about-name">Dr. Preston</div>
-        <div class="about-title-line">PhD · Nuclear Engineering · AFIT · U.S. Air Force Officer</div>
+        <div class="about-title-line">PhD · Nuclear Engineering</div>
 
-        <p>I'm a nuclear engineer, military officer, and educator with over a decade of experience helping students achieve goals they didn't think were possible. My path has taken me from the physics labs at <strong style="color:var(--white)">UC Berkeley</strong>, where I earned a Bachelor's in Physics, to the <strong style="color:var(--white)">Air Force Institute of Technology</strong>, where I earned both my M.S. (2022) and Ph.D. (2025) in Nuclear Engineering with expertise in applied Artificial Intelligence and Machine Learning.</p>
+        <p>I'm a nuclear engineer and educator with over a decade of experience helping students achieve goals they didn't think were possible. My path has taken me from the physics labs at <strong style="color:var(--white)">UC Berkeley</strong>, where I earned a Bachelor's in Physics, to graduate school where I earned both my M.S. (2022) and Ph.D. (2025) in Nuclear Engineering with expertise in applied Artificial Intelligence and Machine Learning.</p>
 
-        <p>During my time as a <strong style="color:var(--white)">U.S. Air Force officer</strong>, I navigated the AFOQT myself, earned my commission, and served in technical and leadership roles that demanded mastery under pressure — the same kind of mastery I now help my students develop. I've worked across government, academia, and industry, applying nuclear physics and AI in real-world environments most tutors have never seen.</p>
+        <p>I've worked across government, academia, and industry, applying nuclear physics and AI in real-world environments most tutors have never seen. I navigated the officer qualifying test process and know the material inside and out — the same mastery I now help my students develop.</p>
 
         <p>I've been tutoring for <strong style="color:var(--white)">10+ years</strong>, across subjects ranging from algebra and AP Physics to Artificial Intelligence and Machine Learning, test prep (AFOQT, SAT/ACT, ASVAB), piano, martial arts, and conversational Mandarin.</p>
 
@@ -1401,20 +1402,14 @@ footer a:hover{color:var(--gold)}
           <div class="cred-item">
             <div class="cred-dot"></div>
             <div>
-              <div class="cred-text">M.S. Nuclear Engineering — Air Force Institute of Technology · 2022</div>
+              <div class="cred-text">M.S. Nuclear Engineering · 2022</div>
               <div class="cred-sub">Expertise in Applied Artificial Intelligence and Machine Learning</div>
             </div>
           </div>
           <div class="cred-item">
             <div class="cred-dot"></div>
             <div>
-              <div class="cred-text">Ph.D. Nuclear Engineering — Air Force Institute of Technology · 2025</div>
-            </div>
-          </div>
-          <div class="cred-item">
-            <div class="cred-dot"></div>
-            <div>
-              <div class="cred-text">U.S. Air Force Officer — Technical &amp; Leadership Roles · 6 Years Service</div>
+              <div class="cred-text">Ph.D. Nuclear Engineering · 2025</div>
             </div>
           </div>
           <div class="cred-item">
@@ -1634,6 +1629,9 @@ footer a:hover{color:var(--gold)}
     <p class="spam-note">No spam. Unsubscribe anytime.</p>
   </div>
 </div>
+
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="display:none;position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:#c9a84c;color:#0d1f3c;border:none;font-size:18px;cursor:pointer;z-index:999;" aria-label="Back to top">&#9650;</button>
+<script>window.addEventListener('scroll',function(){document.getElementById('btt').style.display=window.scrollY>300?'flex':'none'});</script>
 
 <!-- THREE.JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>

@@ -193,6 +193,7 @@ footer a:hover{color:var(--gold)}
   .adsense-slot{margin:0 6vw;}
   .discord-block{padding:36px 24px;}
 }
+@media(max-width:480px){.hero{min-height:auto;padding:60px 20px 40px;}}
 </style>
 </head>
 <body>
@@ -208,7 +209,7 @@ footer a:hover{color:var(--gold)}
 <div class="hero">
   <span class="hero-badge anim-1">PHYSICS &middot; BERKELEY-LEVEL DEPTH</span>
   <h1 class="anim-2">Physics Tutoring &mdash;<br><em>From Mechanics to Modern Physics</em></h1>
-  <p class="hero-sub anim-3">Taught by a PhD physicist who studied at UC Berkeley and AFIT. One-on-one sessions or self-guided community resources.</p>
+  <p class="hero-sub anim-3">Taught by a PhD physicist with a Berkeley physics degree and research experience at national laboratories. One-on-one sessions or self-guided community resources.</p>
   <div class="hero-btns anim-4">
     <a href="#subjects" class="btn-primary">Explore Resources</a>
     <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" rel="noopener" class="btn-ghost">Book Free Intro &rarr;</a>
@@ -217,7 +218,7 @@ footer a:hover{color:var(--gold)}
 
 <!-- ===================== CREDENTIALS BAR ===================== -->
 <div class="creds-bar">
-  <p><strong>B.A. Physics, UC Berkeley</strong> &nbsp;&middot;&nbsp; <strong>PhD Nuclear Engineering, AFIT</strong> &nbsp;&middot;&nbsp; <strong>USAF officer</strong> &nbsp;&middot;&nbsp; Prior research at <strong>LLNL</strong> and <strong>LBNL</strong></p>
+  <p><strong>B.A. Physics, UC Berkeley</strong> &nbsp;&middot;&nbsp; <strong>PhD Nuclear Engineering</strong> &nbsp;&middot;&nbsp; Prior research at <strong>LLNL</strong> and <strong>LBNL</strong></p>
 </div>
 
 <!-- ===================== SUBJECT SECTIONS ===================== -->
@@ -557,7 +558,7 @@ footer a:hover{color:var(--gold)}
   <div class="section-inner">
     <span class="section-tag">Subject 05</span>
     <h2 class="section-title fade-up">Nuclear Physics</h2>
-    <p class="section-desc fade-up">Nuclear physics addresses the structure of atomic nuclei, the forces that bind protons and neutrons together, and the reactions — fission, fusion, and decay — that release enormous amounts of energy. This is the subject area where Dr. Preston's research expertise is deepest, having studied it at Berkeley, AFIT, LLNL, and LBNL.</p>
+    <p class="section-desc fade-up">Nuclear physics addresses the structure of atomic nuclei, the forces that bind protons and neutrons together, and the reactions — fission, fusion, and decay — that release enormous amounts of energy. This is the subject area where Dr. Preston's research expertise is deepest, having conducted research at Berkeley, LLNL, and LBNL.</p>
 
     <div class="content-grid fade-up">
       <div class="content-card">
@@ -824,6 +825,9 @@ footer a:hover{color:var(--gold)}
     <strong style="color:rgba(201,168,76,0.6);">Affiliate Disclosure:</strong> This page contains Amazon affiliate links (tag: fissionlab-20). We earn a small commission on qualifying purchases at no cost to you. <a href="/affiliate-disclosure/">Full disclosure &rarr;</a>
   </div>
 </footer>
+
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="display:none;position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:#c9a84c;color:#0d1f3c;border:none;font-size:18px;cursor:pointer;z-index:999;" aria-label="Back to top">&#9650;</button>
+<script>window.addEventListener('scroll',function(){document.getElementById('btt').style.display=window.scrollY>300?'flex':'none'});</script>
 
 <!-- ===================== THREE.JS PARTICLE CANVAS ===================== -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>

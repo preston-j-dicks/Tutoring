@@ -20,12 +20,12 @@
   "@context": "https://schema.org",
   "@type": "Course",
   "name": "AI / Machine Learning / Deep Learning — PhD-Level Tutoring",
-  "description": "Expert AI/ML tutoring from a PhD researcher who built ML models for nuclear nonproliferation at DTRA. Covers linear algebra for ML, deep learning, neural networks, CNNs, transformers, and ML research methods.",
+  "description": "Expert AI/ML tutoring from a PhD researcher who built ML models for nuclear nonproliferation. Covers linear algebra for ML, deep learning, neural networks, CNNs, transformers, and ML research methods.",
   "subject": ["Machine Learning", "Deep Learning", "Artificial Intelligence", "Neural Networks"],
   "provider": {
     "@type": "Person",
-    "name": "Dr. Preston, PhD",
-    "jobTitle": "PhD Nuclear Engineering, AFIT",
+    "name": "Dr. Preston",
+    "jobTitle": "PhD Nuclear Engineering",
     "url": "https://fissionlab.net"
   },
   "url": "https://fissionlab.net/community/ai-ml/",
@@ -220,6 +220,7 @@ footer a:hover{color:var(--gold)}
   .toc{margin:36px 6vw 0;grid-template-columns:1fr 1fr;}
   .newsletter-bar{padding:36px 6vw;}
 }
+@media(max-width:480px){.hero{min-height:auto;padding:60px 20px 40px;}}
 </style>
 </head>
 <body>
@@ -235,7 +236,7 @@ footer a:hover{color:var(--gold)}
 <div class="hero">
   <span class="hero-badge anim-1">AI &middot; ML &middot; DEEP LEARNING &middot; PHD-LEVEL FOUNDATIONS</span>
   <h1 class="anim-2">AI / Machine Learning<br>/ Deep Learning —<br><em>PhD-Level Foundations</em></h1>
-  <p class="hero-sub anim-3">Taught by a researcher who built ML models for nuclear nonproliferation at DTRA. Theory + implementation + research methodology — from someone who uses these tools in the field.</p>
+  <p class="hero-sub anim-3">Taught by a researcher who built ML models for nuclear nonproliferation research. Theory + implementation + research methodology — from someone who uses these tools in the field.</p>
   <div class="hero-btns anim-4">
     <a href="#topics" class="btn-primary">Explore Topics</a>
     <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" rel="noopener" class="btn-ghost">Book Free Intro</a>
@@ -255,7 +256,7 @@ footer a:hover{color:var(--gold)}
 
 <!-- CREDENTIALS BAR -->
 <div class="credentials-bar">
-  <p><strong>PhD Nuclear Engineering, AFIT</strong> &nbsp;&middot;&nbsp; Research at DTRA &nbsp;&middot;&nbsp; ML for nuclear nonproliferation &nbsp;&middot;&nbsp; HuggingFace: <strong>Dr-P</strong></p>
+  <p><strong>PhD Nuclear Engineering</strong> &nbsp;&middot;&nbsp; ML for nuclear nonproliferation &nbsp;&middot;&nbsp; HuggingFace: <strong>Dr-P</strong></p>
 </div>
 
 <!-- AD SLOT -->
@@ -824,6 +825,9 @@ attn = outputs_attn.attentions  <span class="cm"># tuple of (batch, heads, seq, 
     <a href="/affiliate-disclosure/" style="color:rgba(201,168,76,0.45);">Full disclosure &rarr;</a>
   </p>
 </footer>
+
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="display:none;position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:#c9a84c;color:#0d1f3c;border:none;font-size:18px;cursor:pointer;z-index:999;" aria-label="Back to top">&#9650;</button>
+<script>window.addEventListener('scroll',function(){document.getElementById('btt').style.display=window.scrollY>300?'flex':'none'});</script>
 
 <!-- THREE.js particle canvas — purple dots for AI/ML theme -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>

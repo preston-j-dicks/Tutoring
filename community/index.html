@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FissionLab Study Community — Expert Tutoring in AFOQT, Physics, AI/ML, SAT/ACT &amp; Math</title>
-<meta name="description" content="FissionLab Study Community — expert tutoring in AFOQT, Physics, AI/ML, SAT/ACT, and Mathematics from Dr. Preston, PhD Nuclear Engineer and USAF officer.">
-<meta property="og:title" content="Free AFOQT Study Community — FissionLab">
-<meta property="og:description" content="Expert AFOQT prep, free resources, and a live Discord community led by Dr. Preston PhD, USAF officer.">
+<meta name="description" content="FissionLab Study Community — expert tutoring in AFOQT, Physics, AI/ML, SAT/ACT, and Mathematics from Dr. Preston, PhD Nuclear Engineer. Free Discord, practice problems, and weekly live Q&A.">
+<meta property="og:title" content="Free Study Community — FissionLab by Dr. Preston">
+<meta property="og:description" content="Expert AFOQT prep, free resources, and a live Discord community led by Dr. Preston PhD. Five subjects, always free.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://fissionlab.net/community/">
 <link rel="canonical" href="https://fissionlab.net/community/">
@@ -94,6 +94,12 @@ footer a:hover{color:var(--gold)}
 .sc-desc{font-size:13.5px;color:var(--dim);margin-bottom:16px;line-height:1.6;}
 .sc-link{font-size:12px;font-weight:600;letter-spacing:0.04em;}
 @media(max-width:768px){.nav-links{display:none}.nav-hamburger{display:block}.hero{padding:80px 6vw 60px;}.section{padding:60px 6vw;}}
+@media(max-width:480px){.hero{min-height:auto;padding:60px 20px 40px;}}
+.sticky-subnav{position:sticky;top:64px;z-index:100;background:#0d1f3c;border-bottom:1px solid rgba(201,168,76,0.15);padding:0 8vw;display:flex;gap:0;overflow-x:auto;scrollbar-width:none;}
+.sticky-subnav::-webkit-scrollbar{display:none;}
+.sticky-subnav a{display:inline-block;padding:12px 18px;font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(240,235,224,0.65);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color 0.2s,border-color 0.2s;}
+.sticky-subnav a:hover{color:#c9a84c;border-bottom-color:#c9a84c;}
+#btt{display:none;align-items:center;justify-content:center;}
 </style>
 <meta name="google-adsense-account" content="ca-pub-3289071681648577">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3289071681648577" crossorigin="anonymous"></script>
@@ -116,15 +122,24 @@ footer a:hover{color:var(--gold)}
   <a href="https://calendly.com/preston-j-dicks/introductory-meeting" target="_blank" style="color:var(--gold)">Book Free Intro →</a>
 </div>
 
+<nav class="sticky-subnav" aria-label="Subject navigation">
+  <a href="/community/resources/">AFOQT</a>
+  <a href="/community/physics/">Physics</a>
+  <a href="/community/ai-ml/">AI / ML</a>
+  <a href="/community/sat-act/">SAT / ACT</a>
+  <a href="/community/mathematics/">Mathematics</a>
+  <a href="/community/practice/">Practice</a>
+  <a href="/community/bookshelf/">Bookshelf</a>
+</nav>
+
 <main>
   <div class="hero" style="padding-top:100px">
     <span class="hero-tag anim-1">Free · Expert-Led · Multi-Subject · Active Community</span>
     <h1 class="anim-2">FissionLab Study Community —<br><em>Expert Tutoring Across Five Disciplines</em></h1>
-    <p class="hero-sub anim-3">PhD-level tutoring from a Nuclear Engineer, Berkeley physicist, and USAF officer. Choose your subject and dive in.</p>
+    <p class="hero-sub anim-3">PhD-level tutoring in nuclear engineering, physics, and machine learning. Choose your subject and dive in.</p>
     <div class="creds-bar anim-3">
-      <span class="cred-pill">PhD Nuclear Engineering, AFIT</span>
+      <span class="cred-pill">PhD Nuclear Engineering</span>
       <span class="cred-pill">B.A. Physics, UC Berkeley</span>
-      <span class="cred-pill">USAF officer</span>
       <span class="cred-pill">Research at LLNL, LBNL, DTRA</span>
     </div>
     <div class="hero-btns anim-4">
@@ -185,7 +200,7 @@ footer a:hover{color:var(--gold)}
       <div class="value-card fade-up">
         <span class="value-icon">📚</span>
         <div class="value-title">Expert Resources</div>
-        <div class="value-desc">Comprehensive guides covering all 12 AFOQT subtests — written by a PhD and Air Force officer who's been through it.</div>
+        <div class="value-desc">Comprehensive guides covering all 12 AFOQT subtests — written by a PhD engineer who's studied the test inside and out.</div>
       </div>
       <div class="value-card fade-up">
         <span class="value-icon">💬</span>
@@ -200,7 +215,7 @@ footer a:hover{color:var(--gold)}
       <div class="value-card fade-up">
         <span class="value-icon">✅</span>
         <div class="value-title">Always Free</div>
-        <div class="value-desc">No fees, no paywalls. Access is free because everyone who wants to serve their country deserves a real shot.</div>
+        <div class="value-desc">No fees, no paywalls. Access is free because everyone who wants to build a future in science and service deserves a real shot.</div>
       </div>
     </div>
   </div>
@@ -235,7 +250,7 @@ footer a:hover{color:var(--gold)}
         <a href="/community/about/" class="resource-card fade-up">
           <span class="rc-icon">🔬</span>
           <div class="rc-title">About Dr. Preston</div>
-          <div class="rc-desc">PhD Nuclear Engineering, AFIT 2025 — youngest graduate. USAF officer, 6 Years of Service. Your community leader.</div>
+          <div class="rc-desc">PhD Nuclear Engineering. Research at LLNL, LBNL, and DTRA. Your community leader.</div>
           <span class="rc-link">Read the Bio →</span>
         </a>
       </div>
@@ -355,6 +370,9 @@ function verifyToken(){
 }
 function trackAffiliate(p,i){if(typeof gtag!=='undefined'){gtag('event','affiliate_click',{program:p,item:i});}}
 </script>
+
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="display:none;position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:#c9a84c;color:#0d1f3c;border:none;font-size:18px;cursor:pointer;z-index:999;" aria-label="Back to top">&#9650;</button>
+<script>window.addEventListener('scroll',function(){document.getElementById('btt').style.display=window.scrollY>300?'flex':'none'});</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
 <script>
