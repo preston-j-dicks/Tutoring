@@ -387,4 +387,134 @@ def submit_answer(choice_idx, session):
     session["q_idx"] += 1
     if not session["token_verified"]:
         session["free_used"] += 1
-    session["ans
+    session["answers"].append(correct)
+    result = "Correct!" if correct else f"Incorrect. Correct: {q['choices'][q['answer']]}"
+    return session, f"**{result}**\n\n{q['explanation']}", gr.update(), gr.update(visible=True), fmt_score(session)
+
+def next_question(session):
+    if not session["token_verified"] and session["free_used"] >= FREE_Q_LIMIT:
+        return (session,
+                "**Free limit reached (10 questions).**\n\n"
+                "Unlock unlimited practice:\n"
+                "- [Monthly](https://buy.stripe.com/5kQfZadJAbnQ5OagjU1Fe09)\n"
+                "- [Annual — Best Value](https://buy.stripe.com/7sY14g20SeA2ccy9Vw1Fe0a)\n\n"
+                "Already have a token? Use the **Unlock** tab.",
+                gr.update(choices=[], value=None, interactive=False),
+                gr.update(visible=False), fmt_score(session))
+    q = get_question(session)
+    if q is None:
+        s, t = session["score"], session["q_idx"]
+        return (session, f"**Quiz complete! Final score: {s}/{t}**\n\nRefresh to restart.",
+                gr.update(choices=[], value=None, interactive=False),
+                gr.update(visible=False), fmt_score(session))
+    return (session, "",
+            gr.update(choices=q["choices"], value=None, interactive=True, label=f"Q{session['q_idx']+1}: {q['q']}"),
+            gr.update(visible=False), fmt_score(session))
+
+def verify_token_action(token, session):
+    if verify_token(token):
+        session["token_verified"] = True
+        return session, "**Premium unlocked. Unlimited access active.**"
+    return session, "**Invalid token.** Format: FLAB-XXXX-XXXX-XXXX"
+
+def ask_ai(question, history):
+    if not HAS_ANTHROPIC:
+        return history + [[question, "AI Q&A requires an Anthropic API key configured in Space settings. Contact Dr. Preston directly at Dr_PrestonD@proton.me."]]
+    try:
+        client = anthropic.Anthropic(api_key=ANTHROPIC_KEY)
+        messages = []
+        for h in history:
+            messages.append({"role": "user", "content": h[0]})
+            messages.append({"role": "assistant", "content": h[1]})
+        messages.append({"role": "user", "content": question})
+        response = client.messages.create(
+            model="claude-sonnet-4-6",
+            max_tokens=1024,
+            system=OTS_SYSTEM_PROMPT,
+            messages=messages,
+        )
+        answer = response.content[0].text
+        return history + [[question, answer]]
+    except Exception as e:
+        return history + [[question, f"Error: {str(e)}"]]
+
+with gr.Blocks(css=CSS, title="OTS Commission Roadmap — Dr. Preston") as demo:
+    session_state = gr.State(new_quiz_session())
+
+    gr.Markdown("# OTS Commission Roadmap — Dr. Preston")
+    gr.Markdown("<div class='authority'>Dr. Preston — PhD Nuclear Engineering · Physics Educator & AI/ML Instructor</div>")
+
+    with gr.Tabs():
+        # ── OTS Modules ───────────────────────────────────────────────────────
+        for mod_name, mod_content in MODULE_CONTENT.items():
+            with gr.Tab(mod_name):
+                if mod_name == "Module 4: AFOQT Preparation":
+                    with gr.Tabs():
+                        with gr.Tab("Overview"):
+                            gr.Markdown(mod_content)
+                        with gr.Tab("8-Week Plan"):
+                            gr.Markdown(EIGHT_WEEK_PLAN)
+                elif mod_name == "Module 6: AI/ML Technical Foundation":
+                    with gr.Tabs():
+                        with gr.Tab("Concepts"):
+                            gr.Markdown(mod_content)
+                        with gr.Tab("AI/ML Quiz"):
+                            score_display = gr.Markdown("Score: 0 / 0")
+                            q_radio = gr.Radio(choices=[], label="Loading first question...", interactive=True)
+                            with gr.Row():
+                                submit_btn = gr.Button("Submit Answer", variant="primary")
+                                next_btn = gr.Button("Next Question", visible=False)
+                            feedback_box = gr.Markdown("")
+                else:
+                    gr.Markdown(mod_content)
+
+        # ── AI Q&A ────────────────────────────────────────────────────────────
+        with gr.Tab("Q&A — Ask Dr. Preston's AI"):
+            gr.Markdown(
+                "### Ask anything about OTS, AFSC selection, AFOQT prep, or AI/ML.\n"
+                "*Examples: 'What AFOQT score do I need for 61D?' or 'Review my personal statement draft.'*"
+            )
+            chatbot = gr.Chatbot(height=400)
+            with gr.Row():
+                chat_input = gr.Textbox(placeholder="Ask a question...", show_label=False, scale=4)
+                send_btn = gr.Button("Send", variant="primary", scale=1)
+            chat_history = gr.State([])
+
+        # ── Token unlock ──────────────────────────────────────────────────────
+        with gr.Tab("Unlock Premium"):
+            gr.Markdown(
+                "## Unlock Unlimited Access\n\n"
+                "The free tier includes **10 practice questions**. "
+                "Premium unlocks unlimited questions across all topics.\n\n"
+                "- [Monthly Plan](https://buy.stripe.com/5kQfZadJAbnQ5OagjU1Fe09)\n"
+                "- [Annual Plan — Best Value](https://buy.stripe.com/7sY14g20SeA2ccy9Vw1Fe0a)\n\n"
+                "### Already have a token?"
+            )
+            token_input = gr.Textbox(label="Enter your token (FLAB-XXXX-XXXX-XXXX)", placeholder="FLAB-XXXX-XXXX-XXXX")
+            verify_btn = gr.Button("Verify Token", variant="primary")
+            verify_status = gr.Markdown("")
+
+    # Wire up quiz
+    demo.load(next_question, inputs=[session_state],
+              outputs=[session_state, feedback_box, q_radio, next_btn, score_display])
+    submit_btn.click(submit_answer, inputs=[q_radio, session_state],
+                     outputs=[session_state, feedback_box, q_radio, next_btn, score_display])
+    next_btn.click(next_question, inputs=[session_state],
+                   outputs=[session_state, feedback_box, q_radio, next_btn, score_display])
+    verify_btn.click(verify_token_action, inputs=[token_input, session_state],
+                     outputs=[session_state, verify_status])
+
+    # Wire up Q&A
+    def on_send(question, history):
+        if not question.strip():
+            return history, history, ""
+        new_history = ask_ai(question, history)
+        return new_history, new_history, ""
+
+    send_btn.click(on_send, inputs=[chat_input, chat_history],
+                   outputs=[chatbot, chat_history, chat_input])
+    chat_input.submit(on_send, inputs=[chat_input, chat_history],
+                      outputs=[chatbot, chat_history, chat_input])
+
+if __name__ == "__main__":
+    demo.launch()
