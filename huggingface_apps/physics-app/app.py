@@ -15,7 +15,7 @@ def verify_token(token: str) -> bool:
     if not TOKEN_PATTERN.match(token):
         return False
     try:
-        r = requests.post(PORTAL_VERIFY_URL, json={"token": token}, timeout=5)
+        r = requests.get(PORTAL_VERIFY_URL, params={"token": token}, timeout=5)
         if r.status_code == 200 and r.json().get("valid"):
             return True
     except Exception:
