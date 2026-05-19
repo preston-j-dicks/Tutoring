@@ -7,6 +7,36 @@
 <meta name="robots" content="noindex, nofollow">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K285VK64MP"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K285VK64MP');</script>
+<script>
+(function(){
+  var KEY='FLAB-4MY3-ZK9R-WQP7';
+  if(sessionStorage.getItem('fl_amy_auth')!=='1'){
+    document.addEventListener('DOMContentLoaded',function(){
+      document.getElementById('fl-gate').style.display='flex';
+      document.getElementById('fl-content').style.display='none';
+      document.getElementById('fl-key-input').focus();
+    });
+  } else {
+    document.addEventListener('DOMContentLoaded',function(){
+      document.getElementById('fl-gate').style.display='none';
+      document.getElementById('fl-content').style.display='block';
+    });
+  }
+  window._flUnlock=function(){
+    var v=document.getElementById('fl-key-input').value.trim().toUpperCase();
+    if(v===KEY){
+      sessionStorage.setItem('fl_amy_auth','1');
+      document.getElementById('fl-gate').style.display='none';
+      document.getElementById('fl-content').style.display='block';
+    } else {
+      document.getElementById('fl-key-err').style.display='block';
+      document.getElementById('fl-key-input').value='';
+      document.getElementById('fl-key-input').focus();
+    }
+  };
+  window._flKeydown=function(e){if(e.key==='Enter')window._flUnlock();};
+})();
+</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{--gold:#c9a84c;--bg:#0a1628;--card:#0d1f3c;--border:rgba(201,168,76,0.18);--text:#f0ebe0;--muted:rgba(240,235,224,0.5)}
@@ -65,9 +95,40 @@ a:hover{opacity:.8}
 /* Footer */
 .footer{text-align:center;padding:32px 20px 0;font-size:.75rem;color:rgba(240,235,224,.25)}
 .footer a{color:rgba(201,168,76,.5)}
+
+/* Content hidden until unlocked */
+#fl-content{display:none}
+
+/* Key gate */
+#fl-gate{display:none;position:fixed;inset:0;z-index:999;background:#0a1628;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 20px}
+#fl-gate .g-logo{font-size:1.05rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:32px}
+#fl-gate .g-logo span{color:#c9a84c}
+#fl-gate h2{font-size:1.4rem;font-weight:700;color:#fff;margin-bottom:8px}
+#fl-gate p{font-size:.88rem;color:rgba(240,235,224,.5);margin-bottom:28px;max-width:340px}
+#fl-key-input{width:100%;max-width:300px;background:rgba(13,31,60,.9);border:1px solid rgba(201,168,76,.3);border-radius:8px;padding:13px 16px;font-size:.95rem;font-family:monospace;color:#f0ebe0;text-align:center;letter-spacing:.1em;outline:none;margin-bottom:12px;display:block}
+#fl-key-input:focus{border-color:rgba(201,168,76,.7)}
+#fl-key-err{display:none;font-size:.8rem;color:#e05555;margin-bottom:12px}
+#fl-gate .g-btn{background:#c9a84c;color:#0a1628;font-weight:700;font-size:.9rem;padding:13px 32px;border-radius:8px;border:none;cursor:pointer;transition:opacity .15s;width:100%;max-width:300px}
+#fl-gate .g-btn:hover{opacity:.85}
+#fl-gate .g-back{margin-top:24px;font-size:.78rem;color:rgba(240,235,224,.25)}
+#fl-gate .g-back a{color:rgba(201,168,76,.5);text-decoration:none}
 </style>
 </head>
 <body>
+
+<!-- Key gate -->
+<div id="fl-gate">
+  <div class="g-logo">Fission<span>Lab</span></div>
+  <h2>Private Portal</h2>
+  <p>Enter the access key Dr. Preston sent you to continue.</p>
+  <input id="fl-key-input" type="text" placeholder="FLAB-XXXX-XXXX-XXXX" autocomplete="off" spellcheck="false" onkeydown="_flKeydown(event)" />
+  <div id="fl-key-err">Incorrect key — check for typos and try again.</div>
+  <button class="g-btn" onclick="_flUnlock()">Unlock Portal</button>
+  <p class="g-back"><a href="/">&#8592; FissionLab</a></p>
+</div>
+
+<!-- Portal content (hidden until key accepted) -->
+<div id="fl-content">
 
 <!-- Header -->
 <div class="hero">
@@ -321,6 +382,8 @@ git push mine main            # push them to your Space</div>
 </div>
 
 <p class="footer">Private portal &nbsp;·&nbsp; Please don't share this URL &nbsp;·&nbsp; <a href="/">&#8592; FissionLab</a></p>
+
+</div><!-- /fl-content -->
 
 <script>
 function toggle(btn){
