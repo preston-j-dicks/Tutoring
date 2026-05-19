@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amy's Research Portal — FissionLab</title>
+<meta name="robots" content="noindex, nofollow">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K285VK64MP"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K285VK64MP');</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--gold:#c9a84c;--bg:#0a1628;--card:#0d1f3c;--border:rgba(201,168,76,0.18);--text:#f0ebe0;--muted:rgba(240,235,224,0.5)}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding:0 0 60px}
+a{color:var(--gold);text-decoration:none}
+a:hover{opacity:.8}
+
+/* Header */
+.hero{text-align:center;padding:48px 20px 36px}
+.avatar{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#1a3a5c,#0d2a4a);border:2px solid rgba(201,168,76,0.4);display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:700;color:var(--gold);margin:0 auto 16px}
+.hero h1{font-size:1.8rem;font-weight:700;color:#fff;margin-bottom:6px}
+.hero .subtitle{font-size:0.9rem;color:var(--muted);letter-spacing:.04em}
+
+/* Quick-action bar */
+.actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;padding:0 20px 36px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:8px;font-weight:700;font-size:0.88rem;transition:opacity .15s;cursor:pointer;text-decoration:none}
+.btn-primary{background:var(--gold);color:var(--bg)}
+.btn-outline{background:transparent;border:1px solid var(--border);color:var(--text)}
+.btn-ghost{background:rgba(255,255,255,.05);color:var(--muted)}
+.btn:hover{opacity:.82}
+
+/* Section layout */
+.section{max-width:960px;margin:0 auto 36px;padding:0 20px}
+.section-label{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(201,168,76,.6);margin-bottom:12px}
+.card{background:rgba(13,31,60,.7);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+
+/* App iframe */
+.app-frame{width:100%;height:680px;border:none;display:block;background:#111}
+.app-fallback{padding:24px;text-align:center;display:none}
+
+/* Drive embed */
+.drive-frame{width:100%;height:420px;border:none;display:block;background:#111}
+.drive-link-bar{padding:12px 20px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;font-size:.82rem;color:var(--muted)}
+
+/* Instructions accordion */
+.accordion{border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.acc-item{border-bottom:1px solid var(--border)}
+.acc-item:last-child{border-bottom:none}
+.acc-head{width:100%;background:none;border:none;padding:18px 22px;text-align:left;cursor:pointer;display:flex;align-items:center;justify-content:space-between;color:var(--text);font-size:.95rem;font-weight:600;transition:background .15s}
+.acc-head:hover{background:rgba(201,168,76,.05)}
+.acc-head .icon{color:var(--gold);font-size:1.1rem;margin-right:10px}
+.acc-arrow{color:var(--muted);font-size:.8rem;transition:transform .2s}
+.acc-body{display:none;padding:0 22px 22px;font-size:.88rem;line-height:1.72;color:rgba(240,235,224,.8)}
+.acc-body.open{display:block}
+.acc-head.active .acc-arrow{transform:rotate(90deg)}
+.acc-body h4{font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:18px 0 8px}
+.acc-body h4:first-child{margin-top:8px}
+.acc-body p{margin-bottom:10px}
+.acc-body ul,.acc-body ol{margin:6px 0 10px 18px}
+.acc-body li{margin-bottom:6px}
+.acc-body code{background:rgba(255,255,255,.08);padding:2px 7px;border-radius:4px;font-family:monospace;font-size:.83rem;color:#a8d8f0}
+.acc-body .step-block{background:rgba(13,31,60,.9);border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin:10px 0;font-family:monospace;font-size:.82rem;line-height:1.6;white-space:pre-wrap;color:#a8d8f0}
+.tag{display:inline-block;background:rgba(201,168,76,.12);color:var(--gold);border-radius:4px;padding:2px 8px;font-size:.75rem;font-weight:700;letter-spacing:.06em;margin:0 2px}
+.note{background:rgba(201,168,76,.07);border-left:3px solid rgba(201,168,76,.5);padding:10px 14px;border-radius:0 6px 6px 0;margin:10px 0;font-size:.84rem;color:rgba(240,235,224,.75)}
+
+/* Footer */
+.footer{text-align:center;padding:32px 20px 0;font-size:.75rem;color:rgba(240,235,224,.25)}
+.footer a{color:rgba(201,168,76,.5)}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="hero">
+  <div class="avatar">A</div>
+  <h1>Amy's Research Portal</h1>
+  <p class="subtitle">FissionLab &nbsp;·&nbsp; Organizational Commitment Analysis</p>
+</div>
+
+<!-- Quick actions -->
+<div class="actions">
+  <a href="https://dr-p-amy-commitment-analysis.hf.space" target="_blank" class="btn btn-primary">&#9654; Launch Analysis App</a>
+  <a href="https://drive.google.com/drive/folders/1bjysXSKpL64Izo3fkiRmXsMm9Bk9S77d?usp=sharing" target="_blank" class="btn btn-outline">&#128194; Open Google Drive</a>
+  <a href="https://calendly.com/preston-j-dicks/1hr-session" target="_blank" class="btn btn-ghost">&#128197; Book Session</a>
+</div>
+
+<!-- ML App embed -->
+<div class="section">
+  <div class="section-label">ML Analysis App</div>
+  <div class="card">
+    <iframe class="app-frame"
+      src="https://dr-p-amy-commitment-analysis.hf.space"
+      title="Organizational Commitment Analysis App"
+      allow="cross-origin-isolated"
+      loading="lazy"></iframe>
+    <div class="drive-link-bar">
+      <span>Having trouble? <a href="https://dr-p-amy-commitment-analysis.hf.space" target="_blank">Open in new tab &#8599;</a></span>
+      <span>Powered by HuggingFace Spaces</span>
+    </div>
+  </div>
+</div>
+
+<!-- Google Drive embed -->
+<div class="section">
+  <div class="section-label">Research Resources &amp; Files</div>
+  <div class="card">
+    <iframe class="drive-frame"
+      src="https://drive.google.com/embeddedfolderview?id=1bjysXSKpL64Izo3fkiRmXsMm9Bk9S77d#list"
+      title="Research Resources Google Drive"
+      loading="lazy"></iframe>
+    <div class="drive-link-bar">
+      <span>Can't see files? <a href="https://drive.google.com/drive/folders/1bjysXSKpL64Izo3fkiRmXsMm9Bk9S77d?usp=sharing" target="_blank">Open Drive directly &#8599;</a></span>
+      <span>Google Drive</span>
+    </div>
+  </div>
+</div>
+
+<!-- Instructions accordion -->
+<div class="section">
+  <div class="section-label">Instructions &amp; Documentation</div>
+  <div class="accordion">
+
+    <div class="acc-item">
+      <button class="acc-head" onclick="toggle(this)">
+        <span><span class="icon">&#127760;</span>How to Navigate This Portal</span>
+        <span class="acc-arrow">&#9654;</span>
+      </button>
+      <div class="acc-body">
+        <h4>What's on This Page</h4>
+        <p>This portal has three sections stacked vertically:</p>
+        <ol>
+          <li><strong>ML Analysis App</strong> — the analysis tool runs directly in the browser above. You can use it here or click <em>Launch Analysis App</em> to open it full-screen.</li>
+          <li><strong>Research Resources</strong> — your Google Drive folder is embedded below the app. Use it to access reference materials, papers, and your raw data files. Click <em>Open Google Drive</em> for the full Drive view.</li>
+          <li><strong>Instructions</strong> — this accordion. Expand any section to read guidance on the app, the ML pipeline, or how to deploy your own copy.</li>
+        </ol>
+        <h4>Quick-Action Buttons</h4>
+        <ul>
+          <li><strong>Launch Analysis App</strong> — opens the app full-screen in a new tab (best for working sessions).</li>
+          <li><strong>Open Google Drive</strong> — opens the shared folder where your data files and resources live.</li>
+          <li><strong>Book Session</strong> — schedules a follow-up session with Dr. Preston.</li>
+        </ul>
+        <div class="note">Bookmark this page. It's your single hub for everything related to the organizational commitment study.</div>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <button class="acc-head" onclick="toggle(this)">
+        <span><span class="icon">&#128202;</span>How to Use the Analysis App — 9 Tabs Explained</span>
+        <span class="acc-arrow">&#9654;</span>
+      </button>
+      <div class="acc-body">
+        <p>Work through the tabs left-to-right — they follow the logical order of a research analysis.</p>
+
+        <h4>Tab 1 — Home / Resources</h4>
+        <p>Welcome screen with links to this portal and the Google Drive. Start here to orient yourself.</p>
+
+        <h4>Tab 2 — Data</h4>
+        <p>Load data in one of two ways:</p>
+        <ul>
+          <li><strong>Synthetic dataset</strong> — click <em>Load Synthetic Data</em> to use a pre-built N=300 dataset with realistic correlations. Good for testing and understanding how the app works before you add your real data.</li>
+          <li><strong>Upload your own file</strong> — drag-and-drop or browse for an Excel (<code>.xlsx</code>) or CSV file. After upload, the app shows detected columns.</li>
+        </ul>
+        <p>After loading, you'll see checkboxes and dropdowns to:</p>
+        <ul>
+          <li><strong>Feature columns</strong> — check every column that is an input variable (gender, ideology, etc.).</li>
+          <li><strong>Target column</strong> — select the column you're predicting (commitment: Stay/Leave).</li>
+          <li><strong>Categorical features</strong> — check which features are categorical (names/labels, not numbers).</li>
+        </ul>
+        <p>Click <strong>Confirm Column Setup</strong> when done.</p>
+
+        <h4>Tab 3 — Preprocessing</h4>
+        <p>Control how raw data is cleaned before training:</p>
+        <ul>
+          <li><strong>Imputation</strong> — how to fill missing values: <em>median</em> (default, good for skewed data), <em>mean</em>, or <em>most frequent</em>.</li>
+          <li><strong>Scaling</strong> — normalizes numeric features: <em>standard</em> (z-score, default), <em>minmax</em> (0–1 range), <em>robust</em> (handles outliers), or <em>none</em>.</li>
+          <li><strong>Feature Selection</strong> — automatically removes low-information features: <em>none</em> (keep all), <em>variance</em> (drop near-constant), or <em>kbest</em> (keep top K by chi-squared).</li>
+          <li><strong>Class Balancing</strong> — if Stay/Leave counts are very unequal, use <em>class_weight</em> to compensate.</li>
+        </ul>
+        <div class="note">For most survey data, defaults (median / standard / none / none) work well. Change these only if you notice a model performing poorly or your class counts are very imbalanced.</div>
+
+        <h4>Tab 4 — Model Config &amp; Train</h4>
+        <p>Each model has its own accordion panel with hyperparameter sliders:</p>
+        <ul>
+          <li><strong>Logistic Regression</strong> — C controls regularization strength; lower = simpler model.</li>
+          <li><strong>Random Forest</strong> — n_estimators (number of trees), max_depth (complexity), min_samples_split.</li>
+          <li><strong>Gradient Boosting</strong> — n_estimators, max_depth, learning_rate (step size).</li>
+          <li><strong>SVM</strong> — C (margin penalty).</li>
+          <li><strong>MLP (neural net)</strong> — layer sizes, dropout, learning rate, max epochs.</li>
+        </ul>
+        <p><strong>Auto-Tune</strong> — select a model and click <em>Auto-Tune Selected Model</em> to run automated hyperparameter search (Bayesian optimization). It updates the sliders with the best found values.</p>
+        <p>Click <strong>Train All Models</strong> to train all five with your current settings. Training takes 20–60 seconds depending on dataset size.</p>
+
+        <h4>Tab 5 — Performance</h4>
+        <p>Side-by-side comparison of all trained models: Accuracy, F1-score, ROC-AUC, and a confusion matrix per model. F1 is the primary metric — it balances precision and recall, which matters when Stay/Leave counts differ.</p>
+
+        <h4>Tab 6 — Explainability</h4>
+        <p>Four sub-tabs for understanding <em>why</em> the models predict what they predict:</p>
+        <ul>
+          <li><strong>PFI</strong> — Permutation Feature Importance: shuffles each feature and measures how much model performance drops. Higher bar = more important. Works for all 5 models. Select a model and click Compute.</li>
+          <li><strong>SHAP</strong> — another model-agnostic importance measure. The bar height = average impact on prediction probability. Use this to corroborate PFI findings.</li>
+          <li><strong>LRP</strong> — Layerwise-Relevance Propagation (neural-net only): traces which inputs the MLP relied on, layer by layer. You can view the average across the test set or inspect a single data row.</li>
+          <li><strong>LogReg Coefficients</strong> — direct log-odds weights from Logistic Regression. Positive = pushes toward Stay; negative = pushes toward Leave. These are the most directly citable numbers for a paper.</li>
+        </ul>
+        <div class="note">For publication, report PFI + LogReg coefficients together. PFI is model-agnostic evidence; coefficients give directional effect sizes.</div>
+
+        <h4>Tab 7 — Equations &amp; Rationale</h4>
+        <p>All mathematical formulas used in the app — loss functions, PFI definition, LRP propagation rules — rendered with full citations. Use this section to write the Methods section of your paper.</p>
+
+        <h4>Tab 8 — Code Assistant</h4>
+        <p>Requires an Anthropic API key (see setup below). Lets you read any source file and ask Claude to modify it in natural language. For example: <em>"Change the MLP to have 3 hidden layers"</em> or <em>"Add a ROC curve to the performance plot."</em></p>
+
+        <h4>Tab 9 — Decision Log</h4>
+        <p>A timestamped record of every action the app took: what data was loaded, what encoding was used, what hyperparameters were set, what CV scores each model achieved. Click <strong>Export Log</strong> to download as a <code>.txt</code> file — paste it directly into your paper's supplementary materials as an audit trail.</p>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <button class="acc-head" onclick="toggle(this)">
+        <span><span class="icon">&#128640;</span>Deploy Your Own Copy — HuggingFace Space + API Key Setup</span>
+        <span class="acc-arrow">&#9654;</span>
+      </button>
+      <div class="acc-body">
+        <p>If you want to run this app under your own HuggingFace account (with your own API key and full control), follow these steps.</p>
+
+        <h4>Step 1 — Create a HuggingFace Account</h4>
+        <p>Go to <a href="https://huggingface.co/join" target="_blank">huggingface.co/join</a> and sign up for a free account. Your username will appear in your Space URL.</p>
+
+        <h4>Step 2 — Create a New Space</h4>
+        <ol>
+          <li>Log in, click your profile icon → <strong>New Space</strong>.</li>
+          <li>Name it (e.g., <code>commitment-analysis</code>).</li>
+          <li>Set <strong>SDK: Gradio</strong>, visibility: <strong>Public</strong> (or Private).</li>
+          <li>Click <strong>Create Space</strong>. HuggingFace creates an empty repo.</li>
+        </ol>
+
+        <h4>Step 3 — Get the Source Code</h4>
+        <p>Download or clone the app source from the FissionLab deployment:</p>
+        <div class="step-block">git clone https://huggingface.co/spaces/Dr-P/amy-commitment-analysis
+cd amy-commitment-analysis</div>
+        <p>Or download the ZIP from the Files tab on the Space page.</p>
+
+        <h4>Step 4 — Push to Your Space</h4>
+        <div class="step-block"># Add your Space as a remote (replace YOUR_USERNAME and YOUR_SPACE_NAME)
+git remote add mine https://huggingface.co/spaces/YOUR_USERNAME/YOUR_SPACE_NAME
+
+# Push all files
+git push mine main</div>
+        <p>HuggingFace will automatically build and deploy. The build takes ~3 minutes.</p>
+
+        <h4>Step 5 — Add Your Anthropic API Key (for Code Assistant)</h4>
+        <ol>
+          <li>In your Space, go to <strong>Settings → Repository secrets</strong>.</li>
+          <li>Click <strong>New secret</strong>.</li>
+          <li>Name: <code>ANTHROPIC_API_KEY</code> &nbsp; Value: your key from <a href="https://console.anthropic.com" target="_blank">console.anthropic.com</a></li>
+          <li>Save. The Space will restart with the key available — no code changes needed.</li>
+        </ol>
+        <div class="note">Never put your API key directly in a file. The HF Secrets system injects it as an environment variable securely.</div>
+
+        <h4>Step 6 — Get an Anthropic API Key (if you don't have one)</h4>
+        <ol>
+          <li>Go to <a href="https://console.anthropic.com" target="_blank">console.anthropic.com</a> and create a free account.</li>
+          <li>Navigate to <strong>API Keys</strong> → <strong>Create Key</strong>.</li>
+          <li>Copy the key (it starts with <code>sk-ant-</code>). Store it safely — you can't view it again.</li>
+          <li>Free tier gives enough credits to use the Code Assistant for dozens of modifications.</li>
+        </ol>
+
+        <h4>Step 7 — Verify Your Deployment</h4>
+        <ul>
+          <li>Your app will be live at: <code>https://YOUR_USERNAME-YOUR_SPACE_NAME.hf.space</code></li>
+          <li>Open it, load the synthetic data, train all models — confirm everything works.</li>
+          <li>Upload your own Excel/CSV file and confirm columns are detected correctly.</li>
+          <li>Go to Tab 8 (Code Assistant) and test a small change to confirm the API key is working.</li>
+        </ul>
+
+        <h4>Keeping Your Copy Updated</h4>
+        <p>If Dr. Preston updates the original app with new features:</p>
+        <div class="step-block"># From your local clone
+git pull origin main          # pull updates from FissionLab's copy
+git push mine main            # push them to your Space</div>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <button class="acc-head" onclick="toggle(this)">
+        <span><span class="icon">&#128196;</span>Working with Your Own Data</span>
+        <span class="acc-arrow">&#9654;</span>
+      </button>
+      <div class="acc-body">
+        <h4>Supported File Formats</h4>
+        <ul>
+          <li><strong>Excel</strong> — <code>.xlsx</code> or <code>.xls</code>. Export from SPSS, Qualtrics, or Google Sheets.</li>
+          <li><strong>CSV</strong> — comma-separated values. Any survey export tool produces this.</li>
+        </ul>
+
+        <h4>Preparing Your Survey Data</h4>
+        <ol>
+          <li>Make sure column names are in the first row (headers).</li>
+          <li>Each row = one respondent. Remove aggregate/total rows.</li>
+          <li>The target column (commitment: stay/leave) should be binary — either <code>0/1</code> or text labels like <code>Stay/Leave</code>. The app encodes text labels automatically.</li>
+          <li>Missing values are OK — the preprocessing pipeline handles them. Just don't drop rows manually unless the missingness itself is informative.</li>
+        </ol>
+
+        <h4>Column Mapping Tips</h4>
+        <ul>
+          <li>After upload, check every feature box that is an independent variable.</li>
+          <li>Un-check ID columns, timestamps, or free-text responses — these will confuse the models.</li>
+          <li>If your ideology scale is 1–5 or 1–10 instead of 1–7, it still works — the app treats it as numeric automatically.</li>
+          <li>Check the <span class="tag">categorical</span> box for any column that uses labels/names, even if stored as numbers (e.g., ethnicity coded as 1–5).</li>
+        </ul>
+
+        <h4>Exporting Results for Publication</h4>
+        <ul>
+          <li><strong>Figures</strong> — right-click any chart and save as PNG, or use the Plotly toolbar (camera icon) for high-resolution export.</li>
+          <li><strong>Decision Log</strong> — export from Tab 9 as <code>.txt</code> and include as supplementary material.</li>
+          <li><strong>Coefficients</strong> — the LogReg sub-tab in Explainability gives direction + magnitude per feature; these go directly into a table in your results section.</li>
+          <li><strong>PFI values</strong> — bar heights are mean F1 decrease. Report the top 3–5 features with their 95% confidence intervals (shown as error bars).</li>
+        </ul>
+      </div>
+    </div>
+
+  </div><!-- /accordion -->
+</div>
+
+<p class="footer">Private portal &nbsp;·&nbsp; Please don't share this URL &nbsp;·&nbsp; <a href="/">&#8592; FissionLab</a></p>
+
+<script>
+function toggle(btn){
+  var body=btn.nextElementSibling;
+  var open=body.classList.contains('open');
+  // close all
+  document.querySelectorAll('.acc-body').forEach(function(b){b.classList.remove('open');});
+  document.querySelectorAll('.acc-head').forEach(function(h){h.classList.remove('active');});
+  if(!open){body.classList.add('open');btn.classList.add('active');}
+}
+</script>
+</body>
+</html>
