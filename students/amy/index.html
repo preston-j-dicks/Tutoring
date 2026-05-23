@@ -160,17 +160,15 @@ a:hover{opacity:.8}
   </div>
 </div>
 
-<!-- Google Drive embed -->
+<!-- Google Drive section -->
 <div class="section">
   <div class="section-label">Research Resources &amp; Files</div>
   <div class="card">
-    <iframe class="drive-frame"
-      src="https://drive.google.com/embeddedfolderview?id=1bjysXSKpL64Izo3fkiRmXsMm9Bk9S77d#list"
-      title="Research Resources Google Drive"
-      loading="lazy"></iframe>
-    <div class="drive-link-bar">
-      <span>Can't see files? <a href="https://drive.google.com/drive/folders/1bjysXSKpL64Izo3fkiRmXsMm9Bk9S77d?usp=sharing" target="_blank">Open Drive directly &#8599;</a></span>
-      <span>Google Drive</span>
+    <div style="padding:28px 24px">
+      <p style="font-size:.95rem;font-weight:600;color:#f0ebe0;margin-bottom:10px">&#128194; Shared Google Drive Folder</p>
+      <p style="font-size:.85rem;color:rgba(240,235,224,.7);margin-bottom:18px">Your research materials (papers, data templates, reference sheets) are shared via Google Drive. Click the button below to open the folder.</p>
+      <a href="https://drive.google.com/drive/folders/1bjysXSKpL64Izo3fkiRmXsMm9Bk9S77d?usp=sharing" target="_blank" class="btn btn-outline" style="display:inline-flex">&#128194; Open Google Drive Folder &#8599;</a>
+      <div class="note" style="margin-top:18px">If you see <strong>"You need access"</strong> when opening the link, make sure you're signed into Google with the email address you gave Dr. Preston. If it still doesn't work, email <a href="mailto:Dr_PrestonD@proton.me">Dr_PrestonD@proton.me</a> and Dr. Preston will re-share it with you directly.</div>
     </div>
   </div>
 </div>
@@ -218,15 +216,16 @@ a:hover{opacity:.8}
         <p>Load data in one of two ways:</p>
         <ul>
           <li><strong>Synthetic dataset</strong> — click <em>Load Synthetic Data</em> to use a pre-built N=300 dataset with realistic correlations. Good for testing and understanding how the app works before you add your real data.</li>
-          <li><strong>Upload your own file</strong> — drag-and-drop or browse for an Excel (<code>.xlsx</code>) or CSV file. After upload, the app shows detected columns.</li>
+          <li><strong>Upload your own file</strong> — drag-and-drop or browse for an Excel (<code>.xlsx</code>) or CSV file. <strong>The app detects columns automatically the moment you select the file</strong> — no extra button click needed.</li>
         </ul>
-        <p>After loading, you'll see checkboxes and dropdowns to:</p>
+        <p>After the file loads, you'll see checkboxes and dropdowns pre-filled with your column names:</p>
         <ul>
-          <li><strong>Feature columns</strong> — check every column that is an input variable (gender, ideology, etc.).</li>
-          <li><strong>Target column</strong> — select the column you're predicting (commitment: Stay/Leave).</li>
-          <li><strong>Categorical features</strong> — check which features are categorical (names/labels, not numbers).</li>
+          <li><strong>Feature columns</strong> — all input variables should be checked (gender, ideology, etc.). Uncheck any ID columns or free-text fields.</li>
+          <li><strong>Target column</strong> — select the column you're predicting from the dropdown (commitment / stay / leave). The app suggests the most likely column automatically.</li>
+          <li><strong>Categorical features</strong> — check which features use labels or category codes rather than continuous numbers.</li>
         </ul>
-        <p>Click <strong>Confirm Column Setup</strong> when done.</p>
+        <p>Click <strong>Confirm Column Labels</strong> when done. You'll see a confirmation message showing the count of features, the target column name, and how many are categorical.</p>
+        <div class="note"><strong>Important:</strong> Keep the app open in its tab while you work. If you navigate away and come back (or refresh the page), the session resets and you'll need to re-upload your file. This is normal — just re-upload and re-confirm the columns.</div>
 
         <h4>Tab 3 — Preprocessing</h4>
         <p>Control how raw data is cleaned before training:</p>
