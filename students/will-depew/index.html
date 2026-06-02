@@ -3,50 +3,194 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Student Portal — FissionLab</title>
+<title>Will Depew — USNA Prep · FissionLab</title>
 <meta name="robots" content="noindex, nofollow">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K285VK64MP"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K285VK64MP');</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a1628;color:#f0ebe0;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 20px;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a1628;color:#f0ebe0;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:40px 20px;text-align:center}
 .avatar{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#1a3a5c,#0d2a4a);border:2px solid rgba(201,168,76,0.4);display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:700;color:#c9a84c;margin:0 auto 16px}
-h1{font-size:1.6rem;font-weight:700;color:#fff;margin-bottom:8px}
-.subtitle{font-size:0.9rem;color:rgba(240,235,224,0.5);margin-bottom:36px;letter-spacing:0.04em}
-.card{background:rgba(13,31,60,0.7);border:1px solid rgba(201,168,76,0.15);border-radius:12px;padding:28px 32px;max-width:420px;width:100%;margin:0 auto 16px}
-.card-label{font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(201,168,76,0.6);margin-bottom:16px}
-.btn{display:block;padding:14px 20px;border-radius:8px;font-weight:700;font-size:0.9rem;text-decoration:none;transition:opacity 0.15s;margin-bottom:12px}
+h1{font-size:1.7rem;font-weight:700;color:#fff;margin-bottom:6px}
+.subtitle{font-size:0.9rem;color:rgba(240,235,224,0.5);margin-bottom:28px;letter-spacing:0.04em}
+.wrap{width:100%;max-width:480px;margin:0 auto}
+/* ── Countdown banner ── */
+.countdown{background:linear-gradient(135deg,rgba(201,168,76,0.12),rgba(201,168,76,0.06));border:1px solid rgba(201,168,76,0.35);border-radius:12px;padding:18px 24px;margin-bottom:20px;text-align:center}
+.cd-label{font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(201,168,76,0.7);margin-bottom:6px}
+.cd-num{font-size:2.4rem;font-weight:800;color:#c9a84c;line-height:1;font-family:Georgia,serif}
+.cd-sub{font-size:0.78rem;color:rgba(240,235,224,0.5);margin-top:4px}
+/* ── Cards ── */
+.card{background:rgba(13,31,60,0.7);border:1px solid rgba(201,168,76,0.15);border-radius:12px;padding:22px 28px;margin-bottom:16px;text-align:left}
+.card-label{font-size:0.62rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(201,168,76,0.65);margin-bottom:14px;text-align:center}
+.btn{display:block;padding:13px 18px;border-radius:8px;font-weight:700;font-size:0.88rem;text-decoration:none;transition:opacity 0.15s;margin-bottom:10px;text-align:center}
 .btn:last-child{margin-bottom:0}
 .btn-gold{background:#c9a84c;color:#0a1628}
-.btn-outline{background:transparent;border:1px solid rgba(201,168,76,0.3);color:#c9a84c}
-.btn-portal{background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.25);color:rgba(240,235,224,0.7);font-size:0.82rem;padding:10px 20px}
-.btn:hover{opacity:0.85}
-.token{margin-top:16px;font-size:0.72rem;color:rgba(240,235,224,0.3);letter-spacing:0.05em;font-family:monospace}
-.private-note{margin-top:24px;font-size:0.75rem;color:rgba(240,235,224,0.25);letter-spacing:0.03em}
-.back{margin-top:16px;font-size:0.82rem;color:rgba(240,235,224,0.3)}
-.back a{color:rgba(201,168,76,0.7);text-decoration:none}
+.btn-outline{background:transparent;border:1px solid rgba(201,168,76,0.35);color:#c9a84c}
+.btn-dim{background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.2);color:rgba(240,235,224,0.65);font-size:0.82rem;padding:10px 18px}
+.btn:hover{opacity:0.82}
+/* ── Exam timeline ── */
+.timeline{margin:0}
+.exam-row{display:flex;align-items:flex-start;gap:14px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06)}
+.exam-row:last-child{border-bottom:none}
+.exam-dot{width:10px;height:10px;border-radius:50%;background:#c9a84c;margin-top:5px;flex-shrink:0}
+.exam-dot.red{background:#ff5050}
+.exam-info{flex:1;text-align:left}
+.exam-name{font-weight:700;font-size:0.88rem;color:#f0ebe0}
+.exam-when{font-size:0.75rem;color:rgba(240,235,224,0.45);margin-top:2px}
+.exam-note{font-size:0.73rem;color:rgba(201,168,76,0.7);margin-top:2px}
+/* ── Study plan ── */
+.week-row{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05);text-align:left}
+.week-row:last-child{border-bottom:none}
+.week-label{font-size:0.7rem;font-weight:700;color:#c9a84c;min-width:56px;padding-top:2px;letter-spacing:0.03em}
+.week-content{}
+.week-title{font-size:0.88rem;font-weight:600;color:#f0ebe0}
+.week-tasks{font-size:0.75rem;color:rgba(240,235,224,0.5);margin-top:2px;line-height:1.5}
+/* ── Progress bar ── */
+.progress-wrap{margin:12px 0 6px}
+.progress-label{display:flex;justify-content:space-between;font-size:0.72rem;color:rgba(240,235,224,0.45);margin-bottom:5px}
+.progress-track{background:rgba(255,255,255,0.08);border-radius:4px;height:6px;overflow:hidden}
+.progress-fill{background:linear-gradient(90deg,#c9a84c,#f0d580);height:6px;border-radius:4px;transition:width 0.3s}
+/* ── Token ── */
+.token{margin-top:10px;font-size:0.7rem;color:rgba(240,235,224,0.25);letter-spacing:0.06em;font-family:monospace;text-align:center}
+/* ── Footer ── */
+.private-note{margin-top:22px;font-size:0.73rem;color:rgba(240,235,224,0.22);letter-spacing:0.03em}
+.back{margin-top:12px;font-size:0.8rem;color:rgba(240,235,224,0.3)}
+.back a{color:rgba(201,168,76,0.65);text-decoration:none}
 </style>
 </head>
 <body>
-<div class="avatar">W</div>
-<h1>Welcome Back, Will</h1>
-<p class="subtitle">FissionLab · USNA Validation Prep · Calculus &amp; Physics</p>
+<div class="wrap">
+  <div class="avatar">W</div>
+  <h1>Welcome Back, Will</h1>
+  <p class="subtitle">FissionLab · USNA Validation Prep · Calculus &amp; Physics</p>
 
-<div class="card">
-  <div class="card-label">Practice Apps</div>
-  <a href="https://dr-p-math-app.hf.space" target="_blank" class="btn btn-gold">📐 Math Practice (Calc I–III)</a>
-  <a href="https://dr-p-physics-app.hf.space" target="_blank" class="btn btn-gold">⚛️ Physics Practice (SP211/SP212)</a>
-  <a href="https://web-production-202b9.up.railway.app/portal/FLAB-W4DP-2KXN-7MBT" target="_blank" class="btn btn-portal">🔑 Full Portal →</a>
-  <div class="token">Token: FLAB-W4DP-2KXN-7MBT</div>
+  <!-- Countdown to June 21 -->
+  <div class="countdown">
+    <div class="cd-label">Days to Final Review (June 21)</div>
+    <div class="cd-num" id="cd-days">—</div>
+    <div class="cd-sub">I-Day: June 25 · Calc I exam on Day 1–2 of Plebe Summer</div>
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Prep Start (Jun 2)</span><span>June 21 target</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+    </div>
+  </div>
+
+  <!-- Practice Apps -->
+  <div class="card">
+    <div class="card-label">Practice Apps</div>
+    <a href="https://dr-p-math-app.hf.space" target="_blank" class="btn btn-gold">📐 Calc I–III Diagnostic &amp; Practice</a>
+    <a href="https://dr-p-physics-app.hf.space" target="_blank" class="btn btn-gold">⚛️ Physics SP211 / SP212 Diagnostic</a>
+    <div class="token">Token: FLAB-W4DP-2KXN-7MBT</div>
+  </div>
+
+  <!-- USNA Exam Timeline -->
+  <div class="card">
+    <div class="card-label">USNA Exam Timeline</div>
+    <div class="timeline">
+      <div class="exam-row">
+        <div class="exam-dot"></div>
+        <div class="exam-info">
+          <div class="exam-name">Calculus I</div>
+          <div class="exam-when">I-Day + 1–2 days · ~70% pass rate</div>
+          <div class="exam-note">⚡ First priority — prep this week</div>
+        </div>
+      </div>
+      <div class="exam-row">
+        <div class="exam-dot"></div>
+        <div class="exam-info">
+          <div class="exam-name">Calculus II</div>
+          <div class="exam-when">Plebe Summer Week 2 · Multiple choice only</div>
+          <div class="exam-note">Series, integration techniques, improper integrals</div>
+        </div>
+      </div>
+      <div class="exam-row">
+        <div class="exam-dot"></div>
+        <div class="exam-info">
+          <div class="exam-name">Calculus III</div>
+          <div class="exam-when">Week 2–3 · MC + free response (hardest bar)</div>
+          <div class="exam-note">Vectors, partial derivatives, line/surface integrals</div>
+        </div>
+      </div>
+      <div class="exam-row">
+        <div class="exam-dot"></div>
+        <div class="exam-info">
+          <div class="exam-name">SP211 Mechanics</div>
+          <div class="exam-when">Take ASAP · Required before E&amp;M</div>
+          <div class="exam-note">Kinematics → Newton's → Energy → Rotation → SHM</div>
+        </div>
+      </div>
+      <div class="exam-row">
+        <div class="exam-dot red"></div>
+        <div class="exam-info">
+          <div class="exam-name">SP212 E&amp;M</div>
+          <div class="exam-when">After SP211 validated · Secondary priority</div>
+          <div class="exam-note">Coulomb → Gauss → Circuits → Magnetism → Faraday</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3-Week Study Plan -->
+  <div class="card">
+    <div class="card-label">Study Plan — Target: June 21</div>
+    <div class="week-row">
+      <div class="week-label">Week 1<br>Jun 2–7</div>
+      <div class="week-content">
+        <div class="week-title">Calculus I Intensive</div>
+        <div class="week-tasks">Limits · Derivatives · Related rates · Optimization · FTC · u-substitution<br>Goal: Score 18+/20 on Calc I diagnostic</div>
+      </div>
+    </div>
+    <div class="week-row">
+      <div class="week-label">Week 2<br>Jun 8–14</div>
+      <div class="week-content">
+        <div class="week-title">Calculus II + SP211 Start</div>
+        <div class="week-tasks">IBP · Series &amp; convergence · Taylor/Maclaurin · Improper integrals<br>SP211: Kinematics · Newton's laws · Energy conservation</div>
+      </div>
+    </div>
+    <div class="week-row">
+      <div class="week-label">Week 3<br>Jun 15–20</div>
+      <div class="week-content">
+        <div class="week-title">Calculus III + SP211 Finish</div>
+        <div class="week-tasks">Vectors · Partial derivatives · Multiple integrals · Green's / Stokes / Divergence<br>SP211: Rotation · SHM · Gravitation · Full mechanics diagnostic</div>
+      </div>
+    </div>
+    <div class="week-row">
+      <div class="week-label">Jun 21</div>
+      <div class="week-content">
+        <div class="week-title">Final Review Day</div>
+        <div class="week-tasks">Full diagnostics on all subjects · Weak area focus · Rest before I-Day</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Session Links -->
+  <div class="card">
+    <div class="card-label">Sessions</div>
+    <a href="https://calendly.com/preston-j-dicks/1hr-session" target="_blank" class="btn btn-outline">📅 Book a Session</a>
+    <a href="https://buy.stripe.com/5kQ7sEeNE9fI4K6c3E1Fe0e" target="_blank" class="btn btn-outline">💳 Pay for Session</a>
+    <a href="https://web-production-202b9.up.railway.app/portal/FLAB-W4DP-2KXN-7MBT" target="_blank" class="btn btn-dim">🔑 Full Portal →</a>
+  </div>
+
+  <p class="private-note">This page is private — please don't share the URL</p>
+  <p class="back"><a href="/">← FissionLab</a></p>
 </div>
 
-<div class="card">
-  <div class="card-label">Session Links</div>
-  <a href="https://calendly.com/preston-j-dicks/1hr-session" target="_blank" class="btn btn-outline">📅 Book Your Session</a>
-  <a href="https://buy.stripe.com/5kQ7sEeNE9fI4K6c3E1Fe0e" target="_blank" class="btn btn-outline">💳 Pay for Session</a>
-</div>
+<script>
+// Countdown to June 21, 2026
+(function(){
+  var target = new Date('2026-06-21T00:00:00');
+  var start  = new Date('2026-06-02T00:00:00');
+  var now    = new Date();
+  var msDay  = 86400000;
+  var daysLeft = Math.max(0, Math.ceil((target - now) / msDay));
+  document.getElementById('cd-days').textContent = daysLeft;
 
-<p class="private-note">This page is private — please don't share the URL</p>
-<p class="back"><a href="/">← FissionLab</a></p>
+  // Progress bar: 0% on Jun 2, 100% on Jun 21
+  var totalDays = (target - start) / msDay; // 19 days
+  var elapsed   = Math.min(totalDays, Math.max(0, (now - start) / msDay));
+  var pct       = Math.round(elapsed / totalDays * 100);
+  document.getElementById('progress-fill').style.width = pct + '%';
+})();
+</script>
 </body>
 </html>
