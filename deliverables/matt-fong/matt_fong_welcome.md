@@ -54,7 +54,11 @@ Join at our scheduled time — I'll be there.
 
 Your rate is **$100/session** — grandfathered from our Wyzant arrangement. That doesn't change.
 
-I'll send you a direct payment link before each session. Payment is per-session (no package required). If it's ever easier for a parent to handle billing, just let me know and I can loop them in — no problem either way.
+Pay per session via this link:
+
+**https://buy.stripe.com/14AdR2eNEgIa2BY2t41Fe0f**
+
+No package required — pay as you go. If it's ever easier for a parent to handle billing, just let me know and I can loop them in — no problem either way.
 
 ---
 
