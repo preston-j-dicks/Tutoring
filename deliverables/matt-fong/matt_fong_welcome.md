@@ -52,19 +52,27 @@ Join at our scheduled time — I'll be there.
 
 ## Session Rate & Billing
 
-Your rate is **$100/session** — grandfathered from our Wyzant arrangement. That doesn't change.
+You're on a **4-Session Package — $270 total ($67.50/session)**, price-matched to the current
+fissionlab.net rates. Sessions don't expire, and we're targeting roughly 2 sessions/week —
+flexible around your schedule.
 
-Pay per session via this link:
+Pay for the package via this link:
 
-**https://buy.stripe.com/14AdR2eNEgIa2BY2t41Fe0f**
+**[VERIFY] new $270 4-pack Stripe link — replace this placeholder once generated**
 
-No package required — pay as you go. If it's ever easier for a parent to handle billing, just let me know and I can loop them in — no problem either way.
+If it's ever easier for a parent to handle billing, just let me know and I can loop them in — no problem either way.
+
+Three tracks going forward: SAT prep, ML/AI (built around your imaging project), and continued
+Science Fair mentorship.
 
 ---
 
-## Tuesday
+## First Session — Monday, July 6
 
-We're on for Tuesday. I'm looking forward to hearing what direction you want to take the project next — whether that's extending the WEC analysis, spinning up a new ML project, or something else entirely. Come with ideas; we'll scope it out together.
+We're on for Monday, July 6 at 5:00 PM ET: a SAT diagnostic review plus the full roadmap across
+all three tracks. Come with any SAT practice results you've already got, and think about which
+direction you want to take the ML/AI project next — extending the imaging analysis, or something
+new. We'll scope it out together.
 
 Any questions before then, reach me at **Dr_PrestonD@proton.me**.
 
