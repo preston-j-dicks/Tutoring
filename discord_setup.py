@@ -197,13 +197,13 @@ React to get your subject role:
     "book-a-session": f"""\
 Work 1:1 with Dr. Preston
 
-PhD Nuclear Engineering · USAF Captain · 6+ years active duty
+PhD Nuclear Engineering
 Subjects: AFOQT | Physics | AI/ML | SAT/ACT | Mathematics
 
 PACKAGES:
-Single session — $70/hr
-5-session pack — save $25
-10-session pack — save $100
+Single session — $75/hr
+4-session pack — save $30
+8-session pack — save $100
 
 BOOK NOW: {CALENDLY}
 

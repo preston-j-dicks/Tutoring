@@ -58,7 +58,7 @@ flexible around your schedule.
 
 Pay for the package via this link:
 
-**[VERIFY] new $270 4-pack Stripe link — replace this placeholder once generated**
+**https://buy.stripe.com/bJebIU7lc0Jc5Oa9Vw1Fe0h**
 
 If it's ever easier for a parent to handle billing, just let me know and I can loop them in — no problem either way.
 
