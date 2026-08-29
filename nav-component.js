@@ -36,6 +36,7 @@
     { label: '&#129302; AI / ML / DL', href: b + 'community/ai-ml/' },
     { label: '&#128221; SAT / ACT',    href: b + 'community/sat-act/' },
     { label: '&#128208; Mathematics',  href: b + 'community/mathematics/' },
+    { label: '&#127891; College Counseling', href: b + 'community/college-counseling/' },
   ];
 
   var calendlyURL = 'https://calendly.com/preston-j-dicks/introductory-meeting';
