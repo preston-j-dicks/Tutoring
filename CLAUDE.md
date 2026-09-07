@@ -2,7 +2,8 @@
 Static site on GitHub Pages. Domain: fissionlab.net. Repo: preston-j-dicks/Tutoring.
 
 ## Brand rules (non-negotiable)
-Public name: "Dr. Preston" only. NEVER write: Dicks, Captain, USAF, Air Force, AFIT, active duty, .mil, rank, uniform — anywhere user-facing. PhD credential is fine. Military affiliation is forbidden.
+Public name: "Dr. Preston" only. NEVER write: Dicks, Captain, active duty, .mil, current rank, uniform — anywhere user-facing. PhD credential is fine.
+Historical military bio facts (military-brat childhood, commissioning at 19, "youngest commissioned officer since the Air Force's founding", USAF officer/years of service) are allowed since they don't reveal current active-duty status or position — this is the approved bio content in `index.html` (About section) and `community/about/index.html`. Do not add current rank, unit, or duty-status details.
 Voice: technical, direct, honest, occasional dry humor. Not hype. Not corporate.
 
 ## Tech stack
